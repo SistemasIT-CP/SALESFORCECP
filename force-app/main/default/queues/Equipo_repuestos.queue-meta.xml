@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Equipo repuestos</name>
+    <queueMembers>
+        <users>
+            <user>cmgonzalez@casapellas.com</user>
+            <user>dblanco@casapellas.com</user>
+            <user>lgarcia@kipesa.com</user>
+            <user>lpayan@velosa.com.ni</user>
+            <user>mlsandino@casapellas.com</user>
+            <user>rzeledon@casapellas.com</user>
+            <user>turbina@casapellas.com</user>
+            <user>ygalvez@casapellas.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>MessagingSession</sobjectType>
+    </queueSobject>
+</Queue>

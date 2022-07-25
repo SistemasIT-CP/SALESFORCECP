@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Acceso para productos de la marca JMC en consulta de chasis y precios de lista</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Vendedores JMC</label>
+    <recordTypeVisibilities>
+        <recordType>Product2.JMC</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

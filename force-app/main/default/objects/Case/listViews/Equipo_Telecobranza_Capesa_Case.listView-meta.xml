@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipo_Telecobranza_Capesa_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Antiguedad__c</columns>
+    <columns>Sesi_n_de_Mensajer_a__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>arosa,jlain,jrome,Equipo Telecobranza Capesa,Mensajeria Capesa</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Nuevo,En proceso,Aguardando respuesta</value>
+    </filters>
+    <label>Equipo Telecobranza Capesa</label>
+    <sharedTo>
+        <group>Cobranza_Capesa</group>
+    </sharedTo>
+</ListView>

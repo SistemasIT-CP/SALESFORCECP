@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Razon_de_perdida_lista_negra</fullName>
+    <active>true</active>
+    <description>Si un usuario no es administrador, no puede elegir como razon de perdida &quot;Cliente en Lista Negra&quot;</description>
+    <errorConditionFormula>AND(
+   $Profile.Name &lt;&gt; &quot;Administrador del sistema&quot;,
+   ISCHANGED(Razon_perdida__c),
+   ISPICKVAL(Razon_perdida__c, &quot;Cliente en Lista Negra&quot;) 
+)</errorConditionFormula>
+    <errorDisplayField>Razon_perdida__c</errorDisplayField>
+    <errorMessage>No es posible asignar &quot;Cliente en Lista Negra&quot; como razón de pérdida.</errorMessage>
+</ValidationRule>

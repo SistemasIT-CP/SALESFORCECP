@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Marca</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TOYOTA</fullName>
+                <default>true</default>
+                <label>TOYOTA</label>
+            </value>
+            <value>
+                <fullName>SUZUKI</fullName>
+                <default>false</default>
+                <label>SUZUKI</label>
+            </value>
+            <value>
+                <fullName>KIA</fullName>
+                <default>false</default>
+                <label>KIA</label>
+            </value>
+            <value>
+                <fullName>AUTOLOTE</fullName>
+                <default>false</default>
+                <label>AUTOLOTE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,1 @@
+*** NOTIFICACIÓN DE ASIGNACIÓN DE PROSPECTO NUEVO *** Se le ha asignado el prospecto siguiente.   Compañía:  {!Lead.Company} Nombre del prospecto:  {!Lead.Name}  Haga clic en el vínculo para acceder directamente al prospecto:  {!Lead.Link}

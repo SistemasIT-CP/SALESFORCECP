@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bancario_en_espera</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+(RecordTypeName__c == &quot;Financiamiento Bancario&quot;) ,
+ISPICKVAL(StageName, &quot;Cerrada Ganada&quot;),
+ Bancario_en_espera__c =True)</errorConditionFormula>
+    <errorMessage>No puede ganar la oportunidad porque flujo principal está en proceso de facturación</errorMessage>
+</ValidationRule>

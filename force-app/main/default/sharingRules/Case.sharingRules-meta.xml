@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Acceso_a_casos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Grupo Yamaha tenga acceos a Yamaha</description>
+        <label>Acceso a casos</label>
+        <sharedTo>
+            <group>Digital_Motos_Yamaha</group>
+        </sharedTo>
+        <booleanFilter>(1 AND 2) OR (1 AND 3) OR (1 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Ventas,Casos a tipificar</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0053k00000BJrYlAAL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0053k00000Axge9AAB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0053k00000BK5UPAA1</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Ver_casos_citas_taller_PE</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Visualizar casos de citas taller PE</description>
+        <label>Ver casos citas taller PE</label>
+        <sharedTo>
+            <group>Outbound_Citas_Taller</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Taller</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Equipo_Dollar</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Equipo dollar vea sus casos</description>
+        <label>Equipo Dollar</label>
+        <sharedTo>
+            <group>Digital_Dollar</group>
+        </sharedTo>
+        <sharedFrom>
+            <queue>Equipo_Dollar</queue>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

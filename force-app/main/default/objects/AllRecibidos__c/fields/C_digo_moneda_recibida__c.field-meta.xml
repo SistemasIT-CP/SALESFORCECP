@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>C_digo_moneda_recibida__c</fullName>
+    <externalId>false</externalId>
+    <label>Código moneda recibida</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>USD</fullName>
+                <default>false</default>
+                <label>USD</label>
+            </value>
+            <value>
+                <fullName>COR</fullName>
+                <default>false</default>
+                <label>COR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

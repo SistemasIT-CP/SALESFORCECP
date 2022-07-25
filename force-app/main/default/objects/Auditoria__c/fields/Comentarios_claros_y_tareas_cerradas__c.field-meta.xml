@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comentarios_claros_y_tareas_cerradas__c</fullName>
+    <description>Comentarios de cada llamada son descriptivos y están marcados como completadas?</description>
+    <externalId>false</externalId>
+    <label>¿Comentarios claros y tareas cerradas?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Auditorias</valueSetName>
+    </valueSet>
+</CustomField>

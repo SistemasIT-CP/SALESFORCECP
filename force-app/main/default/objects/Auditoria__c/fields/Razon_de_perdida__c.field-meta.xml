@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Razon_de_perdida__c</fullName>
+    <externalId>false</externalId>
+    <label>Razon de perdida</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Etapa__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cliente no contestó</fullName>
+                <default>false</default>
+                <label>Cliente no contestó</label>
+            </value>
+            <value>
+                <fullName>Cliente no quizo brindad información</fullName>
+                <default>false</default>
+                <label>Cliente no quizo brindad información</label>
+            </value>
+            <value>
+                <fullName>Número de celular incorrecto</fullName>
+                <default>false</default>
+                <label>Número de celular incorrecto</label>
+            </value>
+            <value>
+                <fullName>Ya existe otra oportunidad vigente</fullName>
+                <default>false</default>
+                <label>Ya existe otra oportunidad vigente</label>
+            </value>
+            <value>
+                <fullName>Cliente no localizable</fullName>
+                <default>false</default>
+                <label>Cliente no localizable</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cerrada perdida</controllingFieldValue>
+            <valueName>Cliente no contestó</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrada perdida</controllingFieldValue>
+            <valueName>Cliente no quizo brindad información</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrada perdida</controllingFieldValue>
+            <valueName>Número de celular incorrecto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrada perdida</controllingFieldValue>
+            <valueName>Ya existe otra oportunidad vigente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrada perdida</controllingFieldValue>
+            <valueName>Cliente no localizable</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

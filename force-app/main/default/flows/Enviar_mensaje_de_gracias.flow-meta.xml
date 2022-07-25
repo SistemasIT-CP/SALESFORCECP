@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Email gracias de toyota</description>
+        <name>Gracias_KIA</name>
+        <label>Gracias KIA</label>
+        <locationX>638</locationX>
+        <locationY>408</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>GraciasKIA</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Cuenta__r.Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>notificaciones@casapellas.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Gracias por tu compra</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Mensaje de gracias Suzuki</description>
+        <name>Gracias_Suzuki</name>
+        <label>Gracias Suzuki</label>
+        <locationX>374</locationX>
+        <locationY>408</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>GraciasSuzuki</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Cuenta__r.Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>notificaciones@casapellas.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Gracias por tu compra</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Gracias_TOYOTA</name>
+        <label>Gracias TOYOTA</label>
+        <locationX>110</locationX>
+        <locationY>408</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>Graciasporcompratoyota</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Cuenta__r.Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>notificaciones@casapellas.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Gracias por tu compra</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>MARCA</name>
+        <label>MARCA</label>
+        <locationX>506</locationX>
+        <locationY>288</locationY>
+        <defaultConnectorLabel>OTRA MARCA</defaultConnectorLabel>
+        <rules>
+            <name>ES_TOYOTA</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Marca_Oportunidad__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>TOYOTA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Oportunidad__r.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0123k000001j5pzAAA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Oportunidad__r.Cantidad_de_informes_aprobados__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Cuenta__r.Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Gracias_TOYOTA</targetReference>
+            </connector>
+            <label>ES TOYOTA</label>
+        </rules>
+        <rules>
+            <name>ES_SUZUKI</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Marca_Oportunidad__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SUZUKI</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Oportunidad__r.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0123k000001j5pzAAA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Oportunidad__r.Cantidad_de_informes_aprobados__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Cuenta__r.Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Gracias_Suzuki</targetReference>
+            </connector>
+            <label>ES SUZUKI</label>
+        </rules>
+        <rules>
+            <name>ES_KIA</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Marca_Oportunidad__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>KIA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Oportunidad__r.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0123k000001j5pzAAA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Oportunidad__r.Cantidad_de_informes_aprobados__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>10.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Cuenta__r.Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Gracias_KIA</targetReference>
+            </connector>
+            <label>ES KIA</label>
+        </rules>
+    </decisions>
+    <description>MEsaje de gracias cada que se facture un vehiculo del un cliente
+Como prueba se inicia con TOYOTA, SUZUKI y KIA</description>
+    <interviewLabel>Enviar mensaje de gracias {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Enviar mensaje de gracias</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>factura__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Informe_de_Negociaci_n__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <name>X1_hora_despues</name>
+            <connector>
+                <targetReference>MARCA</targetReference>
+            </connector>
+            <label>1 hora despues</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>Fecha_de_ultima_facturacion__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>PLantilla de email gracias KIA</description>
+        <name>GraciasKIA</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional //EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot; xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot;&gt;
+&lt;head&gt;
+&lt;!--[if gte mso 9]&gt;
+&lt;xml&gt;
+  &lt;o:OfficeDocumentSettings&gt;
+    &lt;o:AllowPNG/&gt;
+    &lt;o:PixelsPerInch&gt;96&lt;/o:PixelsPerInch&gt;
+  &lt;/o:OfficeDocumentSettings&gt;
+&lt;/xml&gt;
+&lt;![endif]--&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta name=&quot;x-apple-disable-message-reformatting&quot;&gt;
+  &lt;!--[if !mso]&gt;&lt;!--&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;!--&lt;![endif]--&gt;
+  &lt;title&gt;&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+      @media only screen and (min-width: 570px) {
+  .u-row {
+    width: 550px !important;
+  }
+  .u-row .u-col {
+    vertical-align: top;
+  }
+
+  .u-row .u-col-100 {
+    width: 550px !important;
+  }
+
+}
+
+@media (max-width: 570px) {
+  .u-row-container {
+    max-width: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .u-row .u-col {
+    min-width: 550px !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+  .u-row {
+    width: calc(100% - 40px) !important;
+  }
+  .u-col {
+    width: 100% !important;
+  }
+  .u-col &gt; div {
+    margin: 0 auto;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table,
+tr,
+td {
+  vertical-align: top;
+  border-collapse: collapse;
+}
+
+p {
+  margin: 0;
+}
+
+.ie-container table,
+.mso-container table {
+  table-layout: fixed;
+}
+
+* {
+  line-height: inherit;
+}
+
+a[x-apple-data-detectors=&apos;true&apos;] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+table, td { color: #000000; } @media (max-width: 480px) { #u_column_2 .v-col-padding { padding: 30px 22px 33px !important; } }
+    &lt;/style&gt;
+
+
+
+&lt;!--[if !mso]&gt;&lt;!--&gt;&lt;link href=&quot;https://fonts.googleapis.com/css?family=Raleway:400,700&amp;display=swap&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;&lt;!--&lt;![endif]--&gt;
+
+&lt;/head&gt;
+
+&lt;body class=&quot;clean-body u_body&quot; style=&quot;margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #3a3737;color: #000000&quot;&gt;
+  &lt;!--[if IE]&gt;&lt;div class=&quot;ie-container&quot;&gt;&lt;![endif]--&gt;
+  &lt;!--[if mso]&gt;&lt;div class=&quot;mso-container&quot;&gt;&lt;![endif]--&gt;
+  &lt;table style=&quot;border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 550px;Margin: 0 auto;background-color: #3a3737;width:100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+  &lt;tbody&gt;
+  &lt;tr style=&quot;vertical-align: top&quot;&gt;
+    &lt;td style=&quot;word-break: break-word;border-collapse: collapse !important;vertical-align: top&quot;&gt;
+    &lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td align=&quot;center&quot; style=&quot;background-color: #3a3737;&quot;&gt;&lt;![endif]--&gt;
+
+
+&lt;div class=&quot;u-row-container&quot; style=&quot;padding: 0px;background-color: transparent&quot;&gt;
+  &lt;div class=&quot;u-row&quot; style=&quot;Margin: 0 auto;min-width: 550px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;&quot;&gt;
+    &lt;div style=&quot;border-collapse: collapse;display: table;width: 100%;background-color: transparent;&quot;&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding: 0px;background-color: transparent;&quot; align=&quot;center&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:550px;&quot;&gt;&lt;tr style=&quot;background-color: transparent;&quot;&gt;&lt;![endif]--&gt;
+
+&lt;!--[if (mso)|(IE)]&gt;&lt;td align=&quot;center&quot; width=&quot;550&quot; class=&quot;v-col-padding&quot; style=&quot;width: 550px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;&quot; valign=&quot;top&quot;&gt;&lt;![endif]--&gt;
+&lt;div class=&quot;u-col u-col-100&quot; style=&quot;max-width: 550px;min-width: 550px;display: table-cell;vertical-align: top;&quot;&gt;
+  &lt;div style=&quot;width: 100% !important;&quot;&gt;
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;div class=&quot;v-col-padding&quot; style=&quot;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;&quot;&gt;&lt;!--&lt;![endif]--&gt;
+
+&lt;table style=&quot;font-family:courier new,courier;&quot; role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:courier new,courier;&quot; align=&quot;left&quot;&gt;
+
+&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;
+  &lt;tr&gt;
+    &lt;td style=&quot;padding-right: 0px;padding-left: 0px;&quot; align=&quot;center&quot;&gt;
+
+      &lt;img align=&quot;center&quot; border=&quot;0&quot; src=&quot;https://gcpcrm--uat--c.documentforce.com/servlet/servlet.ImageServer?id=01555000001aY4s&amp;oid=00D55000000JWUF&amp;lastMod=1653396946000&quot; alt=&quot;Casa Pellas&quot; title=&quot;Casa Pellas&quot; style=&quot;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 100%;&quot; width=&quot;550&quot;/&gt;
+
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;/div&gt;&lt;!--&lt;![endif]--&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;![endif]--&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class=&quot;u-row-container&quot; style=&quot;padding: 0px;background-color: transparent&quot;&gt;
+  &lt;div class=&quot;u-row&quot; style=&quot;Margin: 0 auto;min-width: 550px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;&quot;&gt;
+    &lt;div style=&quot;border-collapse: collapse;display: table;width: 100%;background-color: transparent;&quot;&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding: 0px;background-color: transparent;&quot; align=&quot;center&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:550px;&quot;&gt;&lt;tr style=&quot;background-color: #ffffff;&quot;&gt;&lt;![endif]--&gt;
+
+&lt;!--[if (mso)|(IE)]&gt;&lt;td align=&quot;center&quot; width=&quot;550&quot; class=&quot;v-col-padding&quot; style=&quot;width: 550px;padding: 30px 50px 33px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 10px solid #236fa1;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;&quot; valign=&quot;top&quot;&gt;&lt;![endif]--&gt;
+&lt;div id=&quot;u_column_2&quot; class=&quot;u-col u-col-100&quot; style=&quot;max-width: 550px;min-width: 550px;display: table-cell;vertical-align: top;&quot;&gt;
+  &lt;div style=&quot;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;&quot;&gt;
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;div class=&quot;v-col-padding&quot; style=&quot;padding: 30px 50px 33px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 10px solid #236fa1;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;&quot;&gt;&lt;!--&lt;![endif]--&gt;
+
+
+&lt;table style=&quot;font-family:courier new,courier;&quot; role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:courier new,courier;&quot; align=&quot;left&quot;&gt;
+
+  &lt;div style=&quot;line-height: 170%; text-align: left; word-wrap: break-word;&quot;&gt;
+    &lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Estimado {!$Record.Cuenta__r.FirstName}&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Solo quiero tomar un momento para decirte &amp;iexcl;Gracias y Felicitaciones!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Tu vendedor {!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}, me inform&amp;oacute; que has comprado un nuevo {!$Record.C_Modelo__c}. Esta compra es muy importante para nosotros y especialmente para mi.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Quiero asegurarme de que fuiste atendido de la mejor manera en nuestra sucursal, quisiera saber sus comentarios haciendo click &lt;a href=&quot;https://survey.alchemer.com/s3/6513826/NPS-Autos-Nuevos-Casa-Pellas?idoportunidad={!$Record.Oportunidad__r.Id}&quot;&gt; aqui&lt;/a&gt; Si hay algo en lo que pueda apoyar para garantizar tu satisfacci&amp;oacute;n en la compra, porfavor no dudes en contactarme. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Nuestro objetivo es tu satisfacci&amp;oacute;n. En lo que pueda servirte estoy a la orden, puedes escribirme directamente a sfadmin@casapellas.com&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Atentamente,&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Alejandro P. Martinez&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;/div&gt;&lt;!--&lt;![endif]--&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;![endif]--&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+    &lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;!--[if mso]&gt;&lt;/div&gt;&lt;![endif]--&gt;
+  &lt;!--[if IE]&gt;&lt;/div&gt;&lt;![endif]--&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Graciasporcompratoyota</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional //EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot; xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot;&gt;
+&lt;head&gt;
+&lt;!--[if gte mso 9]&gt;
+&lt;xml&gt;
+  &lt;o:OfficeDocumentSettings&gt;
+    &lt;o:AllowPNG/&gt;
+    &lt;o:PixelsPerInch&gt;96&lt;/o:PixelsPerInch&gt;
+  &lt;/o:OfficeDocumentSettings&gt;
+&lt;/xml&gt;
+&lt;![endif]--&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta name=&quot;x-apple-disable-message-reformatting&quot;&gt;
+  &lt;!--[if !mso]&gt;&lt;!--&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;!--&lt;![endif]--&gt;
+  &lt;title&gt;&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+      @media only screen and (min-width: 570px) {
+  .u-row {
+    width: 550px !important;
+  }
+  .u-row .u-col {
+    vertical-align: top;
+  }
+
+  .u-row .u-col-100 {
+    width: 550px !important;
+  }
+
+}
+
+@media (max-width: 570px) {
+  .u-row-container {
+    max-width: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .u-row .u-col {
+    min-width: 550px !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+  .u-row {
+    width: calc(100% - 40px) !important;
+  }
+  .u-col {
+    width: 100% !important;
+  }
+  .u-col &gt; div {
+    margin: 0 auto;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table,
+tr,
+td {
+  vertical-align: top;
+  border-collapse: collapse;
+}
+
+p {
+  margin: 0;
+}
+
+.ie-container table,
+.mso-container table {
+  table-layout: fixed;
+}
+
+* {
+  line-height: inherit;
+}
+
+a[x-apple-data-detectors=&apos;true&apos;] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+table, td { color: #000000; } @media (max-width: 480px) { #u_column_2 .v-col-padding { padding: 30px 22px 33px !important; } }
+    &lt;/style&gt;
+
+
+
+&lt;!--[if !mso]&gt;&lt;!--&gt;&lt;link href=&quot;https://fonts.googleapis.com/css?family=Raleway:400,700&amp;display=swap&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;&lt;!--&lt;![endif]--&gt;
+
+&lt;/head&gt;
+
+&lt;body class=&quot;clean-body u_body&quot; style=&quot;margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #3a3737;color: #000000&quot;&gt;
+  &lt;!--[if IE]&gt;&lt;div class=&quot;ie-container&quot;&gt;&lt;![endif]--&gt;
+  &lt;!--[if mso]&gt;&lt;div class=&quot;mso-container&quot;&gt;&lt;![endif]--&gt;
+  &lt;table style=&quot;border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 550px;Margin: 0 auto;background-color: #3a3737;width:100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+  &lt;tbody&gt;
+  &lt;tr style=&quot;vertical-align: top&quot;&gt;
+    &lt;td style=&quot;word-break: break-word;border-collapse: collapse !important;vertical-align: top&quot;&gt;
+    &lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td align=&quot;center&quot; style=&quot;background-color: #3a3737;&quot;&gt;&lt;![endif]--&gt;
+
+
+&lt;div class=&quot;u-row-container&quot; style=&quot;padding: 0px;background-color: transparent&quot;&gt;
+  &lt;div class=&quot;u-row&quot; style=&quot;Margin: 0 auto;min-width: 550px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;&quot;&gt;
+    &lt;div style=&quot;border-collapse: collapse;display: table;width: 100%;background-color: transparent;&quot;&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding: 0px;background-color: transparent;&quot; align=&quot;center&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:550px;&quot;&gt;&lt;tr style=&quot;background-color: transparent;&quot;&gt;&lt;![endif]--&gt;
+
+&lt;!--[if (mso)|(IE)]&gt;&lt;td align=&quot;center&quot; width=&quot;550&quot; class=&quot;v-col-padding&quot; style=&quot;width: 550px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;&quot; valign=&quot;top&quot;&gt;&lt;![endif]--&gt;
+&lt;div class=&quot;u-col u-col-100&quot; style=&quot;max-width: 550px;min-width: 550px;display: table-cell;vertical-align: top;&quot;&gt;
+  &lt;div style=&quot;width: 100% !important;&quot;&gt;
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;div class=&quot;v-col-padding&quot; style=&quot;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;&quot;&gt;&lt;!--&lt;![endif]--&gt;
+
+&lt;table style=&quot;font-family:courier new,courier;&quot; role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:courier new,courier;&quot; align=&quot;left&quot;&gt;
+
+&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;
+  &lt;tr&gt;
+    &lt;td style=&quot;padding-right: 0px;padding-left: 0px;&quot; align=&quot;center&quot;&gt;
+
+      &lt;img align=&quot;center&quot; border=&quot;0&quot; src=&quot;https://gcpcrm--uat--c.documentforce.com/servlet/servlet.ImageServer?id=01555000001ZVQl&amp;amp;oid=00D55000000JWUF&amp;amp;lastMod=1649439590000&quot; alt=&quot;Casa Pellas&quot; title=&quot;Casa Pellas&quot; style=&quot;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 100%;&quot; width=&quot;550&quot;/&gt;
+
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;/div&gt;&lt;!--&lt;![endif]--&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;![endif]--&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class=&quot;u-row-container&quot; style=&quot;padding: 0px;background-color: transparent&quot;&gt;
+  &lt;div class=&quot;u-row&quot; style=&quot;Margin: 0 auto;min-width: 550px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;&quot;&gt;
+    &lt;div style=&quot;border-collapse: collapse;display: table;width: 100%;background-color: transparent;&quot;&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding: 0px;background-color: transparent;&quot; align=&quot;center&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:550px;&quot;&gt;&lt;tr style=&quot;background-color: #ffffff;&quot;&gt;&lt;![endif]--&gt;
+
+&lt;!--[if (mso)|(IE)]&gt;&lt;td align=&quot;center&quot; width=&quot;550&quot; class=&quot;v-col-padding&quot; style=&quot;width: 550px;padding: 30px 50px 33px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 10px solid #236fa1;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;&quot; valign=&quot;top&quot;&gt;&lt;![endif]--&gt;
+&lt;div id=&quot;u_column_2&quot; class=&quot;u-col u-col-100&quot; style=&quot;max-width: 550px;min-width: 550px;display: table-cell;vertical-align: top;&quot;&gt;
+  &lt;div style=&quot;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;&quot;&gt;
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;div class=&quot;v-col-padding&quot; style=&quot;padding: 30px 50px 33px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 10px solid #236fa1;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;&quot;&gt;&lt;!--&lt;![endif]--&gt;
+
+
+&lt;table style=&quot;font-family:courier new,courier;&quot; role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:courier new,courier;&quot; align=&quot;left&quot;&gt;
+
+  &lt;div style=&quot;line-height: 170%; text-align: left; word-wrap: break-word;&quot;&gt;
+    &lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Estimado {!$Record.Cuenta__r.FirstName}&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Solo quiero tomar un momento para decirte &amp;iexcl;Gracias y Felicitaciones!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Tu vendedor {!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}, me inform&amp;oacute; que has comprado un nuevo {!$Record.C_Modelo__c}. Esta compra es muy importante para nosotros y especialmente para mi.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Quiero asegurarme de que fuiste atendido de la mejor manera en nuestra sucursal, quisiera saber sus comentarios haciendo click &lt;a href=&quot;https://survey.alchemer.com/s3/6513826/NPS-Autos-Nuevos-Casa-Pellas?idoportunidad={!$Record.Oportunidad__r.Id}&quot;&gt; aqui&lt;/a&gt; Si hay algo en lo que pueda apoyar para garantizar tu satisfacci&amp;oacute;n en la compra, porfavor no dudes en contactarme. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Nuestro objetivo es tu satisfacci&amp;oacute;n. En lo que pueda servirte estoy a la orden, puedes escribirme directamente a notificaciones@casapellas.com&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Atentamente,&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Alejandro P. Martinez&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;/div&gt;&lt;!--&lt;![endif]--&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;![endif]--&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+    &lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;!--[if mso]&gt;&lt;/div&gt;&lt;![endif]--&gt;
+  &lt;!--[if IE]&gt;&lt;/div&gt;&lt;![endif]--&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Plantilla email con header Suzuki</description>
+        <name>GraciasSuzuki</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional //EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot; xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot;&gt;
+&lt;head&gt;
+&lt;!--[if gte mso 9]&gt;
+&lt;xml&gt;
+  &lt;o:OfficeDocumentSettings&gt;
+    &lt;o:AllowPNG/&gt;
+    &lt;o:PixelsPerInch&gt;96&lt;/o:PixelsPerInch&gt;
+  &lt;/o:OfficeDocumentSettings&gt;
+&lt;/xml&gt;
+&lt;![endif]--&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta name=&quot;x-apple-disable-message-reformatting&quot;&gt;
+  &lt;!--[if !mso]&gt;&lt;!--&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;!--&lt;![endif]--&gt;
+  &lt;title&gt;&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+      @media only screen and (min-width: 570px) {
+  .u-row {
+    width: 550px !important;
+  }
+  .u-row .u-col {
+    vertical-align: top;
+  }
+
+  .u-row .u-col-100 {
+    width: 550px !important;
+  }
+
+}
+
+@media (max-width: 570px) {
+  .u-row-container {
+    max-width: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .u-row .u-col {
+    min-width: 550px !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+  .u-row {
+    width: calc(100% - 40px) !important;
+  }
+  .u-col {
+    width: 100% !important;
+  }
+  .u-col &gt; div {
+    margin: 0 auto;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table,
+tr,
+td {
+  vertical-align: top;
+  border-collapse: collapse;
+}
+
+p {
+  margin: 0;
+}
+
+.ie-container table,
+.mso-container table {
+  table-layout: fixed;
+}
+
+* {
+  line-height: inherit;
+}
+
+a[x-apple-data-detectors=&apos;true&apos;] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+table, td { color: #000000; } @media (max-width: 480px) { #u_column_2 .v-col-padding { padding: 30px 22px 33px !important; } }
+    &lt;/style&gt;
+
+
+
+&lt;!--[if !mso]&gt;&lt;!--&gt;&lt;link href=&quot;https://fonts.googleapis.com/css?family=Raleway:400,700&amp;display=swap&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;&lt;!--&lt;![endif]--&gt;
+
+&lt;/head&gt;
+
+&lt;body class=&quot;clean-body u_body&quot; style=&quot;margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #3a3737;color: #000000&quot;&gt;
+  &lt;!--[if IE]&gt;&lt;div class=&quot;ie-container&quot;&gt;&lt;![endif]--&gt;
+  &lt;!--[if mso]&gt;&lt;div class=&quot;mso-container&quot;&gt;&lt;![endif]--&gt;
+  &lt;table style=&quot;border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 550px;Margin: 0 auto;background-color: #3a3737;width:100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+  &lt;tbody&gt;
+  &lt;tr style=&quot;vertical-align: top&quot;&gt;
+    &lt;td style=&quot;word-break: break-word;border-collapse: collapse !important;vertical-align: top&quot;&gt;
+    &lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td align=&quot;center&quot; style=&quot;background-color: #3a3737;&quot;&gt;&lt;![endif]--&gt;
+
+
+&lt;div class=&quot;u-row-container&quot; style=&quot;padding: 0px;background-color: transparent&quot;&gt;
+  &lt;div class=&quot;u-row&quot; style=&quot;Margin: 0 auto;min-width: 550px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;&quot;&gt;
+    &lt;div style=&quot;border-collapse: collapse;display: table;width: 100%;background-color: transparent;&quot;&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding: 0px;background-color: transparent;&quot; align=&quot;center&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:550px;&quot;&gt;&lt;tr style=&quot;background-color: transparent;&quot;&gt;&lt;![endif]--&gt;
+
+&lt;!--[if (mso)|(IE)]&gt;&lt;td align=&quot;center&quot; width=&quot;550&quot; class=&quot;v-col-padding&quot; style=&quot;width: 550px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;&quot; valign=&quot;top&quot;&gt;&lt;![endif]--&gt;
+&lt;div class=&quot;u-col u-col-100&quot; style=&quot;max-width: 550px;min-width: 550px;display: table-cell;vertical-align: top;&quot;&gt;
+  &lt;div style=&quot;width: 100% !important;&quot;&gt;
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;div class=&quot;v-col-padding&quot; style=&quot;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;&quot;&gt;&lt;!--&lt;![endif]--&gt;
+
+&lt;table style=&quot;font-family:courier new,courier;&quot; role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:courier new,courier;&quot; align=&quot;left&quot;&gt;
+
+&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;
+  &lt;tr&gt;
+    &lt;td style=&quot;padding-right: 0px;padding-left: 0px;&quot; align=&quot;center&quot;&gt;
+
+      &lt;img align=&quot;center&quot; border=&quot;0&quot; src=&quot;https://gcpcrm--uat--c.documentforce.com/servlet/servlet.ImageServer?id=01555000001aY4n&amp;oid=00D55000000JWUF&amp;lastMod=1653396214000&quot; alt=&quot;Casa Pellas&quot; title=&quot;Casa Pellas&quot; style=&quot;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 100%;&quot; width=&quot;550&quot;/&gt;
+
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;/div&gt;&lt;!--&lt;![endif]--&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--[if (mso)|(IE)]&gt;&lt;/td&gt;&lt;![endif]--&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class=&quot;u-row-container&quot; style=&quot;padding: 0px;background-color: transparent&quot;&gt;
+  &lt;div class=&quot;u-row&quot; style=&quot;Margin: 0 auto;min-width: 550px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;&quot;&gt;
+    &lt;div style=&quot;border-collapse: collapse;display: table;width: 100%;background-color: transparent;&quot;&gt;
+      &lt;!--[if (mso)|(IE)]&gt;&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding: 0px;background-color: transparent;&quot; align=&quot;center&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:550px;&quot;&gt;&lt;tr style=&quot;background-color: #ffffff;&quot;&gt;&lt;![endif]--&gt;
+
+&lt;!--[if (mso)|(IE)]&gt;&lt;td align=&quot;center&quot; width=&quot;550&quot; class=&quot;v-col-padding&quot; style=&quot;width: 550px;padding: 30px 50px 33px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 10px solid #236fa1;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;&quot; valign=&quot;top&quot;&gt;&lt;![endif]--&gt;
+&lt;div id=&quot;u_column_2&quot; class=&quot;u-col u-col-100&quot; style=&quot;max-width: 550px;min-width: 550px;display: table-cell;vertical-align: top;&quot;&gt;
+  &lt;div style=&quot;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;&quot;&gt;
+  &lt;!--[if (!mso)&amp;(!IE)]&gt;&lt;!--&gt;&lt;div class=&quot;v-col-padding&quot; style=&quot;padding: 30px 50px 33px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 10px solid #236fa1;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;&quot;&gt;&lt;!--&lt;![endif]--&gt;
+
+
+&lt;table style=&quot;font-family:courier new,courier;&quot; role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:courier new,courier;&quot; align=&quot;left&quot;&gt;
+
+  &lt;div style=&quot;line-height: 170%; text-align: left; word-wrap: break-word;&quot;&gt;
+    &lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Estimado {!$Record.Cuenta__r.FirstName}&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Solo quiero tomar un momento para decirte &amp;iexcl;Gracias y Felicitaciones!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Tu vendedor {!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}, me inform&amp;oacute; que has comprado un nuevo {!$Record.C_Modelo__c}. Esta compra es muy importante para nosotros y especialmente para mi.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Quiero asegurarme de que fuiste atendido de la mejor manera en nuestra sucursal, quisiera saber sus comentarios haciendo click &lt;a href=&quot;https://survey.alchemer.com/s3/6513826/NPS-Autos-Nuevos-Casa-Pellas?idoportunidad={!$Record.Oportunidad__r.Id}&quot;&gt; aqui&lt;/a&gt; Si hay algo en lo que pueda apoyar para garantizar tu satisfacci&amp;oacute;n en la compra, porfavor no dudes en contactarme. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Nuestro objetivo es tu satisfacci&amp;oacute;n. En lo que pueda servirte estoy a la orden, puedes escribirme directamente a notificaciones@casapellas.com&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;Atentamente,&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;font-size: 14px; line-height: 170%;&quot;&gt;&lt;span style=&quot;font-family: Raleway, sans-serif; font-size: 14px; line-height: 23.8px;&quot;&gt;José Garcete&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

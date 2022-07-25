@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campos_requeridos_negociacion_autos</fullName>
+    <active>true</active>
+    <description>Etapa &quot;Negociación&quot;
+Valida que los campos [Modelo, Walk around, Prueba de manejo, Tour CP] no se encuentren vacíos.</description>
+    <errorConditionFormula>AND (
+  OR(
+    RecordType.DeveloperName=&quot;Principal_Autos&quot;,
+    RecordType.DeveloperName=&quot;Principal_Autolote&quot;
+  ),
+  ISCHANGED(StageName),
+  ISPICKVAL(StageName,&quot;Negociacion&quot;), 
+  OR (
+   ISBLANK( ModeloVehiculo__c  ),
+   ISBLANK(TEXT(Prueba_de_manejo__c)),
+   ISBLANK(TEXT(Tour_CP__c)),
+   ISBLANK(TEXT(Walk_Around__c))
+  )
+)</errorConditionFormula>
+    <errorMessage>¡Ha dejado campos en blanco !
+Asegurese de llenar los siguientes campos:
+- Modelo -
+- Walk Around -
+- Tour CP -
+- Prueba de manejo -</errorMessage>
+</ValidationRule>

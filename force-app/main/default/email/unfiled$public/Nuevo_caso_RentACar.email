@@ -1,0 +1,3 @@
+<p>Se le informa que tiene un nuevo caso de renta.</p>
+<p>Motivo: "{!Case.Reason}".</p>
+<p>Haga click <a href=" {!Case.Link}">aqui</a> para ver el caso </p>

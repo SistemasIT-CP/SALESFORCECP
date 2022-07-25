@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financiamiento_para_motos</fullName>
+    <active>true</active>
+    <description>Si la forma de adquisicion es Financiamiento Bancario el campo Quien concede es requerido y solamente puede admitir algunas opciones</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;Principal_Motos&quot;, 
+ ISCHANGED(Quien_concede__c),
+ INCLUDES(Forma_de_Pago_Multiple__c, &quot;Financiamiento&quot;),
+ OR(
+  ISBLANK(TEXT(Quien_concede__c)),
+  AND(
+   NOT(ISPICKVAL(Quien_concede__c, &quot;FAMA&quot;)),
+   NOT(ISPICKVAL(Quien_concede__c, &quot;CREDEX&quot;)),
+   NOT(ISPICKVAL(Quien_concede__c, &quot;CREDIFACIL&quot;)),   
+   NOT(ISPICKVAL(Quien_concede__c, &quot;TU CREDITO&quot;)),   
+   NOT(ISPICKVAL(Quien_concede__c, &quot;INSTACREDIT&quot;)),
+   NOT(ISPICKVAL(Quien_concede__c, &quot;FLEXI PAGOS&quot;)),
+   NOT(ISPICKVAL(Quien_concede__c, &quot;FIDEM&quot;)),
+   NOT(ISPICKVAL(Quien_concede__c, &quot;BANPRO&quot;)),
+   NOT(ISPICKVAL(Quien_concede__c, &quot;CRÉDITO INTERNO&quot;)),
+   NOT(ISPICKVAL(Quien_concede__c, &quot;LAFISE&quot;)),
+   NOT(ISPICKVAL(Quien_concede__c, &quot;AVANZ&quot;))
+)
+ )
+)</errorConditionFormula>
+    <errorMessage>Si la Forma de Adquisición es Financiamiento, el campo Quien Concede debe ser uno valido.</errorMessage>
+</ValidationRule>

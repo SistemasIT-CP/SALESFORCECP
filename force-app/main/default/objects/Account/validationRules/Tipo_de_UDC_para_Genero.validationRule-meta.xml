@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_UDC_para_Genero</fullName>
+    <active>true</active>
+    <description>El campo genero solo puede almacenar UDC&apos;s de tipo Genero</description>
+    <errorConditionFormula>AND( NOT(ISBLANK(Genero_UDC__pc)),
+Genero_UDC__pr.RecordType.DeveloperName != &apos;Genero&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Genero_UDC__pc</errorDisplayField>
+    <errorMessage>El campo género debe llenarse con un UDC de Género</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Estoy_interasado_en__c</name>
+    <picklistValues>
+        <masterLabel>Comprar Auto Seminuevo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intercambiar mi Auto</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vender mi Auto</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

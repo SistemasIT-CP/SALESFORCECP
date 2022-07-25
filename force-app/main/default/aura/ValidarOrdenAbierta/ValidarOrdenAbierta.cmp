@@ -1,0 +1,14 @@
+<aura:component controller="CallWSOrdenAbierta" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global">
+
+    <aura:attribute name="recordId" type="String" />
+    <div style="border-radius:10px; width:100%">
+        <table>
+            <tr style="background-color:#f3f2f2;">
+                <td style="padding:15px;text-align:center;">
+                    <lightning:button variant="brand" label="Verificar Orden Abierta" title="Verificar Orden Abierta" onclick="{!c.llamarWSOrdenAbierta}" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</aura:component>

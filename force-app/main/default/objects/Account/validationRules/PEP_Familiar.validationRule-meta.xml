@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PEP_Familiar</fullName>
+    <active>true</active>
+    <description>Llenar el campo de cargo si el PEP famiiar está marcado</description>
+    <errorConditionFormula>AND(
+ Algun_familiar_es_PEP__c ,
+ ISBLANK(Cargo_PEP_del_familiar__c)
+)</errorConditionFormula>
+    <errorDisplayField>Cargo_PEP_del_familiar__c</errorDisplayField>
+    <errorMessage>Si el familiar es PEP, debe de competar el campo del cargo PEP del familiar</errorMessage>
+</ValidationRule>

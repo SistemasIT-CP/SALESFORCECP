@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PresenceUserConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <profiles>
+            <profile>Admin</profile>
+            <profile>Agente Contact Center</profile>
+            <profile>Agente de Servicio</profile>
+        </profiles>
+        <users>
+            <user>ajarquin@kipesa.com</user>
+            <user>agsequeira@casapellas.com</user>
+            <user>aalvarez_fsl@casapellas.com</user>
+            <user>equezada@casapellas.com</user>
+            <user>jjgutierrez@velosa.com.ni</user>
+            <user>knarvaez@casapellas.com</user>
+            <user>lbenoit_fsl@casapellas.com</user>
+            <user>lmontenegro@casapellas.com</user>
+            <user>mfperez@casapellas.com</user>
+            <user>mlsandino@casapellas.com</user>
+            <user>mgarcia@casapellas.com</user>
+            <user>mxponce@casapellas.com</user>
+            <user>rjmora_fsl@casapellas.com</user>
+            <user>sfadmin@casapellas.com</user>
+            <user>sgperez@casapellas.com</user>
+            <user>yrivas@kipesa.com</user>
+        </users>
+    </assignments>
+    <capacity>5000</capacity>
+    <enableAutoAccept>false</enableAutoAccept>
+    <enableDecline>true</enableDecline>
+    <enableDeclineReason>false</enableDeclineReason>
+    <enableDisconnectSound>true</enableDisconnectSound>
+    <enableRequestSound>true</enableRequestSound>
+    <label>Presencia casa pellas</label>
+    <presenceStatusOnPushTimeout>Almorzando</presenceStatusOnPushTimeout>
+</PresenceUserConfig>

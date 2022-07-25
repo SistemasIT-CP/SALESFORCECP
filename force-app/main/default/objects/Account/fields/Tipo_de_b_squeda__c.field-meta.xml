@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_b_squeda__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Dejar en blanco al momento de la creación, por defecto se crea como Customer.
+Otros valores: Employees, Applicants</inlineHelpText>
+    <label>Tipo de usuario</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Catalogo_UDC__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Tipo de busqueda</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Catalogo_UDC__c</referenceTo>
+    <relationshipLabel>Cuentas (Tipo de búsqueda)</relationshipLabel>
+    <relationshipName>Cuentas4</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

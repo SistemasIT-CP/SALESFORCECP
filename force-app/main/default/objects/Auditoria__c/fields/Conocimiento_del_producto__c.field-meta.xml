@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conocimiento_del_producto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ ISPICKVAL( X4_Nuestro_asesor_de_ventas_aclar_las__c , &quot;SI&quot;), VALUE( $Label.Conocimiento_del_producto ) ,0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>% Conocimiento del producto</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

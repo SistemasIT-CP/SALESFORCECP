@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <assignments>
+        <description>Obtiene tareas completadas</description>
+        <name>Tareas_completadas</name>
+        <label>Tareas completadas</label>
+        <locationX>235</locationX>
+        <locationY>346</locationY>
+        <assignmentItems>
+            <assignToReference>Completedtasks</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Obtener_tareas_completadas</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Catndidas_tareas_completadas</targetReference>
+        </connector>
+    </assignments>
+    <description>Obtiene tareas completadas</description>
+    <interviewLabel>Tareas completadas {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Tareas completadas</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Obtiene las tareas completadas</description>
+        <name>Obtener_tareas_completadas</name>
+        <label>Obtener tareas completadas</label>
+        <locationX>116</locationX>
+        <locationY>184</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Tareas_completadas</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>OpportunityID</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completada</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Para alimentar el campo</description>
+        <name>Catndidas_tareas_completadas</name>
+        <label>Catndidas tareas completadas</label>
+        <locationX>682</locationX>
+        <locationY>53</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>OpportunityID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Tareas_Completadas__c</field>
+            <value>
+                <elementReference>Completedtasks</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>44</locationX>
+        <locationY>46</locationY>
+        <connector>
+            <targetReference>Obtener_tareas_completadas</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Tareas completadas</description>
+        <name>Completedtasks</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>OpportunityID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

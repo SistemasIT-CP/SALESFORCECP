@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bancario_Banco</fullName>
+    <active>true</active>
+    <description>Si selecciona financimiento bancario debe elegir el banco</description>
+    <errorConditionFormula>AND(
+( RecordType.DeveloperName == &quot;Principal_Autos&quot;) ,
+ISPICKVAL(StageName, &quot;Negociacion&quot;),
+INCLUDES( Forma_de_Pago_Multiple__c , &quot;Financiamiento Bancario&quot;), 
+ISBLANK(TEXT( Banco__c  ))
+)</errorConditionFormula>
+    <errorDisplayField>Banco__c</errorDisplayField>
+    <errorMessage>Debe seleccionar un banco para continuar</errorMessage>
+</ValidationRule>

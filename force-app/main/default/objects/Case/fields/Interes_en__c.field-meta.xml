@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interes_en__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo del caso</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Reason</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1.5 Ton</fullName>
+                <default>false</default>
+                <label>1.5 Ton</label>
+            </value>
+            <value>
+                <fullName>12 Ton</fullName>
+                <default>false</default>
+                <label>12 Ton</label>
+            </value>
+            <value>
+                <fullName>18 Ton</fullName>
+                <default>false</default>
+                <label>18 Ton</label>
+            </value>
+            <value>
+                <fullName>2.5 Ton</fullName>
+                <default>false</default>
+                <label>2.5 Ton</label>
+            </value>
+            <value>
+                <fullName>2 Ton</fullName>
+                <default>false</default>
+                <label>2 Ton</label>
+            </value>
+            <value>
+                <fullName>3.5 Ton</fullName>
+                <default>false</default>
+                <label>3.5 Ton</label>
+            </value>
+            <value>
+                <fullName>3 Ton</fullName>
+                <default>false</default>
+                <label>3 Ton</label>
+            </value>
+            <value>
+                <fullName>4.5 Ton</fullName>
+                <default>false</default>
+                <label>4.5 Ton</label>
+            </value>
+            <value>
+                <fullName>4 Ton</fullName>
+                <default>false</default>
+                <label>4 Ton</label>
+            </value>
+            <value>
+                <fullName>5.2 Ton</fullName>
+                <default>false</default>
+                <label>5.2 Ton</label>
+            </value>
+            <value>
+                <fullName>5.5 Ton</fullName>
+                <default>false</default>
+                <label>5.5 Ton</label>
+            </value>
+            <value>
+                <fullName>7 Ton</fullName>
+                <default>false</default>
+                <label>7 Ton</label>
+            </value>
+            <value>
+                <fullName>8 Ton</fullName>
+                <default>false</default>
+                <label>8 Ton</label>
+            </value>
+            <value>
+                <fullName>9.5 Ton</fullName>
+                <default>false</default>
+                <label>9.5 Ton</label>
+            </value>
+            <value>
+                <fullName>Abono o cancelación de financiamiento</fullName>
+                <default>false</default>
+                <label>Abono o cancelación de financiamiento</label>
+            </value>
+            <value>
+                <fullName>Acceso a Casa Pellas Online</fullName>
+                <default>false</default>
+                <label>Acceso a Casa Pellas Online</label>
+            </value>
+            <value>
+                <fullName>Accesorios</fullName>
+                <default>false</default>
+                <label>Accesorios</label>
+            </value>
+            <value>
+                <fullName>Actualización de medio de pago</fullName>
+                <default>false</default>
+                <label>Actualización de medio de pago</label>
+            </value>
+            <value>
+                <fullName>Agradecimiento/Felicitaciones de Clientes</fullName>
+                <default>false</default>
+                <label>Agradecimiento/Felicitaciones de Clientes</label>
+            </value>
+            <value>
+                <fullName>Anulación</fullName>
+                <default>false</default>
+                <label>Anulación</label>
+            </value>
+            <value>
+                <fullName>AutoFlex</fullName>
+                <default>false</default>
+                <label>AutoFlex</label>
+            </value>
+            <value>
+                <fullName>Baterías</fullName>
+                <default>false</default>
+                <label>Baterías</label>
+            </value>
+            <value>
+                <fullName>Botes</fullName>
+                <default>false</default>
+                <label>Botes</label>
+            </value>
+            <value>
+                <fullName>Calidad del producto</fullName>
+                <default>false</default>
+                <label>Calidad del producto</label>
+            </value>
+            <value>
+                <fullName>Camión</fullName>
+                <default>false</default>
+                <label>Camión</label>
+            </value>
+            <value>
+                <fullName>Cancelación de factura de crédito</fullName>
+                <default>false</default>
+                <label>Cancelación de factura de crédito</label>
+            </value>
+            <value>
+                <fullName>Cargadores Frontales</fullName>
+                <default>false</default>
+                <label>Cargadores Frontales</label>
+            </value>
+            <value>
+                <fullName>Cita</fullName>
+                <default>false</default>
+                <label>Cita</label>
+            </value>
+            <value>
+                <fullName>Cliente consultó por servicio que no brindamos</fullName>
+                <default>false</default>
+                <label>Cliente consultó por servicio que no brindamos</label>
+            </value>
+            <value>
+                <fullName>Cliente no especifica su interés</fullName>
+                <default>false</default>
+                <label>Cliente no especifica su interés</label>
+            </value>
+            <value>
+                <fullName>Cliente no siguió la conversación</fullName>
+                <default>false</default>
+                <label>Cliente no siguió la conversación</label>
+            </value>
+            <value>
+                <fullName>Colisionado</fullName>
+                <default>false</default>
+                <label>Colisionado</label>
+            </value>
+            <value>
+                <fullName>Compras en línea</fullName>
+                <default>false</default>
+                <label>Compras en línea</label>
+            </value>
+            <value>
+                <fullName>Consulta de opciones de pago</fullName>
+                <default>false</default>
+                <label>Consulta de opciones de pago</label>
+            </value>
+            <value>
+                <fullName>Consulta de saldo</fullName>
+                <default>false</default>
+                <label>Consulta de saldo</label>
+            </value>
+            <value>
+                <fullName>Consulta de Servicios</fullName>
+                <default>false</default>
+                <label>Consulta de Servicios</label>
+            </value>
+            <value>
+                <fullName>Consulta especificaciones técnicas de los vehículos.</fullName>
+                <default>false</default>
+                <label>Consulta especificaciones técnicas de los vehículos.</label>
+            </value>
+            <value>
+                <fullName>Cuadraciclos</fullName>
+                <default>false</default>
+                <label>Cuadraciclos</label>
+            </value>
+            <value>
+                <fullName>Devolución</fullName>
+                <default>false</default>
+                <label>Devolución</label>
+            </value>
+            <value>
+                <fullName>Disponibilidad de inventario</fullName>
+                <default>false</default>
+                <label>Disponibilidad de inventario</label>
+            </value>
+            <value>
+                <fullName>Disponibilidad de Repuestos</fullName>
+                <default>false</default>
+                <label>Disponibilidad de Repuestos</label>
+            </value>
+            <value>
+                <fullName>Documentación para cancelación de póliza recibida</fullName>
+                <default>false</default>
+                <label>Documentación para cancelación de póliza recibida</label>
+            </value>
+            <value>
+                <fullName>Envío de comprobante de pago</fullName>
+                <default>false</default>
+                <label>Envío de comprobante de pago</label>
+            </value>
+            <value>
+                <fullName>Equipos usados</fullName>
+                <default>false</default>
+                <label>Equipos usados</label>
+            </value>
+            <value>
+                <fullName>Excavadoras</fullName>
+                <default>false</default>
+                <label>Excavadoras</label>
+            </value>
+            <value>
+                <fullName>Falta de comunicacion con el cliente</fullName>
+                <default>false</default>
+                <label>Falta de comunicación con el cliente</label>
+            </value>
+            <value>
+                <fullName>Falta de seguimiento a devolucion</fullName>
+                <default>false</default>
+                <label>Falta de seguimiento a devolución</label>
+            </value>
+            <value>
+                <fullName>Falta de seguimiento a respuesto pendiente de entregar</fullName>
+                <default>false</default>
+                <label>Falta de seguimiento a respuesto pendiente de entregar</label>
+            </value>
+            <value>
+                <fullName>Generación de intereses al corriente</fullName>
+                <default>false</default>
+                <label>Generación de intereses al corriente</label>
+            </value>
+            <value>
+                <fullName>Generadores</fullName>
+                <default>false</default>
+                <label>Generadores</label>
+            </value>
+            <value>
+                <fullName>Generadores eléctricos</fullName>
+                <default>false</default>
+                <label>Generadores eléctricos</label>
+            </value>
+            <value>
+                <fullName>Herramientas Eléctricas</fullName>
+                <default>false</default>
+                <label>Herramientas Eléctricas</label>
+            </value>
+            <value>
+                <fullName>Híbridos</fullName>
+                <default>false</default>
+                <label>Híbridos</label>
+            </value>
+            <value>
+                <fullName>Información de Financiamientos</fullName>
+                <default>false</default>
+                <label>Información de Financiamientos</label>
+            </value>
+            <value>
+                <fullName>Información Escuela de Manejo (precios, cursos, horarios)</fullName>
+                <default>false</default>
+                <label>Información Escuela de Manejo (precios, cursos, horarios)</label>
+            </value>
+            <value>
+                <fullName>Información Valores Agregados (GPS, Seguros, PMT)</fullName>
+                <default>false</default>
+                <label>Información Valores Agregados (GPS, Seguros, PMT)</label>
+            </value>
+            <value>
+                <fullName>Insatisfaccion con la atencion</fullName>
+                <default>false</default>
+                <label>Insatisfacción con la atención</label>
+            </value>
+            <value>
+                <fullName>Insastisfaccion con servicio de lavado de vehiculo</fullName>
+                <default>false</default>
+                <label>Insatisfacción con servicio de lavado de vehículo</label>
+            </value>
+            <value>
+                <fullName>Insatisfacción por daños en su vehículo después de su visita</fullName>
+                <default>false</default>
+                <label>Insatisfacción por daños en su vehículo después de su visita</label>
+            </value>
+            <value>
+                <fullName>Insatisfaccion por mtto/reparacion realizada</fullName>
+                <default>false</default>
+                <label>Insatisfacción por mtto/reparacion realizada</label>
+            </value>
+            <value>
+                <fullName>Interesado en ser proveedor de GCP</fullName>
+                <default>false</default>
+                <label>Interesado en ser proveedor de GCP</label>
+            </value>
+            <value>
+                <fullName>Lubricantes</fullName>
+                <default>false</default>
+                <label>Lubricantes</label>
+            </value>
+            <value>
+                <fullName>Mensaje sin contenido</fullName>
+                <default>false</default>
+                <label>Mensaje sin contenido</label>
+            </value>
+            <value>
+                <fullName>Microbus</fullName>
+                <default>false</default>
+                <label>Microbus</label>
+            </value>
+            <value>
+                <fullName>Minicargadores</fullName>
+                <default>false</default>
+                <label>Minicargadores</label>
+            </value>
+            <value>
+                <fullName>Montacargas</fullName>
+                <default>false</default>
+                <label>Montacargas</label>
+            </value>
+            <value>
+                <fullName>Motobombas</fullName>
+                <default>false</default>
+                <label>Motobombas</label>
+            </value>
+            <value>
+                <fullName>Motocicletas Montañeras</fullName>
+                <default>false</default>
+                <label>Motocicletas Montañeras</label>
+            </value>
+            <value>
+                <fullName>Motocicletas Scooter</fullName>
+                <default>false</default>
+                <label>Motocicletas Scooter</label>
+            </value>
+            <value>
+                <fullName>Motocicletas Sport</fullName>
+                <default>false</default>
+                <label>Motocicletas Sport</label>
+            </value>
+            <value>
+                <fullName>Motocicletas Trabajo</fullName>
+                <default>false</default>
+                <label>Motocicletas Trabajo</label>
+            </value>
+            <value>
+                <fullName>Motolote</fullName>
+                <default>false</default>
+                <label>Motolote</label>
+            </value>
+            <value>
+                <fullName>Motores Marinos</fullName>
+                <default>false</default>
+                <label>Motores Marinos</label>
+            </value>
+            <value>
+                <fullName>No Aplica</fullName>
+                <default>false</default>
+                <label>No Aplica</label>
+            </value>
+            <value>
+                <fullName>Notificación de mora</fullName>
+                <default>false</default>
+                <label>Notificación de mora</label>
+            </value>
+            <value>
+                <fullName>Pago de coaseguro</fullName>
+                <default>false</default>
+                <label>Pago de coaseguro</label>
+            </value>
+            <value>
+                <fullName>Pago de factura de contado</fullName>
+                <default>false</default>
+                <label>Pago de factura de contado</label>
+            </value>
+            <value>
+                <fullName>Pago de prima y/o cuotas de PMT</fullName>
+                <default>false</default>
+                <label>Pago de prima y/o cuotas de PMT</label>
+            </value>
+            <value>
+                <fullName>Pérdida o hurto de pertenencias personales</fullName>
+                <default>false</default>
+                <label>Pérdida o hurto de pertenencias personales</label>
+            </value>
+            <value>
+                <fullName>Pickups</fullName>
+                <default>false</default>
+                <label>Pickups</label>
+            </value>
+            <value>
+                <fullName>Presupuesto</fullName>
+                <default>false</default>
+                <label>Presupuesto</label>
+            </value>
+            <value>
+                <fullName>Primas y reservas</fullName>
+                <default>false</default>
+                <label>Primas y reservas</label>
+            </value>
+            <value>
+                <fullName>Promesa de pago</fullName>
+                <default>false</default>
+                <label>Promesa de pago</label>
+            </value>
+            <value>
+                <fullName>Proveedor</fullName>
+                <default>false</default>
+                <label>Proveedor</label>
+            </value>
+            <value>
+                <fullName>Publicidad Falsa</fullName>
+                <default>false</default>
+                <label>Publicidad Falsa</label>
+            </value>
+            <value>
+                <fullName>Referencia de contacto</fullName>
+                <default>false</default>
+                <label>Referencia de contacto</label>
+            </value>
+            <value>
+                <fullName>Rentas Internacionales</fullName>
+                <default>false</default>
+                <label>Rentas Internacionales</label>
+            </value>
+            <value>
+                <fullName>Rentas regulares</fullName>
+                <default>false</default>
+                <label>Rentas regulares</label>
+            </value>
+            <value>
+                <fullName>Repuestos de Autos</fullName>
+                <default>false</default>
+                <label>Repuestos de Autos</label>
+            </value>
+            <value>
+                <fullName>Repuestos de Camiones</fullName>
+                <default>false</default>
+                <label>Repuestos de Camiones</label>
+            </value>
+            <value>
+                <fullName>Repuestos de motos</fullName>
+                <default>false</default>
+                <label>Repuestos de motos</label>
+            </value>
+            <value>
+                <fullName>Retroexcavadoras</fullName>
+                <default>false</default>
+                <label>Retroexcavadoras</label>
+            </value>
+            <value>
+                <fullName>Rodamientos</fullName>
+                <default>false</default>
+                <label>Rodamientos</label>
+            </value>
+            <value>
+                <fullName>Sedán</fullName>
+                <default>false</default>
+                <label>Sedán</label>
+            </value>
+            <value>
+                <fullName>Seguimiento</fullName>
+                <default>false</default>
+                <label>Seguimiento</label>
+            </value>
+            <value>
+                <fullName>Se transfirió llamada de cliente</fullName>
+                <default>false</default>
+                <label>Se transfirió llamada de cliente</label>
+            </value>
+            <value>
+                <fullName>Soldaduras, Discos de corte y Equipo de Soldar</fullName>
+                <default>false</default>
+                <label>Soldaduras, Discos de corte y Equipo de Soldar</label>
+            </value>
+            <value>
+                <fullName>Solicitud de Documentos Tributarios</fullName>
+                <default>false</default>
+                <label>Solicitud de Documentos Tributarios</label>
+            </value>
+            <value>
+                <fullName>Solicitud de empleo</fullName>
+                <default>false</default>
+                <label>Solicitud de empleo</label>
+            </value>
+            <value>
+                <fullName>Solicitud de estado de cuenta</fullName>
+                <default>false</default>
+                <label>Solicitud de estado de cuenta</label>
+            </value>
+            <value>
+                <fullName>Solicitud de medios de pagos</fullName>
+                <default>false</default>
+                <label>Solicitud de medios de pagos</label>
+            </value>
+            <value>
+                <fullName>Solicitud de comprobante</fullName>
+                <default>false</default>
+                <label>Solicitud de comprobante</label>
+            </value>
+            <value>
+                <fullName>SUV</fullName>
+                <default>false</default>
+                <label>SUV</label>
+            </value>
+            <value>
+                <fullName>Tiempo de entrega de vehiculo/moto(Nuevo)</fullName>
+                <default>false</default>
+                <label>Tiempo de entrega de vehículo/moto(Nuevo)</label>
+            </value>
+            <value>
+                <fullName>Tiempo de espera de repuesto</fullName>
+                <default>false</default>
+                <label>Tiempo de espera de repuesto</label>
+            </value>
+            <value>
+                <fullName>Tiempo de recepcion de vehiculo/moto</fullName>
+                <default>false</default>
+                <label>Tiempo de recepción de vehículo/moto</label>
+            </value>
+            <value>
+                <fullName>Tiempo de reparacion de vehiculo/moto</fullName>
+                <default>false</default>
+                <label>Tiempo de reparación de vehículo/moto</label>
+            </value>
+            <value>
+                <fullName>Transferencias automáticas</fullName>
+                <default>false</default>
+                <label>Transferencias automáticas</label>
+            </value>
+            <value>
+                <fullName>Volquetes</fullName>
+                <default>false</default>
+                <label>Volquetes</label>
+            </value>
+            <value>
+                <fullName>Wave Runner</fullName>
+                <default>false</default>
+                <label>Wave Runner</label>
+            </value>
+            <value>
+                <fullName>Respuesta automática NPS</fullName>
+                <default>false</default>
+                <label>Respuesta automática NPS</label>
+            </value>
+            <value>
+                <fullName>Mensajes hostiles sin contenido</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mensajes hostiles sin contenido</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>1.5 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>12 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>18 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>2.5 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>2 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>3.5 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>3 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>4.5 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>4 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>5.2 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>5.5 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>7 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>8 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>9.5 Ton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de camiones</controllingFieldValue>
+            <valueName>Volquetes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobranza Fidem</controllingFieldValue>
+            <controllingFieldValue>Cobranza PMT</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Credicap</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Seguros</controllingFieldValue>
+            <valueName>Actualización de medio de pago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobranza Fidem</controllingFieldValue>
+            <controllingFieldValue>Cobranza PMT</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Credicap</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Seguros</controllingFieldValue>
+            <valueName>Documentación para cancelación de póliza recibida</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobranza Fidem</controllingFieldValue>
+            <controllingFieldValue>Cobranza PMT</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Credicap</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Seguros</controllingFieldValue>
+            <valueName>Envío de comprobante de pago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobranza Fidem</controllingFieldValue>
+            <controllingFieldValue>Cobranza PMT</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Credicap</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Seguros</controllingFieldValue>
+            <valueName>Notificación de mora</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobranza Fidem</controllingFieldValue>
+            <controllingFieldValue>Cobranza PMT</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Credicap</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Seguros</controllingFieldValue>
+            <valueName>Promesa de pago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobranza Fidem</controllingFieldValue>
+            <controllingFieldValue>Cobranza PMT</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Credicap</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Seguros</controllingFieldValue>
+            <valueName>Solicitud de estado de cuenta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobranza Fidem</controllingFieldValue>
+            <controllingFieldValue>Cobranza PMT</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Credicap</controllingFieldValue>
+            <controllingFieldValue>Cobranzas Seguros</controllingFieldValue>
+            <valueName>Solicitud de medios de pagos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Accesorios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Baterías</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Generadores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Herramientas Eléctricas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Lubricantes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Motobombas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Repuestos de Autos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Repuestos de Camiones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Repuestos de motos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Rodamientos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion compra de repuestos</controllingFieldValue>
+            <valueName>Soldaduras, Discos de corte y Equipo de Soldar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicios del Taller Camiones</controllingFieldValue>
+            <controllingFieldValue>Servicios del Taller Express</controllingFieldValue>
+            <controllingFieldValue>Servicio del Taller de Motos</controllingFieldValue>
+            <controllingFieldValue>Servicios de de taller enderezado y pintura</controllingFieldValue>
+            <controllingFieldValue>Servicios de taller mecanica</controllingFieldValue>
+            <valueName>Cita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicios del Taller Camiones</controllingFieldValue>
+            <controllingFieldValue>Servicios del Taller Express</controllingFieldValue>
+            <controllingFieldValue>Servicio del Taller de Motos</controllingFieldValue>
+            <controllingFieldValue>Servicios de de taller enderezado y pintura</controllingFieldValue>
+            <controllingFieldValue>Servicios de taller mecanica</controllingFieldValue>
+            <valueName>Consulta de Servicios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicios del Taller Camiones</controllingFieldValue>
+            <controllingFieldValue>Servicios del Taller Express</controllingFieldValue>
+            <controllingFieldValue>Servicio del Taller de Motos</controllingFieldValue>
+            <controllingFieldValue>Servicios de de taller enderezado y pintura</controllingFieldValue>
+            <controllingFieldValue>Servicios de taller mecanica</controllingFieldValue>
+            <valueName>Presupuesto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicios del Taller Camiones</controllingFieldValue>
+            <controllingFieldValue>Servicios del Taller Express</controllingFieldValue>
+            <controllingFieldValue>Servicio del Taller de Motos</controllingFieldValue>
+            <controllingFieldValue>Servicio de Alpesa</controllingFieldValue>
+            <controllingFieldValue>Servicios de de taller enderezado y pintura</controllingFieldValue>
+            <controllingFieldValue>Servicios de taller mecanica</controllingFieldValue>
+            <valueName>Seguimiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotización/Compra maquinaria</controllingFieldValue>
+            <valueName>Cargadores Frontales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotización/Compra maquinaria</controllingFieldValue>
+            <valueName>Equipos usados</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotización/Compra maquinaria</controllingFieldValue>
+            <valueName>Excavadoras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotización/Compra maquinaria</controllingFieldValue>
+            <valueName>Generadores eléctricos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotización/Compra maquinaria</controllingFieldValue>
+            <valueName>Minicargadores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotización/Compra maquinaria</controllingFieldValue>
+            <valueName>Montacargas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotización/Compra maquinaria</controllingFieldValue>
+            <valueName>Retroexcavadoras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotización/Compra maquinaria</controllingFieldValue>
+            <valueName>Transferencias automáticas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra motos</controllingFieldValue>
+            <valueName>Botes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra motos</controllingFieldValue>
+            <valueName>Cuadraciclos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra motos</controllingFieldValue>
+            <valueName>Motocicletas Montañeras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra motos</controllingFieldValue>
+            <valueName>Motocicletas Scooter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra motos</controllingFieldValue>
+            <valueName>Motocicletas Sport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra motos</controllingFieldValue>
+            <valueName>Motocicletas Trabajo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra motos</controllingFieldValue>
+            <valueName>Motolote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra motos</controllingFieldValue>
+            <valueName>Motores Marinos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra motos</controllingFieldValue>
+            <valueName>Wave Runner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicio del Taller de Motos</controllingFieldValue>
+            <controllingFieldValue>Servicios de taller mecanica</controllingFieldValue>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <controllingFieldValue>Sugerencia</controllingFieldValue>
+            <valueName>No Aplica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Calidad del producto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Disponibilidad de inventario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Disponibilidad de Repuestos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Falta de comunicacion con el cliente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Falta de seguimiento a devolucion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Falta de seguimiento a respuesto pendiente de entregar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Insatisfaccion con la atencion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Insastisfaccion con servicio de lavado de vehiculo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Insatisfacción por daños en su vehículo después de su visita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Insatisfaccion por mtto/reparacion realizada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Pérdida o hurto de pertenencias personales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Tiempo de entrega de vehiculo/moto(Nuevo)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Tiempo de espera de repuesto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Tiempo de recepcion de vehiculo/moto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reclamo</controllingFieldValue>
+            <valueName>Tiempo de reparacion de vehiculo/moto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicio de Alpesa</controllingFieldValue>
+            <valueName>Compras en línea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicio de Renta</controllingFieldValue>
+            <valueName>AutoFlex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicio de Renta</controllingFieldValue>
+            <valueName>Rentas Internacionales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicio de Renta</controllingFieldValue>
+            <valueName>Rentas regulares</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicios de de taller enderezado y pintura</controllingFieldValue>
+            <valueName>Colisionado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Acceso a Casa Pellas Online</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Agradecimiento/Felicitaciones de Clientes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Cliente consultó por servicio que no brindamos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Cliente no especifica su interés</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Cliente no siguió la conversación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Consulta especificaciones técnicas de los vehículos.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Información de Financiamientos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Información Escuela de Manejo (precios, cursos, horarios)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Información Valores Agregados (GPS, Seguros, PMT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Interesado en ser proveedor de GCP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Mensaje sin contenido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Proveedor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Publicidad Falsa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Referencia de contacto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Se transfirió llamada de cliente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Solicitud de Documentos Tributarios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consulta</controllingFieldValue>
+            <valueName>Solicitud de empleo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sugerencia</controllingFieldValue>
+            <valueName>Respuesta automática NPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venta / Intercambio de vehículo</controllingFieldValue>
+            <controllingFieldValue>Cotizacion Compra de autos</controllingFieldValue>
+            <valueName>Camión</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venta / Intercambio de vehículo</controllingFieldValue>
+            <controllingFieldValue>Cotizacion Compra de autos</controllingFieldValue>
+            <valueName>Pickups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venta / Intercambio de vehículo</controllingFieldValue>
+            <controllingFieldValue>Cotizacion Compra de autos</controllingFieldValue>
+            <valueName>Sedán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venta / Intercambio de vehículo</controllingFieldValue>
+            <controllingFieldValue>Cotizacion Compra de autos</controllingFieldValue>
+            <valueName>SUV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra de autos</controllingFieldValue>
+            <valueName>Híbridos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cotizacion Compra de autos</controllingFieldValue>
+            <valueName>Microbus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Abono o cancelación de financiamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Anulación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Cancelación de factura de crédito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Consulta de opciones de pago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Consulta de saldo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Devolución</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Generación de intereses al corriente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Pago de coaseguro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Pago de factura de contado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Pago de prima y/o cuotas de PMT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Primas y reservas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telepagos</controllingFieldValue>
+            <valueName>Solicitud de comprobante</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Etapa_Negociacion_VA</fullName>
+    <active>true</active>
+    <description>Valida que para pasar a la etapa negociación haya seleccionado algún producto</description>
+    <errorConditionFormula>AND( RecordType.Name =&apos;Valores Agregados&apos;, text (StageName)=&apos;Negociación&apos;, TEXT( Seguro__c )&lt;&gt;&apos;SI&apos; ,TEXT ( PMP__c) &lt;&gt; &apos;SI&apos;, TEXT ( GPS__c )&lt;&gt; &apos;SI&apos;)</errorConditionFormula>
+    <errorMessage>Para avanzar de etapa debe haber seleccionado, algún producto. (GPS, Seguro, PMP)</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca_UDC__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Campo para realizar por medio de trigger el matcheo con el campo picklist, util para hacer la conversion a oportunidad</description>
+    <externalId>false</externalId>
+    <label>Marca UDC</label>
+    <referenceTo>Catalogo_UDC__c</referenceTo>
+    <relationshipLabel>Leads (Marca UDC)</relationshipLabel>
+    <relationshipName>Leads5</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

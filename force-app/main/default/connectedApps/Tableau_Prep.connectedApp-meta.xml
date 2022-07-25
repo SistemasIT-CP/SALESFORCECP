@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>eljarquin@casapellas.com</contactEmail>
+    <contactPhone>+50585538480</contactPhone>
+    <label>Tableau_Prep</label>
+    <oauthConfig>
+        <callbackUrl>https://casapellasbi.com/auth/add_oauth_token</callbackUrl>
+        <consumerKey>3MVG9_XwsqeYoueLg4Pn7kNz6S4pbjSgfuTQa3IGEcvHSLj875ONNydsH.997YIYHqk6TNS39_eGCjYjUk4PA</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

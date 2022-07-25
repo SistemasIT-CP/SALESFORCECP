@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Seguimiento__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(
+    OR( ISPICKVAL( X12_En_promedio_cada_cuanto_se_contact__c , &quot;Todos los días&quot;),
+        ISPICKVAL( X12_En_promedio_cada_cuanto_se_contact__c , &quot;Cada dos días&quot;),
+        ISPICKVAL( X12_En_promedio_cada_cuanto_se_contact__c , &quot;Nunca&quot;)),
+    OR(
+        ISPICKVAL( Ser_contactado_1_vez_por_semana_o_nunca__c , &quot;Decisión propia&quot;),
+        ISPICKVAL( Ser_contactado_1_vez_por_semana_o_nunca__c , &quot;Decisión del vendedor&quot;))
+
+),VALUE( $Label.Seguimiento ),
+IF(
+AND(
+     ISPICKVAL( X12_En_promedio_cada_cuanto_se_contact__c , &quot;Una vez por semana&quot;),
+     ISPICKVAL( Ser_contactado_1_vez_por_semana_o_nunca__c , &quot;Decisión del vendedor&quot;)
+),0,0
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>% Seguimiento</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

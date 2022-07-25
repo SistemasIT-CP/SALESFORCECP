@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Informe aprobado</name>
+    <style>none</style>
+    <subject>Informe de negociación aprobado</subject>
+    <textOnly>Notificación de informe de negociación
+
+Tu informe ha sido aprobado
+
+Hola {!User.FirstName} {!User.LastName},
+
+Te informamos que el informe de negociación {!Informe_de_Negociaci_n__c.Consecutivo_del_Informe__c} presente en la oportunidad {!Informe_de_Negociaci_n__c.Nombre_de_la_oportunidad__c}, fue aprobado.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

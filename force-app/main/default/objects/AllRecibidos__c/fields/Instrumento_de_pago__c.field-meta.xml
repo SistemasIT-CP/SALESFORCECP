@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instrumento_de_pago__c</fullName>
+    <externalId>false</externalId>
+    <label>Instrumento de pago</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Efectivo</fullName>
+                <default>false</default>
+                <label>Efectivo</label>
+            </value>
+            <value>
+                <fullName>Cheque</fullName>
+                <default>false</default>
+                <label>Cheque</label>
+            </value>
+            <value>
+                <fullName>Tarjeta de credito</fullName>
+                <default>false</default>
+                <label>Tarjeta de credito</label>
+            </value>
+            <value>
+                <fullName>Deposito bancario</fullName>
+                <default>false</default>
+                <label>Deposito bancario</label>
+            </value>
+            <value>
+                <fullName>Transferencia</fullName>
+                <default>false</default>
+                <label>Transferencia</label>
+            </value>
+            <value>
+                <fullName>Carta banco</fullName>
+                <default>false</default>
+                <label>Carta banco</label>
+            </value>
+            <value>
+                <fullName>Credito/Orden de compra</fullName>
+                <default>false</default>
+                <label>Credito/Orden de compra</label>
+            </value>
+            <value>
+                <fullName>Intercambio Autolote</fullName>
+                <default>false</default>
+                <label>Intercambio Autolote</label>
+            </value>
+            <value>
+                <fullName>Consumo Interno</fullName>
+                <default>false</default>
+                <label>Consumo Interno</label>
+            </value>
+            <value>
+                <fullName>Financiamiento FIDEM</fullName>
+                <default>false</default>
+                <label>Financiamiento FIDEM</label>
+            </value>
+            <value>
+                <fullName>Nota de debito</fullName>
+                <default>false</default>
+                <label>Nota de débito</label>
+            </value>
+            <value>
+                <fullName>Nota de credito</fullName>
+                <default>false</default>
+                <label>Nota de crédito</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

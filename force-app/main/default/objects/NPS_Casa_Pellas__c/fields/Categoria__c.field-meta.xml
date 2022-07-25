@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categoria__c</fullName>
+    <description>Este campo obtiene la categoria por medio de la nota que da el cliente</description>
+    <externalId>false</externalId>
+    <formula>IF  (AND(Nota_NPS__c&gt;=7, Nota_NPS__c&lt;=8), &apos;PASIVO&apos;,
+IF (Nota_NPS__c&lt;=6, &apos;DETRACTOR&apos;, &apos;PROMOTOR&apos;))</formula>
+    <inlineHelpText>Campo se calcula solo al llenar nota NPS</inlineHelpText>
+    <label>Categoria</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

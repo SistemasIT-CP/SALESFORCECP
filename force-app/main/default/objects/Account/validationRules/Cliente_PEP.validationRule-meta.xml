@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cliente_PEP</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  PEP__c,
+  ISBLANK(Cargo_PEP__c)
+)</errorConditionFormula>
+    <errorDisplayField>Cargo_PEP__c</errorDisplayField>
+    <errorMessage>Si el cliente es PEP, debe llenar el cargo</errorMessage>
+</ValidationRule>

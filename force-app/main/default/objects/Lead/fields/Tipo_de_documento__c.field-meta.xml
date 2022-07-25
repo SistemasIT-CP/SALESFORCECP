@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_documento__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Puede seleccionar para Personas: Cedula de Identidad, Cedula de Residente, DUI, Pasaporte y Otros
+Para cuentas Empresas: RUC, RUC Extranjero y Otros</inlineHelpText>
+    <label>Tipo de identificación</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cedula de Identidad</fullName>
+                <default>false</default>
+                <label>Cedula de Identidad</label>
+            </value>
+            <value>
+                <fullName>Cedula de Residente</fullName>
+                <default>false</default>
+                <label>Cedula de Residente</label>
+            </value>
+            <value>
+                <fullName>Pasaporte</fullName>
+                <default>false</default>
+                <label>Pasaporte</label>
+            </value>
+            <value>
+                <fullName>DUI</fullName>
+                <default>false</default>
+                <label>DUI</label>
+            </value>
+            <value>
+                <fullName>RUC</fullName>
+                <default>false</default>
+                <label>RUC</label>
+            </value>
+            <value>
+                <fullName>RUC Extranjero</fullName>
+                <default>false</default>
+                <label>RUC Extranjero</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

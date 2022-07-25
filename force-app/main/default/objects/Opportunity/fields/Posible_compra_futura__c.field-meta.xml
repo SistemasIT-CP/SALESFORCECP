@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Posible_compra_futura__c</fullName>
+    <externalId>false</externalId>
+    <label>Posible compra futura</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 mes</fullName>
+                <default>false</default>
+                <label>1 mes</label>
+            </value>
+            <value>
+                <fullName>2 meses</fullName>
+                <default>false</default>
+                <label>2 meses</label>
+            </value>
+            <value>
+                <fullName>3 meses</fullName>
+                <default>false</default>
+                <label>3 meses</label>
+            </value>
+            <value>
+                <fullName>c</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>c</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Recontacto</controllingFieldValue>
+            <valueName>1 mes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recontacto</controllingFieldValue>
+            <valueName>2 meses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recontacto</controllingFieldValue>
+            <valueName>3 meses</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

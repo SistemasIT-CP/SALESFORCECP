@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Como_desea_realizar_su_compra__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Como desea realizar su compra?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aún no desea realizar su compra</fullName>
+                <default>false</default>
+                <label>Aún no desea realizar su compra</label>
+            </value>
+            <value>
+                <fullName>Ciclo CP</fullName>
+                <default>false</default>
+                <label>Ciclo CP</label>
+            </value>
+            <value>
+                <fullName>Contado</fullName>
+                <default>false</default>
+                <label>Contado</label>
+            </value>
+            <value>
+                <fullName>Credex</fullName>
+                <default>false</default>
+                <label>Credex</label>
+            </value>
+            <value>
+                <fullName>Credifacil</fullName>
+                <default>false</default>
+                <label>Credifacil</label>
+            </value>
+            <value>
+                <fullName>FIDEM</fullName>
+                <default>false</default>
+                <label>FIDEM</label>
+            </value>
+            <value>
+                <fullName>Financiamiento bancario</fullName>
+                <default>false</default>
+                <label>Financiamiento bancario</label>
+            </value>
+            <value>
+                <fullName>Go Leasing</fullName>
+                <default>false</default>
+                <label>Go Leasing</label>
+            </value>
+            <value>
+                <fullName>Instacredit</fullName>
+                <default>false</default>
+                <label>Instacredit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

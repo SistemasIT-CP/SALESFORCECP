@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Forma_de_pago_Auto__c</name>
+    <picklistValues>
+        <masterLabel>Auto+ básico</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Auto+ con PMP</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consolidado 1 año</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consolidado 5 años</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

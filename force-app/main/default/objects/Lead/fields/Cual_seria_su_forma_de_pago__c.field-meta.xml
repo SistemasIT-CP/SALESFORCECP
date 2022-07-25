@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cual_seria_su_forma_de_pago__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Cual seria su forma de pago?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>De contado</fullName>
+                <default>false</default>
+                <label>De contado</label>
+            </value>
+            <value>
+                <fullName>Financiamiento</fullName>
+                <default>false</default>
+                <label>Financiamiento</label>
+            </value>
+            <value>
+                <fullName>Intercambio de vehiculo</fullName>
+                <default>false</default>
+                <label>Intercambio de vehiculo</label>
+            </value>
+            <value>
+                <fullName>Aun no estoy seguro de comprar_vender</fullName>
+                <default>false</default>
+                <label>Aún no estoy seguro de comprar/vender</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

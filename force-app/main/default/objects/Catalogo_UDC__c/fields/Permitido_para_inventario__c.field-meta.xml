@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Permitido_para_inventario__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo de control para decidir si un UDC debe o no poder usarse en una consulta de inventario</description>
+    <externalId>false</externalId>
+    <label>Permitido para inventario</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

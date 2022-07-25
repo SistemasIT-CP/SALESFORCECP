@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Center_Cambio_de_etapa_sin_marca</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( RecordType.Name =&apos;Contact Center&apos;, text (StageName)=&apos;Contacto Intentado&apos;, ISBLANK( Marca_UDC__c ))</errorConditionFormula>
+    <errorDisplayField>Marca_UDC__c</errorDisplayField>
+    <errorMessage>No puede avanzar de etapas sin seleccionar la marca.</errorMessage>
+</ValidationRule>

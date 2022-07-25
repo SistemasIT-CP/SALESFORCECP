@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Capesa Renovacion</name>
+    <queueMembers>
+        <users>
+            <user>aegonzalez@casapellas.com</user>
+            <user>mlsandino@casapellas.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Mensajeria_Renovacion_Capesa</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>MessagingEndUser</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>MessagingSession</sobjectType>
+    </queueSobject>
+</Queue>

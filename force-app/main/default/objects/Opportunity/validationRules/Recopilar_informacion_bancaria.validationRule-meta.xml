@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recopilar_informacion_bancaria</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+(RecordTypeName__c == &quot;Financiamiento Bancario&quot;) ,
+ISCHANGED(StageName),
+ISPICKVAL(StageName, &quot;Información Completa&quot;),
+
+
+OR (
+ISBLANK(    ModeloVehiculo__c  ),
+ISBLANK(Vendedor__c  ),
+ISBLANK(TEXT(  Banco__c  ))
+
+
+)
+
+)</errorConditionFormula>
+    <errorMessage>Para avanzar debe ingresar los campos clave, Modelo, Vendedor, Banco, Teléfono</errorMessage>
+</ValidationRule>

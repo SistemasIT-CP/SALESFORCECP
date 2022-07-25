@@ -1,0 +1,10 @@
+@page {
+/* Landscape orientation */
+size:Portrait;
+
+/* Put page numbers in the top right corner of each
+page in the pdf document. */
+@bottom-center {
+content: "Página " counter(page) " de " counter(pages);
+}
+}

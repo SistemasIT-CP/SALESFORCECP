@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Numero_de_referencia__c</fullName>
+    <description>Campo que sirve para guardar numeros de referencia con registros de sistemas externos</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Complete con el Número de oportunidad(autos/motos), Número de factura(respuestos/Alpesa),Número de contrato de reserva(Renta)</inlineHelpText>
+    <label>Número de referencia</label>
+    <length>25</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,81 @@
+<aura:component controller= "Opp_Financiamiento_Interno"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="retorno" type="String[]"/>
+    <aura:attribute name="name" type="String" />
+    <aura:attribute name="tipo" type="String" />
+    <aura:attribute name="etapa" type="String" />
+    <aura:attribute name="step" type="String" />
+    <aura:attribute name="interno" type="Boolean" default="false"/>
+    <aura:attribute name="loaded" type="Boolean" default="false"/>
+    <aura:attribute name="activo" type="Boolean" default="true"/> 
+     <aura:attribute name="muestra5" type="Boolean" default="true"/>
+    <aura:attribute name="muestra6" type="Boolean" default="true"/>
+     <aura:attribute name="oppParalela" type="String" />
+    <aura:attribute name="vendedor" type="String" />
+
+    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+
+	<aura:if isTrue="{!v.activo}">
+    
+    <div class="slds-box slds-box_xx-small slds-theme_default"> 
+        <div >
+           <lightning:layout class="slds-page-header slds-page-header--object-home"> 
+          <lightning:layoutItem> 
+             <lightning:icon iconName="action:clone" alternativeText="Clone" size="small"/> 
+          </lightning:layoutItem> 
+         <lightning:layoutItem padding="horizontal-small">  
+             <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Oportunidad Paralela</h1>
+                <h2 class="slds-text-heading--medium" style = "font-size :14px" ><a href="" onclick="{!c.Oportunidad}">{!v.name}</a></h2>
+               <h2 class="slds-text-heading--label" >{!v.tipo}</h2>
+                 <h3 class="slds-text-heading--label" >Vendedor: {!v.vendedor}</h3>
+            </div>
+          </lightning:layoutItem>
+    </lightning:layout>
+            
+            <br/>
+          <div>
+           <aura:if isTrue="{!v.interno}">
+                         
+               <lightning:progressIndicator currentStep="{!v.step}" type="path" variant="base">
+                  <aura:if isTrue="{!v.muestra5}">
+                       <lightning:progressStep label="Oportunidad Identificada" value="1"/>
+                       <lightning:progressStep label="Pre - Filtro" value="2"/>
+                       <lightning:progressStep label="Recopilar Información" value="3"/>
+                  </aura:if>  
+                   <lightning:progressStep label="Información Completa" value="4"/>
+                   <lightning:progressStep label="Aprobación Por Comité" value="5"/>
+                  <aura:if isTrue="{!v.muestra6}">
+                       <lightning:progressStep label="Firma de Contrato" value="6"/>
+                       <lightning:progressStep label="Esperando Facturación" value="7"/>
+                       <lightning:progressStep label="Cerrada" value="8"/>
+                 </aura:if>  
+               </lightning:progressIndicator>
+
+                  </aura:if>  
+            
+            </div>
+         
+            
+            <br/>
+           
+            <!-- Spinner -->
+            <aura:if isTrue="{!v.loaded}">
+                <div class="demo-only" style="height:6rem">
+                    <div class="slds-spinner_container">
+                        <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                            <span class="slds-assistive-text">Loading</span>
+                        </div>
+                    </div>
+                </div>
+            </aura:if>  
+            
+        </div>
+    </div> 
+     </aura:if>  
+    
+</aura:component>

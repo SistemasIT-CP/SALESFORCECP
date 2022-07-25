@@ -1,0 +1,17 @@
+<apex:page tabStyle="Informe_de_Negociaci_n__c" controller="CtrlAsignaChasis" showHeader="true" docType="html-5.0">
+    <head>
+        <apex:slds />
+    </head>
+    <center>
+        <h5> 
+            <br/><br/><br/>
+            <b>Respuesta:</b> 
+            <br/><br/>{!respuestaWS}
+            <br/><br/><br/>
+        </h5>
+        <apex:form id="RequestForm">    
+            <apex:commandButton styleClass="slds-button slds-button_brand" value="Guardar y volver al Informe" action="{!goToRecord}" />
+        </apex:form>
+    </center>
+    
+</apex:page>

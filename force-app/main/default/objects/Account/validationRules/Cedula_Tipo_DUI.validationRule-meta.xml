@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cedula_Tipo_DUI</fullName>
+    <active>true</active>
+    <description>Si la Cedula es de tipo DUI debe respetar un patrón especifico</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Tipo_de_Indentificaci_n__c , &apos;DUI&apos;) ,
+NOT(REGEX( Cedula__c , &quot;^[0-9]{8}-[0-9]{1}$&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Cedula__c</errorDisplayField>
+    <errorMessage>Las identificaciones DUI deben respetar el siguiente patrón: 8 números, un guión medio y 1 número</errorMessage>
+</ValidationRule>

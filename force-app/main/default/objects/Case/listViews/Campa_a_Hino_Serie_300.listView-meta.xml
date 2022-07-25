@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campa_a_Hino_Serie_300</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>Antiguedad__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Campana_taller__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Nuevo</value>
+    </filters>
+    <filters>
+        <field>Campana_taller__c</field>
+        <operation>equals</operation>
+        <value>Garantía HINO 300</value>
+    </filters>
+    <label>Campaña Hino Serie 300</label>
+    <sharedTo>
+        <group>Citas_Taller</group>
+        <group>Outbound_Citas_Taller</group>
+    </sharedTo>
+</ListView>

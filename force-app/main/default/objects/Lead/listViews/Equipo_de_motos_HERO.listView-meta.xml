@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipo_de_motos_HERO</fullName>
+    <columns>Color_de_tiempo__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>Modelo_a_cotizar__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Marca_a_cotizar__c</field>
+        <operation>equals</operation>
+        <value>HERO</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Esperando contacto,Contacto intentado,Contacto exitoso,Lead a futuro,Convertido</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Venta_motos</value>
+    </filters>
+    <label>Equipo de Motos Hero</label>
+    <sharedTo>
+        <group>Digital_Motos_Hero</group>
+    </sharedTo>
+</ListView>

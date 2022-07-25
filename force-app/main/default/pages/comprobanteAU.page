@@ -1,0 +1,206 @@
+<apex:page controller="Ctrl_ComprobanteAU" docType="html-5.0" renderAs="PDf" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+    <apex:outputPanel id="vehiculoConAu" rendered="{!vehiculo.AU__c != null}">
+        <div style="text-align:center; font-family:Arial, Helvetica, sans-serif; padding:0px; font-weight:bold;">
+            <span style="font-size: 20px;">CASA PELLAS, S.A.</span> <br/>
+            <span style="font-size: 20px;">DPTO. DE AUTOS SEMINUEVOS</span> <br/>
+            <span style="font-size: 20px;">VEHICULOS USADOS RECIBIDOS</span> <br/>
+            <span style="color:red; font-size: 20px;">{!'No. ' + vehiculo.AU__c}</span>
+        </div>
+
+        <div style="margin-top: 10px; font-family:Arial, Helvetica, sans-serif; width:100%;">
+            <div class="slds-grid slds-gutters">
+                <span style=" width: 90%; font-size: 12px;">HACEMOS CONSTAR QUE EN ESTA FECHA HEMOS RECIBIDO DE:</span>
+                <span style=" width: 10%; text-transform: uppercase; font-size: 12px;">{!nombreCliente}</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px; font-family:Arial, Helvetica, sans-serif; font-size: 12px;">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <td style="border: 1px solid black; padding:3px; width:20%;">PLACA</td>
+                    <td style="border: 1px solid black; padding:3px; width:30%;">{!vehiculo.Placa__c}</td>
+                    <td style="border: 1px solid black; padding:3px; width:20%;">TIPO</td>
+                    <td style="border: 1px solid black; padding:3px; width:30%;">{!vehiculo.Tipo__c}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">MARCA</td>
+                    <td style="border: 1px solid black; padding:3px;">{!IF(vehiculo.Marca__c != null, vehiculo.Marca__r.Name, '')}</td>
+                    <td style="border: 1px solid black; padding:3px;">AÑO</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Anio_opcion__c}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">MODELO</td>
+                    <td style="border: 1px solid black; padding:3px;">{!IF(vehiculo.Modelo__c != null, vehiculo.Modelo__r.Name, '')}</td>
+                    <td style="border: 1px solid black; padding:3px;">CAPACIDAD</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Capacidad__c} PASAJEROS</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">COLOR</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Color__c}</td>
+                    <td style="border: 1px solid black; padding:3px;">CILINDROS</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Cilindros__c}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">MOTOR</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Motor__c}</td>
+                    <td style="border: 1px solid black; padding:3px;">COMBUSTIBLE</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Combustible__c}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">CHASIS</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Chasis__c}</td>
+                    <td style="border: 1px solid black; padding:3px;">CIRCULACIÓN</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Circulacion__c}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">VIN No.</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.VIN__c}</td>
+                    <td style="border: 1px solid black; padding:3px;">KMS. RECORRIDOS</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Kilometraje__c} km</td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="margin-top: 20px; font-family:Arial, Helvetica, sans-serif; font-size: 12px;">
+            EQUIPADO CON: {!vehiculo.Equipado_con__c}
+        </div>
+
+        <div style="margin-top: 20px; font-family:Arial, Helvetica, sans-serif; font-size: 12px;">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <td style="border: 1px solid black; width:70%; padding:3px;">
+                        ESTE VEHICULO SE COMPRA POR LA CANTIDAD DE
+                    </td>
+                    <td style="border: 1px solid black; width:30%; padding:3px; text-align:right;">
+                        {!ROUND(vehiculo.Precio_de_compra_aprobado_S_Autolote__c / (1 - (impuesto*2)), 2)}
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">
+                        RETENCIÓN DE {!porcentajeImpuesto} ALMA (ASUME EL CLIENTE)
+                    </td>
+                    <td style="border: 1px solid black; padding:3px; text-align:right;">
+                        {!ROUND(ROUND(vehiculo.Precio_de_compra_aprobado_S_Autolote__c / (1 - (impuesto*2)), 2) * impuesto, 2)}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">
+                        RETENCIÓN DE {!porcentajeImpuesto} IR (ASUME EL CLIENTE)
+                    </td>
+                    <td style="border: 1px solid black; padding:3px; text-align:right;">
+                        {!ROUND(ROUND(vehiculo.Precio_de_compra_aprobado_S_Autolote__c / (1 - (impuesto*2)), 2) * impuesto, 2)}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">
+                        VALOR NETO NEGOCIADO DEL VEHICULO USADO
+                    </td>
+                    <td style="border: 1px solid black; padding:3px; text-align:right;">
+                        {!ROUND(vehiculo.Precio_de_compra_aprobado_S_Autolote__c, 2)}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="margin-top: 20px; font-family:Arial, Helvetica, sans-serif; font-size:12px;">
+            <p>SE ADJUNTA:</p>
+            <ul style="list-style-type: none;">
+                <li>FOTOCOPIA DE RECEPCIÓN DE VEHICULO DE CASA PELLAS</li>
+                <li>FOTOCOPIA DE CEDULA DE {!nombreCliente}</li>
+                <li>FOTOCOPIA DE CIRCULACION VEHICULAR</li>
+                <li>FOTOCOPIA DE AVALUO DE CASA PELLAS</li>
+                <li>FOTOCOPIA DE CARTA DE VENTA DE {!vehiculo.Carta_de_venta__c}</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 20px; font-family:Arial, Helvetica, sans-serif; font-size:12px;">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <td style="padding:3px;">
+                        SALDO TOTAL
+                    </td>
+                    <td style="padding:3px; text-align:right;">
+                        {!ROUND(vehiculo.Precio_de_compra_aprobado_S_Autolote__c, 2)}
+                    </td>
+                </tr>
+                <apex:repeat value="{!recibos}" var="recibo" id="recibos">
+                    <tr>
+                        <td style="padding:3px;">
+                            {!recibo.Concepto__c}
+                        </td>
+                        <td style="padding:3px; text-align:right;">
+                            {!recibo.Saldo__c}
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </table>
+        </div>
+
+        <div style="margin-top: 20px; font-family:Arial, Helvetica, sans-serif; font-size:12px;">
+            <span>
+                ESTE VEHICULO SE COMPRA DE CONTADO Y ENTRA AL INVENTARIO DE AUTOLOTE PARA SU POSTERIOR VENTA
+            </span>
+        </div>
+        
+        <div style="margin-top: 20px; font-family:Arial, Helvetica, sans-serif; font-size:12px;">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <td style="border: 1px solid black; padding:3px; width:20%;">CLIENTE</td>
+                    <td style="border: 1px solid black; padding:3px; width:40%;">{!nombreCliente}</td>
+                    <td style="border: 1px solid black; padding:3px; width:20%;">CODIGO</td>
+                    <td style="border: 1px solid black; padding:3px; width:20%;">{!codigoCliente}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">CHASIS</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Chasis__c}</td>
+                    <td style="border: 1px solid black; padding:3px;"></td>
+                    <td style="border: 1px solid black; padding:3px;"></td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">CON CARGO A</td>
+                    <td style="border: 1px solid black; padding:3px;">DEPARTAMENTO DE AUTOS USADOS</td>
+                    <td style="border: 1px solid black; padding:3px;"></td>
+                    <td style="border: 1px solid black; padding:3px;"></td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding:3px;">VENDEDOR</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Vendedor__c}</td>
+                    <td style="border: 1px solid black; padding:3px;">EVALUADOR</td>
+                    <td style="border: 1px solid black; padding:3px;">{!vehiculo.Evaluador__c}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="margin-top: 20px; font-family:Arial, Helvetica, sans-serif; font-family:Arial, Helvetica, sans-serif; font-size:12px;">
+            <table style="width:100%;">
+                <tr>
+                    <td style="text-align: center">
+                        <apex:outputText value="{0, date, dd'/'MM'/'yyyy}">
+                            <apex:param value="{!TODAY()}" />
+                        </apex:outputText>
+                    </td>
+                    <td style="text-align: right">
+                        <span>CC:</span> 
+                        <apex:repeat value="{!listaContables}" var="contador" id="contadores">
+                            <span>{!contador}</span> <br/>
+                        </apex:repeat>
+                        <span>ARCHIVO</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="margin-top: 25px; text-align:center; font-family:Arial, Helvetica, sans-serif; padding:0px;">
+            <span style="font-size:16px; font-weight:bold;">ATENTAMENTE</span> <br/>
+            <span style="font-size:16px; font-weight:bold;">CASA PELLAS S.A.</span> <br/>
+            <span style="font-size:12px; font-weight:bold;">ING. ALEJANDRO VEGA</span> <br/>
+            <span style="font-size:12px; font-weight:bold;">AUTOLOTE CASA PELLAS</span>
+        </div>
+    </apex:outputPanel>
+    <apex:outputPanel id="vehiculoSinAu" rendered="{!vehiculo.AU__c == null}">
+        <div style="width:100%; text-align:center; font-family:Arial, Helvetica, sans-serif; vertical-align:center;">
+            <h1>No se puede generar documento si no existe AU.</h1>
+        </div>
+    </apex:outputPanel>
+</apex:page>

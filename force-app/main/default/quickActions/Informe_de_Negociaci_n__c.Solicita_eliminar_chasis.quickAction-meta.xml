@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Somete a aprobación la liberación de accesorios despachados y poder eliminar el informe</description>
+    <flowDefinition>Estado_a_pendiente</flowDefinition>
+    <label>Solicitud eliminar informe</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

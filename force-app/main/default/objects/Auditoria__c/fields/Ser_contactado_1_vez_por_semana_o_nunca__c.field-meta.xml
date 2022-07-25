@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ser_contactado_1_vez_por_semana_o_nunca__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Ser contactado 1 vez por semana (o nunca) fue por solicitud suya o por decision del vendedor?</inlineHelpText>
+    <label>Decisión propia o del vendedor</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Decisión propia</fullName>
+                <default>false</default>
+                <label>Decisión propia</label>
+            </value>
+            <value>
+                <fullName>Decisión del vendedor</fullName>
+                <default>false</default>
+                <label>Decisión del vendedor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

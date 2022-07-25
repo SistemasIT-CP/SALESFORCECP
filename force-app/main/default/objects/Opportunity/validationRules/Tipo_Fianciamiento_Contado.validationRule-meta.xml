@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_Fianciamiento_Contado</fullName>
+    <active>true</active>
+    <description>Si selecciona contado, entonces el banco debe de ir vacío</description>
+    <errorConditionFormula>AND(
+ OR(
+  RecordType.DeveloperName = &quot;Principal_Autos&quot;,
+  RecordType.DeveloperName=&quot;Principal_Autolote&quot;
+ ),
+ INCLUDES(Forma_de_Pago_Multiple__c, &apos;Contado&apos;),
+ NOT(ISPICKVAL(Banco__c, &apos;&apos;))
+)</errorConditionFormula>
+    <errorDisplayField>Banco__c</errorDisplayField>
+    <errorMessage>Si una de las formas de pago es Contado, el campo de banco no se debe de llenar.</errorMessage>
+</ValidationRule>

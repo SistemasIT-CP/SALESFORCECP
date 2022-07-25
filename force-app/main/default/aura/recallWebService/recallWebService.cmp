@@ -1,0 +1,83 @@
+<aura:component controller ="ButtonRecallController"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,force:hasSObjectName" 
+                access="global">
+    
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="yaHaSidoEnviado" type="Boolean" default="false"/>
+    <aura:attribute name="msjeError" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:if isTrue="{!v.yaHaSidoEnviado == false &amp;&amp; v.msjeError == null}">
+        <div class="slds-spinner_container">
+          <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+            <span class="slds-assistive-text">Esperando respuesta del servidor</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+          </div>
+        </div>
+        <aura:set attribute = "else">
+            <aura:if isTrue="{!v.msjeError != null}">
+                <div class="slds-box slds-box_xx-small slds-theme_default"> 
+                    <div class="slds-page-header slds-page-header--object-home">
+                        <aura:if isTrue="{!v.sObjectName == 'Account'}" >
+                            <div class="slds-p-around_x-small slds-text-heading_small slds-text-color_error">
+                                Esta cuenta tiene un error y se ha creado una tarea con más detalles.
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!v.sObjectName == 'Contact'}" >
+                            <div class="slds-p-around_x-small slds-text-heading_small slds-text-color_error">
+                                Este contacto tiene un error y se ha creado una tarea con más detalles.
+                            </div>
+                        </aura:if>
+                        <div class="slds-p-around_x-small slds-text-heading_small slds-text-color_error">
+                            <strong>Error: </strong> {!v.msjeError} 
+                        </div>
+                    </div>
+                </div>
+            </aura:if>
+        
+            <div class="slds-box slds-box_xx-small slds-theme_default"> 
+                <div>
+                    <aura:if isTrue="{!v.sObjectName == 'Account' || v.sObjectName == 'Contact'}">
+                        <lightning:layout class="slds-page-header slds-page-header--object-home" horizontalAlign="center"> 
+                            <lightning:layoutItem padding="around-small"> 
+                                <lightning:icon iconName="utility:send" 
+                                                alternativeText="Reenviar" 
+                                /> 
+                            </lightning:layoutItem> 
+                            <lightning:layoutItem padding="around-small">  
+                                <table style="padding-left: 20px;">
+                                    <tr style="width:90%">
+                                        <td style="width:50%">
+                                            <div class="page-section page-header">
+                                                <h1 class="slds-text-heading--label">
+                                                    Reenviar {!v.sObjectName} a WebService
+                                                </h1>
+                                            </div>
+                                        </td>
+                                        <td style = "padding-left:150px">
+                                            <div>
+                                                <lightning:button class = "slds-button__icon_right" 
+                                                                variant="brand"
+                                                                label="Enviar" 
+                                                                title="Enviar" 
+                                                                onclick="{!c.reenviarCliente}" 
+                                                />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    <aura:set attribute="else">
+                        <lightning:layout class="slds-page-header slds-page-header--object-home" horizontalAlign='cemter'> 
+                            Este componente no está activo en {!v.sObjectName}.
+                        </lightning:layout>
+                    </aura:set>
+                </aura:if>
+                </div>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

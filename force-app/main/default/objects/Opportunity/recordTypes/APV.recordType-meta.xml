@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APV</fullName>
+    <active>true</active>
+    <businessProcess>APV</businessProcess>
+    <label>APV</label>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Asignado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerrado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mejor caso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oportunidades en curso</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Compañía existente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nueva compañía</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

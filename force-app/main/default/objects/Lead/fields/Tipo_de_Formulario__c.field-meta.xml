@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Formulario__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Formulario</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Prueba de Manejo</fullName>
+                <default>false</default>
+                <label>Prueba de Manejo</label>
+            </value>
+            <value>
+                <fullName>Cotizador Web</fullName>
+                <default>false</default>
+                <label>Cotizador Web</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

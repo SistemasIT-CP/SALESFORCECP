@@ -1,0 +1,179 @@
+<body>
+    <div>
+        <table width="100%" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td valign="top">
+                        <table cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <table width="600" cellspacing="0" cellpadding="0"
+                                            bgcolor="#ffffff" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left">
+                                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="530"
+                                                                        valign="top" align="center">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <table style="background-color: #044767;"
+                                                                                    width="600" cellspacing="0"
+                                                                                    cellpadding="0" bgcolor="#044767"
+                                                                                    align="center">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td align="left">
+                                                                                                <table width="100%"
+                                                                                                    cellspacing="0"
+                                                                                                    cellpadding="0">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td idth="530"
+                                                                                                                valign="top"
+                                                                                                                align="center">
+                                                                                                                <table
+                                                                                                                    width="100%"
+                                                                                                                    cellspacing="0"
+                                                                                                                    cellpadding="0">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <td align="center">
+                                                                                                                                <h1
+                                                                                                                                    style="color: #ffffff; line-height: 100%; font-size: 25px; padding-top: 10px">
+                                                                                                                                    Solicitud
+                                                                                                                                    de
+                                                                                                                                    cambio
+                                                                                                                                    en
+                                                                                                                                    cuenta
+                                                                                                                                </h1>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+
+                                                                                <tr>
+                                                                                    <td align="left">
+                                                                                        <p
+                                                                                            style="font-size: 16px; color: #777777; padding-top: 15px">
+                                                                                            El usuario {!Account.Requiere_aprobacion_Name__c}, está solicitando
+                                                                                            cambios para la siguiente
+                                                                                            cuenta:</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <table width="600" cellspacing="0" cellpadding="0"
+                                            bgcolor="#ffffff" align="center">
+                                            <tbody>
+
+                                                <tr>
+                                                    <td align="left">
+                                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="530"
+                                                                        valign="top" align="center">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left">
+                                                                                        <table style="width: 500px; padding-top:15px"
+                                                                                            cellspacing="0"
+                                                                                            cellpadding="0" border="0"
+                                                                                            align="left">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td style="padding: 0px 0px 0px 0"
+                                                                                                        width="40%"
+                                                                                                        align="left">
+                                                                                                        <p>Cliente</p>
+                                                                                                    </td>
+                                                                                                    <td style="padding: 0px 0"
+                                                                                                        width="60%"
+                                                                                                        align="left">
+                                                                                                        <p>{!Account.Name}</p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td style="padding: 0px 0px 0px 0"
+                                                                                                        width="40%"
+                                                                                                        align="left">
+                                                                                                        <p>Código</p>
+                                                                                                    </td>
+                                                                                                    <td style="padding: 0px 0"
+                                                                                                        width="60%"
+                                                                                                        align="left">
+                                                                                                        <p>{!Account.CodigoCliente__c}</p>
+                                                                                                    </td>
+
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height:35px">
+
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        <span style="background: #044767 none repeat scroll 0% 0%;">
+                                                            <a  href="{!Account.Link}"
+                                                                target="_blank"
+                                                                style="font-weight: normal; border-width: 15px 30px; background: #044767 none repeat scroll 0% 0%; 
+                                                                        border-color: #044767; color: #ffffff; font-size: 18px; padding: 10px; border-radius:5px;
+                                                                        text-decoration: none">
+                                                                Ir a la cuenta</a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

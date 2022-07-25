@@ -1,0 +1,28 @@
+<aura:component controller="EnviarInformeParaAprobacion"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" >
+
+    <aura:attribute name="recordId" type="Id"/>
+
+    <div  style = "background-color: #f3f2f2; border-radius: 5px;">
+        <lightning:layout horizontalAlign="center"> 
+            <lightning:layoutItem padding="around-small">  
+                <table>
+                    <tr>
+                        <td>
+                            <div>
+                                <lightning:button class = "slds-button__icon_right"
+                                                variant="brand"
+                                                label="Enviar a aprobación" 
+                                                title="Enviar" 
+                                                onclick="{!c.enviarParaAprobacion}" 
+                                />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+
+</aura:component>

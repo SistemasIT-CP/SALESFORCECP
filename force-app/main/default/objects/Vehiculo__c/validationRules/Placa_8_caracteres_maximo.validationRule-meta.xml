@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Placa_8_caracteres_maximo</fullName>
+    <active>true</active>
+    <description>La placa debe contener como mucho 8 caracteres</description>
+    <errorConditionFormula>LEN( Placa__c ) &gt; 8</errorConditionFormula>
+    <errorDisplayField>Placa__c</errorDisplayField>
+    <errorMessage>La placa debe contener 8 caracteres o menos</errorMessage>
+</ValidationRule>

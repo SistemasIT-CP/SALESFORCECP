@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compacto_sin_productos</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>N_mero_de_tel_fono__c</fields>
+    <fields>OwnerId</fields>
+    <fields>CloseDate</fields>
+    <fields>Inactivo__c</fields>
+    <label>Compacto sin productos</label>
+</CompactLayout>

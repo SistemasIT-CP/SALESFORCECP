@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notificación para oportunidades de altos riesgo a Oficial de cumplimiento</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Oportunidad riesgo alto</name>
+    <relatedEntityType>Opportunity</relatedEntityType>
+    <style>none</style>
+    <subject>Oportunidad a facturar con riesgo ALTO</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

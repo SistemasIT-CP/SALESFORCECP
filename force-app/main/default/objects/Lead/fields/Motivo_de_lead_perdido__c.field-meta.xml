@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_de_lead_perdido__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo de lead perdido</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cliente compro otra marca (externa)</fullName>
+                <default>false</default>
+                <label>Cliente compro otra marca (externa)</label>
+            </value>
+            <value>
+                <fullName>Cliente cotiza otro modelo de GCP</fullName>
+                <default>false</default>
+                <label>Cliente cotiza otro modelo de GCP</label>
+            </value>
+            <value>
+                <fullName>Cliente cotizo por otro servicio/producto de CP</fullName>
+                <default>false</default>
+                <label>Cliente cotizo por otro servicio/producto de CP</label>
+            </value>
+            <value>
+                <fullName>Cliente no contesto a los intentos de contacto</fullName>
+                <default>false</default>
+                <label>Cliente no contesto a los intentos de contacto</label>
+            </value>
+            <value>
+                <fullName>Cliente no cumple requisitos de crédito</fullName>
+                <default>false</default>
+                <label>Cliente no cumple requisitos de crédito</label>
+            </value>
+            <value>
+                <fullName>Cliente pospuso la compra</fullName>
+                <default>false</default>
+                <label>Cliente pospuso la compra</label>
+            </value>
+            <value>
+                <fullName>Cliente sólo queria informacion (precio, financiamiento, características)</fullName>
+                <default>false</default>
+                <label>Cliente sólo queria informacion (precio, financiamiento, características)</label>
+            </value>
+            <value>
+                <fullName>Cliente ya está siendo atendido por un agente o vendedor</fullName>
+                <default>false</default>
+                <label>Cliente ya está siendo atendido por un agente o vendedor</label>
+            </value>
+            <value>
+                <fullName>Falta de disponibilidad de inventario</fullName>
+                <default>false</default>
+                <label>Falta de disponibilidad de inventario</label>
+            </value>
+            <value>
+                <fullName>Prospecto duplicado</fullName>
+                <default>false</default>
+                <label>Prospecto duplicado</label>
+            </value>
+            <value>
+                <fullName>Cliente solo queria avalúo</fullName>
+                <default>false</default>
+                <label>Cliente solo queria avalúo</label>
+            </value>
+            <value>
+                <fullName>Precio/Oferta del producto</fullName>
+                <default>false</default>
+                <label>Precio/Oferta del producto</label>
+            </value>
+            <value>
+                <fullName>Cliente compró en AN</fullName>
+                <default>false</default>
+                <label>Cliente compró en AN</label>
+            </value>
+            <value>
+                <fullName>Cliente ilocalizable</fullName>
+                <default>false</default>
+                <label>Cliente ilocalizable</label>
+            </value>
+            <value>
+                <fullName>Cliente no esta interesado</fullName>
+                <default>false</default>
+                <label>Cliente no esta interesado</label>
+            </value>
+            <value>
+                <fullName>Cliente desea vender su vehiculo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cliente desea vender su vehiculo</label>
+            </value>
+            <value>
+                <fullName>Cliente quiere vender su vehículo (avalúo)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cliente quiere vender su vehículo (avalúo)</label>
+            </value>
+            <value>
+                <fullName>Lead duplicado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead duplicado</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente compro otra marca (externa)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente cotiza otro modelo de GCP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente cotizo por otro servicio/producto de CP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente no contesto a los intentos de contacto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente no cumple requisitos de crédito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente pospuso la compra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente sólo queria informacion (precio, financiamiento, características)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente ya está siendo atendido por un agente o vendedor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Falta de disponibilidad de inventario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Prospecto duplicado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente solo queria avalúo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Precio/Oferta del producto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente compró en AN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente ilocalizable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead perdido</controllingFieldValue>
+            <valueName>Cliente no esta interesado</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

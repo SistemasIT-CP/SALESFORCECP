@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Recibos__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Recibos</label>
+    <summarizedField>Recibos_de_la_negociaci_n__c.Monto_aplicado_a_la_negociaci_n__c</summarizedField>
+    <summaryForeignKey>Recibos_de_la_negociaci_n__c.Informe_de_Negociaci_n__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

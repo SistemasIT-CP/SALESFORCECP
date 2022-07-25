@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cerrar_etapa_Conctat_Center</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+(RecordTypeName__c == &quot;Contact Center&quot;) ,
+ISCHANGED(StageName),
+ISPICKVAL(StageName, &quot;Cerrada Ganada&quot;),
+
+
+OR (
+ISBLANK(TEXT( Cu_ndo_piensa_realizar_la_compra__c )),
+ ISBLANK(Forma_de_Pago_Multiple__c) ,
+ISBLANK(TEXT( Desea_ser_contactado_por_un_vendedor__c )),
+ISBLANK(TEXT( Desea_realizar_intercambio__c  ))
+
+
+
+)
+
+)</errorConditionFormula>
+    <errorMessage>No puede ganar la etapa sin completar los campos clave de la etapa Contacto Exitoso</errorMessage>
+</ValidationRule>

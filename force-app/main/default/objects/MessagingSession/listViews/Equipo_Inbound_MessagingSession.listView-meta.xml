@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipo_Inbound_MessagingSession</fullName>
+    <columns>Name</columns>
+    <columns>Case</columns>
+    <columns>MessagingChannel</columns>
+    <columns>MessagingEndUser</columns>
+    <columns>Owner</columns>
+    <columns>Status</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>EndUserContact</columns>
+    <columns>EndUserAccount</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MessagingChannel</field>
+        <operation>equals</operation>
+        <value>Repuestos - Casa Pellas,AutoGo,Talleres Pellas,whatsapp:+50587001111,whatsapp:50589400040</value>
+    </filters>
+    <filters>
+        <field>Status</field>
+        <operation>equals</operation>
+        <value>0,2</value>
+    </filters>
+    <label>Equipo Inbound</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

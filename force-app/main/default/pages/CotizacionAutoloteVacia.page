@@ -1,0 +1,174 @@
+<apex:page controller="CotizacionAutoloteVacia" docType="html-5.0" renderAs="PDf" showHeader="false" sidebar="false" standardStylesheets="false"
+    applyBodyTag="false" applyHtmlTag="false">
+    <table border="0" width="100%">
+        <tr>
+            <td valign="top" rowspan="4" width="40%">
+                <apex:image style="float:left;" url="{!$Resource.CotizacionBlancoAutolote}" width="250" height="185" />
+            </td>
+            <td colspan="3" width="55%" align="center">
+                <apex:image style="float:right;" url="{!$Resource.Logo_CasaPellas}" width="250" />
+            </td>
+        </tr>
+        <tr width="15%" style="margin-bottom: 10px;">
+            <td colspan="3" align="right" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                <b>RUC:</b> J-03-1-000000237-1
+                <br/> De Enitel 1 c. al Sur
+                <br/> Tel.: 27724100
+                <br/>
+                <br/>
+
+                <b>Forma de pago:</b> Contado o con el banco de su preferencia.
+                <br/>
+            </td>
+        </tr>
+        <tr width="15%">
+            <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr width="15%">
+            <td bgColor="1c3e94" height="10px" width="25%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff">
+                <b>Cotización No.:</b>
+                <br/> {!numCotizacion}
+            </td>
+            <td bgColor="f0eded" width="20%" align="center" style="max-height: 10px; font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                <b>Fecha Creada:</b>
+                <br/> {!fechaCreacion}
+            </td>
+            <td bgColor="f0eded" width="15%" align="center" style="max-height: 10px; font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                <b>Válida por:</b>
+                <br/> {!validaPor}
+            </td>
+        </tr>
+    </table>
+    <table border="0" width="100%" cellspacing="0" style="margin-top: 15px;">
+        <tr>
+            <td rowspan="3" bgColor="1c3e94" width="35%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding:5px; padding-left:10px;">
+                <b>ESTIMADO (A) CLIENTE:</b>
+                <br/> {!cliente.Name}
+                <br/>
+                <b>ATENCIÓN A:</b>
+                <br/>
+                <span style="text-transform: uppercase;">{!nombreResponsable}</span>
+            </td>
+            <td rowspan="3" valign="top" bgColor="f0eded" width="30%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding:5px;">
+                <b>Dirección:</b>
+                <br/> {!cliente.Direccion__c}
+            </td>
+            <td bgColor="f0eded" width="10%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding:5px;">
+                <b>Vendedor:</b>
+            </td>
+            <td bgColor="f0eded" width="25%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding:5px;">
+                {!vendedor.Name}
+            </td>
+        </tr>
+        <tr>
+            <td bgColor="f0eded" width="10%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding:5px;">
+                <b>Correo:</b>
+            </td>
+            <td bgColor="f0eded" width="25%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                {!vendedor.Email}
+            </td>
+        </tr>
+        <tr>
+            <td bgColor="f0eded" width="10%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding:5px;">
+                <b>Tel:</b>
+                <br/>
+            </td>
+            <td bgColor="f0eded" width="25%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                {!vendedor.MobilePhone}
+                <br/>
+            </td>
+        </tr>
+
+        <tr style="margin: 10px 0;">
+            <td colspan="4" style="font-style:normal;font-weight:normal;font-size:9pt;font-family: Arial, Helvetica, sans-serif;color:#000000;padding-top:5px;padding-bottom:5px; padding-left:10px">
+                <b>NOS COMPLACE COTIZARLE:</b>
+            </td>
+        </tr>
+    </table>
+
+    <table border="0" width="100%" cellspacing="0" style="margin: 5px 0px 0px 0px;">
+        <tr>
+            <td bgColor="303030" width="40%" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:10px;padding-top:5px;padding-bottom:5px; border-right: 3px solid white; border-bottom: 3px solid white;">
+                <b>DESCRIPCIÓN</b>
+            </td>
+            <td bgColor="303030" width="15%" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; border-right: 3px solid white; border-bottom: 3px solid white;">
+                <b>CANTIDAD:</b>
+            </td>
+            <td bgColor="303030" width="30%" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; border-right: 3px solid white; border-bottom: 3px solid white;">
+                <b>PRECIO UNITARIO:</b>
+            </td>
+            <td bgColor="303030" width="15%" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; border-bottom: 3px solid white;">
+                <b>PRECIO:</b>
+            </td>
+        </tr>
+        <tr>
+            <td bgColor="f0eded" width="40%" align="left" style="text-transform: uppercase; font-style:normal;font-weight:normal;font-size:7pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-top:5px; padding-left:10px; padding-bottom:5px;">
+                <b>{!vehiculo.descripcion}</b>
+            </td>
+            <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:7pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-top:5px; padding-bottom:5px;">
+                <b>{!vehiculo.cantidad}</b>
+            </td>
+            <td bgColor="f0eded" width="30%" align="center" style="font-style:normal;font-weight:normal;font-size:7pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-top:5px; padding-bottom:5px;">
+                <b>{!vehiculo.precioUnitario}</b>
+            </td>
+            <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:7pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-top:5px; padding-bottom:5px;">
+                <b>{!vehiculo.precioTotal}</b>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" cellspacing="0" style="margin-top: 10px;">
+        <tr>
+            <td style="width: 50%; height:100%">
+                <table width="100%">
+                    <tr>
+                        <td bgColor="303030" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:10px;padding-top:5px;padding-bottom:5px;">
+                            <b>NOTAS ADICIONALES</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgColor="f0eded" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; height:72px;">
+                            {!notasAdicionales}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 50%">
+                <table width="100%">
+                    <tr>
+                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                            <b>TOTAL</b>
+                        </td>
+                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                            {!vehiculo.precioTotal}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px;">
+                            <b>DESCUENTO</b>
+                        </td>
+                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                            {!vehiculo.descuento}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                            <b>I.V.A</b>
+                        </td>
+                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                            {!vehiculo.iva}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                            <b>PRECIO ESPECIAL</b>
+                        </td>
+                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                            {!vehiculo.precioEspecial}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</apex:page>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B_squeda_Usuarios_de_Mensajer_a</fullName>
+    <columns>Name</columns>
+    <columns>MessagingChannel</columns>
+    <columns>MessageType</columns>
+    <columns>MessagingPlatformKey</columns>
+    <columns>Locale</columns>
+    <columns>MessagingConsentStatus</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MessagingPlatformKey</field>
+        <operation>equals</operation>
+        <value>whatsapp:+50588512106</value>
+    </filters>
+    <label>Búsqueda Usuarios de Mensajería</label>
+</ListView>

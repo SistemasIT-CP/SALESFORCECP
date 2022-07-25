@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Auditorias_Camiones</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Gerencia Camoines vea sus auditorias</description>
+        <label>Auditorias Camiones</label>
+        <sharedTo>
+            <group>Gerencia_Camiones</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Name_concatenado__c</field>
+            <operation>contains</operation>
+            <value>HINO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name_concatenado__c</field>
+            <operation>contains</operation>
+            <value>JMC</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Auditorias_KIA</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Gerencia KIA pueda ver sus auditorias</description>
+        <label>Auditorias KIA</label>
+        <sharedTo>
+            <group>Gerencia_KIA</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name_concatenado__c</field>
+            <operation>contains</operation>
+            <value>KIA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Auditorias_Suzuki</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Para que geerncia Suzuki pueda ver toas sus auditorias</description>
+        <label>Auditorias Suzuki</label>
+        <sharedTo>
+            <group>Gerencia_Suzuki</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name_concatenado__c</field>
+            <operation>contains</operation>
+            <value>SUZUKI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Auditorias_TOYOTA</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Gerencia toyota vea las auditoras</description>
+        <label>Auditorias TOYOTA</label>
+        <sharedTo>
+            <group>Gerencia_TOYOTA</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name_concatenado__c</field>
+            <operation>contains</operation>
+            <value>TOYOTA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

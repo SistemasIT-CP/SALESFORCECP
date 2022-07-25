@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Gerencia_Camiones</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para que gerencia camiones pueda ver ventas de HINO y JMC</description>
+        <label>Gerencia Camiones</label>
+        <sharedTo>
+            <group>Gerencia_Camiones</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>HINO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>JMC</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gerencia_Genesis</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para que Gerencia Genesis pueda gestionar sus planes de venta</description>
+        <label>Gerencia Genesis</label>
+        <sharedTo>
+            <group>Gerencia_Genesis</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>GENESIS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gerencia_HERO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Gerencia HERO pueda gestionar sus planes de venta</description>
+        <label>Gerencia HERO</label>
+        <sharedTo>
+            <group>Gerencia_HERO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>HERO</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gerencia_KIA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para que gerencia KIA pueda gestionar planes de venta KIA</description>
+        <label>Gerencia KIA</label>
+        <sharedTo>
+            <group>Gerencia_KIA</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>KIA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gerencia_Suzuki</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Gerencia Suzuki pueda gestionar sus planes de venta</description>
+        <label>Gerencia Suzuki</label>
+        <sharedTo>
+            <group>Gerencia_Suzuki</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>SUZUKI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gerencia_Yamaha</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para que gerencia Yamaha pueda gestionar sus planes de venta</description>
+        <label>Gerencia Yamaha</label>
+        <sharedTo>
+            <group>Gerencia_YAMAHA</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>YAMAHA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Plan_de_Ventas_Altamira</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Plan de ventas vendedores Altamira</description>
+        <label>Plan de Ventas Altamira</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Altamira</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>Altamira</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Plan_de_Ventas_Chinandega</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Pkan de ventas para vendedores de Chinandega</description>
+        <label>Plan de Ventas Chinandega</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Chinandega</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>Chinandega</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Plan_de_Ventas_Esteli</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Plan de ventas vendedores estelí</description>
+        <label>Plan de Ventas Esteli</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Estel</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>Estelí,Juigalpa,León,Matagalpa,Puerto Cabezas,Altamira</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Plan_de_Ventas_Juigalpa</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Plan de ventas para vendedores de Juigalpa</description>
+        <label>Plan de Ventas Juigalpa</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Juigalpa</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>Juigalpa</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Plan_de_Ventas_Leon</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Plan mensual de ventas para la scursal de León</description>
+        <label>Plan de Ventas Leon</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Le_n</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>León</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Plan_de_Ventas_Matagalpa</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Jefe de Matagalpa pueda ver los planes de venta de su sucursal</description>
+        <label>Plan de Ventas Matagalpa</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Matagalpa</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>Matagalpa</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Plan_de_Ventas_Puerto_Cabezas</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Plan de ventas vendedores Puerto Cabezas</description>
+        <label>Plan de Ventas Puerto Cabezas</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Puerto_Cabezas</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>Puerto Cabezas</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Ver_Plan_TOYOTA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para que grupo de Gerencia TOYOTA pueda ver los planes de venta TOYOTA</description>
+        <label>Ver Plan TOYOTA</label>
+        <sharedTo>
+            <group>Gerencia_TOYOTA</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>TOYOTA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>KIA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

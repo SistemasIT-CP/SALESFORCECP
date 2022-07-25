@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Se actualiza el Tipo de Registo de la Oportunidad</description>
+        <name>Actualiza_Oportunidad</name>
+        <label>Actualiza Oportunidad</label>
+        <locationX>192</locationX>
+        <locationY>61</locationY>
+        <assignmentItems>
+            <assignToReference>oportunidad.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ValoresAgregados</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Duplicar_Registro</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Establece el Id. de oportunidad de la variable de bucle y el Id. de la nueva oportunidad y su precio total como nulo</description>
+        <name>Actualiza_Productos</name>
+        <label>Actualiza Productos</label>
+        <locationX>716</locationX>
+        <locationY>64</locationY>
+        <assignmentItems>
+            <assignToReference>opProducto_loop.OpportunityId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>oportunidad.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>opProducto_loop.TotalPrice</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>Agregar_a_nueva_coleccion</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Agregar_a_nueva_coleccion</name>
+        <label>Agregar a nueva coleccion</label>
+        <locationX>600</locationX>
+        <locationY>260</locationY>
+        <assignmentItems>
+            <assignToReference>opProducto_nuevo</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>opProducto_loop</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterar_en_Productos</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <name>ValorAgregado</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0123k000001lR6NAAU</stringValue>
+        </value>
+    </constants>
+    <description>Cuando una Oportunidad llega a una etapa, se clona el registro y actualiza el Tipo de Registro a &quot;Valores Agregados&quot;.</description>
+    <interviewLabel>Oportunidad Valores Agregados {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Oportunidad Valores AgregadosIII</label>
+    <loops>
+        <description>Itera en la colección de Productos.</description>
+        <name>Iterar_en_Productos</name>
+        <label>Iterar en Productos</label>
+        <locationX>491</locationX>
+        <locationY>61</locationY>
+        <assignNextValueToReference>opProducto_loop</assignNextValueToReference>
+        <collectionReference>opProductos_Original</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Actualiza_Productos</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Duplicar_Productos</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Duplicar_Productos</name>
+        <label>Duplicar Productos</label>
+        <locationX>401</locationX>
+        <locationY>281</locationY>
+        <inputReference>opProducto_nuevo</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <description>Se duplica el registro de la Oportunidad actualizada.</description>
+        <name>Duplicar_Registro</name>
+        <label>Duplicar Registro</label>
+        <locationX>330</locationX>
+        <locationY>61</locationY>
+        <connector>
+            <targetReference>Iterar_en_Productos</targetReference>
+        </connector>
+        <inputReference>oportunidad</inputReference>
+    </recordCreates>
+    <start>
+        <locationX>64</locationX>
+        <locationY>61</locationY>
+        <connector>
+            <targetReference>Actualiza_Oportunidad</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <description>Aquí se almacena la Oportunidad.</description>
+        <name>oportunidad</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>opProducto_loop</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <name>opProducto_nuevo</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <description>Se almacenan los registros de los productos de la Oportunidad.</description>
+        <name>opProductos_Original</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <name>ValAgr</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Valores Agregados</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>ValoresAgregados</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>0123k000001lR6NAAU</stringValue>
+        </value>
+    </variables>
+</Flow>

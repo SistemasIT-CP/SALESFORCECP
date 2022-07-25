@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipo_Autos_Kia_MessagingSession</fullName>
+    <columns>Name</columns>
+    <columns>MessagingChannel</columns>
+    <columns>MessagingEndUser</columns>
+    <columns>Owner</columns>
+    <columns>Status</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Case</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ChannelName</field>
+        <operation>equals</operation>
+        <value>KIA Nicaragua,whatsapp:+50589240333</value>
+    </filters>
+    <label>Equipo Autos Kia</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

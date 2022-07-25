@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inicio_de_gestion__c</fullName>
+    <description>Campo de solo lectura para medir el tiempo de espera para la atencion. Se completa automaticamente cuando el caso pasa de estado nuevo a estado En proceso.</description>
+    <externalId>false</externalId>
+    <label>Inicio de gestión</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

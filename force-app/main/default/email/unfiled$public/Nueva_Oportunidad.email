@@ -1,0 +1,12 @@
+***NOTIFICACIÓN DE CREACIÓN DE OPORTUNIDAD*** 
+Hola {!Opportunity.OwnerFullName}
+¡ Una nueva oportunidad ha sido creada !
+
+Creada por: {!Opportunity.CreatedBy}
+Tipo de Registro: {!Opportunity.RecordType}
+Fecha de Creación: {!Opportunity.CreatedDate}
+Fecha de Cierre: {!Opportunity.CloseDate}
+Nombre de la Oportunidad: {!Opportunity.Name}.
+Nombre del cliente: {!Account.Name}
+
+Ir a Oportunidad {!Opportunity.Link}

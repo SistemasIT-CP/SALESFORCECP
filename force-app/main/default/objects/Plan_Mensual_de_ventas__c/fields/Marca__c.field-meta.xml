@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Marca que vende</description>
+    <externalId>false</externalId>
+    <label>Marca</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Catalogo_UDC__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Marcas</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Catalogo_UDC__c</referenceTo>
+    <relationshipLabel>Plan Mensual de ventas</relationshipLabel>
+    <relationshipName>Plan_Mensual_de_ventas</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

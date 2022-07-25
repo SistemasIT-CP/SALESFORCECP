@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <rules>
+        <fullName>Alerta 1 meses posible compra</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Posible_compra_futura__c</field>
+            <operation>equals</operation>
+            <value>1 mes</value>
+        </criteriaItems>
+        <description>Genera una alerta de contacto al cliente, luego de que una oportunidad cerrara con recontacto</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Contactar_al_cliente3</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Alerta 2 meses posible compra</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Posible_compra_futura__c</field>
+            <operation>equals</operation>
+            <value>2 meses</value>
+        </criteriaItems>
+        <description>Genera una alerta de contacto al cliente, luego de que una oportunidad cerrara con recontacto</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Contactar_al_cliente2</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>60</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Alerta 3 meses posible compra</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Posible_compra_futura__c</field>
+            <operation>equals</operation>
+            <value>3 meses</value>
+        </criteriaItems>
+        <description>Genera una alerta de contacto al cliente, luego de que una oportunidad cerrara con recontacto</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Contactar_al_cliente</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>90</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Bancario en espera</fullName>
+        <actions>
+            <name>Bancario_en_espera</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Financiamiento Bancario</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Esperando Faturación</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Cambia tipo de registro Contact Center</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contact Center Creación</value>
+        </criteriaItems>
+        <description>Para el cambio a la vista de detalles del tipo de registro Contact Center</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Genera contacto para recopilar información Interno</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Financiamiento Interno</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Recopilar Información</value>
+        </criteriaItems>
+        <description>Tareas cada dos días para recopilar información del cliente en financiamiento interno</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Contactar_al_cliente_interno</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Contactar_al_cliente_2</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>4</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Interno en espera</fullName>
+        <actions>
+            <name>Interno_en_Espera</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Financiamiento Interno</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Esperando Faturación</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Negociación Valores Agregados</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Valores Agregados</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Negociación</value>
+        </criteriaItems>
+        <description>Se generan tareas cada dos días si oportunidad se encuentra en negociación.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Seguimiento_a_oportunidad</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Seguimiento_a_oportunidad</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>4</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Seguimiento_a_oportunidad</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>6</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>PEP</fullName>
+        <actions>
+            <name>PEP</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>TODAY() &lt;=  Account.Vencimiento_PEP__c</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Seleccionando Mod Detenido HINO</fullName>
+        <active>false</active>
+        <formula>AND ( RecordTypeName__c = &apos;Principal&apos;, ISPICKVAL( StageName , &apos;Seleccionando Modelo&apos;),  CONTAINS(Marca_UDC__r.description1__c, &apos;HINO&apos;)  )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Seleccionando Mod Detenido KIA</fullName>
+        <active>false</active>
+        <formula>AND ( RecordTypeName__c = &apos;Principal&apos;, ISPICKVAL( StageName , &apos;Seleccionando Modelo&apos;),  CONTAINS(Marca_UDC__r.description1__c, &apos;KIA&apos;)  )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Seleccionando Mod Detenido Suzuki</fullName>
+        <active>false</active>
+        <formula>AND ( RecordTypeName__c = &apos;Principal&apos;, ISPICKVAL( StageName , &apos;Seleccionando Modelo&apos;),  CONTAINS(Marca_UDC__r.description1__c, &apos;SUZUKI&apos;)  )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Seleccionando Mod Detenido Toyota</fullName>
+        <active>false</active>
+        <formula>AND ( RecordTypeName__c = &apos;Principal&apos;, ISPICKVAL( StageName , &apos;Seleccionando Modelo&apos;),  CONTAINS(Marca_UDC__r.description1__c, &apos;TOYOTA&apos;)  )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>Contactar_al_cliente</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Favor contactar al cliente que indicó posibilidad de adquirir vehículo en 3 meses</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Contactar al cliente</subject>
+    </tasks>
+    <tasks>
+        <fullName>Contactar_al_cliente2</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Favor contactar al cliente que indicó posibilidad de adquirir vehículo en 2 meses</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Contactar al cliente</subject>
+    </tasks>
+    <tasks>
+        <fullName>Contactar_al_cliente3</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Favor contactar al cliente que indicó posibilidad de adquirir vehículo en 1 mes</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Alta</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Contactar al cliente</subject>
+    </tasks>
+    <tasks>
+        <fullName>Contactar_al_cliente_2</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Seguimiento: Recopilar información del cliente</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Contactar al cliente 2</subject>
+    </tasks>
+    <tasks>
+        <fullName>Contactar_al_cliente_interno</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Seguimiento: Recopilar información del cliente</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Contactar al cliente</subject>
+    </tasks>
+    <tasks>
+        <fullName>Seguimiento_a_oportunidad</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Dar seguimiento a la oportunidad de valores agregados</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Seguimiento a oportunidad</subject>
+    </tasks>
+</Workflow>

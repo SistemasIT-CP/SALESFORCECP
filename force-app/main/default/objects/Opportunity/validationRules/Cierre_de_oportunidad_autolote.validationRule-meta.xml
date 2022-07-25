@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cierre_de_oportunidad_autolote</fullName>
+    <active>true</active>
+    <description>Solo los administradores y supervisores pueden cerrar ganado un avalúo.</description>
+    <errorConditionFormula>AND(
+   RecordType.DeveloperName = &quot;Avaluo&quot;,
+   ISPICKVAL(StageName, &quot;Cerrada ganada&quot;),
+   AND(
+    !CONTAINS($Profile.Name, &quot;Admin&quot;),
+    $Profile.Name &lt;&gt; &quot;Supervisor de compra AutoLote&quot;
+   )
+)</errorConditionFormula>
+    <errorMessage>Solo los administradores y supervisores pueden cerrar ganado un avalúo.</errorMessage>
+</ValidationRule>

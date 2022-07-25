@@ -1,0 +1,80 @@
+<aura:component controller="OportunidadCerradaController"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                >
+
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="caseSimpleRecord" type="Object" />
+    <aura:attribute name="recordLoadError" type="String" />
+    <aura:attribute name="razonPerdida" type="Boolean" default="false" />
+    <aura:attribute name="razonesList" type="List" default="[]"/>
+    <aura:attribute name="detallesList" type="List" default="[]"/>
+    <aura:attribute name="marcasList" type="List" default="[]"/>
+    <aura:attribute name="razonElegida" type="String"/>
+    <aura:attribute name="detalleElegida" type="String"/>
+    <aura:attribute name="marcaElegida" type="String"/>
+    <aura:attribute name="detalleElegidaDisabled" type="Boolean" default="true" />
+    <aura:attribute name="marcaElegidaDisabled" type="Boolean" default="true" />
+    <aura:attribute name="detalleElegidaRequired" type="Boolean" default="false" />
+    <aura:attribute name="marcaElegidaRequired" type="Boolean" default="false" />
+
+    
+    <force:recordData 
+        aura:id="recordLoader"
+        recordId="{!v.recordId}"
+        fields="StageName" 
+        targetFields="{! v.caseSimpleRecord }"
+        targetError="{! v.recordLoadError }"
+        recordUpdated="{! c.changeStage }"
+    />
+
+    <aura:if isTrue="{!v.razonPerdida}">
+      <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+        <div class="slds-modal__container">
+          <header class="slds-modal__header">
+            <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Elegir razón de pérdida</h2>
+          </header>
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                  <lightning:combobox name="perdida" 
+                        aura:id="razonCombobox"
+                        required="true" 
+                        label="Razón de pérdida" 
+                        value="{!v.razonElegida}" 
+                        placeholder="" 
+                        dropdownAlignment="auto" 
+                        options="{!v.razonesList}"
+                        onchange="{!c.cambiarRazon}"
+                        />
+
+                  <lightning:combobox name="detalle" 
+                        aura:id="detalleCombobox"
+                        required="{!v.detalleElegidaRequired}" 
+                        disabled="{!v.detalleElegidaDisabled}" 
+                        label="Detalle de pérdida" 
+                        value="{!v.detalleElegida}" 
+                        placeholder="" 
+                        dropdownAlignment="auto" 
+                        options="{!v.detallesList}"
+                        onchange="{!c.cambiarDetalle}"
+                        />
+
+                  <lightning:combobox name="marca" 
+                        aura:id="marcaCombobox"
+                        required="{!v.marcaElegidaRequired}" 
+                        disabled="{!v.marcaElegidaDisabled}" 
+                        label="Marca detalle de pérdida" 
+                        value="{!v.marcaElegida}" 
+                        placeholder="" 
+                        dropdownAlignment="auto" 
+                        options="{!v.marcasList}"
+                        onchange=""
+                        />
+          </div>
+          <footer class="slds-modal__footer">
+            <lightning:button variant="brand" label="Guardar" title="Guardar" onclick="{! c.razonPerdida }" />
+          </footer>
+        </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aprobacion_autolote_sin_vehiculos</fullName>
+    <active>true</active>
+    <description>Para pasar a Aprobación Autolote debe haber vehículos</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;Avaluo&quot;,
+ ISCHANGED(StageName),
+ ISPICKVAL(StageName, &quot;Aprobacion Autolote&quot;),
+ Cantidad_de_vehiculos__c &lt; 1
+)</errorConditionFormula>
+    <errorMessage>Para pasar a Aprobación Autolote debe haber vehículos</errorMessage>
+</ValidationRule>

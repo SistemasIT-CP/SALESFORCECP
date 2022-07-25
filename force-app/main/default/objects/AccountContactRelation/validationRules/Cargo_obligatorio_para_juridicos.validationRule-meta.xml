@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cargo_obligatorio_para_juridicos</fullName>
+    <active>false</active>
+    <description>Si la cuenta es Juridica el campo &quot;Cargo&quot; será obligatorio</description>
+    <errorConditionFormula>AND( Account.RecordType.DeveloperName &lt;&gt; &apos;PersonAccount&apos;,
+ISBLANK(Cargo__c)
+)</errorConditionFormula>
+    <errorDisplayField>Cargo__c</errorDisplayField>
+    <errorMessage>El campo Cargo debe estar completo para cuentas jurídicas</errorMessage>
+</ValidationRule>

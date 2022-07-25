@@ -1,0 +1,3541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubClasificacion__c</fullName>
+    <externalId>false</externalId>
+    <label>SubClasificación</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Clasificacion__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Natural</fullName>
+                <default>false</default>
+                <label>Natural</label>
+            </value>
+            <value>
+                <fullName>Jurídico</fullName>
+                <default>false</default>
+                <label>Jurídico</label>
+            </value>
+            <value>
+                <fullName>PEP</fullName>
+                <default>false</default>
+                <label>PEP</label>
+            </value>
+            <value>
+                <fullName>Empresa Estatal</fullName>
+                <default>false</default>
+                <label>Empresa Estatal</label>
+            </value>
+            <value>
+                <fullName>Empresa Privada</fullName>
+                <default>false</default>
+                <label>Empresa Privada</label>
+            </value>
+            <value>
+                <fullName>OSFL</fullName>
+                <default>false</default>
+                <label>OSFL</label>
+            </value>
+            <value>
+                <fullName>Sujeto Obligado</fullName>
+                <default>false</default>
+                <label>Sujeto Obligado</label>
+            </value>
+            <value>
+                <fullName>Cédula de identidad</fullName>
+                <default>false</default>
+                <label>Cédula de identidad</label>
+            </value>
+            <value>
+                <fullName>Cédula de residente</fullName>
+                <default>false</default>
+                <label>Cédula de residente</label>
+            </value>
+            <value>
+                <fullName>Pasaporte</fullName>
+                <default>false</default>
+                <label>Pasaporte</label>
+            </value>
+            <value>
+                <fullName>RUC</fullName>
+                <default>false</default>
+                <label>RUC</label>
+            </value>
+            <value>
+                <fullName>D.U.I</fullName>
+                <default>false</default>
+                <label>D.U.I</label>
+            </value>
+            <value>
+                <fullName>Abogado</fullName>
+                <default>false</default>
+                <label>Abogado</label>
+            </value>
+            <value>
+                <fullName>Administrador de Empresas</fullName>
+                <default>false</default>
+                <label>Administrador de Empresas</label>
+            </value>
+            <value>
+                <fullName>Agricultor / Ganadero</fullName>
+                <default>false</default>
+                <label>Agricultor / Ganadero</label>
+            </value>
+            <value>
+                <fullName>Ama De Casa</fullName>
+                <default>false</default>
+                <label>Ama De Casa</label>
+            </value>
+            <value>
+                <fullName>Arquitecto</fullName>
+                <default>false</default>
+                <label>Arquitecto</label>
+            </value>
+            <value>
+                <fullName>Biólogo</fullName>
+                <default>false</default>
+                <label>Biólogo</label>
+            </value>
+            <value>
+                <fullName>Chef</fullName>
+                <default>false</default>
+                <label>Chef</label>
+            </value>
+            <value>
+                <fullName>Comerciante</fullName>
+                <default>false</default>
+                <label>Comerciante</label>
+            </value>
+            <value>
+                <fullName>Comunicador</fullName>
+                <default>false</default>
+                <label>Comunicador</label>
+            </value>
+            <value>
+                <fullName>Contador</fullName>
+                <default>false</default>
+                <label>Contador</label>
+            </value>
+            <value>
+                <fullName>Dentista</fullName>
+                <default>false</default>
+                <label>Dentista</label>
+            </value>
+            <value>
+                <fullName>Diplomático / Estadista</fullName>
+                <default>false</default>
+                <label>Diplomático / Estadista</label>
+            </value>
+            <value>
+                <fullName>Diseñador</fullName>
+                <default>false</default>
+                <label>Diseñador</label>
+            </value>
+            <value>
+                <fullName>Doctor</fullName>
+                <default>false</default>
+                <label>Doctor</label>
+            </value>
+            <value>
+                <fullName>Economista</fullName>
+                <default>false</default>
+                <label>Economista</label>
+            </value>
+            <value>
+                <fullName>Enfermero</fullName>
+                <default>false</default>
+                <label>Enfermero</label>
+            </value>
+            <value>
+                <fullName>Farmaceutico</fullName>
+                <default>false</default>
+                <label>Farmaceutico</label>
+            </value>
+            <value>
+                <fullName>Fotógrafo</fullName>
+                <default>false</default>
+                <label>Fotógrafo</label>
+            </value>
+            <value>
+                <fullName>Historiador</fullName>
+                <default>false</default>
+                <label>Historiador</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Agrónomo</fullName>
+                <default>false</default>
+                <label>Ingeniero Agrónomo</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Civil</fullName>
+                <default>false</default>
+                <label>Ingeniero Civil</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Eléctrico</fullName>
+                <default>false</default>
+                <label>Ingeniero Eléctrico</label>
+            </value>
+            <value>
+                <fullName>Ingeniero en Computación</fullName>
+                <default>false</default>
+                <label>Ingeniero en Computación</label>
+            </value>
+            <value>
+                <fullName>Ingeniero en Sistemas</fullName>
+                <default>false</default>
+                <label>Ingeniero en Sistemas</label>
+            </value>
+            <value>
+                <fullName>Ingeniero en Telecomunicaciones</fullName>
+                <default>false</default>
+                <label>Ingeniero en Telecomunicaciones</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Industrial</fullName>
+                <default>false</default>
+                <label>Ingeniero Industrial</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Zootenista</fullName>
+                <default>false</default>
+                <label>Ingeniero Zootenista</label>
+            </value>
+            <value>
+                <fullName>Licenciado</fullName>
+                <default>false</default>
+                <label>Licenciado</label>
+            </value>
+            <value>
+                <fullName>Maestro (Educador)</fullName>
+                <default>false</default>
+                <label>Maestro (Educador)</label>
+            </value>
+            <value>
+                <fullName>Mecánico</fullName>
+                <default>false</default>
+                <label>Mecánico</label>
+            </value>
+            <value>
+                <fullName>Mercadotecnista</fullName>
+                <default>false</default>
+                <label>Mercadotecnista</label>
+            </value>
+            <value>
+                <fullName>Ninguna Profesión</fullName>
+                <default>false</default>
+                <label>Ninguna Profesión</label>
+            </value>
+            <value>
+                <fullName>Oftalmólogo</fullName>
+                <default>false</default>
+                <label>Oftalmólogo</label>
+            </value>
+            <value>
+                <fullName>Periodista</fullName>
+                <default>false</default>
+                <label>Periodista</label>
+            </value>
+            <value>
+                <fullName>Piloto</fullName>
+                <default>false</default>
+                <label>Piloto</label>
+            </value>
+            <value>
+                <fullName>Policia</fullName>
+                <default>false</default>
+                <label>Policia</label>
+            </value>
+            <value>
+                <fullName>Profesor</fullName>
+                <default>false</default>
+                <label>Profesor</label>
+            </value>
+            <value>
+                <fullName>Psicólogo</fullName>
+                <default>false</default>
+                <label>Psicólogo</label>
+            </value>
+            <value>
+                <fullName>Publicista</fullName>
+                <default>false</default>
+                <label>Publicista</label>
+            </value>
+            <value>
+                <fullName>Relacionista Público</fullName>
+                <default>false</default>
+                <label>Relacionista Público</label>
+            </value>
+            <value>
+                <fullName>Secretaria / Asistente Adminsitrativo</fullName>
+                <default>false</default>
+                <label>Secretaria / Asistente Adminsitrativo</label>
+            </value>
+            <value>
+                <fullName>Sociólogo</fullName>
+                <default>false</default>
+                <label>Sociólogo</label>
+            </value>
+            <value>
+                <fullName>Soldado</fullName>
+                <default>false</default>
+                <label>Soldado</label>
+            </value>
+            <value>
+                <fullName>Técnico en Computación</fullName>
+                <default>false</default>
+                <label>Técnico en Computación</label>
+            </value>
+            <value>
+                <fullName>Veterinario</fullName>
+                <default>false</default>
+                <label>Veterinario</label>
+            </value>
+            <value>
+                <fullName>Abogado y Notario</fullName>
+                <default>false</default>
+                <label>Abogado y Notario</label>
+            </value>
+            <value>
+                <fullName>Administrador</fullName>
+                <default>false</default>
+                <label>Administrador</label>
+            </value>
+            <value>
+                <fullName>Agente Call Center</fullName>
+                <default>false</default>
+                <label>Agente Call Center</label>
+            </value>
+            <value>
+                <fullName>Agente de Seguros</fullName>
+                <default>false</default>
+                <label>Agente de Seguros</label>
+            </value>
+            <value>
+                <fullName>Albañil</fullName>
+                <default>false</default>
+                <label>Albañil</label>
+            </value>
+            <value>
+                <fullName>Analista de Crédito</fullName>
+                <default>false</default>
+                <label>Analista de Crédito</label>
+            </value>
+            <value>
+                <fullName>Analista de Datos</fullName>
+                <default>false</default>
+                <label>Analista de Datos</label>
+            </value>
+            <value>
+                <fullName>Area de Mantenimiento</fullName>
+                <default>false</default>
+                <label>Area de Mantenimiento</label>
+            </value>
+            <value>
+                <fullName>Artesano</fullName>
+                <default>false</default>
+                <label>Artesano</label>
+            </value>
+            <value>
+                <fullName>Atletas</fullName>
+                <default>false</default>
+                <label>Atletas</label>
+            </value>
+            <value>
+                <fullName>Barbero</fullName>
+                <default>false</default>
+                <label>Barbero</label>
+            </value>
+            <value>
+                <fullName>Barrendero</fullName>
+                <default>false</default>
+                <label>Barrendero</label>
+            </value>
+            <value>
+                <fullName>Bibliotecario</fullName>
+                <default>false</default>
+                <label>Bibliotecario</label>
+            </value>
+            <value>
+                <fullName>Bodeguero/Auxiliar De Carga/Despachador</fullName>
+                <default>false</default>
+                <label>Bodeguero/Auxiliar De Carga/Despachador</label>
+            </value>
+            <value>
+                <fullName>Bombero</fullName>
+                <default>false</default>
+                <label>Bombero</label>
+            </value>
+            <value>
+                <fullName>Cajero</fullName>
+                <default>false</default>
+                <label>Cajero</label>
+            </value>
+            <value>
+                <fullName>Camarero</fullName>
+                <default>false</default>
+                <label>Camarero</label>
+            </value>
+            <value>
+                <fullName>Carnicero</fullName>
+                <default>false</default>
+                <label>Carnicero</label>
+            </value>
+            <value>
+                <fullName>Carpintero</fullName>
+                <default>false</default>
+                <label>Carpintero</label>
+            </value>
+            <value>
+                <fullName>Conductor</fullName>
+                <default>false</default>
+                <label>Conductor</label>
+            </value>
+            <value>
+                <fullName>Conserje</fullName>
+                <default>false</default>
+                <label>Conserje</label>
+            </value>
+            <value>
+                <fullName>Diplomático/Estadista</fullName>
+                <default>false</default>
+                <label>Diplomático/Estadista</label>
+            </value>
+            <value>
+                <fullName>Dueño de Autolote</fullName>
+                <default>false</default>
+                <label>Dueño de Autolote</label>
+            </value>
+            <value>
+                <fullName>Electricista</fullName>
+                <default>false</default>
+                <label>Electricista</label>
+            </value>
+            <value>
+                <fullName>Estilista</fullName>
+                <default>false</default>
+                <label>Estilista</label>
+            </value>
+            <value>
+                <fullName>Estudiante</fullName>
+                <default>false</default>
+                <label>Estudiante</label>
+            </value>
+            <value>
+                <fullName>Florista</fullName>
+                <default>false</default>
+                <label>Florista</label>
+            </value>
+            <value>
+                <fullName>Gerente</fullName>
+                <default>false</default>
+                <label>Gerente</label>
+            </value>
+            <value>
+                <fullName>Guarda de Seguridad</fullName>
+                <default>false</default>
+                <label>Guarda de Seguridad</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Mecánico</fullName>
+                <default>false</default>
+                <label>Ingeniero Mecánico</label>
+            </value>
+            <value>
+                <fullName>Jardinero</fullName>
+                <default>false</default>
+                <label>Jardinero</label>
+            </value>
+            <value>
+                <fullName>Jubilado</fullName>
+                <default>false</default>
+                <label>Jubilado</label>
+            </value>
+            <value>
+                <fullName>Juez</fullName>
+                <default>false</default>
+                <label>Juez</label>
+            </value>
+            <value>
+                <fullName>Maestro</fullName>
+                <default>false</default>
+                <label>Maestro</label>
+            </value>
+            <value>
+                <fullName>Maestro de Obras</fullName>
+                <default>false</default>
+                <label>Maestro de Obras</label>
+            </value>
+            <value>
+                <fullName>Mecanico</fullName>
+                <default>false</default>
+                <label>Mecanico</label>
+            </value>
+            <value>
+                <fullName>Mensajero / Cartero</fullName>
+                <default>false</default>
+                <label>Mensajero / Cartero</label>
+            </value>
+            <value>
+                <fullName>Mesero</fullName>
+                <default>false</default>
+                <label>Mesero</label>
+            </value>
+            <value>
+                <fullName>Modelo</fullName>
+                <default>false</default>
+                <label>Modelo</label>
+            </value>
+            <value>
+                <fullName>Panadero</fullName>
+                <default>false</default>
+                <label>Panadero</label>
+            </value>
+            <value>
+                <fullName>Pescador</fullName>
+                <default>false</default>
+                <label>Pescador</label>
+            </value>
+            <value>
+                <fullName>Pintor</fullName>
+                <default>false</default>
+                <label>Pintor</label>
+            </value>
+            <value>
+                <fullName>Político</fullName>
+                <default>false</default>
+                <label>Político</label>
+            </value>
+            <value>
+                <fullName>Promotor de Crédito</fullName>
+                <default>false</default>
+                <label>Promotor de Crédito</label>
+            </value>
+            <value>
+                <fullName>Eliminar proveedor</fullName>
+                <default>false</default>
+                <label>Eliminar proveedor</label>
+            </value>
+            <value>
+                <fullName>Recepcionista</fullName>
+                <default>false</default>
+                <label>Recepcionista</label>
+            </value>
+            <value>
+                <fullName>Repartidor</fullName>
+                <default>false</default>
+                <label>Repartidor</label>
+            </value>
+            <value>
+                <fullName>Sacerdote</fullName>
+                <default>false</default>
+                <label>Sacerdote</label>
+            </value>
+            <value>
+                <fullName>Salvavidas</fullName>
+                <default>false</default>
+                <label>Salvavidas</label>
+            </value>
+            <value>
+                <fullName>Sastre / Costurera</fullName>
+                <default>false</default>
+                <label>Sastre / Costurera</label>
+            </value>
+            <value>
+                <fullName>Supervisor de Piso</fullName>
+                <default>false</default>
+                <label>Supervisor de Piso</label>
+            </value>
+            <value>
+                <fullName>Tabacalero</fullName>
+                <default>false</default>
+                <label>Tabacalero</label>
+            </value>
+            <value>
+                <fullName>Taxista</fullName>
+                <default>false</default>
+                <label>Taxista</label>
+            </value>
+            <value>
+                <fullName>Técnico de Campo</fullName>
+                <default>false</default>
+                <label>Técnico de Campo</label>
+            </value>
+            <value>
+                <fullName>Traductor</fullName>
+                <default>false</default>
+                <label>Traductor</label>
+            </value>
+            <value>
+                <fullName>Transportista</fullName>
+                <default>false</default>
+                <label>Transportista</label>
+            </value>
+            <value>
+                <fullName>Vendedor</fullName>
+                <default>false</default>
+                <label>Vendedor</label>
+            </value>
+            <value>
+                <fullName>Visitador Médico</fullName>
+                <default>false</default>
+                <label>Visitador Médico</label>
+            </value>
+            <value>
+                <fullName>Administración pública y defensa</fullName>
+                <default>false</default>
+                <label>Administración pública y defensa</label>
+            </value>
+            <value>
+                <fullName>Agricultura / Ganadería</fullName>
+                <default>false</default>
+                <label>Agricultura / Ganadería</label>
+            </value>
+            <value>
+                <fullName>Asalariado</fullName>
+                <default>false</default>
+                <label>Asalariado</label>
+            </value>
+            <value>
+                <fullName>Banca y Seguros</fullName>
+                <default>false</default>
+                <label>Banca y Seguros</label>
+            </value>
+            <value>
+                <fullName>Bienes y Raíces</fullName>
+                <default>false</default>
+                <label>Bienes y Raíces</label>
+            </value>
+            <value>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>Cárnica</fullName>
+                <default>false</default>
+                <label>Cárnica</label>
+            </value>
+            <value>
+                <fullName>Casinos</fullName>
+                <default>false</default>
+                <label>Casinos</label>
+            </value>
+            <value>
+                <fullName>Comercio</fullName>
+                <default>false</default>
+                <label>Comercio</label>
+            </value>
+            <value>
+                <fullName>Construcción</fullName>
+                <default>false</default>
+                <label>Construcción</label>
+            </value>
+            <value>
+                <fullName>Distribución y/o Comercialización de combustible</fullName>
+                <default>false</default>
+                <label>Distribución y/o Comercialización de combustible</label>
+            </value>
+            <value>
+                <fullName>Energía y agua</fullName>
+                <default>false</default>
+                <label>Energía y agua</label>
+            </value>
+            <value>
+                <fullName>Enseñanza</fullName>
+                <default>false</default>
+                <label>Enseñanza</label>
+            </value>
+            <value>
+                <fullName>Explotación de minas y canteras</fullName>
+                <default>false</default>
+                <label>Explotación de minas y canteras</label>
+            </value>
+            <value>
+                <fullName>Farmacéutica</fullName>
+                <default>false</default>
+                <label>Farmacéutica</label>
+            </value>
+            <value>
+                <fullName>Gobierno. Es la entidad</fullName>
+                <default>false</default>
+                <label>Gobierno. Es la entidad</label>
+            </value>
+            <value>
+                <fullName>Hoteles y restaurantes</fullName>
+                <default>false</default>
+                <label>Hoteles y restaurantes</label>
+            </value>
+            <value>
+                <fullName>Industria manufactura</fullName>
+                <default>false</default>
+                <label>Industria manufactura</label>
+            </value>
+            <value>
+                <fullName>Intermediación y servicios conexos</fullName>
+                <default>false</default>
+                <label>Intermediación y servicios conexos</label>
+            </value>
+            <value>
+                <fullName>Mataderos Industriales</fullName>
+                <default>false</default>
+                <label>Mataderos Industriales</label>
+            </value>
+            <value>
+                <fullName>Organizaciones no gubernamentales</fullName>
+                <default>false</default>
+                <label>Organizaciones no gubernamentales</label>
+            </value>
+            <value>
+                <fullName>Otros servicios</fullName>
+                <default>false</default>
+                <label>Otros servicios</label>
+            </value>
+            <value>
+                <fullName>Pecuario</fullName>
+                <default>false</default>
+                <label>Pecuario</label>
+            </value>
+            <value>
+                <fullName>Pesca y acuicultura</fullName>
+                <default>false</default>
+                <label>Pesca y acuicultura</label>
+            </value>
+            <value>
+                <fullName>Producción y Comercialización de Lácteos</fullName>
+                <default>false</default>
+                <label>Producción y Comercialización de Lácteos</label>
+            </value>
+            <value>
+                <fullName>Profesional Independiente</fullName>
+                <default>false</default>
+                <label>Profesional Independiente</label>
+            </value>
+            <value>
+                <fullName>Propiedad de vivienda (Bienes y raices)</fullName>
+                <default>false</default>
+                <label>Propiedad de vivienda (Bienes y raices)</label>
+            </value>
+            <value>
+                <fullName>Proyectos</fullName>
+                <default>false</default>
+                <label>Proyectos</label>
+            </value>
+            <value>
+                <fullName>Micro financieras</fullName>
+                <default>false</default>
+                <label>Micro financieras</label>
+            </value>
+            <value>
+                <fullName>Religioso</fullName>
+                <default>false</default>
+                <label>Religioso</label>
+            </value>
+            <value>
+                <fullName>Salud</fullName>
+                <default>false</default>
+                <label>Salud</label>
+            </value>
+            <value>
+                <fullName>Seguridad</fullName>
+                <default>false</default>
+                <label>Seguridad</label>
+            </value>
+            <value>
+                <fullName>Servicios de Telecomunicaciones</fullName>
+                <default>false</default>
+                <label>Servicios de Telecomunicaciones</label>
+            </value>
+            <value>
+                <fullName>Servicios Públicos</fullName>
+                <default>false</default>
+                <label>Servicios Públicos</label>
+            </value>
+            <value>
+                <fullName>Silvicultura y extracción de madera</fullName>
+                <default>false</default>
+                <label>Silvicultura y extracción de madera</label>
+            </value>
+            <value>
+                <fullName>Tercerización de servicios</fullName>
+                <default>false</default>
+                <label>Tercerización de servicios</label>
+            </value>
+            <value>
+                <fullName>Transporte y comunicación</fullName>
+                <default>false</default>
+                <label>Transporte y comunicación</label>
+            </value>
+            <value>
+                <fullName>Venta de vehículos</fullName>
+                <default>false</default>
+                <label>Venta de vehículos</label>
+            </value>
+            <value>
+                <fullName>Zonas Francas</fullName>
+                <default>false</default>
+                <label>Zonas Francas</label>
+            </value>
+            <value>
+                <fullName>Ahorro</fullName>
+                <default>false</default>
+                <label>Ahorro</label>
+            </value>
+            <value>
+                <fullName>Bienes muebles</fullName>
+                <default>false</default>
+                <label>Bienes muebles</label>
+            </value>
+            <value>
+                <fullName>Financiamiento instituciones financieras</fullName>
+                <default>false</default>
+                <label>Financiamiento instituciones financieras</label>
+            </value>
+            <value>
+                <fullName>Herencia</fullName>
+                <default>false</default>
+                <label>Herencia</label>
+            </value>
+            <value>
+                <fullName>Ingresos del negocio</fullName>
+                <default>false</default>
+                <label>Ingresos del negocio</label>
+            </value>
+            <value>
+                <fullName>Obsequio</fullName>
+                <default>false</default>
+                <label>Obsequio</label>
+            </value>
+            <value>
+                <fullName>Premio de casino</fullName>
+                <default>false</default>
+                <label>Premio de casino</label>
+            </value>
+            <value>
+                <fullName>Premio de lotería</fullName>
+                <default>false</default>
+                <label>Premio de lotería</label>
+            </value>
+            <value>
+                <fullName>Remesa</fullName>
+                <default>false</default>
+                <label>Remesa</label>
+            </value>
+            <value>
+                <fullName>Rifa</fullName>
+                <default>false</default>
+                <label>Rifa</label>
+            </value>
+            <value>
+                <fullName>Venta de inmuebles</fullName>
+                <default>false</default>
+                <label>Venta de inmuebles</label>
+            </value>
+            <value>
+                <fullName>Ocasional</fullName>
+                <default>false</default>
+                <label>Ocasional</label>
+            </value>
+            <value>
+                <fullName>Habitual</fullName>
+                <default>false</default>
+                <label>Habitual</label>
+            </value>
+            <value>
+                <fullName>Al Detalle</fullName>
+                <default>false</default>
+                <label>Al Detalle</label>
+            </value>
+            <value>
+                <fullName>Distribuidor Autorizado</fullName>
+                <default>false</default>
+                <label>Distribuidor Autorizado</label>
+            </value>
+            <value>
+                <fullName>Nacional</fullName>
+                <default>false</default>
+                <label>Nacional</label>
+            </value>
+            <value>
+                <fullName>Extranjero</fullName>
+                <default>false</default>
+                <label>Extranjero</label>
+            </value>
+            <value>
+                <fullName>Acahualinca</fullName>
+                <default>false</default>
+                <label>Acahualinca</label>
+            </value>
+            <value>
+                <fullName>Altamira</fullName>
+                <default>false</default>
+                <label>Altamira</label>
+            </value>
+            <value>
+                <fullName>Casa Matriz</fullName>
+                <default>false</default>
+                <label>Casa Matriz</label>
+            </value>
+            <value>
+                <fullName>Chinandega</fullName>
+                <default>false</default>
+                <label>Chinandega</label>
+            </value>
+            <value>
+                <fullName>Estelí</fullName>
+                <default>false</default>
+                <label>Estelí</label>
+            </value>
+            <value>
+                <fullName>Juigalpa</fullName>
+                <default>false</default>
+                <label>Juigalpa</label>
+            </value>
+            <value>
+                <fullName>León</fullName>
+                <default>false</default>
+                <label>León</label>
+            </value>
+            <value>
+                <fullName>Mall Las Américas</fullName>
+                <default>false</default>
+                <label>Mall Las Américas</label>
+            </value>
+            <value>
+                <fullName>Masaya</fullName>
+                <default>false</default>
+                <label>Masaya</label>
+            </value>
+            <value>
+                <fullName>Matagalpa</fullName>
+                <default>false</default>
+                <label>Matagalpa</label>
+            </value>
+            <value>
+                <fullName>Moto Plaza PE.</fullName>
+                <default>false</default>
+                <label>Moto Plaza PE.</label>
+            </value>
+            <value>
+                <fullName>Puerto Cabezas</fullName>
+                <default>false</default>
+                <label>Puerto Cabezas</label>
+            </value>
+            <value>
+                <fullName>Depósitos bancarios</fullName>
+                <default>false</default>
+                <label>Depósitos bancarios</label>
+            </value>
+            <value>
+                <fullName>Transferencia banaria</fullName>
+                <default>false</default>
+                <label>Transferencia banaria</label>
+            </value>
+            <value>
+                <fullName>Efectivo</fullName>
+                <default>false</default>
+                <label>Efectivo</label>
+            </value>
+            <value>
+                <fullName>Cheque</fullName>
+                <default>false</default>
+                <label>Cheque</label>
+            </value>
+            <value>
+                <fullName>Tarjeta</fullName>
+                <default>false</default>
+                <label>Tarjeta</label>
+            </value>
+            <value>
+                <fullName>Financiamiento por un tercero</fullName>
+                <default>false</default>
+                <label>Financiamiento por un tercero</label>
+            </value>
+            <value>
+                <fullName>Afganistán</fullName>
+                <default>false</default>
+                <label>Afganistán</label>
+            </value>
+            <value>
+                <fullName>Albania</fullName>
+                <default>false</default>
+                <label>Albania</label>
+            </value>
+            <value>
+                <fullName>Alemania</fullName>
+                <default>false</default>
+                <label>Alemania</label>
+            </value>
+            <value>
+                <fullName>Andorra</fullName>
+                <default>false</default>
+                <label>Andorra</label>
+            </value>
+            <value>
+                <fullName>Angola</fullName>
+                <default>false</default>
+                <label>Angola</label>
+            </value>
+            <value>
+                <fullName>Antigua y Barbuda</fullName>
+                <default>false</default>
+                <label>Antigua y Barbuda</label>
+            </value>
+            <value>
+                <fullName>Arabia Saudita</fullName>
+                <default>false</default>
+                <label>Arabia Saudita</label>
+            </value>
+            <value>
+                <fullName>Argelia</fullName>
+                <default>false</default>
+                <label>Argelia</label>
+            </value>
+            <value>
+                <fullName>Argentina</fullName>
+                <default>false</default>
+                <label>Argentina</label>
+            </value>
+            <value>
+                <fullName>Armenia</fullName>
+                <default>false</default>
+                <label>Armenia</label>
+            </value>
+            <value>
+                <fullName>Australia</fullName>
+                <default>false</default>
+                <label>Australia</label>
+            </value>
+            <value>
+                <fullName>Austria</fullName>
+                <default>false</default>
+                <label>Austria</label>
+            </value>
+            <value>
+                <fullName>Azerbaiyán</fullName>
+                <default>false</default>
+                <label>Azerbaiyán</label>
+            </value>
+            <value>
+                <fullName>Bahamas</fullName>
+                <default>false</default>
+                <label>Bahamas</label>
+            </value>
+            <value>
+                <fullName>Bangladés</fullName>
+                <default>false</default>
+                <label>Bangladés</label>
+            </value>
+            <value>
+                <fullName>Barbados</fullName>
+                <default>false</default>
+                <label>Barbados</label>
+            </value>
+            <value>
+                <fullName>Baréin</fullName>
+                <default>false</default>
+                <label>Baréin</label>
+            </value>
+            <value>
+                <fullName>Bélgica</fullName>
+                <default>false</default>
+                <label>Bélgica</label>
+            </value>
+            <value>
+                <fullName>Belice</fullName>
+                <default>false</default>
+                <label>Belice</label>
+            </value>
+            <value>
+                <fullName>Benín</fullName>
+                <default>false</default>
+                <label>Benín</label>
+            </value>
+            <value>
+                <fullName>Bielorrusia</fullName>
+                <default>false</default>
+                <label>Bielorrusia</label>
+            </value>
+            <value>
+                <fullName>Birmania</fullName>
+                <default>false</default>
+                <label>Birmania</label>
+            </value>
+            <value>
+                <fullName>Bolivia</fullName>
+                <default>false</default>
+                <label>Bolivia</label>
+            </value>
+            <value>
+                <fullName>Bosnia y Herzegovina</fullName>
+                <default>false</default>
+                <label>Bosnia y Herzegovina</label>
+            </value>
+            <value>
+                <fullName>Botsuana</fullName>
+                <default>false</default>
+                <label>Botsuana</label>
+            </value>
+            <value>
+                <fullName>Brasil</fullName>
+                <default>false</default>
+                <label>Brasil</label>
+            </value>
+            <value>
+                <fullName>Brunéi</fullName>
+                <default>false</default>
+                <label>Brunéi</label>
+            </value>
+            <value>
+                <fullName>Bulgaria</fullName>
+                <default>false</default>
+                <label>Bulgaria</label>
+            </value>
+            <value>
+                <fullName>Burkina Faso</fullName>
+                <default>false</default>
+                <label>Burkina Faso</label>
+            </value>
+            <value>
+                <fullName>Burundi</fullName>
+                <default>false</default>
+                <label>Burundi</label>
+            </value>
+            <value>
+                <fullName>Bután</fullName>
+                <default>false</default>
+                <label>Bután</label>
+            </value>
+            <value>
+                <fullName>Cabo Verde</fullName>
+                <default>false</default>
+                <label>Cabo Verde</label>
+            </value>
+            <value>
+                <fullName>Camboya</fullName>
+                <default>false</default>
+                <label>Camboya</label>
+            </value>
+            <value>
+                <fullName>Camerún</fullName>
+                <default>false</default>
+                <label>Camerún</label>
+            </value>
+            <value>
+                <fullName>Canadá</fullName>
+                <default>false</default>
+                <label>Canadá</label>
+            </value>
+            <value>
+                <fullName>Catar</fullName>
+                <default>false</default>
+                <label>Catar</label>
+            </value>
+            <value>
+                <fullName>Chad</fullName>
+                <default>false</default>
+                <label>Chad</label>
+            </value>
+            <value>
+                <fullName>Chile</fullName>
+                <default>false</default>
+                <label>Chile</label>
+            </value>
+            <value>
+                <fullName>China</fullName>
+                <default>false</default>
+                <label>China</label>
+            </value>
+            <value>
+                <fullName>Chipre</fullName>
+                <default>false</default>
+                <label>Chipre</label>
+            </value>
+            <value>
+                <fullName>Ciudad del Vaticano</fullName>
+                <default>false</default>
+                <label>Ciudad del Vaticano</label>
+            </value>
+            <value>
+                <fullName>Colombia</fullName>
+                <default>false</default>
+                <label>Colombia</label>
+            </value>
+            <value>
+                <fullName>Comoras</fullName>
+                <default>false</default>
+                <label>Comoras</label>
+            </value>
+            <value>
+                <fullName>Corea del Norte</fullName>
+                <default>false</default>
+                <label>Corea del Norte</label>
+            </value>
+            <value>
+                <fullName>Corea del Sur</fullName>
+                <default>false</default>
+                <label>Corea del Sur</label>
+            </value>
+            <value>
+                <fullName>Costa de Marfil</fullName>
+                <default>false</default>
+                <label>Costa de Marfil</label>
+            </value>
+            <value>
+                <fullName>Costa Rica</fullName>
+                <default>false</default>
+                <label>Costa Rica</label>
+            </value>
+            <value>
+                <fullName>Croacia</fullName>
+                <default>false</default>
+                <label>Croacia</label>
+            </value>
+            <value>
+                <fullName>Cuba</fullName>
+                <default>false</default>
+                <label>Cuba</label>
+            </value>
+            <value>
+                <fullName>Dinamarca</fullName>
+                <default>false</default>
+                <label>Dinamarca</label>
+            </value>
+            <value>
+                <fullName>Dominica</fullName>
+                <default>false</default>
+                <label>Dominica</label>
+            </value>
+            <value>
+                <fullName>Ecuador</fullName>
+                <default>false</default>
+                <label>Ecuador</label>
+            </value>
+            <value>
+                <fullName>Egipto</fullName>
+                <default>false</default>
+                <label>Egipto</label>
+            </value>
+            <value>
+                <fullName>El Salvador</fullName>
+                <default>false</default>
+                <label>El Salvador</label>
+            </value>
+            <value>
+                <fullName>Emiratos Árabes Unidos</fullName>
+                <default>false</default>
+                <label>Emiratos Árabes Unidos</label>
+            </value>
+            <value>
+                <fullName>Eritrea</fullName>
+                <default>false</default>
+                <label>Eritrea</label>
+            </value>
+            <value>
+                <fullName>Eslovaquia</fullName>
+                <default>false</default>
+                <label>Eslovaquia</label>
+            </value>
+            <value>
+                <fullName>Eslovenia</fullName>
+                <default>false</default>
+                <label>Eslovenia</label>
+            </value>
+            <value>
+                <fullName>España</fullName>
+                <default>false</default>
+                <label>España</label>
+            </value>
+            <value>
+                <fullName>Estados Unidos</fullName>
+                <default>false</default>
+                <label>Estados Unidos</label>
+            </value>
+            <value>
+                <fullName>Estonia</fullName>
+                <default>false</default>
+                <label>Estonia</label>
+            </value>
+            <value>
+                <fullName>Etiopía</fullName>
+                <default>false</default>
+                <label>Etiopía</label>
+            </value>
+            <value>
+                <fullName>Filipinas</fullName>
+                <default>false</default>
+                <label>Filipinas</label>
+            </value>
+            <value>
+                <fullName>Finlandia</fullName>
+                <default>false</default>
+                <label>Finlandia</label>
+            </value>
+            <value>
+                <fullName>Fiyi</fullName>
+                <default>false</default>
+                <label>Fiyi</label>
+            </value>
+            <value>
+                <fullName>Francia</fullName>
+                <default>false</default>
+                <label>Francia</label>
+            </value>
+            <value>
+                <fullName>Gabón</fullName>
+                <default>false</default>
+                <label>Gabón</label>
+            </value>
+            <value>
+                <fullName>Gambia</fullName>
+                <default>false</default>
+                <label>Gambia</label>
+            </value>
+            <value>
+                <fullName>Georgia</fullName>
+                <default>false</default>
+                <label>Georgia</label>
+            </value>
+            <value>
+                <fullName>Ghana</fullName>
+                <default>false</default>
+                <label>Ghana</label>
+            </value>
+            <value>
+                <fullName>Granada</fullName>
+                <default>false</default>
+                <label>Granada</label>
+            </value>
+            <value>
+                <fullName>Grecia</fullName>
+                <default>false</default>
+                <label>Grecia</label>
+            </value>
+            <value>
+                <fullName>Guatemala</fullName>
+                <default>false</default>
+                <label>Guatemala</label>
+            </value>
+            <value>
+                <fullName>Guyana</fullName>
+                <default>false</default>
+                <label>Guyana</label>
+            </value>
+            <value>
+                <fullName>Guinea</fullName>
+                <default>false</default>
+                <label>Guinea</label>
+            </value>
+            <value>
+                <fullName>Guinea ecuatorial</fullName>
+                <default>false</default>
+                <label>Guinea ecuatorial</label>
+            </value>
+            <value>
+                <fullName>Guinea-Bisáu</fullName>
+                <default>false</default>
+                <label>Guinea-Bisáu</label>
+            </value>
+            <value>
+                <fullName>Haití</fullName>
+                <default>false</default>
+                <label>Haití</label>
+            </value>
+            <value>
+                <fullName>Honduras</fullName>
+                <default>false</default>
+                <label>Honduras</label>
+            </value>
+            <value>
+                <fullName>Hungría</fullName>
+                <default>false</default>
+                <label>Hungría</label>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <label>India</label>
+            </value>
+            <value>
+                <fullName>Indonesia</fullName>
+                <default>false</default>
+                <label>Indonesia</label>
+            </value>
+            <value>
+                <fullName>Irak</fullName>
+                <default>false</default>
+                <label>Irak</label>
+            </value>
+            <value>
+                <fullName>Irán</fullName>
+                <default>false</default>
+                <label>Irán</label>
+            </value>
+            <value>
+                <fullName>Irlanda</fullName>
+                <default>false</default>
+                <label>Irlanda</label>
+            </value>
+            <value>
+                <fullName>Islandia</fullName>
+                <default>false</default>
+                <label>Islandia</label>
+            </value>
+            <value>
+                <fullName>Islas Marshall</fullName>
+                <default>false</default>
+                <label>Islas Marshall</label>
+            </value>
+            <value>
+                <fullName>Islas Salomón</fullName>
+                <default>false</default>
+                <label>Islas Salomón</label>
+            </value>
+            <value>
+                <fullName>Israel</fullName>
+                <default>false</default>
+                <label>Israel</label>
+            </value>
+            <value>
+                <fullName>Italia</fullName>
+                <default>false</default>
+                <label>Italia</label>
+            </value>
+            <value>
+                <fullName>Jamaica</fullName>
+                <default>false</default>
+                <label>Jamaica</label>
+            </value>
+            <value>
+                <fullName>Japón</fullName>
+                <default>false</default>
+                <label>Japón</label>
+            </value>
+            <value>
+                <fullName>Jordania</fullName>
+                <default>false</default>
+                <label>Jordania</label>
+            </value>
+            <value>
+                <fullName>Kazajistán</fullName>
+                <default>false</default>
+                <label>Kazajistán</label>
+            </value>
+            <value>
+                <fullName>Kenia</fullName>
+                <default>false</default>
+                <label>Kenia</label>
+            </value>
+            <value>
+                <fullName>Kirguistán</fullName>
+                <default>false</default>
+                <label>Kirguistán</label>
+            </value>
+            <value>
+                <fullName>Kiribati</fullName>
+                <default>false</default>
+                <label>Kiribati</label>
+            </value>
+            <value>
+                <fullName>Kuwait</fullName>
+                <default>false</default>
+                <label>Kuwait</label>
+            </value>
+            <value>
+                <fullName>Laos</fullName>
+                <default>false</default>
+                <label>Laos</label>
+            </value>
+            <value>
+                <fullName>Lesoto</fullName>
+                <default>false</default>
+                <label>Lesoto</label>
+            </value>
+            <value>
+                <fullName>Letonia</fullName>
+                <default>false</default>
+                <label>Letonia</label>
+            </value>
+            <value>
+                <fullName>Líbano</fullName>
+                <default>false</default>
+                <label>Líbano</label>
+            </value>
+            <value>
+                <fullName>Liberia</fullName>
+                <default>false</default>
+                <label>Liberia</label>
+            </value>
+            <value>
+                <fullName>Libia</fullName>
+                <default>false</default>
+                <label>Libia</label>
+            </value>
+            <value>
+                <fullName>Liechtenstein</fullName>
+                <default>false</default>
+                <label>Liechtenstein</label>
+            </value>
+            <value>
+                <fullName>Lituania</fullName>
+                <default>false</default>
+                <label>Lituania</label>
+            </value>
+            <value>
+                <fullName>Luxemburgo</fullName>
+                <default>false</default>
+                <label>Luxemburgo</label>
+            </value>
+            <value>
+                <fullName>Madagascar</fullName>
+                <default>false</default>
+                <label>Madagascar</label>
+            </value>
+            <value>
+                <fullName>Malasia</fullName>
+                <default>false</default>
+                <label>Malasia</label>
+            </value>
+            <value>
+                <fullName>Malaui</fullName>
+                <default>false</default>
+                <label>Malaui</label>
+            </value>
+            <value>
+                <fullName>Maldivas</fullName>
+                <default>false</default>
+                <label>Maldivas</label>
+            </value>
+            <value>
+                <fullName>Malí</fullName>
+                <default>false</default>
+                <label>Malí</label>
+            </value>
+            <value>
+                <fullName>Malta</fullName>
+                <default>false</default>
+                <label>Malta</label>
+            </value>
+            <value>
+                <fullName>Marruecos</fullName>
+                <default>false</default>
+                <label>Marruecos</label>
+            </value>
+            <value>
+                <fullName>Mauricio</fullName>
+                <default>false</default>
+                <label>Mauricio</label>
+            </value>
+            <value>
+                <fullName>Mauritania</fullName>
+                <default>false</default>
+                <label>Mauritania</label>
+            </value>
+            <value>
+                <fullName>México</fullName>
+                <default>false</default>
+                <label>México</label>
+            </value>
+            <value>
+                <fullName>Micronesia</fullName>
+                <default>false</default>
+                <label>Micronesia</label>
+            </value>
+            <value>
+                <fullName>Moldavia</fullName>
+                <default>false</default>
+                <label>Moldavia</label>
+            </value>
+            <value>
+                <fullName>Mónaco</fullName>
+                <default>false</default>
+                <label>Mónaco</label>
+            </value>
+            <value>
+                <fullName>Mongolia</fullName>
+                <default>false</default>
+                <label>Mongolia</label>
+            </value>
+            <value>
+                <fullName>Montenegro</fullName>
+                <default>false</default>
+                <label>Montenegro</label>
+            </value>
+            <value>
+                <fullName>Mozambique</fullName>
+                <default>false</default>
+                <label>Mozambique</label>
+            </value>
+            <value>
+                <fullName>Namibia</fullName>
+                <default>false</default>
+                <label>Namibia</label>
+            </value>
+            <value>
+                <fullName>Nauru</fullName>
+                <default>false</default>
+                <label>Nauru</label>
+            </value>
+            <value>
+                <fullName>Nepal</fullName>
+                <default>false</default>
+                <label>Nepal</label>
+            </value>
+            <value>
+                <fullName>Nicaragua</fullName>
+                <default>false</default>
+                <label>Nicaragua</label>
+            </value>
+            <value>
+                <fullName>Níger</fullName>
+                <default>false</default>
+                <label>Níger</label>
+            </value>
+            <value>
+                <fullName>Nigeria</fullName>
+                <default>false</default>
+                <label>Nigeria</label>
+            </value>
+            <value>
+                <fullName>Noruega</fullName>
+                <default>false</default>
+                <label>Noruega</label>
+            </value>
+            <value>
+                <fullName>Nueva Zelanda</fullName>
+                <default>false</default>
+                <label>Nueva Zelanda</label>
+            </value>
+            <value>
+                <fullName>Omán</fullName>
+                <default>false</default>
+                <label>Omán</label>
+            </value>
+            <value>
+                <fullName>Países Bajos</fullName>
+                <default>false</default>
+                <label>Países Bajos</label>
+            </value>
+            <value>
+                <fullName>Pakistán</fullName>
+                <default>false</default>
+                <label>Pakistán</label>
+            </value>
+            <value>
+                <fullName>Palaos</fullName>
+                <default>false</default>
+                <label>Palaos</label>
+            </value>
+            <value>
+                <fullName>Panamá</fullName>
+                <default>false</default>
+                <label>Panamá</label>
+            </value>
+            <value>
+                <fullName>Papúa Nueva Guinea</fullName>
+                <default>false</default>
+                <label>Papúa Nueva Guinea</label>
+            </value>
+            <value>
+                <fullName>Paraguay</fullName>
+                <default>false</default>
+                <label>Paraguay</label>
+            </value>
+            <value>
+                <fullName>Perú</fullName>
+                <default>false</default>
+                <label>Perú</label>
+            </value>
+            <value>
+                <fullName>Polonia</fullName>
+                <default>false</default>
+                <label>Polonia</label>
+            </value>
+            <value>
+                <fullName>Portugal</fullName>
+                <default>false</default>
+                <label>Portugal</label>
+            </value>
+            <value>
+                <fullName>Puerto Rico</fullName>
+                <default>false</default>
+                <label>Puerto Rico</label>
+            </value>
+            <value>
+                <fullName>Reino Unido</fullName>
+                <default>false</default>
+                <label>Reino Unido</label>
+            </value>
+            <value>
+                <fullName>República Centroafricana</fullName>
+                <default>false</default>
+                <label>República Centroafricana</label>
+            </value>
+            <value>
+                <fullName>República Checa</fullName>
+                <default>false</default>
+                <label>República Checa</label>
+            </value>
+            <value>
+                <fullName>República de Macedonia</fullName>
+                <default>false</default>
+                <label>República de Macedonia</label>
+            </value>
+            <value>
+                <fullName>República del Congo</fullName>
+                <default>false</default>
+                <label>República del Congo</label>
+            </value>
+            <value>
+                <fullName>República Democrática del Congo</fullName>
+                <default>false</default>
+                <label>República Democrática del Congo</label>
+            </value>
+            <value>
+                <fullName>República Dominicana</fullName>
+                <default>false</default>
+                <label>República Dominicana</label>
+            </value>
+            <value>
+                <fullName>República Sudafricana</fullName>
+                <default>false</default>
+                <label>República Sudafricana</label>
+            </value>
+            <value>
+                <fullName>Ruanda</fullName>
+                <default>false</default>
+                <label>Ruanda</label>
+            </value>
+            <value>
+                <fullName>Rumanía</fullName>
+                <default>false</default>
+                <label>Rumanía</label>
+            </value>
+            <value>
+                <fullName>Rusia</fullName>
+                <default>false</default>
+                <label>Rusia</label>
+            </value>
+            <value>
+                <fullName>Samoa</fullName>
+                <default>false</default>
+                <label>Samoa</label>
+            </value>
+            <value>
+                <fullName>San Cristóbal y Nieves</fullName>
+                <default>false</default>
+                <label>San Cristóbal y Nieves</label>
+            </value>
+            <value>
+                <fullName>San Marino</fullName>
+                <default>false</default>
+                <label>San Marino</label>
+            </value>
+            <value>
+                <fullName>San Vicente y las Granadinas</fullName>
+                <default>false</default>
+                <label>San Vicente y las Granadinas</label>
+            </value>
+            <value>
+                <fullName>Santa Lucía</fullName>
+                <default>false</default>
+                <label>Santa Lucía</label>
+            </value>
+            <value>
+                <fullName>Santo Tomé y Príncipe</fullName>
+                <default>false</default>
+                <label>Santo Tomé y Príncipe</label>
+            </value>
+            <value>
+                <fullName>Senegal</fullName>
+                <default>false</default>
+                <label>Senegal</label>
+            </value>
+            <value>
+                <fullName>Serbia</fullName>
+                <default>false</default>
+                <label>Serbia</label>
+            </value>
+            <value>
+                <fullName>Seychelles</fullName>
+                <default>false</default>
+                <label>Seychelles</label>
+            </value>
+            <value>
+                <fullName>Sierra Leona</fullName>
+                <default>false</default>
+                <label>Sierra Leona</label>
+            </value>
+            <value>
+                <fullName>Singapur</fullName>
+                <default>false</default>
+                <label>Singapur</label>
+            </value>
+            <value>
+                <fullName>Siria</fullName>
+                <default>false</default>
+                <label>Siria</label>
+            </value>
+            <value>
+                <fullName>Somalia</fullName>
+                <default>false</default>
+                <label>Somalia</label>
+            </value>
+            <value>
+                <fullName>Sri Lanka</fullName>
+                <default>false</default>
+                <label>Sri Lanka</label>
+            </value>
+            <value>
+                <fullName>Suazilandia</fullName>
+                <default>false</default>
+                <label>Suazilandia</label>
+            </value>
+            <value>
+                <fullName>Sudán</fullName>
+                <default>false</default>
+                <label>Sudán</label>
+            </value>
+            <value>
+                <fullName>Sudán del Sur</fullName>
+                <default>false</default>
+                <label>Sudán del Sur</label>
+            </value>
+            <value>
+                <fullName>Suecia</fullName>
+                <default>false</default>
+                <label>Suecia</label>
+            </value>
+            <value>
+                <fullName>Suiza</fullName>
+                <default>false</default>
+                <label>Suiza</label>
+            </value>
+            <value>
+                <fullName>Surinam</fullName>
+                <default>false</default>
+                <label>Surinam</label>
+            </value>
+            <value>
+                <fullName>Tailandia</fullName>
+                <default>false</default>
+                <label>Tailandia</label>
+            </value>
+            <value>
+                <fullName>Tanzania</fullName>
+                <default>false</default>
+                <label>Tanzania</label>
+            </value>
+            <value>
+                <fullName>Tayikistán</fullName>
+                <default>false</default>
+                <label>Tayikistán</label>
+            </value>
+            <value>
+                <fullName>Timor Oriental</fullName>
+                <default>false</default>
+                <label>Timor Oriental</label>
+            </value>
+            <value>
+                <fullName>Togo</fullName>
+                <default>false</default>
+                <label>Togo</label>
+            </value>
+            <value>
+                <fullName>Tonga</fullName>
+                <default>false</default>
+                <label>Tonga</label>
+            </value>
+            <value>
+                <fullName>Trinidad y Tobago</fullName>
+                <default>false</default>
+                <label>Trinidad y Tobago</label>
+            </value>
+            <value>
+                <fullName>Túnez</fullName>
+                <default>false</default>
+                <label>Túnez</label>
+            </value>
+            <value>
+                <fullName>Turkmenistán</fullName>
+                <default>false</default>
+                <label>Turkmenistán</label>
+            </value>
+            <value>
+                <fullName>Turquía</fullName>
+                <default>false</default>
+                <label>Turquía</label>
+            </value>
+            <value>
+                <fullName>Tuvalu</fullName>
+                <default>false</default>
+                <label>Tuvalu</label>
+            </value>
+            <value>
+                <fullName>Ucrania</fullName>
+                <default>false</default>
+                <label>Ucrania</label>
+            </value>
+            <value>
+                <fullName>Uganda</fullName>
+                <default>false</default>
+                <label>Uganda</label>
+            </value>
+            <value>
+                <fullName>Uruguay</fullName>
+                <default>false</default>
+                <label>Uruguay</label>
+            </value>
+            <value>
+                <fullName>Uzbekistán</fullName>
+                <default>false</default>
+                <label>Uzbekistán</label>
+            </value>
+            <value>
+                <fullName>Vanuatu</fullName>
+                <default>false</default>
+                <label>Vanuatu</label>
+            </value>
+            <value>
+                <fullName>Venezuela</fullName>
+                <default>false</default>
+                <label>Venezuela</label>
+            </value>
+            <value>
+                <fullName>Vietnam</fullName>
+                <default>false</default>
+                <label>Vietnam</label>
+            </value>
+            <value>
+                <fullName>Yemen</fullName>
+                <default>false</default>
+                <label>Yemen</label>
+            </value>
+            <value>
+                <fullName>Yibuti</fullName>
+                <default>false</default>
+                <label>Yibuti</label>
+            </value>
+            <value>
+                <fullName>Zambia</fullName>
+                <default>false</default>
+                <label>Zambia</label>
+            </value>
+            <value>
+                <fullName>Zimbabue</fullName>
+                <default>false</default>
+                <label>Zimbabue</label>
+            </value>
+            <value>
+                <fullName>Managua</fullName>
+                <default>false</default>
+                <label>Managua</label>
+            </value>
+            <value>
+                <fullName>RACCN</fullName>
+                <default>false</default>
+                <label>RACCN</label>
+            </value>
+            <value>
+                <fullName>Jinotega</fullName>
+                <default>false</default>
+                <label>Jinotega</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>FORMA DE PAGO</controllingFieldValue>
+            <valueName>Depósitos bancarios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FORMA DE PAGO</controllingFieldValue>
+            <valueName>Transferencia banaria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FORMA DE PAGO</controllingFieldValue>
+            <valueName>Efectivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FORMA DE PAGO</controllingFieldValue>
+            <valueName>Cheque</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FORMA DE PAGO</controllingFieldValue>
+            <valueName>Tarjeta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RESPONSABLE DEL PAGO</controllingFieldValue>
+            <valueName>Financiamiento por un tercero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Afganistán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Albania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Alemania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Andorra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Angola</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Antigua y Barbuda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Arabia Saudita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Argelia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Argentina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Armenia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Australia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Austria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Azerbaiyán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Bahamas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Bangladés</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Barbados</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Baréin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Bélgica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Belice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Benín</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Bielorrusia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Birmania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Bolivia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Bosnia y Herzegovina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Botsuana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Brasil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Brunéi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Bulgaria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Burkina Faso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Burundi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Bután</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Cabo Verde</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Camboya</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Camerún</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Canadá</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Catar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Chad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Chile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>China</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Chipre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Ciudad del Vaticano</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Colombia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Comoras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Corea del Norte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Corea del Sur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Costa de Marfil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Costa Rica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Croacia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Cuba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Dinamarca</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Dominica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Ecuador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Egipto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>El Salvador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Emiratos Árabes Unidos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Eritrea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Eslovaquia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Eslovenia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>España</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Estados Unidos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Estonia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Etiopía</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Filipinas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Finlandia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Fiyi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Francia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Gabón</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Gambia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Georgia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Ghana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <controllingFieldValue>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</controllingFieldValue>
+            <valueName>Granada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Grecia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Guatemala</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Guyana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Guinea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Guinea ecuatorial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Guinea-Bisáu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Haití</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Honduras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Hungría</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Indonesia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Irak</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Irán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Irlanda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Islandia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Islas Marshall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Islas Salomón</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Israel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Italia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Jamaica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Japón</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Jordania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Kazajistán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Kenia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Kirguistán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Kiribati</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Kuwait</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Laos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Lesoto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Letonia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Líbano</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Liberia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Libia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Liechtenstein</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Lituania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Luxemburgo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Madagascar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Malasia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Malaui</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Maldivas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Malí</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Malta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Marruecos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Mauricio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Mauritania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>México</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Micronesia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Moldavia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Mónaco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Mongolia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Montenegro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Mozambique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Namibia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Nauru</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Nepal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Nicaragua</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Níger</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Nigeria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Noruega</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Nueva Zelanda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Omán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Países Bajos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Pakistán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Palaos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Panamá</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Papúa Nueva Guinea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Paraguay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Perú</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Polonia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Portugal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Puerto Rico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Reino Unido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>República Centroafricana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>República Checa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>República de Macedonia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>República del Congo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>República Democrática del Congo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>República Dominicana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>República Sudafricana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Ruanda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Rumanía</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Rusia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Samoa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>San Cristóbal y Nieves</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>San Marino</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>San Vicente y las Granadinas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Santa Lucía</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Santo Tomé y Príncipe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Senegal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Serbia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Seychelles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Sierra Leona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Singapur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Siria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Somalia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Sri Lanka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Suazilandia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Sudán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Sudán del Sur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Suecia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Suiza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Surinam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Tailandia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Tanzania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Tayikistán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Timor Oriental</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Togo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Tonga</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Trinidad y Tobago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Túnez</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Turkmenistán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Turquía</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Tuvalu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Ucrania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Uganda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Uruguay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Uzbekistán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Vanuatu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Venezuela</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Vietnam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Yemen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Yibuti</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Zambia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAÍS DE ORIGEN</controllingFieldValue>
+            <valueName>Zimbabue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</controllingFieldValue>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Chinandega</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</controllingFieldValue>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Estelí</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</controllingFieldValue>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>León</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</controllingFieldValue>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Masaya</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</controllingFieldValue>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Matagalpa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</controllingFieldValue>
+            <valueName>Managua</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</controllingFieldValue>
+            <valueName>RACCN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</controllingFieldValue>
+            <valueName>Jinotega</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIPO DE CLIENTE</controllingFieldValue>
+            <valueName>Natural</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIPO DE CLIENTE</controllingFieldValue>
+            <valueName>Jurídico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIPO DE CLIENTE</controllingFieldValue>
+            <valueName>PEP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIPO DE CLIENTE</controllingFieldValue>
+            <valueName>Empresa Estatal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIPO DE CLIENTE</controllingFieldValue>
+            <valueName>Empresa Privada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIPO DE CLIENTE</controllingFieldValue>
+            <valueName>OSFL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIPO DE CLIENTE</controllingFieldValue>
+            <valueName>Sujeto Obligado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOC. IDENTIDAD</controllingFieldValue>
+            <valueName>Cédula de identidad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOC. IDENTIDAD</controllingFieldValue>
+            <valueName>Cédula de residente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOC. IDENTIDAD</controllingFieldValue>
+            <valueName>Pasaporte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOC. IDENTIDAD</controllingFieldValue>
+            <valueName>RUC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOC. IDENTIDAD</controllingFieldValue>
+            <valueName>D.U.I</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <valueName>Abogado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <valueName>Administrador de Empresas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Agricultor / Ganadero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Ama De Casa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Arquitecto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Biólogo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Chef</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Comerciante</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Comunicador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Contador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Dentista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <valueName>Diplomático / Estadista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Diseñador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Doctor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <valueName>Economista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Enfermero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Farmaceutico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Fotógrafo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Historiador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Ingeniero Agrónomo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Ingeniero Civil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Ingeniero Eléctrico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Ingeniero en Computación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Ingeniero en Sistemas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Ingeniero en Telecomunicaciones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Ingeniero Industrial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Ingeniero Zootenista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <valueName>Licenciado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <valueName>Maestro (Educador)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <valueName>Mecánico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Mercadotecnista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <valueName>Ninguna Profesión</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Oftalmólogo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Periodista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Piloto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Policia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Profesor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Psicólogo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Publicista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Relacionista Público</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Secretaria / Asistente Adminsitrativo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <valueName>Sociólogo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Soldado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <valueName>Técnico en Computación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESIÓN</controllingFieldValue>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Veterinario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Abogado y Notario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Administrador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Agente Call Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Agente de Seguros</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Albañil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Analista de Crédito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Analista de Datos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Area de Mantenimiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Artesano</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Atletas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Barbero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Barrendero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Bibliotecario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Bodeguero/Auxiliar De Carga/Despachador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Bombero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Cajero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Camarero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Carnicero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Carpintero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Conductor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Conserje</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Diplomático/Estadista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Dueño de Autolote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Electricista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Estilista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Estudiante</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Florista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Gerente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Guarda de Seguridad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Ingeniero Mecánico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Jardinero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Jubilado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Juez</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Maestro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Maestro de Obras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Mecanico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Mensajero / Cartero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Mesero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Modelo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Panadero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Pescador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Pintor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Político</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Promotor de Crédito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Eliminar proveedor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Recepcionista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Repartidor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Sacerdote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Salvavidas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Sastre / Costurera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Supervisor de Piso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Tabacalero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Taxista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Técnico de Campo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Traductor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Transportista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Vendedor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCUPACIÓN</controllingFieldValue>
+            <valueName>Visitador Médico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Administración pública y defensa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Agricultura / Ganadería</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Asalariado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Banca y Seguros</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Bienes y Raíces</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Call Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Cárnica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Casinos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Comercio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Construcción</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Distribución y/o Comercialización de combustible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Energía y agua</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Enseñanza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Explotación de minas y canteras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Farmacéutica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Gobierno. Es la entidad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Hoteles y restaurantes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Industria manufactura</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Intermediación y servicios conexos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Mataderos Industriales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Organizaciones no gubernamentales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Otros servicios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Pecuario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Pesca y acuicultura</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Producción y Comercialización de Lácteos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Profesional Independiente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Propiedad de vivienda (Bienes y raices)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Proyectos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Micro financieras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Religioso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Salud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Seguridad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Servicios de Telecomunicaciones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Servicios Públicos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Silvicultura y extracción de madera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Tercerización de servicios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Transporte y comunicación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Venta de vehículos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACTIVIDAD ECONÓMICA</controllingFieldValue>
+            <valueName>Zonas Francas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Ahorro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Bienes muebles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Financiamiento instituciones financieras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Herencia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Ingresos del negocio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Obsequio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Premio de casino</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Premio de lotería</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Remesa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Rifa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ORIGEN DE LOS FONDOS</controllingFieldValue>
+            <valueName>Venta de inmuebles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ANTIGÜEDAD DE CLIENTE (AÑOS)</controllingFieldValue>
+            <valueName>Ocasional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ANTIGÜEDAD DE CLIENTE (AÑOS)</controllingFieldValue>
+            <valueName>Habitual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIPO DE CANAL</controllingFieldValue>
+            <valueName>Al Detalle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIPO DE CANAL</controllingFieldValue>
+            <valueName>Distribuidor Autorizado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROCEDENCIA</controllingFieldValue>
+            <valueName>Nacional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROCEDENCIA</controllingFieldValue>
+            <valueName>Extranjero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Acahualinca</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Altamira</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Casa Matriz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Juigalpa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Mall Las Américas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Moto Plaza PE.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>¿DONDE CONTRATA?</controllingFieldValue>
+            <valueName>Puerto Cabezas</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

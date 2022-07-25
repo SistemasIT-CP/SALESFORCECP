@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Esperando_Facturacio_Bancaria</fullName>
+    <active>true</active>
+    <description>No se puede ganar la oportunidad, depende de oportunidad principal</description>
+    <errorConditionFormula>AND (
+( RecordType.DeveloperName == &quot;Financiamiento_Bancario&quot;) ,
+ISCHANGED(StageName),
+ISPICKVAL(StageName, &quot;Información Completa&quot;),
+
+
+OR (
+ISBLANK(  ModeloVehiculo__c  ),
+ISBLANK(Vendedor__c ),
+ISBLANK(TEXT( Banco__c ))
+
+
+)
+
+)</errorConditionFormula>
+    <errorMessage>Debe completar la información de la etapa</errorMessage>
+</ValidationRule>

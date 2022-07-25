@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>eljarquin@casapellas.com</contactEmail>
+    <contactPhone>50585538480</contactPhone>
+    <label>Agilepoint</label>
+    <oauthConfig>
+        <callbackUrl>https://prodapp1.nxone.com/SharedResources/SharedEditors/oauthsuccess.html</callbackUrl>
+        <consumerKey>3MVG9_XwsqeYoueLg4Pn7kNz6Szk3CJNW6NLl9_3Z5Lj1O3zvCF.D3EiEGYabdv6zubtzFNWkgqfvc48qEwOl</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

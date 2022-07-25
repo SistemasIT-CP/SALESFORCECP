@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Documento_cliente_juridico</fullName>
+    <active>true</active>
+    <description>Esta regla de validacion es para cuando completan el campo Company no lo deje seleccion ciertos valores de lista de seleccion &quot;Tipo de documento&quot;</description>
+    <errorConditionFormula>AND(
+				OR(
+								RecordType.DeveloperName=&quot;Autolote&quot;,
+								RecordType.DeveloperName=&quot;Venta_motos&quot;,
+							 RecordType.DeveloperName=&quot;Ventas&quot;),
+				NOT(ISBLANK(Company)),
+				OR(
+			   	ISPICKVAL(Tipo_de_documento__c,&quot;Cedula de Identidad&quot;),
+							ISPICKVAL(Tipo_de_documento__c,&quot;Cedula de Residente&quot;)
+								)
+				)</errorConditionFormula>
+    <errorDisplayField>Tipo_de_documento__c</errorDisplayField>
+    <errorMessage>Los valores del campo &quot;Tipo de Documento&quot; no son validos para el tipo de &quot;Cliente Jurídicos&quot;</errorMessage>
+</ValidationRule>

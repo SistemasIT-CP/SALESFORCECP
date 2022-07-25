@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Recibidos__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Recibos</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>AllRecibidos__c.CodigoCliente__c</field>
+            <operation>equals</operation>
+            <valueField>AllRecibidos__c.Informe_de_Negociaci_n__r.C_digo_de_Cliente__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>AllRecibidos__c</referenceTo>
+    <relationshipLabel>Informes de Negociación</relationshipLabel>
+    <relationshipName>Informes_de_Negociaci_n</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

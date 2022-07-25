@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clasificacion__c</fullName>
+    <externalId>false</externalId>
+    <label>Clasificación</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Factor__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TIPO DE CLIENTE</fullName>
+                <default>false</default>
+                <label>TIPO DE CLIENTE</label>
+            </value>
+            <value>
+                <fullName>DOC. IDENTIDAD</fullName>
+                <default>false</default>
+                <label>DOC. IDENTIDAD</label>
+            </value>
+            <value>
+                <fullName>PROFESIÓN</fullName>
+                <default>false</default>
+                <label>PROFESIÓN</label>
+            </value>
+            <value>
+                <fullName>OCUPACIÓN</fullName>
+                <default>false</default>
+                <label>OCUPACIÓN</label>
+            </value>
+            <value>
+                <fullName>ACTIVIDAD ECONÓMICA</fullName>
+                <default>false</default>
+                <label>ACTIVIDAD ECONÓMICA</label>
+            </value>
+            <value>
+                <fullName>ORIGEN DE LOS FONDOS</fullName>
+                <default>false</default>
+                <label>ORIGEN DE LOS FONDOS</label>
+            </value>
+            <value>
+                <fullName>ANTIGÜEDAD DE CLIENTE (AÑOS)</fullName>
+                <default>false</default>
+                <label>ANTIGÜEDAD DE CLIENTE (AÑOS)</label>
+            </value>
+            <value>
+                <fullName>TIPO DE CANAL</fullName>
+                <default>false</default>
+                <label>TIPO DE CANAL</label>
+            </value>
+            <value>
+                <fullName>PROCEDENCIA</fullName>
+                <default>false</default>
+                <label>PROCEDENCIA</label>
+            </value>
+            <value>
+                <fullName>¿DONDE CONTRATA?</fullName>
+                <default>false</default>
+                <label>¿DONDE CONTRATA?</label>
+            </value>
+            <value>
+                <fullName>FORMA DE PAGO</fullName>
+                <default>false</default>
+                <label>FORMA DE PAGO</label>
+            </value>
+            <value>
+                <fullName>RESPONSABLE DEL PAGO</fullName>
+                <default>false</default>
+                <label>RESPONSABLE DEL PAGO</label>
+            </value>
+            <value>
+                <fullName>PAÍS DE ORIGEN</fullName>
+                <default>false</default>
+                <label>PAÍS DE ORIGEN</label>
+            </value>
+            <value>
+                <fullName>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</fullName>
+                <default>false</default>
+                <label>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Factor Cliente</controllingFieldValue>
+            <valueName>TIPO DE CLIENTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor Cliente</controllingFieldValue>
+            <valueName>DOC. IDENTIDAD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor Cliente</controllingFieldValue>
+            <valueName>PROFESIÓN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor Cliente</controllingFieldValue>
+            <valueName>OCUPACIÓN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor Cliente</controllingFieldValue>
+            <valueName>ACTIVIDAD ECONÓMICA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor Cliente</controllingFieldValue>
+            <valueName>ORIGEN DE LOS FONDOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor Cliente</controllingFieldValue>
+            <valueName>ANTIGÜEDAD DE CLIENTE (AÑOS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor canal de distribución</controllingFieldValue>
+            <valueName>TIPO DE CANAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor canal de distribución</controllingFieldValue>
+            <valueName>PROCEDENCIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor canal de distribución</controllingFieldValue>
+            <valueName>¿DONDE CONTRATA?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor producto</controllingFieldValue>
+            <valueName>FORMA DE PAGO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factor producto</controllingFieldValue>
+            <valueName>RESPONSABLE DEL PAGO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factores Geográficos</controllingFieldValue>
+            <valueName>PAÍS DE ORIGEN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Factores Geográficos</controllingFieldValue>
+            <valueName>LOCALIZACIÓN GEOGRÁFICA DEL CLIENTE</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

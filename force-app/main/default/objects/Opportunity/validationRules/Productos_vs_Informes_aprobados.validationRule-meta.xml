@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Productos_vs_Informes_aprobados</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ OR(
+   RecordType.DeveloperName=&quot;Principal_Motos&quot;,
+   RecordType.DeveloperName=&quot;Principal_Autos&quot;,
+   RecordType.DeveloperName=&quot;Principal_Autolote&quot;
+ ),
+ ISCHANGED(StageName),
+ ISPICKVAL(StageName, &quot;Listo para Facturar&quot;),
+ OR(ISNULL(Cantidad_de_informes_aprobados__c), 
+    Cantidad_de_vehiculos__c &lt;&gt; Cantidad_de_informes_aprobados__c)
+)</errorConditionFormula>
+    <errorMessage>Favor verifique que todos los productos de la oportunidad tengan informes de negociación aprobados o elimine los productos que no va a facturar.</errorMessage>
+</ValidationRule>

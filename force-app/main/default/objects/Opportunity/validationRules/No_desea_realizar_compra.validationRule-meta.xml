@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_desea_realizar_compra</fullName>
+    <active>true</active>
+    <description>Si cambiamos a formalización, al forma de adquisicion no puede ser &apos;No desea realizar su compra&apos;</description>
+    <errorConditionFormula>AND(
+				OR(
+							RecordType.DeveloperName=&quot;Principal_Motos&quot;,
+							RecordType.DeveloperName=&quot;Principal_Autos&quot;,
+RecordType.DeveloperName=&quot;Principal_Autolote&quot;
+								),	
+       ISPICKVAL(StageName, &quot;Formalizacion&quot;),
+       INCLUDES( Forma_de_Pago_Multiple__c, &quot;Aun no desea realizar su compra&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Forma_de_Pago_Multiple__c</errorDisplayField>
+    <errorMessage>&apos;Aún no desea realizar su compra&apos; no es un tipo válido a partir de la etapa Formalización</errorMessage>
+</ValidationRule>

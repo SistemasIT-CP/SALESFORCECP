@@ -1,0 +1,26 @@
+<html> 
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;"> 
+  <div style="text-align: center;"> 
+   <img alt="Encabezado-CP" src="{[devName:EncabezadoCP]}" style="max-width: 682.678px; width: 702.656px; height: 135.327px;" title="Encabezado-CP" /> 
+  </div> 
+  <div> 
+   <br /> Estimado&nbsp;{{{Informe_de_Negociaci_n__c.Cuenta__c}}}. 
+   <br /> 
+   <br /> Solo quiero tomar un momento para decirte <b>¡Gracias y Felicitaciones!</b> 
+   <br /> 
+   <br /> Tu vendedor&nbsp;{{{Informe_de_Negociaci_n__c.Vendedor__c}}}, me informó que has comprado un nuevo&nbsp;{{{Informe_de_Negociaci_n__c.C_Modelo__c}}}. Esta compra es muy importante para nosotros y especialmente para mi. 
+   <br /> 
+   <br /> Quiero asegurarme de que fue atendido de la mejor manera en nuestra sucursal. Si hay algo en lo que pueda apoyar para garantizar su satisfacción en su compra, porfavor no dude en contactarme.&nbsp; 
+   <br /> Nuestro objetivo es su satisfacción y cualquier otro sentimineto es considerado una falla para nosotros. 
+   <br /> 
+   <br /> Puede contactarme directamente a aegonzalez@casapellas.com 
+   <br /> 
+   <br /> Atentamente,&nbsp; 
+   <br /> 
+   <br /> Firma en imagen del gerente 
+  </div> 
+ </body>
+</html>

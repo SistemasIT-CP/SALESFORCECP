@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EstadoAccesorio__c</fullName>
+    <description>Variable original SFLAD .
+Enviar D si el accesorios esta en estado &quot;Despachado&quot;, de lo contrario enviar &quot; &quot; .</description>
+    <externalId>false</externalId>
+    <label>Estado del accesorio</label>
+    <length>1</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

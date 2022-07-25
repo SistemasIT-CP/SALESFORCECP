@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cambio_de_propietario</fullName>
+    <active>true</active>
+    <description>Impedir el cambio de propietario de oportunidad por perfil Agente Contact Center y Agente de ventas</description>
+    <errorConditionFormula>AND(
+ISCHANGED( OwnerId ),
+$Permission.Saltear_validacion_ops = FALSE, 
+				OR(
+							 $Profile.Name = &quot;Agente Contact Center&quot;,		
+								$Profile.Name = &quot;Agente de Ventas&quot;,
+								$Profile.Name = &quot;Vendedor V.A.&quot;,
+								$Profile.Name = &quot;Vendedor de Accesorios&quot;,
+								$Profile.Name = &quot;Facturador&quot;,
+								$Profile.Name = &quot;Avaluador de Autolote&quot;
+				)
+)</errorConditionFormula>
+    <errorDisplayField>OwnerId</errorDisplayField>
+    <errorMessage>No puedes cambiar de propietario</errorMessage>
+</ValidationRule>

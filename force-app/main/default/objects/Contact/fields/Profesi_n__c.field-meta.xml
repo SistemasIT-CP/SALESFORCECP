@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profesi_n__c</fullName>
+    <externalId>false</externalId>
+    <label>Profesión</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abogado</fullName>
+                <default>false</default>
+                <label>Abogado</label>
+            </value>
+            <value>
+                <fullName>Administrador de Empresas</fullName>
+                <default>false</default>
+                <label>Administrador de Empresas</label>
+            </value>
+            <value>
+                <fullName>Agricultor / Ganadero</fullName>
+                <default>false</default>
+                <label>Agricultor / Ganadero</label>
+            </value>
+            <value>
+                <fullName>Ama De Casa</fullName>
+                <default>false</default>
+                <label>Ama De Casa</label>
+            </value>
+            <value>
+                <fullName>Arquitecto</fullName>
+                <default>false</default>
+                <label>Arquitecto</label>
+            </value>
+            <value>
+                <fullName>Biólogo</fullName>
+                <default>false</default>
+                <label>Biólogo</label>
+            </value>
+            <value>
+                <fullName>Chef</fullName>
+                <default>false</default>
+                <label>Chef</label>
+            </value>
+            <value>
+                <fullName>Comerciante</fullName>
+                <default>false</default>
+                <label>Comerciante</label>
+            </value>
+            <value>
+                <fullName>Comunicador</fullName>
+                <default>false</default>
+                <label>Comunicador</label>
+            </value>
+            <value>
+                <fullName>Contador</fullName>
+                <default>false</default>
+                <label>Contador</label>
+            </value>
+            <value>
+                <fullName>Dentista</fullName>
+                <default>false</default>
+                <label>Dentista</label>
+            </value>
+            <value>
+                <fullName>Diplomático / Estadista</fullName>
+                <default>false</default>
+                <label>Diplomático / Estadista</label>
+            </value>
+            <value>
+                <fullName>Diseñador</fullName>
+                <default>false</default>
+                <label>Diseñador</label>
+            </value>
+            <value>
+                <fullName>Doctor</fullName>
+                <default>false</default>
+                <label>Doctor</label>
+            </value>
+            <value>
+                <fullName>Economista</fullName>
+                <default>false</default>
+                <label>Economista</label>
+            </value>
+            <value>
+                <fullName>Enfermero</fullName>
+                <default>false</default>
+                <label>Enfermero</label>
+            </value>
+            <value>
+                <fullName>Farmaceutico</fullName>
+                <default>false</default>
+                <label>Farmaceutico</label>
+            </value>
+            <value>
+                <fullName>Fotógrafo</fullName>
+                <default>false</default>
+                <label>Fotógrafo</label>
+            </value>
+            <value>
+                <fullName>Historiador</fullName>
+                <default>false</default>
+                <label>Historiador</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Agrónomo</fullName>
+                <default>false</default>
+                <label>Ingeniero Agrónomo</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Civil</fullName>
+                <default>false</default>
+                <label>Ingeniero Civil</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Eléctrico</fullName>
+                <default>false</default>
+                <label>Ingeniero Eléctrico</label>
+            </value>
+            <value>
+                <fullName>Ingeniero en Computación</fullName>
+                <default>false</default>
+                <label>Ingeniero en Computación</label>
+            </value>
+            <value>
+                <fullName>Ingeniero en Sistemas</fullName>
+                <default>false</default>
+                <label>Ingeniero en Sistemas</label>
+            </value>
+            <value>
+                <fullName>Ingeniero en Telecomunicaciones</fullName>
+                <default>false</default>
+                <label>Ingeniero en Telecomunicaciones</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Industrial</fullName>
+                <default>false</default>
+                <label>Ingeniero Industrial</label>
+            </value>
+            <value>
+                <fullName>Ingeniero Zootenista</fullName>
+                <default>false</default>
+                <label>Ingeniero Zootenista</label>
+            </value>
+            <value>
+                <fullName>Licenciado</fullName>
+                <default>false</default>
+                <label>Licenciado</label>
+            </value>
+            <value>
+                <fullName>Maestro (Educador)</fullName>
+                <default>false</default>
+                <label>Maestro (Educador)</label>
+            </value>
+            <value>
+                <fullName>Mecánico</fullName>
+                <default>false</default>
+                <label>Mecánico</label>
+            </value>
+            <value>
+                <fullName>Mercadotecnista</fullName>
+                <default>false</default>
+                <label>Mercadotecnista</label>
+            </value>
+            <value>
+                <fullName>Ninguna Profesión</fullName>
+                <default>false</default>
+                <label>Ninguna Profesión</label>
+            </value>
+            <value>
+                <fullName>Oftalmólogo</fullName>
+                <default>false</default>
+                <label>Oftalmólogo</label>
+            </value>
+            <value>
+                <fullName>Periodista</fullName>
+                <default>false</default>
+                <label>Periodista</label>
+            </value>
+            <value>
+                <fullName>Piloto</fullName>
+                <default>false</default>
+                <label>Piloto</label>
+            </value>
+            <value>
+                <fullName>Policia</fullName>
+                <default>false</default>
+                <label>Policia</label>
+            </value>
+            <value>
+                <fullName>Profesor</fullName>
+                <default>false</default>
+                <label>Profesor</label>
+            </value>
+            <value>
+                <fullName>Psicólogo</fullName>
+                <default>false</default>
+                <label>Psicólogo</label>
+            </value>
+            <value>
+                <fullName>Publicista</fullName>
+                <default>false</default>
+                <label>Publicista</label>
+            </value>
+            <value>
+                <fullName>Relacionista Público</fullName>
+                <default>false</default>
+                <label>Relacionista Público</label>
+            </value>
+            <value>
+                <fullName>Secretaria / Asistente Adminsitrativo</fullName>
+                <default>false</default>
+                <label>Secretaria / Asistente Adminsitrativo</label>
+            </value>
+            <value>
+                <fullName>Sociólogo</fullName>
+                <default>false</default>
+                <label>Sociólogo</label>
+            </value>
+            <value>
+                <fullName>Soldado</fullName>
+                <default>false</default>
+                <label>Soldado</label>
+            </value>
+            <value>
+                <fullName>Técnico en Computación</fullName>
+                <default>false</default>
+                <label>Técnico en Computación</label>
+            </value>
+            <value>
+                <fullName>Veterinario</fullName>
+                <default>false</default>
+                <label>Veterinario</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

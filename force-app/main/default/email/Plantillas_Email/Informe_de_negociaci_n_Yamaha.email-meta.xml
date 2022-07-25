@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla informe Yamaha</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Informe de negociación Yamaha</name>
+    <style>none</style>
+    <subject>Informe de negociación</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

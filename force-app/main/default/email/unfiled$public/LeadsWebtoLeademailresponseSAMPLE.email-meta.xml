@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Respuesta automática cuando se envía un prospecto nuevo online.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Prospectos:  Respuesta por email de Web para registro de prospectos (MUESTRA)</name>
+    <style>none</style>
+    <subject>{!Organization.Name}:  Gracias por su consulta</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

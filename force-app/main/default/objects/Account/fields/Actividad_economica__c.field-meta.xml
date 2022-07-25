@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actividad_economica__c</fullName>
+    <externalId>false</externalId>
+    <label>Actividad económica</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administración pública y defensa</fullName>
+                <default>false</default>
+                <label>Administración pública y defensa</label>
+            </value>
+            <value>
+                <fullName>Agricultura / Ganadería</fullName>
+                <default>false</default>
+                <label>Agricultura / Ganadería</label>
+            </value>
+            <value>
+                <fullName>Asalariado</fullName>
+                <default>false</default>
+                <label>Asalariado</label>
+            </value>
+            <value>
+                <fullName>Banca y Seguros</fullName>
+                <default>false</default>
+                <label>Banca y Seguros</label>
+            </value>
+            <value>
+                <fullName>Bienes y Raíces</fullName>
+                <default>false</default>
+                <label>Bienes y Raíces</label>
+            </value>
+            <value>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>Cárnica</fullName>
+                <default>false</default>
+                <label>Cárnica</label>
+            </value>
+            <value>
+                <fullName>Casinos</fullName>
+                <default>false</default>
+                <label>Casinos</label>
+            </value>
+            <value>
+                <fullName>Comercio</fullName>
+                <default>false</default>
+                <label>Comercio</label>
+            </value>
+            <value>
+                <fullName>Construcción</fullName>
+                <default>false</default>
+                <label>Construcción</label>
+            </value>
+            <value>
+                <fullName>Distribución y/o Comercialización de combustible</fullName>
+                <default>false</default>
+                <label>Distribución y/o Comercialización de combustible</label>
+            </value>
+            <value>
+                <fullName>Energía y agua</fullName>
+                <default>false</default>
+                <label>Energía y agua</label>
+            </value>
+            <value>
+                <fullName>Enseñanza</fullName>
+                <default>false</default>
+                <label>Enseñanza</label>
+            </value>
+            <value>
+                <fullName>Explotación de minas y canteras</fullName>
+                <default>false</default>
+                <label>Explotación de minas y canteras</label>
+            </value>
+            <value>
+                <fullName>Farmacéutica</fullName>
+                <default>false</default>
+                <label>Farmacéutica</label>
+            </value>
+            <value>
+                <fullName>Gobierno. Es la entidad</fullName>
+                <default>false</default>
+                <label>Gobierno. Es la entidad</label>
+            </value>
+            <value>
+                <fullName>Hoteles y restaurantes</fullName>
+                <default>false</default>
+                <label>Hoteles y restaurantes</label>
+            </value>
+            <value>
+                <fullName>Industria manufactura</fullName>
+                <default>false</default>
+                <label>Industria manufactura</label>
+            </value>
+            <value>
+                <fullName>Intermediación y servicios conexos</fullName>
+                <default>false</default>
+                <label>Intermediación y servicios conexos</label>
+            </value>
+            <value>
+                <fullName>Mataderos Industriales</fullName>
+                <default>false</default>
+                <label>Mataderos Industriales</label>
+            </value>
+            <value>
+                <fullName>Organizaciones no gubernamentales</fullName>
+                <default>false</default>
+                <label>Organizaciones no gubernamentales</label>
+            </value>
+            <value>
+                <fullName>Otros servicios</fullName>
+                <default>false</default>
+                <label>Otros servicios</label>
+            </value>
+            <value>
+                <fullName>Pecuario</fullName>
+                <default>false</default>
+                <label>Pecuario</label>
+            </value>
+            <value>
+                <fullName>Pesca y acuicultura</fullName>
+                <default>false</default>
+                <label>Pesca y acuicultura</label>
+            </value>
+            <value>
+                <fullName>Producción y Comercialización de Lácteos</fullName>
+                <default>false</default>
+                <label>Producción y Comercialización de Lácteos</label>
+            </value>
+            <value>
+                <fullName>Profesional Independiente</fullName>
+                <default>false</default>
+                <label>Profesional Independiente</label>
+            </value>
+            <value>
+                <fullName>Propiedad de vivienda (Bienes y raices)</fullName>
+                <default>false</default>
+                <label>Propiedad de vivienda (Bienes y raices)</label>
+            </value>
+            <value>
+                <fullName>Proyectos</fullName>
+                <default>false</default>
+                <label>Proyectos</label>
+            </value>
+            <value>
+                <fullName>Micro financieras</fullName>
+                <default>false</default>
+                <label>Micro financieras</label>
+            </value>
+            <value>
+                <fullName>Religioso</fullName>
+                <default>false</default>
+                <label>Religioso</label>
+            </value>
+            <value>
+                <fullName>Salud</fullName>
+                <default>false</default>
+                <label>Salud</label>
+            </value>
+            <value>
+                <fullName>Seguridad</fullName>
+                <default>false</default>
+                <label>Seguridad</label>
+            </value>
+            <value>
+                <fullName>Servicios de Telecomunicaciones</fullName>
+                <default>false</default>
+                <label>Servicios de Telecomunicaciones</label>
+            </value>
+            <value>
+                <fullName>Servicios Públicos</fullName>
+                <default>false</default>
+                <label>Servicios Públicos</label>
+            </value>
+            <value>
+                <fullName>Silvicultura y extracción de madera</fullName>
+                <default>false</default>
+                <label>Silvicultura y extracción de madera</label>
+            </value>
+            <value>
+                <fullName>Tercerización de servicios</fullName>
+                <default>false</default>
+                <label>Tercerización de servicios</label>
+            </value>
+            <value>
+                <fullName>Transporte y comunicación</fullName>
+                <default>false</default>
+                <label>Transporte y comunicación</label>
+            </value>
+            <value>
+                <fullName>Venta de vehículos</fullName>
+                <default>false</default>
+                <label>Venta de vehículos</label>
+            </value>
+            <value>
+                <fullName>Zonas Francas</fullName>
+                <default>false</default>
+                <label>Zonas Francas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

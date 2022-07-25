@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Para dar acceso a modificación de campos de crédito</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Categoria_26_UDC__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Categoria_8_UDC__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Categoria 8 y 26</label>
+    <license>Salesforce</license>
+    <recordTypeVisibilities>
+        <recordType>Account.Juridicos</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

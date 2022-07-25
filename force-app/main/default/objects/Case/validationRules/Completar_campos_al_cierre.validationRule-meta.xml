@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completar_campos_al_cierre</fullName>
+    <active>true</active>
+    <description>Regla de validacion para no poder cerrar un caso sin completar el campo motivo de cierre</description>
+    <errorConditionFormula>AND(
+				RecordType.DeveloperName &lt;&gt; &quot;Casos_a_tipificar&quot;, 
+				CONTAINS(
+								TEXT(Status),
+								&quot;Cerrado&quot;) ,
+				OR(
+								ISBLANK(
+												TEXT(	Motivo_de_cierre__c)
+								),
+								ISBLANK(
+												TEXT(Origin)
+								),
+								ISBLANK(
+												TEXT( Reason)
+								),
+								ISBLANK(
+												TEXT( Priority	)
+								),
+								ISBLANK(
+												TEXT(Unidad_de_negocio__c	)
+								),
+								ISBLANK(
+												TEXT(	Valoracion_del_contacto__c )
+								),
+								ISBLANK(Subject),
+								ISBLANK(
+												TEXT(	Interes_en__c 	)
+								))
+)</errorConditionFormula>
+    <errorMessage>Debe completar los siguientes campos antes de poder cerrar el caso: Asunto, Motivo de cierre, Prioridad, Clasificación, Valoración del contacto, Motivo del caso y Unidad de negocio.</errorMessage>
+</ValidationRule>

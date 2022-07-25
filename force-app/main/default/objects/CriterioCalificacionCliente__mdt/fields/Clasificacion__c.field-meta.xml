@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clasificacion__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Clasificacion</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ninguno</fullName>
+                <default>true</default>
+                <label>Ninguno</label>
+            </value>
+            <value>
+                <fullName>Tipo Persona</fullName>
+                <default>false</default>
+                <label>Tipo de persona</label>
+            </value>
+            <value>
+                <fullName>Tipo Cliente</fullName>
+                <default>false</default>
+                <label>Tipo de cliente</label>
+            </value>
+            <value>
+                <fullName>Doc. Identidad</fullName>
+                <default>false</default>
+                <label>Doc. Identidad</label>
+            </value>
+            <value>
+                <fullName>Tipo Relación</fullName>
+                <default>false</default>
+                <label>Tipo Relacion Economica</label>
+            </value>
+            <value>
+                <fullName>Nivel Organizacional</fullName>
+                <default>false</default>
+                <label>Nivel Organizacional</label>
+            </value>
+            <value>
+                <fullName>Profesión</fullName>
+                <default>false</default>
+                <label>Profesión</label>
+            </value>
+            <value>
+                <fullName>Ocupación</fullName>
+                <default>false</default>
+                <label>Ocupación</label>
+            </value>
+            <value>
+                <fullName>Actividad Economica</fullName>
+                <default>false</default>
+                <label>Actividad Economica</label>
+            </value>
+            <value>
+                <fullName>Canal Contrata</fullName>
+                <default>false</default>
+                <label>Canal Contrata</label>
+            </value>
+            <value>
+                <fullName>Sucursal</fullName>
+                <default>false</default>
+                <label>Sucursal</label>
+            </value>
+            <value>
+                <fullName>Forma de pago</fullName>
+                <default>false</default>
+                <label>Forma de pago</label>
+            </value>
+            <value>
+                <fullName>Tipo de transacción</fullName>
+                <default>false</default>
+                <label>Tipo de transacción</label>
+            </value>
+            <value>
+                <fullName>Responsable del pago</fullName>
+                <default>false</default>
+                <label>Responsable del pago</label>
+            </value>
+            <value>
+                <fullName>Origen de los fondo</fullName>
+                <default>false</default>
+                <label>Origen de los fondo</label>
+            </value>
+            <value>
+                <fullName>Procedencia</fullName>
+                <default>false</default>
+                <label>Procedencia</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

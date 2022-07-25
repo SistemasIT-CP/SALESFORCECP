@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Empresa_Aseguradora__c</fullName>
+    <externalId>false</externalId>
+    <label>Empresa Aseguradora</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Seguros América</fullName>
+                <default>false</default>
+                <label>Seguros América</label>
+            </value>
+            <value>
+                <fullName>Seguros Lafise</fullName>
+                <default>false</default>
+                <label>Seguros Lafise</label>
+            </value>
+            <value>
+                <fullName>ASSA</fullName>
+                <default>false</default>
+                <label>ASSA</label>
+            </value>
+            <value>
+                <fullName>INISER</fullName>
+                <default>false</default>
+                <label>INISER</label>
+            </value>
+            <value>
+                <fullName>MAPFRE</fullName>
+                <default>false</default>
+                <label>MAPFRE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca_detalle_de_perdida__c</fullName>
+    <externalId>false</externalId>
+    <label>Marca detalle de perdida</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Detalle_de_perdida__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hyundai - Deshon</fullName>
+                <default>false</default>
+                <label>Hyundai - Deshon</label>
+            </value>
+            <value>
+                <fullName>Hyundai - Excel</fullName>
+                <default>false</default>
+                <label>Hyundai - Excel</label>
+            </value>
+            <value>
+                <fullName>Nissan</fullName>
+                <default>false</default>
+                <label>Nissan</label>
+            </value>
+            <value>
+                <fullName>Mazda</fullName>
+                <default>false</default>
+                <label>Mazda</label>
+            </value>
+            <value>
+                <fullName>Mitsubichi</fullName>
+                <default>false</default>
+                <label>Mitsubichi</label>
+            </value>
+            <value>
+                <fullName>Isuzu</fullName>
+                <default>false</default>
+                <label>Isuzu</label>
+            </value>
+            <value>
+                <fullName>Ford</fullName>
+                <default>false</default>
+                <label>Ford</label>
+            </value>
+            <value>
+                <fullName>Honda</fullName>
+                <default>false</default>
+                <label>Honda</label>
+            </value>
+            <value>
+                <fullName>Kia</fullName>
+                <default>false</default>
+                <label>Kia</label>
+            </value>
+            <value>
+                <fullName>Toyota - CP</fullName>
+                <default>false</default>
+                <label>Toyota - CP</label>
+            </value>
+            <value>
+                <fullName>Toyota -AN</fullName>
+                <default>false</default>
+                <label>Toyota -AN</label>
+            </value>
+            <value>
+                <fullName>Hino</fullName>
+                <default>false</default>
+                <label>Hino</label>
+            </value>
+            <value>
+                <fullName>Suzuki</fullName>
+                <default>false</default>
+                <label>Suzuki</label>
+            </value>
+            <value>
+                <fullName>Chevrolet</fullName>
+                <default>false</default>
+                <label>Chevrolet</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Hyundai - Deshon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Hyundai - Excel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Nissan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Mazda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Mitsubichi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Isuzu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Ford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Honda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Kia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Toyota - CP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Toyota -AN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Hino</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Suzuki</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Chevrolet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compro otra marca (Ext)</controllingFieldValue>
+            <valueName>Otros</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

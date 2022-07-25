@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accesorios__c</fullName>
+    <externalId>false</externalId>
+    <label>Accesorios</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Canastera</fullName>
+                <default>false</default>
+                <label>Canastera</label>
+            </value>
+            <value>
+                <fullName>Anti Vuelco</fullName>
+                <default>false</default>
+                <label>Anti Vuelco</label>
+            </value>
+            <value>
+                <fullName>Pescante</fullName>
+                <default>false</default>
+                <label>Pescante</label>
+            </value>
+            <value>
+                <fullName>Defensa</fullName>
+                <default>false</default>
+                <label>Defensa</label>
+            </value>
+            <value>
+                <fullName>Camara Retroceso</fullName>
+                <default>false</default>
+                <label>Camara Retroceso</label>
+            </value>
+            <value>
+                <fullName>Alarma</fullName>
+                <default>false</default>
+                <label>Alarma</label>
+            </value>
+            <value>
+                <fullName>Sensores Retroceso</fullName>
+                <default>false</default>
+                <label>Sensores Retroceso</label>
+            </value>
+            <value>
+                <fullName>Ninguno</fullName>
+                <default>false</default>
+                <label>Ninguno</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

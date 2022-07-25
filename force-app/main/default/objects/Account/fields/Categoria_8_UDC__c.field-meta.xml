@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categoria_8_UDC__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Tipo de cliente crédito</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Catalogo_UDC__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Categoria 8</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Catalogo_UDC__c</referenceTo>
+    <relationshipLabel>Cuentas (Tipo de cliente credito)</relationshipLabel>
+    <relationshipName>Cuentas8</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

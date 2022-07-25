@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X12_En_promedio_cada_cuanto_se_contact__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>12. En promedio cada cuanto se contactó con usted nuestro asesor de ventas? Todos los días, cada 2 días, 1 vez por semana, o nunca le contactó.</inlineHelpText>
+    <label>12. En promedio cada cuanto se contactó?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Todos los días</fullName>
+                <default>false</default>
+                <label>Todos los días</label>
+            </value>
+            <value>
+                <fullName>Cada dos días</fullName>
+                <default>false</default>
+                <label>Cada dos días</label>
+            </value>
+            <value>
+                <fullName>Una vez por semana</fullName>
+                <default>false</default>
+                <label>Una vez por semana</label>
+            </value>
+            <value>
+                <fullName>Nunca</fullName>
+                <default>false</default>
+                <label>Nunca</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

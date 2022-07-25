@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IOrigen__c</fullName>
+    <description>Muestra con un icono referente al campo origen del caso para mejorar la identificacion rapida al usuario</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+Origin ,
+&quot;Telefono&quot;, IMAGE (&quot;https://gcpcrm--c.documentforce.com/servlet/servlet.FileDownload?file=0153k00000At5Xn&quot;, &quot;Telefono&quot;,35,35),
+&quot;Email&quot;, IMAGE (&quot;https://gcpcrm--c.documentforce.com/servlet/servlet.FileDownload?file=0153k00000At5Y7&quot;, &quot;Email&quot;,35,35),
+&quot;Web&quot;, IMAGE (&quot;https://gcpcrm--dev3--c.visualforce.com/resource/1605727551000/Web?&quot;, &quot;Web&quot;,35,35),
+&quot;Whatsapp&quot;, IMAGE (&quot;https://gcpcrm--c.documentforce.com/servlet/servlet.FileDownload?file=0153k00000At5YR&quot;, &quot;Whatsapp&quot;,35,35),
+&quot;Facebook&quot;, IMAGE (&quot;https://gcpcrm--c.documentforce.com/servlet/servlet.FileDownload?file=0153k00000At5YC&quot;, &quot;Facebook&quot;,35,35),
+&quot;Twitter&quot;, IMAGE (&quot;https://gcpcrm--c.documentforce.com/servlet/servlet.FileDownload?file=0153k00000At5YH&quot;, &quot;Twitter&quot;,35,35),
+&quot;Presencial&quot;, IMAGE (&quot;https://gcpcrm--c.documentforce.com/servlet/servlet.FileDownload?file=0153k00000At5YM&quot;, &quot;Presencial&quot;,35,35),
+&quot;Facebook Messenger&quot;, IMAGE (&quot;https://gcpcrm--c.documentforce.com/servlet/servlet.FileDownload?file=0153k00000At5YW&quot;, &quot;Facebook Messenger&quot;,35,35),
+&quot;&quot; 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Origen</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

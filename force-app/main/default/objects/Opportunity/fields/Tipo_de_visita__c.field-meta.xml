@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_visita__c</fullName>
+    <description>CAMPO PARA QUE LLENE EL ANFITRIÓN COMO PARTE DE SU TRACKING A LOS LEADS QUE ELLA CREÓ</description>
+    <externalId>false</externalId>
+    <label>Tipo de visita</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SEGUIMIENTO</fullName>
+                <default>false</default>
+                <label>SEGUIMIENTO</label>
+            </value>
+            <value>
+                <fullName>A RESERVAR</fullName>
+                <default>false</default>
+                <label>A RESERVAR</label>
+            </value>
+            <value>
+                <fullName>ENTREGA</fullName>
+                <default>false</default>
+                <label>ENTREGA</label>
+            </value>
+            <value>
+                <fullName>PRUEBA DE MANEJO</fullName>
+                <default>false</default>
+                <label>PRUEBA DE MANEJO</label>
+            </value>
+            <value>
+                <fullName>ABONAR PAGO</fullName>
+                <default>false</default>
+                <label>ABONAR PAGO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

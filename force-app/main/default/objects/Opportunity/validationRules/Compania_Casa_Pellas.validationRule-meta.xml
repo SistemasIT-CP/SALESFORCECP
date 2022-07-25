@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compania_Casa_Pellas</fullName>
+    <active>false</active>
+    <description>Para escoger casa pellas cuando se tiene la marca correcpondiente</description>
+    <errorConditionFormula>OR(
+   AND ( Compa_a__r.description1__c != &apos;CASA PELLAS, S.A&apos;,
+OR( 
+       L_neas_de_Negocio__r.description1__c  = &apos;Autos Toyota&apos;,
+       L_neas_de_Negocio__r.description1__c  = &apos;Autos Suzuki&apos;,
+       L_neas_de_Negocio__r.description1__c  = &apos;Camiones Hino&apos;)),
+   AND ( Compa_a__r.description1__c != &apos;KIPESA&apos;,
+       L_neas_de_Negocio__r.description1__c  = &apos;Autos Nuevos&apos;),
+  AND ( Compa_a__r.description1__c != &apos;V E L O S A&apos;,
+       L_neas_de_Negocio__r.description1__c  = &apos;Camiones&apos;))</errorConditionFormula>
+    <errorDisplayField>Compa_a__c</errorDisplayField>
+    <errorMessage>Casa Pellas : TOYOTA, SUZUKI, HINO
+KIPESA: AUTOS NUEVOS
+VELOSA: CAMIONES</errorMessage>
+</ValidationRule>

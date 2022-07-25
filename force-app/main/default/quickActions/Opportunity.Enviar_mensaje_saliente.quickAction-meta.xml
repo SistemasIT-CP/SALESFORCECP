@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Prueba para enviar desde la opp</description>
+    <flowDefinition>Mensaje_saliente_case</flowDefinition>
+    <label>Enviar mensaje saliente</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipo_Motos_yamaha_Lead</fullName>
+    <columns>Color_de_tiempo__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Modelo_a_cotizar__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Tiempo_transcurrido__c</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>Cuando_desea_realizar_su_compra__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Marca_a_cotizar__c</field>
+        <operation>equals</operation>
+        <value>Yamaha</value>
+    </filters>
+    <label>Equipo Motos Yamaha</label>
+    <sharedTo>
+        <group>Digital_Motos_Yamaha</group>
+        <group>Marketing_Digital</group>
+    </sharedTo>
+</ListView>

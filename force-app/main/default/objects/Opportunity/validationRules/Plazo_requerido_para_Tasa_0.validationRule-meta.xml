@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plazo_requerido_para_Tasa_0</fullName>
+    <active>true</active>
+    <description>Si la forma de pago es Tasa 0, el campo Plazo es requerido</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;Principal_Motos&quot;,
+ ISCHANGED(Plazo__c),
+ INCLUDES(Forma_de_Pago_Multiple__c, &quot;Tasa 0&quot;),
+ ISBLANK(TEXT(Plazo__c))
+)</errorConditionFormula>
+    <errorMessage>Si la Forma de Adquisición es Tasa 0, el Plazo es requerido</errorMessage>
+</ValidationRule>

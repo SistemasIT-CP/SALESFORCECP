@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mensajeria_Telecobranza_Fidem_MessagingSession</fullName>
+    <columns>Name</columns>
+    <columns>MessagingChannel</columns>
+    <columns>MessagingEndUser</columns>
+    <columns>Owner</columns>
+    <columns>Status</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Case</columns>
+    <columns>CreatedDate</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MessagingChannel</field>
+        <operation>equals</operation>
+        <value>whatsapp:+50584092111</value>
+    </filters>
+    <filters>
+        <field>MessagingChannel</field>
+        <operation>notEqual</operation>
+        <value>Finalizado o cerrado</value>
+    </filters>
+    <label>Mensajeria Telecobranza Fidem</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

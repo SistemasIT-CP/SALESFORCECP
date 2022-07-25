@@ -1,0 +1,6 @@
+<messaging:emailTemplate subject="Sus comentarios son importantes para nosotros" recipientType="Contact" relatedToType="Case">
+<messaging:plainTextEmailBody >
+Felicitaciones.
+Ésta es la nueva plantilla de email de Visualforce.
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

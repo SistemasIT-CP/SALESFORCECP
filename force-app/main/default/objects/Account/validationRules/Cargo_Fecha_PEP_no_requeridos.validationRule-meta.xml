@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cargo_Fecha_PEP_no_requeridos</fullName>
+    <active>true</active>
+    <description>Si el cliente no es PEP, el cargo y la fecha no deben llenarse</description>
+    <errorConditionFormula>AND(
+ NOT( PEP__c ),
+ OR(
+  NOT (ISBLANK(Cargo_PEP__c)),
+  NOT (ISNULL(Fecha_inicio_PEP__c))
+ )
+)</errorConditionFormula>
+    <errorDisplayField>PEP__c</errorDisplayField>
+    <errorMessage>Si el cliente no es PEP, el cargo y la fecha no deben llenarse</errorMessage>
+</ValidationRule>

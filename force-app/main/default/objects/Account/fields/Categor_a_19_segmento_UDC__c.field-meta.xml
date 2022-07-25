@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categor_a_19_segmento_UDC__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Sugerencias: Clientes particulares, Empresa sector privado, Empresas del grupo Pellas, Gobierno, Cooperativas de transporte, Embajadas/ONG o Grupos religiosos.</inlineHelpText>
+    <label>Segmentación del cliente</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Catalogo_UDC__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Categoria 19</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Catalogo_UDC__c</referenceTo>
+    <relationshipLabel>Cuentas (Segmentacion del cliente)</relationshipLabel>
+    <relationshipName>Cuentas7</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

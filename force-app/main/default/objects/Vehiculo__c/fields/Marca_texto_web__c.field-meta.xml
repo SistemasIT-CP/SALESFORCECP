@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca_texto_web__c</fullName>
+    <description>El mismo campo de marca del vehiculo, en tipo texto alimentado por flow para que lo pueda consumir el plugin de la web de autolote</description>
+    <externalId>false</externalId>
+    <label>Marca texto web</label>
+    <length>25</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

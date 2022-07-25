@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Informes_pendientes_de_aprobacion</fullName>
+    <columns>NAME</columns>
+    <columns>Consecutivo_del_Informe__c</columns>
+    <columns>N_mero_de_la_oportunidad__c</columns>
+    <columns>Oportunidad__c</columns>
+    <columns>factura__c</columns>
+    <columns>Producto__c</columns>
+    <columns>total_negociado__c</columns>
+    <columns>Marca_Oportunidad__c</columns>
+    <columns>MarcaIntercambio__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Aprobado__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Marca_Oportunidad__c</field>
+        <operation>equals</operation>
+        <value>TOYOTA</value>
+    </filters>
+    <label>Pendientes TOYOTA</label>
+    <sharedTo>
+        <group>Informer_pendientes_TOYOTA</group>
+    </sharedTo>
+</ListView>

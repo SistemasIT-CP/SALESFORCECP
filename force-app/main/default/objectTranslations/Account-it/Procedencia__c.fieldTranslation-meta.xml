@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Procedencia__c</name>
+    <picklistValues>
+        <masterLabel>Extranjero</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nacional</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

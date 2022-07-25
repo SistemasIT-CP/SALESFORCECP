@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Taller</fullName>
+    <active>true</active>
+    <businessProcess>Taller</businessProcess>
+    <compactLayoutAssignment>Servicio</compactLayoutAssignment>
+    <description>Tipo de registro para los casos de Taller</description>
+    <label>Taller</label>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Campaña</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook Messenger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presencial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefono</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whatsapp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Alta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baja</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Servicio del Taller de Motos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicios de de taller enderezado y pintura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicios de taller mecanica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicios del Taller Camiones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicios del Taller Express</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Pregunta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problema</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitud de función</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

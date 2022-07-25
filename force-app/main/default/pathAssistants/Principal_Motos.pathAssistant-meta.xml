@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Principal Motos</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Canal_Contrata__c</fieldNames>
+        <fieldNames>Desea_realizar_intercambio__c</fieldNames>
+        <fieldNames>Distribuidor__c</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <fieldNames>Forma_de_Pago_Multiple__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Validar Inventario&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Enviar Imágenes/enlace web de modelo de interés&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Invitar a ver inventario en piso&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Ofrecer Prueba&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Contacto Exitoso</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Fecha_de_entrega__c</fieldNames>
+        <fieldNames>Quien_concede__c</fieldNames>
+        <fieldNames>Plazo__c</fieldNames>
+        <fieldNames>Tipo_de_relaci_n_econ_mica__c</fieldNames>
+        <fieldNames>Tipo_de_transacci_n__c</fieldNames>
+        <info>&lt;p&gt;Seleccione el campo Quien Concede que corresponda:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Si la forma de pago es Contado no debe elegir ninguna opción.&lt;/li&gt;&lt;li&gt;Si la forma de pago es Financiamiento debe elegir: FAMA, CREDEX, CREDIFACIL, TU CREDITO, INSTACREDIT o FIDEM.&lt;/li&gt;&lt;li&gt;Si la forma de pago es Tasa 0 debe elegir: BANPRO, BAC, LAFISE o FICOHSA.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Ademas revisar campos obligatorios para la generación del Scoring UAF:&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;﻿&lt;/span&gt;Sucursal, Tipo de transacción, Responsable del pago, Tipo de relación económica y Canal de venta en &lt;b&gt;Oportunidad&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;País, Tipo de contribuyente, Tipo de persona y Tipo de cliente en &lt;/span&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Cuenta&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Formalizacion</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Incluir en el expediente (Cédula/ Cédula Rep. Legal, Circulación, Sumario, Informe de Negociación con saldo en $0, Hoja de Entrega&lt;/p&gt;&lt;p&gt;Recordar Firma de cliente en: Informe, Checklist, Garantía, Factura, Constancia de Tránsito.&lt;/p&gt;</info>
+        <picklistValueName>Listo Para Facturar</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Comprador__c</fieldNames>
+        <fieldNames>Origen_de_los_fondos__c</fieldNames>
+        <fieldNames>Procedencia_de_los_fondos__c</fieldNames>
+        <fieldNames>Responsable_del_pago__c</fieldNames>
+        <fieldNames>Sucursal__c</fieldNames>
+        <info>&lt;p&gt;Revisar campos obligatorios para la generación del PIC:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Origen de los fondos, Procedencia de los fondos, Responsable del pago y Sucursal en &lt;b&gt;Oportunidad&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Comprador en &lt;b&gt;Oportunidades de cuentas Empresa&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Cédula, &lt;span style=&quot;font-size: 13px;&quot;&gt;Tipo de identificación, &lt;/span&gt;Email, Teléfono, Dirección, Departamento, Municipio y Actividad Económica en &lt;b&gt;Cuenta&lt;/b&gt;&lt;ul&gt;&lt;li&gt;Si es &lt;b&gt;Cuenta Jurídica: &lt;/b&gt;Representante Legal&lt;/li&gt;&lt;li&gt;Si es &lt;b&gt;Cuenta Personal: &lt;/b&gt;Nacionalidad, Profesión y Ocupación&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Negociacion</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>ModeloVehiculo__c</fieldNames>
+        <fieldNames>Prueba_de_manejo__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Validar con el cliente detalles actuales del vehículo (Equipamiento, colores, etc.)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Realizar Prueba de Manejo con cliente&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Validar si hay otro tomador de decisión&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Seleccionando Modelo</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Principal_Motos</recordTypeName>
+</PathAssistant>

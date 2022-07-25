@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_de_cierre__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo de cierre</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bloqueo</fullName>
+                <default>false</default>
+                <label>Bloqueo</label>
+            </value>
+            <value>
+                <fullName>Caso agotó su periodo de seguimiento</fullName>
+                <default>false</default>
+                <label>Caso agotó su periodo de seguimiento</label>
+            </value>
+            <value>
+                <fullName>Caso existe como prospecto</fullName>
+                <default>false</default>
+                <label>Caso existe como prospecto</label>
+            </value>
+            <value>
+                <fullName>Se Deriva a ventas</fullName>
+                <default>false</default>
+                <label>Caso se deriva a ventas</label>
+            </value>
+            <value>
+                <fullName>Caso ya fue atendido por correo</fullName>
+                <default>false</default>
+                <label>Caso ya fue atendido por correo</label>
+            </value>
+            <value>
+                <fullName>Caso ya fue atendido por llamada</fullName>
+                <default>false</default>
+                <label>Caso ya fue atendido por llamada entrante</label>
+            </value>
+            <value>
+                <fullName>Cerrado Asignado</fullName>
+                <default>false</default>
+                <label>Cerrado Asignado</label>
+            </value>
+            <value>
+                <fullName>Cerrado Resuelto</fullName>
+                <default>false</default>
+                <label>Cerrado Resuelto</label>
+            </value>
+            <value>
+                <fullName>Cliente canceló su solicitud</fullName>
+                <default>false</default>
+                <label>Cliente canceló su solicitud</label>
+            </value>
+            <value>
+                <fullName>Cliente compro</fullName>
+                <default>false</default>
+                <label>Cliente compró</label>
+            </value>
+            <value>
+                <fullName>Cliente compro en otro lugar</fullName>
+                <default>false</default>
+                <label>Cliente compro en otro lugar</label>
+            </value>
+            <value>
+                <fullName>Cliente consulta por informacion referida a pagos o estado de cuenta</fullName>
+                <default>false</default>
+                <label>Cliente consulta por informacion referida a pagos o estado de cuenta</label>
+            </value>
+            <value>
+                <fullName>Cliente consultó por servicio que no brindamos</fullName>
+                <default>false</default>
+                <label>Cliente consultó por servicio que no brindamos</label>
+            </value>
+            <value>
+                <fullName>Cliente cotiza otros sevicios CP</fullName>
+                <default>false</default>
+                <label>Cliente cotiza otros sevicios CP</label>
+            </value>
+            <value>
+                <fullName>Cliente cotizó en mostrador o llamó</fullName>
+                <default>false</default>
+                <label>Cliente cotizó en mostrador o llamó</label>
+            </value>
+            <value>
+                <fullName>Cliente cotizó marca que no distribuimos</fullName>
+                <default>false</default>
+                <label>Cliente cotizó marca que no distribuimos</label>
+            </value>
+            <value>
+                <fullName>Cliente desea darse de baja de los correos electronicos</fullName>
+                <default>false</default>
+                <label>Cliente desea darse de baja de los correos electrónicos</label>
+            </value>
+            <value>
+                <fullName>Cliente desistio de la oferta</fullName>
+                <default>false</default>
+                <label>Cliente desistió de la oferta</label>
+            </value>
+            <value>
+                <fullName>Cliente desistio del reclamo</fullName>
+                <default>false</default>
+                <label>Cliente desistió del reclamo</label>
+            </value>
+            <value>
+                <fullName>Cliente está siendo atendido por otro vendedor</fullName>
+                <default>false</default>
+                <label>Cliente está siendo atendido por otro vendedor</label>
+            </value>
+            <value>
+                <fullName>Cliente inconforme con el costo del diagnóstico</fullName>
+                <default>false</default>
+                <label>Cliente inconforme con el costo del diagnóstico</label>
+            </value>
+            <value>
+                <fullName>Cliente no contestó intentos de llamada</fullName>
+                <default>false</default>
+                <label>Cliente no contestó intentos de llamada</label>
+            </value>
+            <value>
+                <fullName>Cliente no cumple con los requisitos de credito</fullName>
+                <default>false</default>
+                <label>Cliente no cumple con los requisitos de crédito</label>
+            </value>
+            <value>
+                <fullName>Cliente no especifica su interés</fullName>
+                <default>false</default>
+                <label>Cliente no especifica su interés</label>
+            </value>
+            <value>
+                <fullName>Cliente no realizo pago pago rechazado</fullName>
+                <default>false</default>
+                <label>Cliente no realizo pago/pago rechazado</label>
+            </value>
+            <value>
+                <fullName>Cliente no respondio a los intentos de contacto</fullName>
+                <default>false</default>
+                <label>Cliente no respondió a los intentos de contacto</label>
+            </value>
+            <value>
+                <fullName>Cliente nos contactará</fullName>
+                <default>false</default>
+                <label>Cliente nos contactará</label>
+            </value>
+            <value>
+                <fullName>Cliente no tiene interés (ingresó por error)</fullName>
+                <default>false</default>
+                <label>Cliente no tiene interés (ingresó por error)</label>
+            </value>
+            <value>
+                <fullName>Cliente queria ofrecer producto/servicio</fullName>
+                <default>false</default>
+                <label>Cliente quería ofrecer producto/servicio</label>
+            </value>
+            <value>
+                <fullName>Cliente realizo pago</fullName>
+                <default>false</default>
+                <label>Cliente realizo pago</label>
+            </value>
+            <value>
+                <fullName>Cliente solo queria informacion</fullName>
+                <default>false</default>
+                <label>Cliente solo queria información</label>
+            </value>
+            <value>
+                <fullName>Cotizo instalacion de repuestos</fullName>
+                <default>false</default>
+                <label>Cotizó instalación de repuestos</label>
+            </value>
+            <value>
+                <fullName>Cotizo servicios de diagnostico</fullName>
+                <default>false</default>
+                <label>Cotizó servicios de diagnóstico</label>
+            </value>
+            <value>
+                <fullName>Datos del cliente no coinciden</fullName>
+                <default>false</default>
+                <label>Datos del cliente no coinciden</label>
+            </value>
+            <value>
+                <fullName>El cliente recibe la informacion que solicito</fullName>
+                <default>false</default>
+                <label>El cliente recibe la información que solicito</label>
+            </value>
+            <value>
+                <fullName>El diagnostico no puede ser atendido</fullName>
+                <default>false</default>
+                <label>El diagnóstico no puede ser atendido</label>
+            </value>
+            <value>
+                <fullName>Falta de disponibilidad de inventario</fullName>
+                <default>false</default>
+                <label>Falta de disponibilidad de inventario</label>
+            </value>
+            <value>
+                <fullName>Hagalos por el producto/servicio</fullName>
+                <default>false</default>
+                <label>Hagalos por el producto/servicio</label>
+            </value>
+            <value>
+                <fullName>Inconformidad con los datos registrados</fullName>
+                <default>false</default>
+                <label>Inconformidad con los datos registrados</label>
+            </value>
+            <value>
+                <fullName>Mensaje hostil sin contenido</fullName>
+                <default>false</default>
+                <label>Mensaje hostíl sin contenido</label>
+            </value>
+            <value>
+                <fullName>Mensaje sin contenido</fullName>
+                <default>false</default>
+                <label>Mensaje sin contenido</label>
+            </value>
+            <value>
+                <fullName>No desea ser contactado</fullName>
+                <default>false</default>
+                <label>No desea ser contactado</label>
+            </value>
+            <value>
+                <fullName>No requiere respuesta, envio de publicidad o respuesta automatica</fullName>
+                <default>false</default>
+                <label>No requiere respuesta, envío de publicidad o respuesta automática</label>
+            </value>
+            <value>
+                <fullName>No se recibio respuesta  Ilocalizable</fullName>
+                <default>false</default>
+                <label>No se recibio respuesta / Ilocalizable</label>
+            </value>
+            <value>
+                <fullName>No tenía fondos suficientes</fullName>
+                <default>false</default>
+                <label>No tenía fondos suficientes</label>
+            </value>
+            <value>
+                <fullName>Precios de mantenimiento son altos</fullName>
+                <default>false</default>
+                <label>Precios de mantenimiento son altos</label>
+            </value>
+            <value>
+                <fullName>Se actualiza informacion de contacto</fullName>
+                <default>false</default>
+                <label>Se actualiza información de contacto</label>
+            </value>
+            <value>
+                <fullName>Se brindo informacion de los servicios</fullName>
+                <default>false</default>
+                <label>Se brindo información de los servicios</label>
+            </value>
+            <value>
+                <fullName>Se concerto cita</fullName>
+                <default>false</default>
+                <label>Se concertó cita</label>
+            </value>
+            <value>
+                <fullName>Se proporcionó información solicitada</fullName>
+                <default>false</default>
+                <label>Se proporcionó información solicitada</label>
+            </value>
+            <value>
+                <fullName>Se transfirió llamada</fullName>
+                <default>false</default>
+                <label>Se transfirió llamada</label>
+            </value>
+            <value>
+                <fullName>Se transfirió llamada de cliente</fullName>
+                <default>false</default>
+                <label>Se transfirió llamada de cliente</label>
+            </value>
+            <value>
+                <fullName>Sin dinero en este momento</fullName>
+                <default>false</default>
+                <label>Sin dinero en este momento</label>
+            </value>
+            <value>
+                <fullName>Vehículo está colisionado</fullName>
+                <default>false</default>
+                <label>Vehículo está colisionado</label>
+            </value>
+            <value>
+                <fullName>Vehículo fue llevado a otro taller</fullName>
+                <default>false</default>
+                <label>Vehículo fue llevado a otro taller</label>
+            </value>
+            <value>
+                <fullName>Vehículo sin uso/Aún no llega al km requerido</fullName>
+                <default>false</default>
+                <label>Vehículo sin uso/Aún no llega al km requerido</label>
+            </value>
+            <value>
+                <fullName>Vendió el vehículo</fullName>
+                <default>false</default>
+                <label>Vendió el vehículo</label>
+            </value>
+            <value>
+                <fullName>Reclamo no procede</fullName>
+                <default>false</default>
+                <label>Reclamo no procede</label>
+            </value>
+            <value>
+                <fullName>Mensajes sin contenido</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mensajes sin contenido</label>
+            </value>
+            <value>
+                <fullName>Solo cotizo instalacion de repuestos</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Solo cotizo instalacion de repuestos</label>
+            </value>
+            <value>
+                <fullName>Solo cotizo mantenimiento pide informacion</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Solo cotizo mantenimiento pide informacion</label>
+            </value>
+            <value>
+                <fullName>Solo cotizo un diagnostico</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Solo cotizo un diagnostico</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Bloqueo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Caso agotó su periodo de seguimiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Caso existe como prospecto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Se Deriva a ventas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Caso ya fue atendido por correo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Caso ya fue atendido por llamada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cerrado Asignado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cerrado Resuelto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente canceló su solicitud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente compro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente compro en otro lugar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente consulta por informacion referida a pagos o estado de cuenta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente consultó por servicio que no brindamos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente cotiza otros sevicios CP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente cotizó en mostrador o llamó</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente cotizó marca que no distribuimos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente desea darse de baja de los correos electronicos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente desistio de la oferta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente desistio del reclamo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente está siendo atendido por otro vendedor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente inconforme con el costo del diagnóstico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente no contestó intentos de llamada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente no cumple con los requisitos de credito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente no especifica su interés</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente no realizo pago pago rechazado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente no respondio a los intentos de contacto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente nos contactará</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente no tiene interés (ingresó por error)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente queria ofrecer producto/servicio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente realizo pago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cliente solo queria informacion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cotizo instalacion de repuestos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Cotizo servicios de diagnostico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Datos del cliente no coinciden</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>El cliente recibe la informacion que solicito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>El diagnostico no puede ser atendido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Falta de disponibilidad de inventario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Hagalos por el producto/servicio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Inconformidad con los datos registrados</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Mensaje hostil sin contenido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Mensaje sin contenido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>No desea ser contactado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>No requiere respuesta, envio de publicidad o respuesta automatica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>No se recibio respuesta  Ilocalizable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>No tenía fondos suficientes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Precios de mantenimiento son altos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Se actualiza informacion de contacto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Se brindo informacion de los servicios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Se concerto cita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Se proporcionó información solicitada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Se transfirió llamada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Se transfirió llamada de cliente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Sin dinero en este momento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Vehículo está colisionado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Vehículo fue llevado a otro taller</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Vehículo sin uso/Aún no llega al km requerido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Vendió el vehículo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrado</controllingFieldValue>
+            <valueName>Reclamo no procede</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

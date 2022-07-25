@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Acceso para productos de la marca HINO en consulta de chasis y precios de lista</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Vendedores HINO</label>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Product2</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Product2.Hino</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

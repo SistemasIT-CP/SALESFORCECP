@@ -1,0 +1,83 @@
+<aura:component controller="ModificarDatosDeCuenta"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global">
+    
+    <aura:attribute name="filetype" type="List" default="['.png', '.jpg', '.jpeg']" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="archivos" type="Integer" default="0"/>
+    <aura:attribute name="nombreArchivos" type="String" />
+    <aura:attribute name="tipoCuenta" type="String"/>
+    <aura:attribute name="button" type="Boolean" default="true"/>
+    <aura:attribute name="options" 
+                    type="List" 
+                    default="[{'label': 'RUC', 'value': 'RUC'},
+                              {'label': 'RUC Extranjero', 'value': 'RUC Extranjero'},
+                              {'label': 'Otros', 'value': 'Otros'},]"/>
+    
+    <div style = "background-color: #f3f2f2; border-radius: 5px; width: 100%">
+        <aura:if isTrue="{!v.button}">
+            <lightning:layout horizontalAlign="center"> 
+                <lightning:layoutItem padding="around-small">
+                    <lightning:button variant="brand" 
+                                      label="Modificar Nombre/Identificación" 
+                                      title="Modificar Nombre/Identificación" 
+                                      onclick="{!c.handleClick}" />
+                </lightning:layoutItem>
+            </lightning:layout>
+            <aura:set attribute="else">
+                <lightning:layout> 
+                <lightning:layoutItem padding="around-small">
+                <div class="row">
+                    <h1 class="header">Modificar nombre/identificación</h1>
+                    <br></br>
+                    <aura:if isTrue="{!v.tipoCuenta == 'Juridica'}">
+                        <lightning:input name="name"
+                                         aura:id="name"
+                                         label="Nombre" />
+                    <aura:set attribute="else">
+                        <lightning:input name="firstName"
+                                         aura:id="firstName"
+                                         label="Primer Nombre" />
+                        <lightning:input name="middleName"
+                                         aura:id="middleName"
+                                         label="Segundo Nombre" />
+                        <lightning:input name="lastName"
+                                         aura:id="lastName"
+                                         label="Apellido" />
+                    </aura:set>
+                    </aura:if>
+                    <lightning:combobox name="tipoIdentificacion"
+                                        aura:id="tipo"
+                                        label="Tipo de Identificación" 
+                                        value="" 
+                                        placeholder="--- Seleccionar tipo ---" 
+                                        options="{!v.options}"/>
+                    
+                    <lightning:input name="cedula"
+                                     aura:id="cedula"
+                                     label="Identificación" />
+                    
+                    <lightning:fileUpload label="Adjuntar imagenes (máx 2 imagenes)"
+                                     name="fileUploader"
+                                     multiple="true"
+                                     accept="{!v.filetype}"
+                                     recordId="{!v.recordId}"
+                                     onuploadfinished="{!c.handleUploadFinished}" />
+                    <br></br>
+                    <aura:if isTrue="{!v.archivos  != 0}">
+                        {!v.archivos + ' archivos cargados.'}
+                    </aura:if>
+                    <br></br>
+                    <br></br>
+                    
+                    <lightning:button variant="brand" 
+                                      label="Enviar a aprobación" 
+                                      title="Enviar a aprobación" 
+                                      onclick="{!c.aprobar}" />
+                </div>
+                </lightning:layoutItem>
+                </lightning:layout>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

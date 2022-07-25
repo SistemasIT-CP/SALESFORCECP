@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Origen__c</fullName>
+    <externalId>false</externalId>
+    <label>Origen</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chat On Line</fullName>
+                <default>false</default>
+                <label>Chat On Line</label>
+            </value>
+            <value>
+                <fullName>Contact Center Inbound</fullName>
+                <default>false</default>
+                <label>Contact Center Inbound</label>
+            </value>
+            <value>
+                <fullName>Contact Center Outbound</fullName>
+                <default>false</default>
+                <label>Contact Center Outbound</label>
+            </value>
+            <value>
+                <fullName>Email Contact Center</fullName>
+                <default>false</default>
+                <label>Email Contact Center</label>
+            </value>
+            <value>
+                <fullName>Facebook organico</fullName>
+                <default>false</default>
+                <label>Facebook organico</label>
+            </value>
+            <value>
+                <fullName>Facebook pago</fullName>
+                <default>false</default>
+                <label>Facebook pago</label>
+            </value>
+            <value>
+                <fullName>Referido Contact Center</fullName>
+                <default>false</default>
+                <label>Referido Contact Center</label>
+            </value>
+            <value>
+                <fullName>Instagram</fullName>
+                <default>false</default>
+                <label>Instagram</label>
+            </value>
+            <value>
+                <fullName>Linkedin</fullName>
+                <default>false</default>
+                <label>Linkedin</label>
+            </value>
+            <value>
+                <fullName>Lead Nurturing</fullName>
+                <default>false</default>
+                <label>Lead Nurturing</label>
+            </value>
+            <value>
+                <fullName>Google Ads</fullName>
+                <default>false</default>
+                <label>Google Ads</label>
+            </value>
+            <value>
+                <fullName>Google Organico</fullName>
+                <default>false</default>
+                <label>Google Organico</label>
+            </value>
+            <value>
+                <fullName>Sitio Web</fullName>
+                <default>false</default>
+                <label>Sitio Web</label>
+            </value>
+            <value>
+                <fullName>SMS Outbound</fullName>
+                <default>false</default>
+                <label>SMS Outbound</label>
+            </value>
+            <value>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+                <label>Twitter</label>
+            </value>
+            <value>
+                <fullName>WhatsApp</fullName>
+                <default>false</default>
+                <label>WhatsApp</label>
+            </value>
+            <value>
+                <fullName>Feria/Evento</fullName>
+                <default>false</default>
+                <label>Feria/Evento</label>
+            </value>
+            <value>
+                <fullName>ExpoMóvil</fullName>
+                <default>false</default>
+                <label>ExpoMóvil</label>
+            </value>
+            <value>
+                <fullName>Licitación</fullName>
+                <default>false</default>
+                <label>Licitación</label>
+            </value>
+            <value>
+                <fullName>Llamé</fullName>
+                <default>false</default>
+                <label>Llamé</label>
+            </value>
+            <value>
+                <fullName>Referido</fullName>
+                <default>false</default>
+                <label>Referido</label>
+            </value>
+            <value>
+                <fullName>E-Mail</fullName>
+                <default>false</default>
+                <label>E-Mail</label>
+            </value>
+            <value>
+                <fullName>Llamó</fullName>
+                <default>false</default>
+                <label>Llamó</label>
+            </value>
+            <value>
+                <fullName>Cuentas Claves</fullName>
+                <default>false</default>
+                <label>Cuentas Claves</label>
+            </value>
+            <value>
+                <fullName>Cuentas Corporativas</fullName>
+                <default>false</default>
+                <label>Cuentas Corporativas</label>
+            </value>
+            <value>
+                <fullName>Visité</fullName>
+                <default>false</default>
+                <label>Visité</label>
+            </value>
+            <value>
+                <fullName>Visitó Sucursal</fullName>
+                <default>false</default>
+                <label>Visitó Sucursal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

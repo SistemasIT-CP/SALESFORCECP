@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>5</activeVersionNumber>
+    <description>Prueba para enviar salientes desde el objeto de la oportunida, el del caso lo vamos a pasar a otro qe se llamara Mensaje saliente objeto case</description>
+    <masterLabel>Mensaje saliente case</masterLabel>
+</FlowDefinition>

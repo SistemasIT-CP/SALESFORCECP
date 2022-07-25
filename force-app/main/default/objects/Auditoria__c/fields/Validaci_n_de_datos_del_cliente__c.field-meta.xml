@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validaci_n_de_datos_del_cliente__c</fullName>
+    <description>Para validar si los datos ingresado están correctos y brindarle un mejor servicio…&quot; 1. Podría confimarnos que su dirección es la siguiente (leer del SF)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Para validar si los datos ingresado están correctos y brindarle un mejor servicio…&quot; 1. Podría confimarnos que su dirección es la siguiente (leer del SF)</inlineHelpText>
+    <label>Validación de datos del cliente</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Auditorias</valueSetName>
+    </valueSet>
+</CustomField>

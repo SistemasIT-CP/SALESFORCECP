@@ -1,0 +1,150 @@
+<p>&nbsp;</p>
+<!--
+
+    An email present from your friends at Litmus (@litmusapp)
+
+    Email is surprisingly hard. While this has been thoroughly tested, your mileage may vary.
+    It's highly recommended that you test using a service like Litmus (http://litmus.com) and your own devices.
+
+    Enjoy!
+
+ -->
+<p></p>
+<!-- [if gte mso 12]>
+<style type="text/css">
+.mso-right {
+	padding-left: 20px;
+}
+</style>
+<![endif]--><!-- HIDDEN PREHEADER TEXT -->
+<div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Entice the open with some amazing preheader text. Use a little mystery and get those subscribers to read through...</div>
+<!-- HEADER -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="center" bgcolor="#001160"><!-- [if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">
+            <tr>
+            <td align="center" valign="top" width="500">
+            <![endif]-->
+<table class="wrapper" style="max-width: 500px;" border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="logo" style="padding: 15px 0;" align="center" valign="top"><a href="http://litmus.com" target="_blank" rel="noopener"> <img style="display: block; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size: 16px;" src="https://cdn2.hubspot.net/hubfs/2771192/corregido%20test%20email%20header%20cp-01.png" alt="Logo" width="500" height="43" border="0" /> </a></td>
+</tr>
+</tbody>
+</table>
+<!-- [if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]--></td>
+</tr>
+<tr>
+<td class="section-padding" style="padding: 20px 15px 20px 15px;" align="center" bgcolor="#D8F1FF"><!-- [if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">
+            <tr>
+            <td align="center" valign="top" width="500">
+            <![endif]-->
+<table class="responsive-table" style="max-width: 500px;" border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><!-- HERO IMAGE -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="padding" align="center">&nbsp;</td>
+</tr>
+<tr>
+<td><!-- COPY -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="padding-copy" style="font-size: 36px; font-family: Helvetica, Arial, sans-serif; color: #266e9c; padding-top: 15px;" align="center">Notificaci&oacute;n CRM</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- [if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]--></td>
+</tr>
+<tr>
+<td class="section-padding" style="padding: 25px 15px 70px 15px;" align="center" bgcolor="#ffffff">
+<table class="responsive-table" border="0" width="500" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><!-- COPY -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="padding-copy" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" align="center">Aprobaci&oacute;n de cambio de precio&nbsp;</td>
+</tr>
+<tr>
+<td class="padding-copy" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" align="center">Hola estimado usuario. Se solicit&oacute; su aprobaci&oacute;n para el cambio de precio de la siguiente oportunidad: {!Opportunity.Name}, con los siguientes detalles Vendedor:{!Opportunity.Vendedor__c}, Cliente: {!Opportunity.Account}</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center"><!-- BULLETPROOF BUTTON -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="padding" style="padding-top: 25px;" align="center">
+<table class="mobile-button-container" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="border-radius: 3px;" align="center" bgcolor="#256F9C"><a class="mobile-button" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 25px; border: 1px solid #256F9C; display: inline-block;" href="{!ApprovalRequest.Internal_URL}" target="_blank" rel="noopener">Aprobaci&oacute;n&rarr;</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding: 20px 0px;" align="center" bgcolor="#ffffff"><!-- [if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">
+            <tr>
+            <td align="center" valign="top" width="500">
+            <![endif]--> <!-- UNSUBSCRIBE COPY -->
+<table class="responsive-table" style="max-width: 500px;" border="0" width="100%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color: #666666;" align="center">Casa Pellas, Suficiente Garant&iacute;a</td>
+</tr>
+</tbody>
+</table>
+<!-- [if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]--></td>
+</tr>
+</tbody>
+</table>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Razon_perdida__c</fullName>
+    <externalId>false</externalId>
+    <label>Razón principal de perdida</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cliente no contesta</fullName>
+                <default>false</default>
+                <label>Cliente no contesta</label>
+            </value>
+            <value>
+                <fullName>Cliente sólo quería saber información</fullName>
+                <default>false</default>
+                <label>Cliente sólo quería saber información</label>
+            </value>
+            <value>
+                <fullName>No aplica a financiamiento</fullName>
+                <default>false</default>
+                <label>No aplica a financiamiento</label>
+            </value>
+            <value>
+                <fullName>Cliente Pospone Compra</fullName>
+                <default>false</default>
+                <label>Cliente Pospone Compra</label>
+            </value>
+            <value>
+                <fullName>Ya atendido por otro vendedor</fullName>
+                <default>false</default>
+                <label>Ya atendido por otro vendedor</label>
+            </value>
+            <value>
+                <fullName>Precio/Extras</fullName>
+                <default>false</default>
+                <label>Precio/Extras</label>
+            </value>
+            <value>
+                <fullName>Inventario/Tiempo de entrega</fullName>
+                <default>false</default>
+                <label>Inventario/Tiempo de entrega</label>
+            </value>
+            <value>
+                <fullName>Disenio/Atributos</fullName>
+                <default>false</default>
+                <label>Diseño/Atributos</label>
+            </value>
+            <value>
+                <fullName>Facilidad credito competencia</fullName>
+                <default>false</default>
+                <label>Facilidad crédito competencia</label>
+            </value>
+            <value>
+                <fullName>Cliente no brinda datos UAF</fullName>
+                <default>false</default>
+                <label>Cliente no brinda datos UAF</label>
+            </value>
+            <value>
+                <fullName>Oportunidad Duplicada</fullName>
+                <default>false</default>
+                <label>Oportunidad Duplicada</label>
+            </value>
+            <value>
+                <fullName>Cliente en Lista Negra</fullName>
+                <default>false</default>
+                <label>Cliente en Lista Negra</label>
+            </value>
+            <value>
+                <fullName>Cambio de Nombre/Razon social</fullName>
+                <default>false</default>
+                <label>Cambio de Nombre/Razón social</label>
+            </value>
+            <value>
+                <fullName>Se sintio mejor atendido en otra empresa</fullName>
+                <default>false</default>
+                <label>Se sintió mejor atendido en otra empresa</label>
+            </value>
+            <value>
+                <fullName>Falta de seguimiento</fullName>
+                <default>false</default>
+                <label>Falta de seguimiento</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cerrada perdida</controllingFieldValue>
+            <valueName>Cliente sólo quería saber información</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrada perdida</controllingFieldValue>
+            <valueName>No aplica a financiamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrada perdida</controllingFieldValue>
+            <valueName>Cliente Pospone Compra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrada perdida</controllingFieldValue>
+            <valueName>Oportunidad Duplicada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cerrada perdida</controllingFieldValue>
+            <valueName>Cliente en Lista Negra</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

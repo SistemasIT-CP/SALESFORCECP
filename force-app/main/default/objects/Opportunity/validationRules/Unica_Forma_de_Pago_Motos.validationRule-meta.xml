@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unica_Forma_de_Pago_Motos</fullName>
+    <active>true</active>
+    <description>De formalizacion en adelante la forma de pago debe ser unica</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName=&quot;Principal_Motos&quot;,
+OR(
+  ISPICKVAL( StageName , &apos;Negociacion&apos;),
+  ISPICKVAL( StageName , &apos;Formalizacion&apos;),
+  ISPICKVAL( StageName , &apos;Listo Para Facturar&apos;),
+  ISPICKVAL( StageName , &apos;Facturado&apos;)
+),
+(IF(INCLUDES(Forma_de_Pago_Multiple__c, &apos;Contado&apos;), 1, 0) +
+IF(INCLUDES(Forma_de_Pago_Multiple__c, &apos;Financiamiento&apos;), 1, 0) +
+IF(INCLUDES(Forma_de_Pago_Multiple__c, &apos;Tasa 0&apos;), 1, 0) +
+IF(INCLUDES(Forma_de_Pago_Multiple__c, &apos;Aun no desea realizar su compra&apos;), 1, 0)) &gt; 1 
+)</errorConditionFormula>
+    <errorMessage>La Forma de Pago debe ser única</errorMessage>
+</ValidationRule>

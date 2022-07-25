@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipo_Toyota_Lead</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Color_de_tiempo__c</columns>
+    <columns>Modelo_a_cotizar__c</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Cuando_desea_realizar_su_compra__c</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>Tipo_de_Formulario__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Marca_a_cotizar__c</field>
+        <operation>equals</operation>
+        <value>Toyota</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Ventas</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Esperando contacto,Contacto intentado,Contacto exitoso,Lead a futuro</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FIRST_NAME</field>
+        <operation>contains</operation>
+        <value>Lisdany</value>
+    </filters>
+    <label>Digital TOYOTA Lisdany</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

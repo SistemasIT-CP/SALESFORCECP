@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Crea una auditoiroa al crear una opp</description>
+    <formulas>
+        <description>Valor por default para usar este nombre en las sharing settings</description>
+        <name>Nombreparasharing</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  NOT({!$Record.Account.IsPersonAccount}),
+  {!$Record.Account.Name},
+  IF(
+     ISBLANK({!$Record.Account.MiddleName}),
+     {!$Record.Account.FirstName} + &quot; &quot; + {!$Record.Account.LastName},
+     {!$Record.Account.FirstName} + &quot; &quot; + {!$Record.Account.MiddleName} + &quot; &quot; + {!$Record.Account.LastName}
+  )
+)+ &quot;/&quot; +{!$Record.Marca_UDC__r.Name}+ &quot;/&quot; +TEXT({!$Record.Owner.Sucursal__c})</expression>
+    </formulas>
+    <interviewLabel>Crear una auditoria {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Crear una auditoria</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Crea una auditoria</description>
+        <name>CreateAuditoria</name>
+        <label>CreateAuditoria</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>Name_concatenado__c</field>
+            <value>
+                <elementReference>Nombreparasharing</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Oportunidad__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Owner.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Auditoria__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CreateAuditoria</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0123k000001j5pzAAA</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

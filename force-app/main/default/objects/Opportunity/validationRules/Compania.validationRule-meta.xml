@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compania</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   OR(
+     RecordType.DeveloperName = &quot;Principal_Autos&quot;,
+     RecordType.DeveloperName = &quot;Principal_Motos&quot;
+   ),
+   ISCHANGED(StageName),
+   ISPICKVAL(StageName, &quot;Seleccionando Modelo&quot;),
+   OR(
+      ISBLANK(Compa_a__c),
+      ISBLANK(L_neas_de_Negocio__c)
+   )
+)</errorConditionFormula>
+    <errorMessage>Para avanzar debe ingresar los campos Compañía y línea</errorMessage>
+</ValidationRule>

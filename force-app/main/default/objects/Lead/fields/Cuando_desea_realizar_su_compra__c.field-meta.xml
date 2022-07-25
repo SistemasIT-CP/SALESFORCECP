@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cuando_desea_realizar_su_compra__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Cuándo desea realizar su compra?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Esta semana</fullName>
+                <default>false</default>
+                <label>Esta semana</label>
+            </value>
+            <value>
+                <fullName>En los próximos 30 días</fullName>
+                <default>false</default>
+                <label>En los próximos 30 días</label>
+            </value>
+            <value>
+                <fullName>1-3 meses</fullName>
+                <default>false</default>
+                <label>1-3 meses</label>
+            </value>
+            <value>
+                <fullName>3-6 meses</fullName>
+                <default>false</default>
+                <label>3-6 meses</label>
+            </value>
+            <value>
+                <fullName>Aun no estoy seguro de comprar</fullName>
+                <default>false</default>
+                <label>Aun no estoy seguro de comprar</label>
+            </value>
+            <value>
+                <fullName>0 a 3 meses</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>0 a 3 meses</label>
+            </value>
+            <value>
+                <fullName>3 a 6 meses</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3 a 6 meses</label>
+            </value>
+            <value>
+                <fullName>Necesito más tiempo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Necesito más tiempo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

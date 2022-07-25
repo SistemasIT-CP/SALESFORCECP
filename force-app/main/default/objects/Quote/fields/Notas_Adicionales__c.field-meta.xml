@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notas_Adicionales__c</fullName>
+    <externalId>false</externalId>
+    <label>Notas Adicionales</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

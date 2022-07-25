@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mes_numerico__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Mes_Calendario__c , 
+  &quot;ENERO&quot;, 1, 
+  &quot;FEBRERO&quot;, 2,
+  &quot;MARZO&quot;, 3, 
+  &quot;ABRIL&quot;, 4,
+  &quot;MAYO&quot;, 5,
+  &quot;JUNIO&quot;, 6, 
+  &quot;JULIO&quot;, 7,
+  &quot;AGOSTO&quot;, 8,
+  &quot;SEPTIEMBRE&quot;, 9,
+  &quot;OCTUBRE&quot;, 10,
+  &quot;NOVIEMBRE&quot;, 11,
+  &quot;DICIEMBRE&quot;, 12,
+ 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mes numérico</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

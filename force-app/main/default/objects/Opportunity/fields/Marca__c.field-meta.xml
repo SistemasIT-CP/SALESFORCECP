@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca__c</fullName>
+    <description>Marca del producto de interés</description>
+    <externalId>false</externalId>
+    <label>Marca</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>HINO</fullName>
+                <default>false</default>
+                <label>HINO</label>
+            </value>
+            <value>
+                <fullName>JMC</fullName>
+                <default>false</default>
+                <label>JMC</label>
+            </value>
+            <value>
+                <fullName>KIA</fullName>
+                <default>false</default>
+                <label>KIA</label>
+            </value>
+            <value>
+                <fullName>SUZUKI</fullName>
+                <default>false</default>
+                <label>SUZUKI</label>
+            </value>
+            <value>
+                <fullName>TOYOTA</fullName>
+                <default>false</default>
+                <label>TOYOTA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

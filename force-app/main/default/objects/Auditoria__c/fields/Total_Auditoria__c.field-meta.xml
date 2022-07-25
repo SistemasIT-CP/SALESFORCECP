@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Auditoria__c</fullName>
+    <externalId>false</externalId>
+    <formula>Comentarios_claros_10ptos__c +  Cotizaci_n_de_venta__c  +  Primer_llamada__c  + Seguimiento_25_ptos__c +  Registro_en_CRM_Datos_Correctos__c + Valores_Agregados__c + Correo_correcto__c + Telefono_correcto__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>% Total Auditoria</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

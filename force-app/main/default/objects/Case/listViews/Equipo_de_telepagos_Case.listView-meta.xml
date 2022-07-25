@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipo_de_telepagos_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Equipo de telepagos</label>
+    <queue>Equipo_de_telepagos</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

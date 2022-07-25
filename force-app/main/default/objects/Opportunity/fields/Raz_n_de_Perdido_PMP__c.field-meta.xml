@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Raz_n_de_Perdido_PMP__c</fullName>
+    <externalId>false</externalId>
+    <label>Razón de Perdido PMP</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Precio</fullName>
+                <default>false</default>
+                <label>Precio</label>
+            </value>
+            <value>
+                <fullName>Distancia</fullName>
+                <default>false</default>
+                <label>Distancia</label>
+            </value>
+            <value>
+                <fullName>No se pudo contactar</fullName>
+                <default>false</default>
+                <label>No se pudo contactar</label>
+            </value>
+            <value>
+                <fullName>No va al taller</fullName>
+                <default>false</default>
+                <label>No va al taller</label>
+            </value>
+            <value>
+                <fullName>Forma de Pago</fullName>
+                <default>false</default>
+                <label>Forma de Pago</label>
+            </value>
+            <value>
+                <fullName>Va al taller de forma regular</fullName>
+                <default>false</default>
+                <label>Va al taller de forma regular</label>
+            </value>
+            <value>
+                <fullName>Rent a Car</fullName>
+                <default>false</default>
+                <label>Rent a Car</label>
+            </value>
+            <value>
+                <fullName>Lo tomará en el taller</fullName>
+                <default>false</default>
+                <label>Lo tomará en el taller</label>
+            </value>
+            <value>
+                <fullName>No percibe valor del paquete</fullName>
+                <default>false</default>
+                <label>No percibe valor del paquete</label>
+            </value>
+            <value>
+                <fullName>Licitación</fullName>
+                <default>false</default>
+                <label>Licitación</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+            <value>
+                <fullName>Mala Experiencia en el Taller</fullName>
+                <default>false</default>
+                <label>Mala Experiencia en el Taller</label>
+            </value>
+            <value>
+                <fullName>Vehículo No Aplica</fullName>
+                <default>false</default>
+                <label>Vehículo No Aplica</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Atencion al cliente</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Reason</fieldNames>
+        <fieldNames>Origin</fieldNames>
+        <fieldNames>Subject</fieldNames>
+        <picklistValueName>En proceso</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Atencion_al_cliente</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Razon_especifica_de_cierre__c</fullName>
+    <externalId>false</externalId>
+    <label>Razón específica de cierre</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Razon_de_perdida__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contacto ya no labora en empresa</fullName>
+                <default>false</default>
+                <label>Contacto ya no labora en empresa</label>
+            </value>
+            <value>
+                <fullName>Teléfono aleatorio</fullName>
+                <default>false</default>
+                <label>Teléfono aleatorio</label>
+            </value>
+            <value>
+                <fullName>Teléfono de un colaborador</fullName>
+                <default>false</default>
+                <label>Teléfono de un colaborador</label>
+            </value>
+            <value>
+                <fullName>Teléfono de un familiar</fullName>
+                <default>false</default>
+                <label>Teléfono de un familiar</label>
+            </value>
+            <value>
+                <fullName>Buzón directo</fullName>
+                <default>false</default>
+                <label>Buzón directo</label>
+            </value>
+            <value>
+                <fullName>Número de teléfono extranjero</fullName>
+                <default>false</default>
+                <label>Número de teléfono extranjero</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Número de celular incorrecto</controllingFieldValue>
+            <valueName>Contacto ya no labora en empresa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Número de celular incorrecto</controllingFieldValue>
+            <valueName>Teléfono aleatorio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Número de celular incorrecto</controllingFieldValue>
+            <valueName>Teléfono de un colaborador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cliente no localizable</controllingFieldValue>
+            <valueName>Teléfono de un familiar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cliente no localizable</controllingFieldValue>
+            <valueName>Buzón directo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cliente no localizable</controllingFieldValue>
+            <valueName>Número de teléfono extranjero</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

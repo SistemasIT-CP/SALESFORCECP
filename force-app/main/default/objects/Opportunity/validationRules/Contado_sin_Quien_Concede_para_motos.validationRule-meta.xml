@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contado_sin_Quien_Concede_para_motos</fullName>
+    <active>true</active>
+    <description>Si la forma de adquisicion es Tasa 0 el campo Quien concede es requerido y solamente puede admitir algunas opciones</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;Principal_Motos&quot;,
+INCLUDES(Forma_de_Pago_Multiple__c, &quot;Contado&quot;),
+NOT(ISBLANK(TEXT(Quien_concede__c)))
+)</errorConditionFormula>
+    <errorMessage>Si la Forma de Adquisición es Contado, no debe llenarse el campo Quien Concede.</errorMessage>
+</ValidationRule>

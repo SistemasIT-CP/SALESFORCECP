@@ -1,0 +1,1140 @@
+<apex:page controller="CtrlPDF_Cotizacion" docType="html-5.0" renderAs="PDf" showHeader="false" sidebar="false" standardStylesheets="false"
+           applyBodyTag="false" applyHtmlTag="false">
+    <html>
+    <head>
+        <style>
+            @page {
+                @bottom-center {
+                    content: element(footer);
+                }
+
+                margin-top: 1.4cm;
+            }
+
+            div.footer {
+                margin: 0 auto;
+                margin-top:20px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <apex:outputPanel id="oportunidadAUTOS" rendered="{!OR(CONTAINS(modeloAMostrar, 'Autos'), CONTAINS(modeloAMostrar, 'Genesis'), CONTAINS(modeloAMostrar, 'Camiones'))}">
+            <div style="margin-right:0cm; position: absolute; top: 0;">
+                <apex:outputPanel id="encabezadoHINO" rendered="{!CONTAINS(modeloAMostrar, 'Hino')}">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td colspan="2">
+                                <apex:image style="float:left;" url="{!$Resource.Encabezado_cotizacion_Hino}" height="55" />
+                            </td>
+                            <td align="center">
+                                <apex:image style="float:right;" url="{!$Resource.Logo_CasaPellas}" height="50" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"></td>
+                            <td colspan="2" width="70%" align="right" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+
+                                <b>RUC:</b> J-03-1-000000237-1
+                                <br/> {!direccionSuc}
+                                <br/> Tel.: {!telefonoSuc}
+                                <br/>
+                                <br/>
+
+                                <b>Garantía de Fábrica:</b> 3 años o 100,000 KM
+                                <br/>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Cotización: {!cotizacionNum}</b>
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Fecha Creada:</b>
+                                <br/> {!fechaCreacion}
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Válida por:</b>
+                                <br/> {!validaPor}
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+
+                <apex:outputPanel id="encabezadoGENESIS" rendered="{!CONTAINS(modeloAMostrar, 'Genesis')}">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td colspan="2">
+                                <apex:image style="float:left;" url="{!$Resource.Encabezado_cotizacion_Genesis}" height="65" />
+                            </td>
+                            <td align="center">
+                                <apex:image style="float:right;" url="{!$Resource.VelosaLogo}" height="50" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"></td>
+                            <td colspan="2" width="70%" align="right" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+
+                                <b>RUC:</b> J-01-1-000000387-5
+                                <br/> {!direccionSuc}
+                                <br/> Tel.: {!telefonoSuc}
+                                <br/>
+                                <br/>
+
+                                <b>Garantía de Fábrica:</b> 3 meses o 3,000 KM, lo que ocurra primero
+                                <br/>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Cotización: {!cotizacionNum}</b>
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Fecha Creada:</b>
+                                <br/> {!fechaCreacion}
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Válida por:</b>
+                                <br/> {!validaPor}
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+
+                <apex:outputPanel id="encabezadoJMC" rendered="{!CONTAINS(modeloAMostrar, 'JMC')}">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td colspan="2">
+                                <apex:image style="float:left;" url="{!$Resource.Encabezado_cotizacion_JMC}" height="55" />
+                            </td>
+                            <td align="center">
+                                <apex:image style="float:right;" url="{!$Resource.Logo_CasaPellas}" height="50" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"></td>
+                            <td colspan="2" width="70%" align="right" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+
+                                <b>RUC:</b> J-01-1-000000387-5
+                                <br/> {!direccionSuc}
+                                <br/> Tel.: {!telefonoSuc}
+                                <br/>
+                                <br/>
+
+                                <b>Garantía de Fábrica:</b> 3 años o 100,000 KM
+                                <br/>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Cotización: {!cotizacionNum}</b>
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Fecha Creada:</b>
+                                <br/> {!fechaCreacion}
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Válida por:</b>
+                                <br/> {!validaPor}
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+
+                <apex:outputPanel id="encabezadoTOYOTA" rendered="{!CONTAINS(modeloAMostrar, 'Toyota')}">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td colspan="2">
+                                <apex:image style="float:left;" url="{!$Resource.Encabezado_cotizacion_Toyota}" height="55" />
+                            </td>
+                            <td align="center">
+                                <apex:image style="float:right;" url="{!$Resource.Logo_CasaPellas}" height="50" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"></td>
+                            <td colspan="2" width="70%" align="right" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+
+                                <b>RUC:</b> J-03-1-000000237-1
+                                <br/> {!direccionSuc}
+                                <br/> Tel.: {!telefonoSuc}
+                                <br/>
+                                <br/>
+
+                                <b>Garantía de Fábrica:</b> 3 años o 100,000 KM
+                                <br/>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Cotización: {!cotizacionNum}</b>
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Fecha Creada:</b>
+                                <br/> {!fechaCreacion}
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Válida por:</b>
+                                <br/> {!validaPor}
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+
+                <apex:outputPanel id="encabezadoKIA" rendered="{!CONTAINS(modeloAMostrar, 'Kia')}">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td colspan="2">
+                                <apex:image style="float:left;" url="{!$Resource.Encabezado_cotizacion_Kia}" height="55" />
+                            </td>
+                            <td colspan="3" width="55%" align="center">
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"></td>
+                            <td colspan="2" width="70%" align="right" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+
+                                <b>RUC:</b> J-03-1-000029887-4
+                                <br/> {!direccionSuc}
+                                <br/> Tel.: {!telefonoSuc}
+                                <br/>
+                                <br/>
+
+                                <b>Garantía de Fábrica:</b> 3 años o 100,000 KM
+                                <br/>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Cotización: {!cotizacionNum}</b>
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Fecha Creada:</b>
+                                <br/> {!fechaCreacion}
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Válida por:</b>
+                                <br/> {!validaPor}
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+
+                <apex:outputPanel id="encabezadoSUZUKI" rendered="{!CONTAINS(modeloAMostrar, 'Suzuki')}">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td colspan="2">
+                                <apex:image style="float:left;" url="{!$Resource.Encabezado_cotizacion_Suzuki}" height="70" />
+                            </td>
+                            <td align="center">
+                                <apex:image style="float:right;" url="{!$Resource.Logo_CasaPellas}" height="50" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"></td>
+                            <td colspan="2" width="70%" align="right" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+
+                                <b>RUC:</b> J-03-1-000000237-1
+                                <br/> {!direccionSuc}
+                                <br/> Tel.: {!telefonoSuc}
+                                <br/>
+                                <br/>
+
+                                <b>Garantía de Fábrica:</b> 3 años o 100,000 KM
+                                <br/>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:10pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Cotización: {!cotizacionNum}</b>
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Fecha Creada:</b>
+                                <br/> {!fechaCreacion}
+                            </td>
+                            <td bgColor="f0eded" width="33%" align="center" style="font-style:normal;font-weight:normal;font-size:8.5pt;font-family: Arial, Helvetica, sans-serif;color:#696969">
+                                <b>Válida por:</b>
+                                <br/> {!validaPor}
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+
+
+                <table border="0" width="100%" cellspacing="0" style="margin-top:5px;">
+                    <tr>
+                        <td rowspan="3" bgColor="f0eded" width="35%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding:5px; padding-left:10px;">
+                            <b>ESTIMADO (A) CLIENTE:</b>
+                            <br/> {!estimadoCte}
+                            <br/>
+                            <b>ATENCIÓN A:</b>
+                            <br/> {!atencionA}
+                        </td>
+                        <td bgColor="303030" width="15%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding:5px;">
+                            <b>Vendedor:</b>
+                        </td>
+                        <td bgColor="303030" width="50%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding:5px;">
+                            {!vendedor}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgColor="303030" width="15%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding:5px;">
+                            <b>Correo:</b>
+                        </td>
+                        <td bgColor="303030" width="50%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff">
+                            {!correo}   
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgColor="303030" width="15%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding:5px;">
+                            <b>Tel:</b>
+                            <br/>
+                        </td>
+                        <td bgColor="303030" width="50%" align="left" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff">
+                            {!telefono}
+                            <br/>
+                        </td>
+                    </tr>
+                </table>
+
+                <table border="0" width="100%" cellspacing="0" style="margin: 5px 0px 0px 0px;">
+                    <apex:repeat value="{!wQLIList}" var="QLI">
+                        <tr>
+                            <td width="60%" bgColor="303030" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding: 5px 5px 5px 10px; text-align:center;">
+                                <b>{!QLI.marca} MODELO: {!QLI.descripcion}</b>
+                            </td>
+                            <td width="30%" bgColor="303030" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding: 5px 5px 5px 10px; text-align:right;">
+                                <b>Cantidad</b>
+                            </td>
+                            <td width="10%" bgColor="303030" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding: 5px 5px 5px 10px; text-align:center;">
+                                <b>{!QLI.cantidad}</b>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </table>
+
+                <table width="100%">
+                    <tr>
+                        <td bgColor="303030" width="50%" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:10px;padding-top:5px;padding-bottom:5px; ">
+                            <b>INTERIOR</b>
+                        </td>
+                        <td bgColor="303030" width="50%" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:10px;padding-top:5px;padding-bottom:5px; ">
+                            <b>MOTOR Y CARACTERÍSTICAS TÉCNICAS</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgColor="f0eded" width="50%" style="height:150px; font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:10px;padding-top:5px;padding-bottom:5px; ">
+                            <apex:repeat value="{!lstEsp1_Interior}" var="t">
+                                {!t}
+                                <br/>
+                            </apex:repeat>
+
+                        </td>
+                        <td bgColor="f0eded" width="50%" style="height:150px; font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:10px;padding-top:5px;padding-bottom:5px; ">
+                            <apex:repeat value="{!lstEsp2_motorYCaract}" var="t">
+                                {!t}
+                                <br/>
+                            </apex:repeat>
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgColor="303030" width="50%" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:10px;padding-top:5px;padding-bottom:5px; ">
+                            <b>EXTERIOR</b>
+                        </td>
+                        <td bgColor="303030" width="50%" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:10px;padding-top:5px;padding-bottom:5px; ">
+                            <b>SEGURIDAD</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgColor="f0eded" width="50%" style="height:150px; font-style:normal;font-weight:normal;font-size:8pt !important;font-family: Arial, Helvetica, sans-serif !important;color:#696969; padding-left:10px;padding-top:5px;padding-bottom:5px; ">
+                            <apex:repeat value="{!lstEsp3_exterior}" var="t">
+                                {!t}
+                                <br/>
+                            </apex:repeat>
+                        </td>
+                        <td bgColor="f0eded" width="50%" style="height:150px; font-style:normal;font-weight:normal;font-size:8pt !important;font-family: Arial, Helvetica, sans-serif !important;color:#696969; padding-left:10px;padding-top:5px;padding-bottom:5px; ">
+                            <apex:repeat value="{!lstEsp4_seguridad}" var="t">
+                                {!t}
+                                <br/>
+                            </apex:repeat>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+
+                        </td>
+                    </tr>
+                </table>
+
+                <apex:outputPanel rendered="{!AND(NOT(CONTAINS(modeloAMostrar, 'Camiones')), NOT(CONTAINS(modeloAMostrar, 'Suzuki')))}">
+                    <table width="100%" cellspacing="0">
+                        <tr>
+                            <td style="width: 50%; height:100%">
+                                <table width="100%" height="100%">
+                                    <tr>
+                                        <td bgColor="303030" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:10px;padding-top:5px;padding-bottom:5px;">
+                                            <b>NOTAS ADICIONALES</b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td bgColor="f0eded" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; height:51px;">
+                                            {!notasAdicionales}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="width: 50%; height:100%">
+                                <table width="100%" height="100%">
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            <b>PRECIO SIN IVA</b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!totalAntesDeIVA}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            <b>I.V.A</b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!iva}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            <b>TOTAL</b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!precioEspecial}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+
+                <apex:outputPanel rendered="{!CONTAINS(modeloAMostrar, 'Autos_Suzuki')}">
+                    <table width="100%" cellspacing="0">
+                        <tr>
+                            <td style="width: 50%; height:100%">
+                                <table width="100%">
+                                    <tr>
+                                        <td bgColor="303030" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:10px;padding-top:5px;padding-bottom:5px;">
+                                            <b>NOTAS ADICIONALES</b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td bgColor="f0eded" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; height:72px;">
+                                            {!notasAdicionales}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="width: 50%">
+                                <table width="100%">
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            <b>SUB TOTAL</b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!subtotal2}
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px;">
+                                            <b>DESCUENTO</b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!descuento}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            <b>I.V.A</b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!iva}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            <b>TOTAL PRECIO ESPECIAL</b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!precioEspecial}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+
+                <apex:outputPanel rendered="{!CONTAINS(modeloAMostrar, 'Camiones')}">
+                    <table width="100%" cellspacing="0">
+                        <tr>
+                            <td style="width: 50%">
+                                <table width="100%">
+                                    <tr>
+                                        <td bgColor="303030" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:10px;padding-top:5px;padding-bottom:5px;">
+                                            <b>NOTAS ADICIONALES</b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td bgColor="f0eded" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; height:72px;">
+                                            {!notasAdicionales}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="width: 50%;">
+                                <table>
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            <b>PRECIO SIN IVA</b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!totalAntesDeIVA}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            <b>ACCESORIO {!IF(accesorioAdicional != null, accesorioAdicional, '-- --')}
+                                            </b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!IF(precioAccesorioAdicional != null, precioAccesorioAdicional, 'USD $ 0.00')}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            <b>I.V.A</b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!iva}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td bgColor="303030" width="40%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#ffffff; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            <b>TOTAL</b>
+                                        </td>
+                                        <td bgColor="f0eded" width="15%" align="center" style="font-style:normal;font-weight:normal;font-size:8pt;font-family: Arial, Helvetica, sans-serif;color:#696969; padding-left:5px;padding-top:5px;padding-bottom:5px; ">
+                                            {!precioEspecial}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </apex:outputPanel>
+            </div>
+        </apex:outputPanel>
+        
+        <apex:outputPanel id="cotizacionHERO" rendered="{!CONTAINS(modeloAMostrar, 'Hero')}">
+            <div style="padding-left: 15px">
+                <table style="width:100%; border:none;border-collapse: collapse;font-family:Calibri, sans-serif;">
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;border:none;">
+                            <apex:image style="float:left;" url="{!$Resource.Encabezado_cotizacion_Hero}" width="230" height="70" />                  
+                        </td>
+                        <td rowspan="2" style="padding-left:5px;align-items: center;">
+                            <div style="width:150px; height:150px;">
+                                <apex:image style="position:relative; z-index:-1;" url="{!urlLogo}" alt="" width="250"/>
+                            </div>
+                        </td>
+                        <td rowspan="2" style="padding-left:90px; text-align:left;">
+                            <p style="margin:0; color:red; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 20px;">HERO</p>
+                            <p style="margin:0; color:red; vertical-align: top; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 20px;">MODELO {!modelo}</p>
+                            <p style="margin:0; font-size:13px;font-weight:400;font-style:normal;text-decoration:none;margin:0;padding:0;">&nbsp;</p>
+                            <p style="margin:0; color:red; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px;">COTIZACIÓN N°: {!cotizacionNum}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:30%; text-align:left;vertical-align:bottom;border:none;background:white;height:18.5pt;">
+                            <p style="color:red; vertical-aling:bottom; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px;">CLIENTE: {!estimadoCte}</p>
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom:0;">Estimado señor:</p>
+                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom:15px; margin-top:0;">A continuacion, tenemos el gusto de ofrecerles especificaciones y precio del modelo descrito así: <strong>MOTOCICLETA</strong></p>
+                </div> 
+                <div>
+                    <hr style="border: 1px solid black" />
+                    <p style="text-align: center; margin: 5px 0 5px 0">
+                        <strong style="font-family: Arial, Helvetica, sans-serif; color:red;">ESPECIFICACIONES TÉCNICAS:</strong>
+                    </p>
+                    <hr style="border: 1px solid black" />
+                    <p style="margin:20px;">
+                    </p>
+                    <hr style="border: 1px solid black" />
+                </div>
+                <table>
+                    <apex:variable var="i" value="{!0}"/>
+                    <apex:repeat value="{!keySetEspecificaciones}" var="key">
+                        <tr style="{!IF(MOD(i, 2) == 0, 'background-color:#CCC', '')}">
+                            <td style="{!IF(MOD(i, 2) == 0, 
+                                'text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-size: 10px; padding-left:10px;', 
+                                'text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-size: 10px; padding-left:10px; border-style:none;')}" width="600">
+                                {!key}
+                            </td>
+                            <td style="{!IF(MOD(i, 2) == 0, 
+                                'text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-size: 10px; padding-left:10px;', 
+                                'text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-size: 10px; padding-left:10px; border-style:none;')}" width="600">
+                                {!mapaEspecificaciones[key]}
+                            </td>
+                        </tr>
+                        <apex:variable var="i" value="{!i + 1}"/>
+                    </apex:repeat>
+                </table>
+            </div>
+            <div>
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; color:red; text-align: center;">
+                    <strong>PRECIO UNITARIO:</strong> {!precioUnitario}
+                </p>
+                <hr style="border: 1px solid black" />
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th width="40%"></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;" width="35%">UNIDADES</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;" width="25%">{!cantidad}</td>
+                      </tr>
+                      <tr>
+                        <th width="40%"></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; color:red;" width="35%">PRECIO SIN DESCUENTO</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;" width="25%">{!precioSinDescuento}</td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; color:#212F3D;font-weight: bold;">DESCUENTO</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">{!descuentoHero} </td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; color:red;">PRECIO CON DESCUENTO</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">{!precioConDescuento} </td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; color:#212F3D;font-weight: bold;">TOTAL ANTES DE IVA</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">{!totalAntesDeIVA}</td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; color:#212F3D;">IVA</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">{!IVAHero}</td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; color:#212F3D;font-weight: bold;">PRECIO ESPECIAL TOTAL</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">{!precioEspecialHero}</td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td colspan="2"><hr/></td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;"></td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">FORMA DE PAGO:</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">{!formaAdquisicion}</td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">FECHA DE ENTREGA:</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">SEGUN DISPONIBILIDAD</td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">GARANTÍA DE FÁBRICA:</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;">40,000 KMS. ó 4 AÑOS. LO QUE OCURRA PRIMERO</td>
+                      </tr>
+                </table>
+            </div>
+            <div>
+                <hr style="border: 1px solid black;" />
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; color:red; text-align: center;margin: 0;">
+                    <strong>NOTA:</strong> ESTE PRECIO INCLUYE IVA. ESTA OFERTA CONTIENE CLAUSULAS DE MANTENIMIENTO DEL VALOR RESPECTO AL DÓLAR.
+                </p>
+            </div>
+
+            <div style="padding-top: 15px; margin-bottom:10px">
+                <table>
+                    <tr>
+                        <td style="text-align:center" width="200">
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9">Vendedor: {!vendedor}</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9">Correo: {!correo}</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9">Telefono: {!telefono}</p>
+                        </td>
+                        <td width="200"></td>
+                        <td>
+                            <apex:image style="float:left;" url="{!$Resource.Detalle_cotizacion_Hero}" width="60" height="40" />
+                        </td>
+                        <td style="text-align:center; padding-left:10px">
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9; font-weight: bold;">STOCK DE REPUESTOS</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9; font-weight: bold;">Y TALLERES DE SERVICIOS</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9; font-weight: bold;">DISPONIBLES</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding-top: 40px;">
+                <apex:image style="float:left; width:100%;" url="{!$Resource.Pie_cotizacion_Hero}"/>
+            </div>
+        </apex:outputPanel>
+        
+        <apex:outputPanel id="cotizacionYAMAHA" rendered="{!CONTAINS(modeloAMostrar, 'Yamaha')}">
+            <table style="width:100%; border:none;border-collapse: collapse;font-family:Calibri, sans-serif;">
+                <tr>
+                    <td style="text-align:center;vertical-align:middle;border:none;">
+                        <apex:image style="float:center;" url="{!$Resource.Encabezado_cotizacion_Yamaha}" height="50" />                    
+                    </td>
+                    <td rowspan="2" style="padding-left:5px;align-items: center;">
+                        <div style="width:150px; height:150px;">
+                            <apex:outputPanel rendered="{!CONTAINS(modeloAMostrar, 'MotoresMarinos')}">
+                                <apex:image style="position:relative; z-index:-1;left:25px;top:-15px; display:flex;" url="{!urlLogo}" alt="" height="200"/>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!NOT(CONTAINS(modeloAMostrar, 'MotoresMarinos'))}">
+                            	<apex:image style="position:relative; z-index:-1;left:-83px;top:-65px; width:250%; display:flex;" url="{!urlLogo}" alt="" width="150"/>
+                            </apex:outputPanel>
+                        </div>
+                    </td>
+                    <td rowspan="2" style="text-align:left; vertical-align:bottom;">
+                        <p style="color:red;font-size:13px;font-weight:700;font-style:normal;text-decoration:none;margin:0;padding:0;">YAMAHA</p>
+                        <p style="color:red;font-size:13px;font-weight:700;font-style:normal;text-decoration:none;margin:0;padding:0;">MODELO</p>
+                        <p style="color:red;font-size:13px;font-weight:700;font-style:normal;text-decoration:none;margin:0;padding:0;">{!modelo}</p>
+                        <p style="font-size:13px;font-weight:400;font-style:normal;text-decoration:none;margin:0;padding:0;">&nbsp;</p>
+                        <p style="color:red;font-size:14px;font-weight:700;font-style:normal;text-decoration:none;margin:0;padding:0;">COTIZACIÓN N°:</p>
+                        <p style="font-size:13px;font-weight:700;font-style:normal;text-decoration:none;margin:0;padding:0;">{!cotizacionNum}</p>
+                        <p style="font-size:13px;font-weight:700;font-style:normal;text-decoration:none;margin:0;padding:0;">Fecha: {!fechaCreacion}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:30%; text-align:center;vertical-align:bottom;border:none;background:white;height:18.5pt;">
+                        <p style="font-size:13px;color:red;font-weight:700;font-style:normal;text-decoration:none;margin:0;padding:0;">ATENCIÓN A:</p>
+                        <p style="font-size:13px;font-weight:700;font-style:normal;text-decoration:none;margin:0;padding:0;">{!estimadoCte}</p>
+                    </td>
+                </tr>
+            </table>
+            <p style="margin:25px 0;">
+            </p>
+            <p style="margin:0 0 0 5px;">
+                <span style="font-size: 13px;font-family: Arial, Helvetica, sans-serif !important;">Estimado Señor:</span>
+            </p>
+            <apex:outputPanel rendered="{!NOT(CONTAINS(modeloAMostrar, 'MotoresMarinos'))}">
+                <p style="margin:0 0 5px 5px;">
+                    <span style="font-size: 12px;font-family: Arial, Helvetica, sans-serif !important;">A continuación tenemos el gusto de ofrecerles especificaciones y precio del modelo descrito asi: {!modelo}</span> 
+                </p>                
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!CONTAINS(modeloAMostrar, 'MotoresMarinos')}">
+                <p style="margin:0 0 5px 5px;">
+                    <span style="font-size: 12px;font-family: Arial, Helvetica, sans-serif !important;">A continuación tenemos el gusto de ofrecerle especificaciones y precio del motor marino descrito asi: <strong>{!modelo}</strong></span> 
+                </p>                
+            </apex:outputPanel>
+            <div>
+                <hr style="border: 1px solid black" />
+                <p style="text-align: center; margin: 5px 0 5px 0;">
+                    <strong style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color:red;">ESPECIFICACIONES TÉCNICAS:</strong>
+                </p>
+                <hr style="border: 1px solid black" />
+            </div>
+            <table style="width:100%;border-collapse: collapse;">
+                <apex:variable var="i" value="{!0}"/>
+                <apex:repeat value="{!keySetEspecificaciones}" var="key">
+                    <tr style="{!IF(MOD(i, 2) == 0, 'background-color:#CCC', '')}">
+                        <td style="{!IF(MOD(i, 2) == 0, 
+                            'text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-size: 10px; padding-left:10px;', 
+                            'text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-size: 10px; padding-left:10px; border-style:none;')}" width="600">
+                            {!key}
+                        </td>
+                        <td style="{!IF(MOD(i, 2) == 0, 
+                            'text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-size: 10px; padding-left:10px;', 
+                            'text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-size: 10px; padding-left:10px; border-style:none;')}" width="600">
+                            {!mapaEspecificaciones[key]}
+                        </td>
+                    </tr>
+                    <apex:variable var="i" value="{!i + 1}"/>
+                </apex:repeat>
+            </table>             
+
+            
+            <hr style="border: 1px solid black" />
+            <table style="width: 100%; border-collapse: collapse; border: solid rgb(255, 255, 255);font-size: 11px;font-family: Arial, Helvetica, sans-serif !important;">
+                <tbody>
+                    <tr>
+                        <td style="width: 50%; border: solid rgb(255, 255, 255);">
+                            <span style="font-size: 11px;">CANTIDAD: {!cantidad}</span>
+                        </td>
+                        <td style="width:20%; border: solid rgb(255, 255, 255);">
+                            <div style="text-align: left;">
+                                <span style="font-size: 11px; color: rgb(255, 0, 0);">PRECIO DE LISTA CON IVA</span>
+                            </div>
+                        </td>
+                        <td style="width:25%; border: solid rgb(255, 255, 255);">
+                            <span style="font-size: 11px;">{!precioLista}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" style="width: 50%; border: solid rgb(255, 255, 255);">&nbsp;</td>
+                        <td style="width: 25.0001%; border: solid rgb(255, 255, 255);">
+                        <div style="text-align: left;"><span style="font-size: 11px;">PRECIO ESPECIAL SIN IVA</span></div>
+                        </td>
+                        <td style="width: 24.9999%; border: solid rgb(255, 255, 255);"><span style="font-size: 11px;">{!totalAntesDeIVA}</span></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25.0001%; border: solid rgb(255, 255, 255);">
+                        <div style="text-align: left;"><span style="font-size: 11px; color: rgb(255, 0, 0);">IVA</span></div>
+                        </td>
+                        <td style="width: 24.9999%; border: solid rgb(255, 255, 255);"><span style="font-size: 11px;">{!iva}</span></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25.0001%; border: solid rgb(255, 255, 255);">
+                        <div style="text-align: left;"><span style="font-size: 11px;font-weight:700;"><strong>PRECIO ESPECIAL CON IVA</strong></span></div>
+                        </td>
+                        <td style="width: 24.9999%; border: solid rgb(255, 255, 255);"><span style="font-size: 11px;font-weight:700;">{!precioEspecial}</span></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td colspan="2"><hr/></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 11px;">FORMA DE PAGO:</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 11px;">{!formaAdquisicion}</td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 11px;">FECHA DE ENTREGA:</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 11px;">SEGÚN DISPONIBILIDAD</td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 11px;vertical-align: top;">GARANTÍA DE FÁBRICA:</td>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 11px;">6 MESES POR DESPERFECTO DE FÁBRICA</td>
+                      </tr>
+                </tbody>
+            </table>
+            
+            <div>
+                <hr style="border: 1px solid black;" />
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; color:red; text-align: left;margin: 0;padding-bottom:10px;">
+                    <strong>NOTA:</strong> ESTE PRECIO INCLUYE IVA - ESTA OFERTA CONTIENE CLÁUSULAS DE MANTENIMIENTO DEL VALOR RESPECTO AL DÓLAR - COTIZACIÓN VÁLIDA POR 5 DÍAS
+                </p>
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color:black; text-align: left;margin: 0;">
+                    <strong>NOTAS ADICIONALES:</strong> {!notasAdicionales}
+                </p>
+                <hr style="border: 1px solid black;" />
+            </div>
+
+            <div style="padding-top: 10px;">
+                <table>
+                    <tr>
+                        <td style="text-align:center" width="200">
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9">Vendedor: {!vendedor}</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9">Correo: {!correo}</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9">Telefono: {!telefono}</p>
+                        </td>
+                        <td width="200"></td>
+                        <td>
+                            <apex:outputPanel rendered="{!CONTAINS(modeloAMostrar, 'MotoresMarinos')}">
+                                <apex:image style="float:left;" url="{!$Resource.Detalle_cotizacion_Motores_Marinos}" width="60" height="40" />
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!NOT(CONTAINS(modeloAMostrar, 'MotoresMarinos'))}">
+                                <apex:image style="float:left;" url="{!$Resource.Detalle_cotizacion_Yamaha}" width="60" height="40" />
+                            </apex:outputPanel>
+                        </td>
+                        <td style="text-align:center; padding-left:10px">
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9; font-weight: bold;">STOCK DE REPUESTOS</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9; font-weight: bold;">Y TALLERES DE SERVICIOS</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin:0; color:#ABB2B9; font-weight: bold;">DISPONIBLES</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer">
+                <apex:image style="float:left; width:95%;" url="{!$Resource.Pie_cotizacion_Yamaha}" />
+            </div>
+        </apex:outputPanel>
+
+        <apex:outputPanel id="cotizacionAutolote" rendered="{!CONTAINS(modeloAMostrar, 'Autolote')}">
+            <table style="width:100%; font-family:Arial, Helvetica, sans-serif; border-collapse: collapse;">
+                <tr>
+                    <td colspan="3" style="font-size: 22px;">AUTOLOTE CASA PELLAS</td>
+                    <td colspan="3"></td>
+                    <td colspan="3" style="text-align: center; font-size: 28px; color:#182c63"><strong>PROFORMA</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding: 5px 0px; font-size: 12px;">Grupo Casa Pellas</td>
+                    <td colspan="3"></td>
+                    <td colspan="3">
+                        <table style="width:100%">
+                            <tr>
+                                <td style="font-size: 12px; width:50%;">Fecha:</td>
+                                <td style="font-size: 12px; width:50%; border: solid black 1px; text-align:center; background-color:#e4e8f3;">
+                                    <apex:outputText value="{0, date, dd '/' MM '/' yyyy}">
+                                        <apex:param value="{! NOW() }" />
+                                    </apex:outputText>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding: 5px 0px; font-size: 12px;">Rot. El Gueguense 350mts al Sur.</td>
+                    <td colspan="3"></td>
+                    <td colspan="3">
+                        <table style="width:100%">
+                            <tr>
+                                <td style="font-size: 12px; width:50%;">No:</td>
+                                <td style="font-size: 12px; width:50%; text-align:center; border: solid black 1px;">{!quote.QuoteNumber}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding: 5px 0px; font-size: 12px;">Managua, Nicaragua</td>
+                    <td colspan="3" rowspan="3"></td>
+                    <td colspan="3" style="text-align: center;" rowspan="3">
+                        <apex:image style="width:95%;" url="{!$Resource.Cotizacion_autolote}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding: 5px 0px; font-size: 12px;">Teléfono: 2255-4444</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding: 5px 0px; font-size: 12px; vertical-align:top;">WhatsApp: 8700-1111</td>
+                </tr>
+                <tr>    
+                    <td colspan="3">&nbsp;</td>
+                    <td colspan="3">&nbsp;</td>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+            </table>
+
+            <table style="width:100%; font-family:Arial, Helvetica, sans-serif; border-collapse: collapse;">
+                <tr>
+                    <td style="width: 40%; padding: 5px; font-size: 14px; background-color:#e4e8f3;">CLIENTE</td>
+                    <td style="width: 20%; padding: 5px; font-size: 14px;">&nbsp;</td>
+                    <td style="width: 40%; padding: 5px; font-size: 14px; background-color:#e4e8f3;">ASESOR DE VENTAS</td>
+                </tr>
+                <tr>
+                    <td style="width: 40%; font-size: 12px;">{!quote.Account.Name}</td>
+                    <td style="width: 20%;">&nbsp;</td>
+                    <td style="width: 40%; font-size: 12px;">{!vendedorU.Name}</td>
+                </tr>
+                <tr>
+                    <td style="width: 40%; font-size: 12px;">{!quote.Account.CodigoCliente__c}</td>
+                    <td style="width: 20%;">&nbsp;</td>
+                    <td style="width: 40%; font-size: 12px;">{!IF(vendedorU.MobilePhone != null, vendedorU.MobilePhone, "-- --")}</td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;">&nbsp;</td>
+                    <td style="width: 20%;">&nbsp;</td>
+                    <td style="width: 40%; font-size: 12px;">{!vendedorU.Email}</td>
+                </tr>
+            </table>
+
+            <table style="width:100%; font-family:Arial, Helvetica, sans-serif; border-collapse: collapse; margin-top:10px;">
+                <thead style="background-color: #e4e8f3">
+                    <th style="font-weight: bold; padding: 5px 0px; font-size: 14px; width:15%; text-align:center;">ITEMS</th>
+                    <th style="font-weight: bold; padding: 5px 0px; font-size: 14px; width:35%; text-align:center;">DESCRIPCIÓN</th>
+                    <th style="font-weight: bold; padding: 5px 0px; font-size: 14px; width:10%; text-align:center;">UND</th>
+                    <th style="font-weight: bold; padding: 5px 0px; font-size: 14px; width:15%; text-align:center;">PRECIO UNITARIO</th>
+                    <th style="font-weight: bold; padding: 5px 0px; font-size: 14px; width:25%; text-align:center;">PRECIO DE LISTA</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width:15%; padding: 5px 0px; font-size: 12px; text-align:center;">MARCA</td>
+                        <td style="width:35%; padding: 5px 0px; font-size: 12px; text-align:center;">{!vehiculo.Marca__r.Name}</td>
+                        <td style="width:10%; padding: 5px 0px; font-size: 12px; text-align:center;">1</td>
+                        <td style="width:15%; padding: 5px 0px; font-size: 12px; text-align:right;">{!vehOpp.Precio_de_venta__c}</td>
+                        <td style="width:25%; background-color:#f0f0f0; padding: 5px 0px; font-size: 12px; text-align:right;">{!vehiculo.Precio_vendedor__c}</td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%; width:30%; padding: 5px 0px; font-size: 12px; text-align:center;">MODELO</td>
+                        <td style="width:35%; padding: 5px 0px; font-size: 12px; text-align:center;">{!vehiculo.Modelo__r.Name}</td>
+                        <td style="width:10%;"></td>
+                        <td style="width:15%;"></td>
+                        <td style="width:25%; background-color:#f0f0f0"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%; padding: 5px 0px; font-size: 12px; text-align:center;">TIPO</td>
+                        <td style="width:35%; padding: 5px 0px; font-size: 12px; text-align:center;">{!vehiculo.Tipo_de_modelo__c}</td>
+                        <td style="width:10%;"></td>
+                        <td style="width:15%;"></td>
+                        <td style="width:25%; background-color:#f0f0f0"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%; padding: 5px 0px; font-size: 12px; text-align:center;">MOTOR</td>
+                        <td style="width:35%; padding: 5px 0px; font-size: 12px; text-align:center;">{!vehiculo.Motor__c}</td>
+                        <td style="width:10%;"></td>
+                        <td style="width:15%;"></td>
+                        <td style="width:25%; background-color:#f0f0f0"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%; padding: 5px 0px; font-size: 12px; text-align:center;">COLOR</td>
+                        <td style="width:35%; padding: 5px 0px; font-size: 12px; text-align:center;">{!vehiculo.Color__c}</td>
+                        <td style="width:10%;"></td>
+                        <td style="width:15%;"></td>
+                        <td style="width:25%; background-color:#f0f0f0"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%; padding: 5px 0px; font-size: 12px; text-align:center;">PLACA</td>
+                        <td style="width:35%; padding: 5px 0px; font-size: 12px; text-align:center;">{!vehiculo.Placa__c}</td>
+                        <td style="width:10%;"></td>
+                        <td style="width:15%;"></td>
+                        <td style="width:25%; background-color:#f0f0f0"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%; padding: 5px 0px; font-size: 12px; text-align:center;">CHASIS</td>
+                        <td style="width:35%; padding: 5px 0px; font-size: 12px; text-align:center;">{!vehiculo.Chasis__c}</td>
+                        <td style="width:10%;"></td>
+                        <td style="width:15%;"></td>
+                        <td style="width:25%; background-color:#f0f0f0"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%; padding: 5px 0px; font-size: 12px; text-align:center;">AÑO</td>
+                        <td style="width:35%; padding: 5px 0px; font-size: 12px; text-align:center;">{!vehiculo.Anio_opcion__c}</td>
+                        <td style="width:10%;"></td>
+                        <td style="width:15%;"></td>
+                        <td style="width:25%; background-color:#f0f0f0"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%; padding: 5px 0px; font-size: 12px; text-align:center; ">DESCRIPCIÓN</td>
+                        <td style="width:35%; padding: 5px 0px; font-size: 12px; word-break: break-all; text-align:center;">{!vehiculo.Observaciones_generales__c}</td>
+                        <td style="width:10%;"></td>
+                        <td style="width:15%;"></td>
+                        <td style="width:25%; background-color:#f0f0f0"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table style="width:100%; font-family:Arial, Helvetica, sans-serif; border-collapse: collapse; margin-top:5px;">
+                <tr>
+                    <td style="width:60%;">
+                        <table style="width:100%;">
+                            <tr style="height:20%;">
+                                <td style="background-color:#e4e8f3; padding: 5px; width:100%; font-size: 14px;">ACCESORIOS</td>
+                            </tr>
+                            <tr style="height:130px;">
+                                <td style="width:100%; border:solid 1px black; font-size: 12px; padding: 5px;">{!vehiculo.Equipado_con__c}</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:40%;">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:70%; padding: 5px; font-size: 12px;">Subtotal</td>
+                                <td style="width:30%; padding: 5px; font-size: 12px;">{!vehiculo.Precio_vendedor__c}</td>
+                            </tr>
+                            <tr>
+                                <td style="width:70%; padding: 5px; font-size: 12px;">Accesorios</td>
+                                <td style="width:30%; padding: 5px; font-size: 12px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:70%; padding: 5px; font-size: 12px;">Descuento</td>
+                                <td style="width:30%; padding: 5px; font-size: 12px;">
+                                    {!IF(vehOpp.Precio_de_venta__c - vehiculo.Precio_vendedor__c > 0, 
+                                        vehOpp.Precio_de_venta__c - vehiculo.Precio_vendedor__c, 
+                                        vehiculo.Precio_vendedor__c - vehOpp.Precio_de_venta__c
+                                    )}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:70%; padding: 5px; font-size: 12px;">Descuento x Int</td>
+                                <td style="width:30%; padding: 5px; font-size: 12px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:70%; padding: 5px; font-size: 12px; font-weight: bold;">Total</td>
+                                <td style="width:30%; padding: 5px; font-size: 12px; font-weight: bold; background-color:#e4e8f3;">
+                                    <apex:outputText value="${0, number, #.00}">
+                                        <apex:param value="{!vehOpp.Precio_de_venta__c}" />
+                                    </apex:outputText>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:70%; padding: 5px; font-size: 12px;">Currency</td>
+                                <td style="width:30%; padding: 5px; font-size: 12px;">{!vehOpp.CurrencyIsoCode}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="width:100%; font-family:Arial, Helvetica, sans-serif; border-collapse: collapse; margin-top:15px;">
+                <tr>
+                    <td style="padding: 5px; font-family: Arial, Helvetica, sans-serif; font-size:14px; background-color:#e4e8f3; font-weight: bold;">
+                        INFORMACIÓN ADICIONAL
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px; font-family: Arial, Helvetica, sans-serif; font-size:12px;">Garantía por 3 meses o 5,000 km
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px; font-family: Arial, Helvetica, sans-serif; font-size:12px;">Proforma válida por 10 días.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px; font-family: Arial, Helvetica, sans-serif; font-size:12px;">Historial de Mantenimiento de Talleres Pellas
+                    </td>
+                </tr>
+            </table>
+
+
+
+            <table style="width:100%; font-family:Arial, Helvetica, sans-serif; border-collapse: collapse; margin-top:45px;">
+                <tr>
+                    <td style="width:40%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:40%; text-align:center; font-size: 14px;">
+                        <apex:outputText value="{0, date, dd '/' MM '/' yyyy}">
+                            <apex:param value="{!NOW()}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; width:40%; border-top: 1px solid black;"><span style="padding-top: 3px;">Ronny Rivera Pastora</span></td>
+                    <td style="width:10%;"></td>
+                    <td style="font-size: 12px; width:40%; border-top: 1px solid black;"><span style="padding-top: 3px;">Fecha</span></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; width:40%;">Supervisor de venta</td>
+                    <td style="width:10%;"></td>
+                    <td style="width:40%;"></td>
+                </tr>
+            </table>
+        </apex:outputPanel>
+    </body>
+    </html>
+</apex:page>

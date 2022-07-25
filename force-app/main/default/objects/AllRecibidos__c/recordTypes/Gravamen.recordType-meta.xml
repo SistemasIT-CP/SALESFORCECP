@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gravamen</fullName>
+    <active>true</active>
+    <description>Recibo para la deuda de un vehículo a ser comprado</description>
+    <label>Gravamen</label>
+</RecordType>

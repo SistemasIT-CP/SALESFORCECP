@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_financiamiento__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de financiamiento</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ciclo</fullName>
+                <default>false</default>
+                <label>Ciclo</label>
+            </value>
+            <value>
+                <fullName>Go / Drive</fullName>
+                <default>false</default>
+                <label>Go / Drive</label>
+            </value>
+            <value>
+                <fullName>Línea de crédito</fullName>
+                <default>false</default>
+                <label>Línea de crédito</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

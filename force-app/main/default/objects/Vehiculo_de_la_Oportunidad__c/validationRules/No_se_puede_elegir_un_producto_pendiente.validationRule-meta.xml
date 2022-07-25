@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_se_puede_elegir_un_producto_pendiente</fullName>
+    <active>true</active>
+    <description>Si la oportunidad es de Autolote no es posible elegir un vehículo con estado pendiente</description>
+    <errorConditionFormula>AND(
+  Oportunidad__r.RecordType.DeveloperName = &quot;Principal_Autolote&quot;,
+  NOT(ISPICKVAL(Vehiculo__r.Estado__c, &quot;Libre&quot;)),
+  OR(
+   ISNEW(),
+   ISCHANGED(Vehiculo__c)
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Vehiculo__c</errorDisplayField>
+    <errorMessage>Este vehículo no se encuentra libre. Por favor, escoja otro.</errorMessage>
+</ValidationRule>

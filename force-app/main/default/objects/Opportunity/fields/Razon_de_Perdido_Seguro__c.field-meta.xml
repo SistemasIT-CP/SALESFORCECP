@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Razon_de_Perdido_Seguro__c</fullName>
+    <externalId>false</externalId>
+    <label>Razón de Perdido Seguro</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Compro directamente en Aseguradora</fullName>
+                <default>false</default>
+                <label>Compro directamente en Aseguradora</label>
+            </value>
+            <value>
+                <fullName>No comprará Seguro para su vehículo</fullName>
+                <default>false</default>
+                <label>No comprará Seguro para su vehículo</label>
+            </value>
+            <value>
+                <fullName>Tiene su corredor</fullName>
+                <default>false</default>
+                <label>Tiene su corredor</label>
+            </value>
+            <value>
+                <fullName>Exonerado</fullName>
+                <default>false</default>
+                <label>Exonerado</label>
+            </value>
+            <value>
+                <fullName>Precio</fullName>
+                <default>false</default>
+                <label>Precio</label>
+            </value>
+            <value>
+                <fullName>No se contactó a tiempo</fullName>
+                <default>false</default>
+                <label>No se contactó a tiempo</label>
+            </value>
+            <value>
+                <fullName>Licitación</fullName>
+                <default>false</default>
+                <label>Licitación</label>
+            </value>
+            <value>
+                <fullName>No se pudo contactar</fullName>
+                <default>false</default>
+                <label>No se pudo contactar</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+            <value>
+                <fullName>Cliente consiguió mejor oferta</fullName>
+                <default>false</default>
+                <label>Cliente consiguió mejor oferta</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

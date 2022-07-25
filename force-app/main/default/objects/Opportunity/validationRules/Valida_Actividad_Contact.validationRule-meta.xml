@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valida_Actividad_Contact</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+RecordTypeName__c == &quot;Contact Center&quot; ,
+ISCHANGED(StageName),
+ISPICKVAL(StageName, &quot;Contacto Exitoso&quot;), Actividad_Contact_Center__c = False)</errorConditionFormula>
+    <errorMessage>No puede avanzar de etapa debido a que no ha registrado tareas de contacto</errorMessage>
+</ValidationRule>

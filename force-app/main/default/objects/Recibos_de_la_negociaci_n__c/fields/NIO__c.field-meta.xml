@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NIO__c</fullName>
+    <externalId>false</externalId>
+    <formula>if (ISPICKVAL(CurrencyIsoCode , &apos;USD&apos;),  Monto_aplicado_a_la_negociaci_n__c * Informe_de_Negociaci_n__r.Tasa_Cambio__c , Monto_aplicado_a_la_negociaci_n__c * 1)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NIO</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mensajeria_Dollar_Rent_a_Car_Nicaragua_MessagingSession</fullName>
+    <columns>Name</columns>
+    <columns>MessagingChannel</columns>
+    <columns>MessagingEndUser</columns>
+    <columns>Owner</columns>
+    <columns>Status</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Case</columns>
+    <columns>EndUserContact</columns>
+    <columns>EndUserAccount</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MessagingChannel</field>
+        <operation>equals</operation>
+        <value>Dollar Rent a Car Nicaragua,whatsapp:+50588222555,Mensajeria Hertz Nicaragua</value>
+    </filters>
+    <label>Mensajeria Dollar Rent a Car Nicaragua</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

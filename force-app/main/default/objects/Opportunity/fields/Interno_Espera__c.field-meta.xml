@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interno_Espera__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check para indicar que oportunidad de financiamiento interna</description>
+    <externalId>false</externalId>
+    <label>Interno Espera</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

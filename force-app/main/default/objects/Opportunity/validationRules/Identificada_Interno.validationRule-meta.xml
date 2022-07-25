@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Identificada_Interno</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+(RecordTypeName__c == &quot;Financiamiento Interno&quot;) ,
+ISCHANGED(StageName),
+ISPICKVAL(StageName, &quot;Pre - Filtro&quot;),
+
+
+OR (
+ISBLANK(  ModeloVehiculo__c  ),
+ISBLANK(Vendedor__c ),
+ISBLANK(TEXT( Producto_Financiamiento__c  ))
+
+
+)
+
+)</errorConditionFormula>
+    <errorMessage>Debe ingresar campos claves para poder avanzar de etapa, Modelo, Vendedor, Producto de financiamiento</errorMessage>
+</ValidationRule>

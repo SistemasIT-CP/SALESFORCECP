@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Asignaci_n_V_A_por_vendedor__c</name>
+    <relationshipLabel></relationshipLabel>
+</CustomFieldTranslation>

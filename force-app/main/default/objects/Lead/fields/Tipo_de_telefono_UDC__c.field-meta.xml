@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_telefono_UDC__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Sugerencia de opciones, Home, Work, Car o Mobile, FAX, Home - Emergency Contact, Other, Work - Emergency Contact</inlineHelpText>
+    <label>Tipo de teléfono</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Catalogo_UDC__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Tipo de Telefono</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Catalogo_UDC__c</referenceTo>
+    <relationshipLabel>Leads (Tipo de teléfono)</relationshipLabel>
+    <relationshipName>Leads4</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

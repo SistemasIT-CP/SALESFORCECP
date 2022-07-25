@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contacto_exitoso_AUTOLOTE_PERSONA</fullName>
+    <active>true</active>
+    <description>Esta regla de validacion se usa para que sean obligatorio completar los campos expuestos en la regla si el estado anterios del Lead es &quot;Contacto exitoso&quot;.</description>
+    <errorConditionFormula>OR(
+				AND(
+								RecordType.DeveloperName =&quot;Autolote&quot;,
+		     	OR(
+							   ISPICKVAL(Status,&quot;Lead perdido&quot;),
+          ISPICKVAL(Status,&quot;Lead a futuro&quot;)
+												),  
+			    	ISPICKVAL(PRIORVALUE(Status),&quot;Contacto exitoso&quot;),
+								ISBLANK(Company),
+				  			OR(
+												ISBLANK(Ingresos_mensuales__c),
+												ISBLANK(TEXT(Desea_que_le_contacte_el_vendedor__c)),
+												ISBLANK(TEXT(Cuando_desea_realizar_su_compra__c)),
+												ISBLANK(TEXT(Cual_seria_su_forma_de_pago__c)),
+											 ISBLANK(Genero__c),
+											 ISBLANK(Ciudad_UDC__c), 
+											 ISBLANK(Municipio_UDC__c),
+            ISBLANK(Departamento_UDC__c)
+												)
+						 )
+				)</errorConditionFormula>
+    <errorMessage>Debe completar los siguientes campos de la Sección de Contacto Exitoso: INGRESOS MENSUALES, DESEA QUE LO CONTACTE UN VENDEDOR, CUANDO DESEA REALIZAR SU COMPRA, CUAL SERIA SU FORMA DE PAGO, CIUDAD, MUNICIPIO, DEPARTAMENTO, GENERO.</errorMessage>
+</ValidationRule>

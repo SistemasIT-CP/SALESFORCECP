@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_de_entrega_posterior</fullName>
+    <active>true</active>
+    <description>La fecha de entrega no puede ser menor a hoy</description>
+    <errorConditionFormula>AND(
+ ISCHANGED(Fecha_de_entrega__c),
+ Fecha_de_entrega__c &lt;  TODAY()
+)</errorConditionFormula>
+    <errorDisplayField>Fecha_de_entrega__c</errorDisplayField>
+    <errorMessage>La fecha de entrega no puede ser anterior al día de hoy.</errorMessage>
+</ValidationRule>

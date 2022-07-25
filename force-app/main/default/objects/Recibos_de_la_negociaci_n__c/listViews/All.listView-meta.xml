@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>C_digo_de_cliente__c</columns>
+    <columns>Monto_aplicado_a_la_negociaci_n__c</columns>
+    <columns>Saldo_disponible__c</columns>
+    <columns>Saldo_total_aplicado__c</columns>
+    <columns>Saldo__c</columns>
+    <columns>Informe_de_Negociaci_n__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>C_digo_de_cliente__c</field>
+        <operation>equals</operation>
+        <value>4082154</value>
+    </filters>
+    <label>Todos</label>
+</ListView>

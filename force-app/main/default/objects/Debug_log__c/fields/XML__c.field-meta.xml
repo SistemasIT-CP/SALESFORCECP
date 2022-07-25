@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>XML__c</fullName>
+    <description>En caso de errores se almacena el XML del envio que falló.
+En caso de reservas se almacena el detalle del cambio en la reserva.</description>
+    <externalId>false</externalId>
+    <label>Detalle</label>
+    <length>131072</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>50</visibleLines>
+</CustomField>

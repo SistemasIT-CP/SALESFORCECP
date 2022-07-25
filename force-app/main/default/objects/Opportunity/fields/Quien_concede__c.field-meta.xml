@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quien_concede__c</fullName>
+    <externalId>false</externalId>
+    <label>Quién concede</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FAMA</fullName>
+                <default>false</default>
+                <label>FAMA</label>
+            </value>
+            <value>
+                <fullName>CREDEX</fullName>
+                <default>false</default>
+                <label>CREDEX</label>
+            </value>
+            <value>
+                <fullName>CREDIFACIL</fullName>
+                <default>false</default>
+                <label>CREDIFACIL</label>
+            </value>
+            <value>
+                <fullName>TU CREDITO</fullName>
+                <default>false</default>
+                <label>TU CREDITO</label>
+            </value>
+            <value>
+                <fullName>INSTACREDIT</fullName>
+                <default>false</default>
+                <label>INSTACREDIT</label>
+            </value>
+            <value>
+                <fullName>FIDEM</fullName>
+                <default>false</default>
+                <label>FIDEM</label>
+            </value>
+            <value>
+                <fullName>BANPRO</fullName>
+                <default>false</default>
+                <label>BANPRO</label>
+            </value>
+            <value>
+                <fullName>BAC</fullName>
+                <default>false</default>
+                <label>BAC</label>
+            </value>
+            <value>
+                <fullName>LAFISE</fullName>
+                <default>false</default>
+                <label>LAFISE</label>
+            </value>
+            <value>
+                <fullName>FICOHSA</fullName>
+                <default>false</default>
+                <label>FICOHSA</label>
+            </value>
+            <value>
+                <fullName>FLEXI PAGOS</fullName>
+                <default>false</default>
+                <label>FLEXI PAGOS</label>
+            </value>
+            <value>
+                <fullName>CRÉDITO INTERNO</fullName>
+                <default>false</default>
+                <label>CRÉDITO INTERNO</label>
+            </value>
+            <value>
+                <fullName>AVANZ</fullName>
+                <default>false</default>
+                <label>AVANZ</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_se_pueden_saltar_etapas_avaluo</fullName>
+    <active>true</active>
+    <description>Se imposibilita la posibilidad de saltar mas de una etapa a la vez</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;Avaluo&quot;,
+ ISCHANGED(StageName),
+ NOT(CONTAINS(TEXT(PRIORVALUE(StageName)), &quot;Cerrada&quot;)),
+ NOT(CONTAINS(TEXT(StageName), &quot;Cerrada&quot;)),
+(ABS(
+CASE(StageName ,
+&quot;Esperando Contacto&quot;,1,
+&quot;Cliente en espera de avaluo&quot;,2,
+&quot;Aprobacion Autolote&quot;,3,
+&quot;Negociacion&quot;,4,
+&quot;Formalizacion&quot;,5,1)
+-
+CASE(PRIORVALUE(StageName) ,
+&quot;Esperando Contacto&quot;,1,
+&quot;Cliente en espera de avaluo&quot;,2,
+&quot;Aprobacion Autolote&quot;,3,
+&quot;Negociacion&quot;,4,
+&quot;Formalizacion&quot;,5,0))
+&lt;&gt; 1
+)
+)</errorConditionFormula>
+    <errorMessage>Las etapas deben avanzarse de una en una.</errorMessage>
+</ValidationRule>

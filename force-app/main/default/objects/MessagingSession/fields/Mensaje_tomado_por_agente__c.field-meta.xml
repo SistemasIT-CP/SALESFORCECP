@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mensaje_tomado_por_agente__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo auxiliar utilizado para el testeo del seteo del owner en Caso cuando un vendedor toma el mensaje</description>
+    <externalId>false</externalId>
+    <label>Mensaje tomado por agente</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

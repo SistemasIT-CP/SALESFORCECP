@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sucursal__c</fullName>
+    <externalId>false</externalId>
+    <label>Sucursal</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Esteli</fullName>
+                <default>false</default>
+                <label>Esteli</label>
+            </value>
+            <value>
+                <fullName>Matagalpa</fullName>
+                <default>false</default>
+                <label>Matagalpa</label>
+            </value>
+            <value>
+                <fullName>Chinandega</fullName>
+                <default>false</default>
+                <label>Chinandega</label>
+            </value>
+            <value>
+                <fullName>Plaza España</fullName>
+                <default>false</default>
+                <label>Plaza España</label>
+            </value>
+            <value>
+                <fullName>Leon</fullName>
+                <default>false</default>
+                <label>Leon</label>
+            </value>
+            <value>
+                <fullName>Puerto Cabezas</fullName>
+                <default>false</default>
+                <label>Puerto Cabezas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

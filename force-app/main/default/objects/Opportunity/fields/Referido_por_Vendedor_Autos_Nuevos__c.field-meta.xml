@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referido_por_Vendedor_Autos_Nuevos__c</fullName>
+    <externalId>false</externalId>
+    <label>Referido por Vendedor Autos Nuevos</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>No Aplica</fullName>
+                <default>false</default>
+                <label>No Aplica</label>
+            </value>
+            <value>
+                <fullName>Sí, en la reserva en persona</fullName>
+                <default>false</default>
+                <label>Sí, en la reserva en persona</label>
+            </value>
+            <value>
+                <fullName>Sí, en la entrega en persona</fullName>
+                <default>false</default>
+                <label>Sí, en la entrega en persona</label>
+            </value>
+            <value>
+                <fullName>Si, por teléfono</fullName>
+                <default>false</default>
+                <label>Si, por teléfono</label>
+            </value>
+            <value>
+                <fullName>Si, en Combo</fullName>
+                <default>false</default>
+                <label>Si, en Combo</label>
+            </value>
+            <value>
+                <fullName>Vendedor dio teléfono</fullName>
+                <default>false</default>
+                <label>Vendedor dio teléfono</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

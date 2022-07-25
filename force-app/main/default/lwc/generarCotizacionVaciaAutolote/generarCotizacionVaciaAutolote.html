@@ -1,0 +1,183 @@
+<template>
+    <div style="background-color: #f3f2f2; border-radius: 5px; width: 100%">
+        <lightning-layout horizontal-align="center">
+            <lightning-layout-item padding="around-small">
+                <lightning-button variant="brand" label="Generar cotizacion en blanco"
+                    title="Generar cotizacion en blanco" onclick={openModal}>
+                </lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+    <template if:true={showModal}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Cerrar" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="Cerrar" variant="inverse"
+                            title="Cerrar"></lightning-icon>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Nueva cotización</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="max-height: 400px">
+                    <div class="slds-form">
+                        <div class="slds-form-element__control">
+                            <div class="slds-text-heading_medium"><b>Datos generales</b></div>
+                            <div class="slds-form__row">
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <lightning-input type="text" label="A nombre de:" value={accountName}
+                                            readonly>
+                                        </lightning-input>
+                                    </div>
+                                </div>
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="nombreResponsable">
+                                            Atención a:</label>
+                                        <div class="slds-form-element__control">
+                                            <input type="text" id="nombreResponsable" placeholder=""
+                                                class="slds-input" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form__row">
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="fechaCotizacion">
+                                            <abbr class="slds-required" title="required">* </abbr>Fecha de
+                                            cotizacion:</label>
+                                        <div class="slds-form-element__control">
+                                            <input type="date" id="fechaCotizacion" class="slds-input" value=""
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="horizontal-form-element-id-02">
+                                            <abbr class="slds-required" title="required">* </abbr>Dias de
+                                            validez:</label>
+                                        <div class="slds-form-element__control">
+                                            <input class="slds-input" type="number" id="diasValidez" name="diasValidez"
+                                                min="0" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form__row">
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="notasAdicionales">
+                                            Notas adicionales:</label>
+                                        <div class="slds-form-element__control">
+                                            <textarea id="notasAdicionales" placeholder=""
+                                                class="slds-textarea"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-text-heading_medium"><b>Información del vehiculo</b></div>
+                            <div class="slds-form__row">
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="marca">
+                                            <abbr class="slds-required" title="required">* </abbr>Marca:</label>
+                                        <div class="slds-form-element__control">
+                                            <input type="text" id="marca" placeholder="" class="slds-input" required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="horizontal-form-element-id-02">
+                                            <abbr class="slds-required" title="required">* </abbr>Modelo:</label>
+                                        <div class="slds-form-element__control">
+                                            <input type="text" id="modelo" placeholder="" class="slds-input" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form__row">
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="descripcion">
+                                            <abbr class="slds-required" title="required">* </abbr>Descripción:</label>
+                                        <div class="slds-form-element__control">
+                                            <textarea id="descripcion" placeholder="" class="slds-textarea"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="anio">
+                                            <abbr class="slds-required" title="required">* </abbr>Año</label>
+                                        <div class="slds-form-element__control">
+                                            <input class="slds-input" type="number" id="anio" name="anio" min="1900"
+                                                max={maxYear} required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form__row">
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="precioUnitario">
+                                            <abbr class="slds-required" title="required">* </abbr>Precio
+                                            Unitario</label>
+                                        <div class="slds-form-element__control">
+                                            <input class="slds-input" type="number" id="precioUnitario"
+                                                name="precioUnitario" min="1" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="cantidad">
+                                            <abbr class="slds-required" title="required">* </abbr>Cantidad</label>
+                                        <div class="slds-form-element__control">
+                                            <input class="slds-input" type="number" id="cantidad" name="cantidad"
+                                                min="1" value="1" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form__row">
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label" for="precioEspecial">
+                                            <abbr class="slds-required" title="required">* </abbr>Precio
+                                            Especial</label>
+                                        <div class="slds-form-element__control">
+                                            <input class="slds-input" type="number" id="precioEspecial"
+                                                name="precioEspecial" min="1" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form__item" role="listitem">
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-checkbox__label" for="iva">
+                                            <span class="slds-checkbox_faux"></span>
+                                            <span class="slds-form-element__label">IVA</span>
+                                        </label>
+                                        <div class="slds-form-element__control">
+                                            <input type="checkbox" name="default" id="iva" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={closeModal}
+                        aria-label="Cancel and close">Cancelar</button>
+                    <button class="slds-button slds-button_brand" onclick={generarCotizacion}>Generar</button>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

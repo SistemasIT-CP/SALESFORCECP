@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Banco__c</fullName>
+    <externalId>false</externalId>
+    <label>Banco</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Avanz</fullName>
+                <default>false</default>
+                <label>Avanz</label>
+            </value>
+            <value>
+                <fullName>BAC</fullName>
+                <default>false</default>
+                <label>BAC</label>
+            </value>
+            <value>
+                <fullName>Banpro</fullName>
+                <default>false</default>
+                <label>Banpro</label>
+            </value>
+            <value>
+                <fullName>BDF</fullName>
+                <default>false</default>
+                <label>BDF</label>
+            </value>
+            <value>
+                <fullName>Lafise</fullName>
+                <default>false</default>
+                <label>Lafise</label>
+            </value>
+            <value>
+                <fullName>Iniser</fullName>
+                <default>false</default>
+                <label>Iniser</label>
+            </value>
+            <value>
+                <fullName>Seguros América</fullName>
+                <default>false</default>
+                <label>Seguros América</label>
+            </value>
+            <value>
+                <fullName>FICOHSA</fullName>
+                <default>false</default>
+                <label>FICOHSA</label>
+            </value>
+            <value>
+                <fullName>BANCO DE FOMENTO A LA PRODUCCION</fullName>
+                <default>false</default>
+                <label>BANCO DE FOMENTO A LA PRODUCCION</label>
+            </value>
+            <value>
+                <fullName>INVERAUTO SA</fullName>
+                <default>false</default>
+                <label>INVERAUTO SA</label>
+            </value>
+            <value>
+                <fullName>PROMUJER LLC</fullName>
+                <default>false</default>
+                <label>PROMUJER LLC</label>
+            </value>
+            <value>
+                <fullName>CREDIQ</fullName>
+                <default>false</default>
+                <label>CREDIQ</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

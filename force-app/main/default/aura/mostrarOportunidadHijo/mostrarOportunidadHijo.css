@@ -1,0 +1,16 @@
+.THIS .slds-path__stage-name{
+    display: none !important;
+}
+
+.THIS .slds-box {
+    border: none !important;
+}
+
+.THIS .slds-form-element__static {
+    border-bottom: 1px solid #d3d3d3;
+    text-align: center;
+}
+
+.THIS .colorBlanco svg{
+    fill: white !important; 
+}

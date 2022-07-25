@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reclamos_Taller_Camiones</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Antiguedad__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Atencion_al_cliente</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Nuevo,En proceso,Aguardando respuesta</value>
+    </filters>
+    <filters>
+        <field>CASES.REASON</field>
+        <operation>equals</operation>
+        <value>Reclamo</value>
+    </filters>
+    <filters>
+        <field>Unidad_de_negocio__c</field>
+        <operation>equals</operation>
+        <value>Taller camiones</value>
+    </filters>
+    <label>Reclamos Taller Camiones</label>
+    <sharedTo>
+        <group>Atenci_n_al_Cliente</group>
+        <group>Outbound_Citas_Taller</group>
+    </sharedTo>
+</ListView>

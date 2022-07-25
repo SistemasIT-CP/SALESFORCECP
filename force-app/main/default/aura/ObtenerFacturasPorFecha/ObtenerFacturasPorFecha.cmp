@@ -1,0 +1,67 @@
+<aura:component controller="ProcesaWSGetFacturasAutomaticasPorFecha"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:lightningQuickAction" 
+                access="global">
+
+    <aura:attribute name="elegirFecha" type="Boolean" default="false"/>  
+    <aura:attribute name="loaded" type="Boolean" default="false"/>  
+    <aura:attribute name="disabled" type="Boolean" default="false"/>  
+    <aura:attribute name="fecha" type="Date"/>  
+
+    <div style="border-radius:10px; width:100%">
+        <table>
+            <tr style="background-color:#f3f2f2;">
+                <td style="padding:15px;text-align:center;">
+                    <lightning:button variant="brand" 
+                                    label="Solicitar facturas por fecha" 
+                                    title="Solicitar facturas por fecha" 
+                                    onclick="{!c.abrirElegirFecha}" />
+                </td>
+            </tr>
+            <tr style="background-color:#f3f2f2;">
+                <td style="padding:15px;text-align:center;">
+                    <lightning:button variant="brand" 
+                                    label="Solicitar devoluciones" 
+                                    title="Solicitar devoluciones" 
+                                    onclick="{!c.consumirDevoluciones}" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <aura:if isTrue="{!v.elegirFecha}">
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+            <div class="slds-modal__container">
+              <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Cerrar esta ventana" onclick="{!c.cerrarElegirFecha}">
+                    <lightning:icon iconName="utility:close" size="small"/>  
+                    <span class="slds-assistive-text">Cerrar esta ventana</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Elegir fecha</h2>
+              </header>
+              <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <aura:if isTrue="{!v.loaded}">
+                    <div style="height:75px; background-color:white;">
+                        <div role="status" class="slds-spinner slds-spinner_medium">
+                            <span class="slds-assistive-text">Loading</span>
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+                <aura:set attribute="else"> 
+                    <lightning:input type="date" name="fecha" label="Fecha" required="true" value="{!v.fecha}" />
+                </aura:set>
+               </aura:if>
+              </div>
+              <footer class="slds-modal__footer">
+                <div style="text-align:center;">
+                    <lightning:button variant="brand"
+                            disabled="{!v.disabled}" 
+                            label="Solicitar facturas" 
+                            title="Solicitar facturas" 
+                            onclick="{!c.solicitarFacturas}" />
+                </div>
+              </footer>
+            </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+</aura:component>

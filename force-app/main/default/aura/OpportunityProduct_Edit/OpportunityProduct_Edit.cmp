@@ -1,0 +1,110 @@
+<aura:component controller="OpportunityProduct_Edit_Controller" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <!-- attributes -->
+    <aura:attribute name="data" type="List"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="OpenAsignar" type="Boolean" default="false"/>
+	<aura:attribute name="Producto_Id" type="String" default=""/>
+    <aura:attribute name="Producto_Nombre" type="String" default=""/>
+    <aura:attribute name="Motor" type="String" default=""/>
+    <aura:attribute name="Chasis" type="String" default=""/>
+    <aura:attribute name="Color" type="String" default=""/>
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="tipoOportunidad" type="String" />
+    
+    <aura:attribute name="reservaDisabled" type="Boolean" default="false"/>
+    <aura:attribute name="F_Compania" type="String" default=""/>
+    <aura:attribute name="F_Linea" type="String" default=""/>
+    <aura:attribute name="F_Marca" type="String" default=""/>
+    <aura:attribute name="F_Modelo" type="String" default=""/>
+    
+    <aura:attribute name ="caseSimpleRecord" type="Object" />
+    <aura:attribute name ="recordLoadError" type="String" />
+    <aura:attribute name="CurrentUser" type="Object"/>
+
+    <force:recordData 
+        recordId="{!$SObjectType.CurrentUser.Id}"
+        fields="Profile.Name, Id_Empleado__c"
+        targetFields="{!v.CurrentUser}"
+        recordUpdated="{! c.verificarPerfil }"
+    />
+
+    <force:recordData 
+        aura:id="recordLoader"
+        recordId="{! v.recordId }"
+        fields="Cantidad_de_Veh_culos__c" 
+        targetFields="{! v.caseSimpleRecord }"
+        targetError="{! v.recordLoadError }"
+        recordUpdated="{! c.actualizar }"
+    />
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+	<lightning:card iconName="action:add_relationship">
+        <aura:set attribute="title">
+            Asignar Motor/Chasis
+        </aura:set> 
+    
+   <div style="height: 200px">
+        <lightning:datatable
+            columns="{! v.columns }"
+            data="{! v.data }"
+            keyField="id"
+            onrowaction="{! c.handleRowAction }"
+            hideCheckboxColumn="true"/>
+    </div>
+    
+     <aura:if isTrue="{!v.OpenAsignar}">        
+           
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" 
+                aria-modal="true" 
+                aria-describedby="modal-content-id-1" 
+                class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                        <strong>Asignar Motor/Chasis</strong>
+                    </h2>
+                </header>
+                <div class="slds-form-element">
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    	<table>
+                        	<tr>
+                            	<td style="width:15%; font-size:15px;">Producto:</td>
+                                <td style="left:0px; font-size:15px; "><strong>{!v.Producto_Nombre}</strong></td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <table>
+                        	<tr>
+                            	<td style="width:10%; font-size:15px">Motor:</td>
+                                <td style="width:30%; font-size:15px"><strong>{!v.Motor}</strong></td>
+                                <td style="width:10%; font-size:15px">Chasis:</td>
+                                <td style="width:30%; font-size:15px"><strong>{!v.Chasis}</strong></td>
+                            </tr>
+                        </table>
+                        
+                        <div>
+                            <c:ConsultaDisponibilidad aura:id="ConsulDis" parent="{!this}" 
+                                                      F_Compania="{!v.F_Compania}" 
+                                                      F_Linea="{!v.F_Linea}" F_Marca="{!v.F_Marca}"
+                                                      F_Modelo="{!v.F_Modelo}" 
+                                                      Motor="{!v.Motor}" Chasis="{!v.Chasis}" 
+                                                      Color="{!v.Color}" Producto_Nombre="{!v.Producto_Nombre}"
+                                                      pageSize="5" idEmpleado="{!v.CurrentUser.Id_Empleado__c}" funcion="asignacion"
+                            />
+                        </div>
+                    </div>
+                   
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" label="Aceptar" title="Asignar Motor/Chasis" onclick="{!c.Asignar}"/>
+                        <lightning:button variant="neutral" label="Cancelar" title="Cancelar" onclick="{!c.closeAsignar}"/> 
+                    </footer>      
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div> 
+        
+        
+    </aura:if>
+    </lightning:card>
+</aura:component>

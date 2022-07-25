@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Riesgo__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (Puntaje__c == NULL, &quot;&quot;,
+   IF(AND( Puntaje__c &gt;= 0, Puntaje__c &lt;= 2) , &quot;Tolerante&quot;, 
+      IF(AND( Puntaje__c &gt;= 3, Puntaje__c &lt;= 4), &quot;Riesgo Bajo&quot;,
+         IF(AND( Puntaje__c &gt;= 5, Puntaje__c &lt;= 7), &quot;Riesgo Medio&quot;,
+            IF(AND( Puntaje__c &gt;= 8, Puntaje__c &lt;= 10), &quot;Riesgo Medio&quot;, &quot;&quot;)
+         )
+      )
+   )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tipo de Riesgo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_puede_modificarse_la_fecha_de_PEP</fullName>
+    <active>true</active>
+    <description>Si el usuario no es administrador u oficial de cumplimiento la fecha PEP no puede modificarse</description>
+    <errorConditionFormula>AND(
+  ISCHANGED( Fecha_inicio_PEP__c ),
+  NOT(ISBLANK(PRIORVALUE(Fecha_inicio_PEP__c ))),
+  AND(
+   $Profile.Name &lt;&gt; &quot;Administrador del sistema&quot;,
+   $Profile.Name &lt;&gt; &quot;Oficial de cumplimiento&quot;
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Fecha_inicio_PEP__c</errorDisplayField>
+    <errorMessage>No es posible modificar la fecha PEP</errorMessage>
+</ValidationRule>

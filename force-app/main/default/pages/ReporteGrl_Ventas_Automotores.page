@@ -1,0 +1,74 @@
+<apex:page docType="html-5.0" controller="Ctrl_ReporteGrl_Ventas_Automotores"  lightningStylesheets="true" >
+
+<style>
+    .outSize {
+        zoom: 85%;
+    }
+</style>
+
+<h2>Reporte de Ventas Automotores</h2>    
+<apex:form >
+    <apex:pageBlock >
+        <h4>Ingresar las fechas del reporte       </h4>
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >Fecha inicial
+                <apex:input value="{!fecha}" type="date" required="true" id="fch1"/>                          
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >Fecha final
+            	<apex:input value="{!fecha2}" type="date" required="true" id="fch2"/>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+               	<apex:outputLabel value="Monto maximo UAF"/>
+                <apex:actionRegion >
+                    <apex:selectlist size="1" value="{!montoMaxSeleccionado}" id="montoMaximo">  
+                       <apex:selectOptions value="{!montoMaxList}" />       
+                    </apex:selectlist>
+                </apex:actionRegion>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Compañias"/>
+                <apex:actionRegion >
+                    <apex:selectlist size="1" value="{!companiaSeleccionada}" id="compania">  
+                       <apex:selectOptions value="{!companias}" />       
+                    </apex:selectlist>
+                </apex:actionRegion>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+               	<apex:outputLabel value="Tipo de pago"/>
+                <apex:actionRegion >
+                    <div class="outSize">
+                        <c:MultiselectPicklist leftLabel=""
+                            leftOption="{!tiposDePago}"
+                            rightLabel=""
+                            rightOption="{!tiposDePagoSeleccionados}"
+                            size="5"
+                            width="150px"/>
+                    </div>
+                </apex:actionRegion>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+               	<apex:outputLabel value="Linea de negocio"/>
+                <apex:actionRegion >
+                    <div class="outSize">
+                        <c:MultiselectPicklist leftLabel=""
+                            leftOption="{!lineasDeNegocio}"
+                            rightLabel=""
+                            rightOption="{!lineasDeNegocioSeleccionadas}"
+                            size="5"
+                            width="150px"/>
+                    </div>
+                </apex:actionRegion>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>   
+         
+        <center>
+            <apex:commandButton value="Generar reporte" action="{!generar}"/>
+        </center>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

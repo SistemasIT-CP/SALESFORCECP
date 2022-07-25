@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asesor_de_Autos_Nuevos__c</fullName>
+    <externalId>false</externalId>
+    <label>Asesor de Autos Nuevos</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alejandro Bermudez</fullName>
+                <default>false</default>
+                <label>Alejandro Bermudez</label>
+            </value>
+            <value>
+                <fullName>Karla Mendieta</fullName>
+                <default>false</default>
+                <label>Karla Mendieta</label>
+            </value>
+            <value>
+                <fullName>Alexis Gonzalez</fullName>
+                <default>false</default>
+                <label>Alexis Gonzalez</label>
+            </value>
+            <value>
+                <fullName>Jesse Huete</fullName>
+                <default>false</default>
+                <label>Jesse Huete</label>
+            </value>
+            <value>
+                <fullName>Katlin Raudez</fullName>
+                <default>false</default>
+                <label>Katlin Raudez</label>
+            </value>
+            <value>
+                <fullName>Roberto Herrera</fullName>
+                <default>false</default>
+                <label>Roberto Herrera</label>
+            </value>
+            <value>
+                <fullName>Hazel Sevilla</fullName>
+                <default>false</default>
+                <label>Hazel Sevilla</label>
+            </value>
+            <value>
+                <fullName>Mariano Ricarte</fullName>
+                <default>false</default>
+                <label>Mariano Ricarte</label>
+            </value>
+            <value>
+                <fullName>German Siles</fullName>
+                <default>false</default>
+                <label>German Siles</label>
+            </value>
+            <value>
+                <fullName>Denis Rivera</fullName>
+                <default>false</default>
+                <label>Denis Rivera</label>
+            </value>
+            <value>
+                <fullName>Fernando Nicaragua</fullName>
+                <default>false</default>
+                <label>Fernando Nicaragua</label>
+            </value>
+            <value>
+                <fullName>Beatriz Murillo</fullName>
+                <default>false</default>
+                <label>Beatriz Murillo</label>
+            </value>
+            <value>
+                <fullName>Marjorie Guevara</fullName>
+                <default>false</default>
+                <label>Marjorie Guevara</label>
+            </value>
+            <value>
+                <fullName>Norlan Navarrete</fullName>
+                <default>false</default>
+                <label>Norlan Navarrete</label>
+            </value>
+            <value>
+                <fullName>Walter Araica</fullName>
+                <default>false</default>
+                <label>Walter Araica</label>
+            </value>
+            <value>
+                <fullName>Moises J. Zepeda Calderon</fullName>
+                <default>false</default>
+                <label>Moises J. Zepeda Calderon</label>
+            </value>
+            <value>
+                <fullName>Jose Noel Rivera</fullName>
+                <default>false</default>
+                <label>Jose Noel Rivera</label>
+            </value>
+            <value>
+                <fullName>Gerald Gómez</fullName>
+                <default>false</default>
+                <label>Gerald Gómez</label>
+            </value>
+            <value>
+                <fullName>Gerald Gémez</fullName>
+                <default>false</default>
+                <label>Gerald Gémez</label>
+            </value>
+            <value>
+                <fullName>Silmalila Sarantez</fullName>
+                <default>false</default>
+                <label>Silmalila Sarantez</label>
+            </value>
+            <value>
+                <fullName>Julio C. Baez Mairena</fullName>
+                <default>false</default>
+                <label>Julio C. Baez Mairena</label>
+            </value>
+            <value>
+                <fullName>Jose E. Acevedo</fullName>
+                <default>false</default>
+                <label>Jose E. Acevedo</label>
+            </value>
+            <value>
+                <fullName>Maria F. Perez Chavez</fullName>
+                <default>false</default>
+                <label>Maria F. Perez Chavez</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllProducts</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+    <columns>Marca_P__c</columns>
+    <columns>modelogenerico__c</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <columns>Aniovehiculo__c</columns>
+    <columns>AnioModelo__c</columns>
+    <columns>modelofabrica__c</columns>
+    <columns>PRODUCT2.CREATED_DATE</columns>
+    <columns>PRODUCT2.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PRODUCT2.DESCRIPTION</field>
+        <operation>notContain</operation>
+        <value>autolote</value>
+    </filters>
+    <label>Todos los productos</label>
+</ListView>

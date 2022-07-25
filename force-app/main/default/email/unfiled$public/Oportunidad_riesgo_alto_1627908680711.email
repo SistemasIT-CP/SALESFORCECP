@@ -1,0 +1,16 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><img alt="Header plantilla correo" src="https://gcpcrm--uat--c.documentforce.com/file-asset-public/Header_plantilla_correo?oid=00D55000000JWUF" style="max-width: 671.76875px" title="Header plantilla correo" /><br />
+<br />
+&nbsp; &nbsp;Hola&nbsp;{{{Recipient.FirstName}}}!<br />
+<br />
+&nbsp; &nbsp;Te informamos que se va a facturar una oportunidad con riesgo ALTO.<br />
+&nbsp; &nbsp;Los datos de la oportunidad son los siguientes:<br />
+<br />
+&nbsp; &nbsp;Cliente:&nbsp;{{{Opportunity.AccountId}}}<br />
+&nbsp; &nbsp;Oportunidad:&nbsp;{{{Opportunity.Name}}}<br />
+&nbsp; &nbsp;Vendedor:&nbsp;{{{Opportunity.OwnerId}}}<br />
+<br />
+<br />
+<img alt="Pie de pagina plantilla correo" src="https://gcpcrm--uat--c.documentforce.com/file-asset-public/Pie_de_pagina_plantilla_correo?oid=00D55000000JWUF" style="max-width: 671.76875px" title="Pie de pagina plantilla correo" /></body></html>

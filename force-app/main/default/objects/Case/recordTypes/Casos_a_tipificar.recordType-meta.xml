@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Casos_a_tipificar</fullName>
+    <active>true</active>
+    <businessProcess>Casos a tipificar</businessProcess>
+    <compactLayoutAssignment>Servicio</compactLayoutAssignment>
+    <description>Tipo de registro para los casos pendientes de tipificar</description>
+    <label>Casos a tipificar</label>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook Messenger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presencial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefono</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whatsapp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Alta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baja</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Cobranzas Credicap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cobranzas Seguros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cotizacion Compra de autos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cotizacion Compra motos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cotizacion compra de camiones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cotizacion compra de repuestos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reclamo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicio de Alpesa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicio de Renta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicios de de taller enderezado y pintura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicios de taller mecanica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sugerencia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telepagos</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Pregunta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problema</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitud de función</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

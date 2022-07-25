@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campos_requeridos_financiamiento_motos</fullName>
+    <active>true</active>
+    <description>Para pasar a Listo para Facturar en Motos el campo Quien Concede es requerido si es de tipo Financiamiento</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;Principal_Motos&quot;,
+ISCHANGED(StageName),
+ISPICKVAL(StageName, &quot;Listo Para Facturar&quot;),
+INCLUDES(Forma_de_Pago_Multiple__c, &quot;Financiamiento&quot;),
+ISBLANK(TEXT(Quien_concede__c))
+)</errorConditionFormula>
+    <errorMessage>El campo Quien Concede es requerido para pasar a Listo Para Facturar.</errorMessage>
+</ValidationRule>

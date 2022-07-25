@@ -1,0 +1,1 @@
+El vendedor {!Opportunity.OwnerFullName} ha solicitado la aprobación del finacimiento relacionado a la oportunidad {!Opportunity.Name}

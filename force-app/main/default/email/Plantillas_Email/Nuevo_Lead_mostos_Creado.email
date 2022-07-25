@@ -1,0 +1,11 @@
+Se informa que ha llegado un nuevo prospecto de ventas al sistema.<br>
+<br>
+Nombre del prospecto: {!Lead.Name} <br>
+<br>
+Marca a cotizar: {!Lead.Marca_a_cotizar__c}<br>
+<br>
+Modelo a cotizar: {!Lead.Modelo_a_cotizar__c}<br>
+<br>
+Correo Electronico: {!Lead.Email}<br>
+<br>
+Telefono: {!Lead.Phone}

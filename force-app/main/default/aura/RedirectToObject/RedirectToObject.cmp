@@ -1,0 +1,33 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                            access="global" >
+
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="debugRecord" type="Object"/>
+    <aura:attribute name="recordLoadError" type="String"/>
+
+    <force:recordData aura:id="recordLoader"
+                    recordId="{!v.recordId}"
+                    fields="Objeto__c, ID_Objeto__c"
+                    targetFields="{!v.debugRecord}"
+                    targetError="{!v.recordLoadError}"
+    />
+    <lightning:layout horizontalAlign="center"> 
+        <lightning:layoutItem padding="around-small">  
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <lightning:button class = "slds-button__icon_right"
+                                            variant="brand"
+                                            label="Ir al objeto" 
+                                            title="Enviar" 
+                                            onclick="{!c.redireccionar}" 
+                            />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </lightning:layoutItem>
+    </lightning:layout>
+
+</aura:component>

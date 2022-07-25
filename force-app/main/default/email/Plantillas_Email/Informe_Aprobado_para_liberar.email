@@ -1,0 +1,125 @@
+<body>
+    <div>
+        <table width="100%" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td valign="top">
+                        <table cellpadding="0" cellspacing="0" class="es-header esd-header-popover" align="center">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <table style="background-color: #044767;" width="600"
+                                            cellspacing="0" cellpadding="0" bgcolor="#044767" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left">
+                                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="530"
+                                                                        valign="top" align="center">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center">
+                                                                                        <h1
+                                                                                            style="color: #ffffff; line-height: 100%; font-size: 25px; padding-top:15px">
+                                                                                            Informe de
+                                                                                            negociación liberado</h1>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <table width="600" height="300" cellspacing="0" cellpadding="0"
+                                            bgcolor="#ffffff" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #f7f7f7;"
+                                                        bgcolor="#f7f7f7" align="left">
+                                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="530"
+                                                                        valign="top" align="center">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center">
+                                                                                        <h2
+                                                                                            style="color: #333333; font-family: 'open sans', 'helvetica neue', helvetica, arial, sans-serif;">
+                                                                                            Tu informe ha sido liberado
+                                                                                        </h2>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left">
+                                                                                        <h3 style="font-size: 20px;">
+                                                                                            Hola {!Informe_de_Negociaci_n__c.Vendedor__c},</h3>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left">
+                                                                                        <p
+                                                                                            style="font-size: 18px; color: #777777;">
+                                                                                            Te informamos que el
+                                                                                            informe de negociación
+                                                                                            {!Informe_de_Negociaci_n__c.Consecutivo_del_Informe__c} presente en la oportunidad {!Informe_de_Negociaci_n__c.Nombre_de_la_oportunidad__c},
+                                                                                            fue aprobado para eliminar</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="height:35px">
+
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="center">
+                                                                                        <span
+                                                                                            style="background: #ed8e20 none repeat scroll 0% 0%;">
+                                                                                            <a  href="{!Informe_de_Negociaci_n__c.Link}"
+                                                                                                target="_blank"
+                                                                                                style="font-weight: normal; border-width: 15px 30px; background: #044767 none repeat scroll 0% 0%; 
+                                                                                                        border-color: #044767; color: #ffffff; font-size: 18px; padding: 10px; border-radius:5px;
+                                                                                                        text-decoration: none">
+                                                                                                Ir al informe</a>
+                                                                                            </span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

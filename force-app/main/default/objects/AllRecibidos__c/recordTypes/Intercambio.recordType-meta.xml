@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intercambio</fullName>
+    <active>true</active>
+    <description>Recibo para la entrega de dinero al cliente</description>
+    <label>Depósito al cliente</label>
+</RecordType>

@@ -1,0 +1,469 @@
+<aura:component controller="WS_InventorySearchList" implements="force:appHostable,flexipage:availableForAllPageTypes"
+    access="global">
+
+    <aura:attribute name="inventoryList" type="List" />
+    <aura:attribute name="listaFiltrada" type="List" />
+    <aura:attribute name="OriginalinventoryList" type="List" />
+    <aura:attribute name="paginationList" type="List" />
+    <aura:attribute name="opcionLineaNegocio" type="List" />
+    <aura:attribute name="opcionCompania" type="List" />
+    <aura:attribute name="opcionMarca" type="List" />
+    <aura:attribute name="opcionModelo" type="List" />
+    <aura:attribute name="columns" type="List" />
+    <aura:attribute name="selectedValue" type="object" />
+    <aura:attribute name="pageSize" type="Integer" default="10" />
+    <aura:attribute name="totalSize" type="Integer" />
+    <aura:attribute name="end" type="Integer" />
+    <aura:attribute name="loaded" type="Boolean" default="false" />
+    <aura:attribute name="OpenEstado" type="Boolean" default="false" />
+    <aura:attribute name="enableInfiniteLoading" type="Boolean" default="true" />
+    <aura:attribute name="Estado_NOrden" type="string" default="" />
+    <aura:attribute name="Estado_Chasis" type="string" default="" />
+    <aura:attribute name="Estado_Cliente" type="string" default="" />
+    <aura:attribute name="Estado_Vendedor" type="string" default="" />
+    <aura:attribute name="Estado_Nota" type="string" default="" />
+    <aura:attribute name="hiddenClass" type="String" default="" />
+    <aura:attribute name="showInboundButton" type="Boolean" default="true" />
+
+    <aura:attribute name="parent" type="Aura.Component" />
+    <aura:attribute name="funcion" type="String" default="consulta" />
+    <aura:attribute name="F_Compania" type="String" default="" />
+    <aura:attribute name="F_Linea" type="String" default="" />
+    <aura:attribute name="F_Marca" type="String" default="" />
+    <aura:attribute name="F_Modelo" type="String" default="" />
+    <aura:attribute name="Inbond" type="Boolean" default = "false"/>
+    <aura:attribute name="disabledModelo" type="Boolean" default="true" />
+    <aura:attribute name="requiredMarca" type="Boolean" default="false" />
+
+    <aura:attribute name="Producto_Nombre" type="String" default="" />
+    <aura:attribute name="Motor" type="String" default="" />
+    <aura:attribute name="Chasis" type="String" default="" />
+    <aura:attribute name="Color" type="String" default="" />
+
+    <aura:attribute name="sortBy" type="String" />
+    <aura:attribute name="sortDirection" type="String" />
+    <aura:attribute name="filtrado" type="String" default="" />
+    <aura:attribute name="checkFiltrado" type="Boolean" default="false" />
+    <aura:attribute name="idEmpleado" type="String" />
+
+    <aura:attribute name="hrefExport" type="String" default="" />
+
+    <aura:attribute name="recordList" type="Object" />
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:if isTrue="{!v.funcion == 'consulta'}">
+        <!--HEADER-->
+        <article class="slds-card">
+            <div class="slds-page-header">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <lightning:icon iconName="standard:pricebook" size="small"
+                            alternativeText="Consulta Disponibilidad" />
+                    </div>
+                    <div class="slds-media__body">
+                        <h1 class="slds-page-header__title slds-truncate slds-align-middle">Consulta Disponibilidad</h1>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </aura:if>
+
+    <!--BODY-->
+    <br />
+    <article class="slds-card" style="padding:5px;">
+        <aura:if isTrue="{!v.funcion == 'consulta'}">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1" style="padding: 5px;">
+                    <strong> Filtros: </strong>
+                </div>
+                <div class="slds-col slds-size_1-of-1" style="padding: 5px;">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:20%; padding: 0 5px 0 0;">
+                                <lightning:select aura:id="datosCompania" name="selectItem" label="Compañia"
+                                    onchange="{! c.cambiaCompania }" required="true"
+                                    messageWhenValueMissing="Seleccione una Compañia">
+                                    <option text="-- Ninguno --" value="" selected="true" />
+                                    <aura:iteration items="{!v.opcionCompania}" var="option">
+                                        <option text="{!option.description1__c}" value="{!option.productCode__c}" />
+                                    </aura:iteration>
+                                </lightning:select>
+                            </td>
+
+                            <td style="width:20%; padding: 0 5px 0 5px;">
+
+                                <lightning:select aura:id="datosLinea" name="selectItem" label="Linea de Negocio"
+                                    onchange="{! c.cambiaLinea }" required="true"
+                                    messageWhenValueMissing="Seleccione una Linea de Negocio">
+                                    <option text="-- Ninguno --" value="" selected="true" />
+                                    <aura:iteration items="{!v.opcionLineaNegocio}" var="option">
+                                        <option text="{!option.description1__c}" value="{!option.productCode__c}" />
+                                    </aura:iteration>
+                                </lightning:select>
+                            </td>
+
+                            <td style="width:20%; padding: 0 5px 0 5px;">
+
+                                <lightning:select aura:id="datosMarca" name="selectItem" label="Marca"
+                                    required="{!v.requiredMarca}" onchange="{! c.cambiaMarca }"
+                                    messageWhenValueMissing="Para motos es requerido seleccionar Marca">
+                                    <option text="-- Ninguno --" value="" />
+                                    <aura:iteration items="{!v.opcionMarca}" var="option">
+                                        <option text="{!option.description1__c}" value="{!option.productCode__c}" />
+                                    </aura:iteration>
+                                </lightning:select>
+                            </td>
+
+                            <td style="width:20%; padding: 0 5px 0 5px;">
+                                <lightning:select aura:id="datosModelo" name="modelo" label="Modelo"
+                                    disabled="{!v.disabledModelo}" required="{!v.requiredMarca}"
+                                    onchange="{! c.cambiaModelo }"
+                                    messageWhenValueMissing="Para motos es requerido seleccionar Modelo">
+                                    <option text="-- Ninguno --" value="" />
+                                    <aura:iteration items="{!v.opcionModelo}" var="option">
+                                        <option text="{!option.nombre}" value="{!option.codigo}" />
+                                    </aura:iteration>
+                                </lightning:select>
+                            </td>
+
+                            <aura:if isTrue="{!v.showInboundButton}">
+                                <td style="vertical-align: middle; width:10%; padding: 0 5px 0 5px;">
+                                    <lightning:input aura:id="inbond" type="checkbox" label="Inbond"
+                                        name="inbond" value="Inbond" onchange="{!c.cambiaInbond}" />
+                                </td>
+                                <td style="width:20%; padding: 25px 0 0 5px;">
+                                    <div style="text-align: center">
+                                        <lightning:button variant="brand" label="Buscar" title="Buscar"
+                                        onclick="{!c.CargaDatos}" />
+                                        </div>
+                                </td>
+
+                                <aura:set attribute="else">
+                                    <td style="width:20%; padding: 25px 0 0 5px;">
+                                        <div style="text-align: center">
+                                            <lightning:button variant="brand" label="Buscar" title="Buscar"
+                                                onclick="{!c.CargaDatos}" />
+                                        </div>
+                                    </td>
+                                </aura:set>
+                            </aura:if>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <br />
+        </aura:if>
+
+        <aura:if isTrue="{!and(v.funcion == 'consulta', v.OriginalinventoryList.length > 0)}">
+            <table style="width:100%; padding-bottom: 10px;">
+            </table>
+        </aura:if>
+        <div style="padding: 5px 0px;">
+            <aura:if isTrue="{!v.OriginalinventoryList.length != 0}">
+                <table style="overflow-x: scroll">
+                    <tr>
+                        <td style="width:70%; padding: 10px;" collspan="5">
+                        </td>
+                        <td style="width:30%;">
+                            <aura:if isTrue="{!v.funcion != 'asignacion'}">
+                                <div class="slds-grid slds-gutters">
+                                    <div class="slds-col" style="text-align:right;">
+                                        <a target="_self" class="slds-button" download="Disponibilidad.csv"
+                                            href="{!v.hrefExport}" onclick="{!c.exportToCSV}">
+                                            <lightning:icon iconName="doctype:csv" />
+                                        </a>
+                                    </div>
+                                    <div class="slds-col">
+                                        <div onclick="{!c.ExportarPDF}">
+                                            <lightning:icon iconName="doctype:pdf" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </aura:if>
+                        </td>
+                    </tr>
+                </table>
+                <div class="container" style="height: 50%;width:100%; overflow: auto; padding: 10px 5px;">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+                        aria-labelledby="element-with-table-label other-element-with-table-label">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="{!v.hiddenClass}" scope="col">
+                                    <div class="slds-truncate" title="Add"></div>
+                                </th>
+                                <aura:iteration items="{!v.columns}" var="column">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="{!column.label}">{!column.label}</div>
+                                    </th>
+                                </aura:iteration>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="{!v.hiddenClass}" scope="col">
+                                    <div class="slds-truncate" title="add">
+                                    </div>
+                                </td>
+                                <aura:iteration items="{!v.columns}" var="column">
+                                    <td class="" scope="col">
+                                        <div class="slds-truncate" title="{!column.fieldName}">
+                                            <input class="slds-input filter" type="text" id="{!column.fieldName}" name="{!column.fieldName}" onchange="{!c.searchKeyChange}"/>
+                                        </div>
+                                    </td>
+                                </aura:iteration>
+                            </tr>
+                            <aura:iteration items="{!v.paginationList}" var="item">
+                                <tr class="slds-hint-parent" style="height:40px;">
+                                    <td class="{!v.hiddenClass}" data-label="add" scope="row" style="text-align:center;">
+                                        <div class="slds-truncate" title="Add">
+                                            <button class="slds-button slds-button_icon slds-button_icon-brand" title="Seleccionar" 
+                                                onclick="{!c.handleRowAction}" name="{!item.chasis}">
+                                                <lightning:icon iconName="utility:add" size="small"
+                                                    alternativeText="Add" variant="inverse"/>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="codigovehiculo" scope="row">
+                                        <div class="slds-truncate" title="{!item.codigovehiculo}">
+                                            {!item.codigovehiculo}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="chasis" scope="row">
+                                        <div class="slds-truncate" title="{!item.chasis}">
+                                            {!item.chasis}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="codigomotor" scope="row">
+                                        <div class="slds-truncate" title="{!item.codigomotor}">
+                                            {!item.codigomotor}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="estado" scope="row" style="text-align:center;">
+                                        <div class="slds-truncate" title="{!item.estado}">
+                                            <button class="slds-button slds-button_neutral" title="Estado" 
+                                                onclick="{!c.handleRowAction}" name="{!item.chasis}">
+                                                    {!item.estado}
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="colorexterno" scope="row">
+                                        <div class="slds-truncate" title="{!item.colorexterno}">
+                                            {!item.colorexterno}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="colorinterno" scope="row">
+                                        <div class="slds-truncate" title="{!item.colorinterno}">
+                                            {!item.colorinterno}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="produccion" scope="row">
+                                        <div class="slds-truncate" title="{!item.produccion}">
+                                            {!item.produccion}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="bl" scope="row">
+                                        <div class="slds-truncate" title="{!item.bl}">
+                                            {!item.bl}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="codigovendedor" scope="row">
+                                        <div class="slds-truncate" title="{!item.codigovendedor}">
+                                            {!item.codigovendedor}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="nombrevendedor" scope="row">
+                                        <div class="slds-truncate" title="{!item.nombrevendedor}">
+                                            {!item.nombrevendedor}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="codigocliente" scope="row">
+                                        <div class="slds-truncate" title="{!item.codigocliente}">
+                                            {!item.codigocliente}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="nombrecliente" scope="row">
+                                        <div class="slds-truncate" title="{!item.nombrecliente}">
+                                            {!item.nombrecliente}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="modelofabrica" scope="row">
+                                        <div class="slds-truncate" title="{!item.modelofabrica}">
+                                            {!item.modelofabrica}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="anovehiculo" scope="row">
+                                        <div class="slds-truncate" title="{!item.anovehiculo}">
+                                            {!item.anovehiculo}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="nacionalizado" scope="row">
+                                        <div class="slds-truncate" title="{!item.nacionalizado}">
+                                            {!item.nacionalizado}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="sucursal" scope="row">
+                                        <div class="slds-truncate" title="{!item.sucursal}">
+                                            {!item.sucursal}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="fechaarribo" scope="row">
+                                        <div class="slds-truncate" title="{!item.fechaarribo}">
+                                            {!item.fechaarribo}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="tipo" scope="row">
+                                        <div class="slds-truncate" title="{!item.tipo}">
+                                            {!item.tipo}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="marca" scope="row">
+                                        <div class="slds-truncate" title="{!item.marca}">
+                                            {!item.marca}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="descripcion" scope="row">
+                                        <div class="slds-truncate" title="{!item.descripcion}">
+                                            {!item.descripcion}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="comentarioschasis" scope="row">
+                                        <div class="slds-truncate" title="{!item.comentarioschasis}">
+                                            {!item.comentarioschasis}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="pedido" scope="row">
+                                        <div class="slds-truncate" title="{!item.pedido}">
+                                            {!item.pedido}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="codigoubicacion" scope="row">
+                                        <div class="slds-truncate" title="{!item.codigoubicacion}">
+                                            {!item.codigoubicacion}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="notasordenventa" scope="row">
+                                        <div class="slds-truncate" title="{!item.notasordenventa}">
+                                            {!item.notasordenventa}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="numeroorden" scope="row">
+                                        <div class="slds-truncate" title="{!item.numeroorden}">
+                                            {!item.numeroorden}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="fechaEntrega" scope="row">
+                                        <div class="slds-truncate" title="{!item.fechaEntrega}">
+                                            {!item.fechaEntrega}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="promesaEntrega" scope="row">
+                                        <div class="slds-truncate" title="{!item.promesaEntrega}">
+                                            {!item.promesaEntrega}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="codigosucursal" scope="row">
+                                        <div class="slds-truncate" title="{!item.codigosucursal}">
+                                            {!item.codigosucursal}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="transmision" scope="row">
+                                        <div class="slds-truncate" title="{!item.transmision}">
+                                            {!item.transmision}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="precio" scope="row">
+                                        <div class="slds-truncate" title="{!item.precio}">
+                                            {!item.precio}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="placa" scope="row">
+                                        <div class="slds-truncate" title="{!item.placa}">
+                                            {!item.placa}
+                                        </div>
+                                    </td>
+                                    <td class="dataRow" data-label="codigocolorexterno" scope="row">
+                                        <div class="slds-truncate" title="{!item.codigocolorexterno}">
+                                            {!item.codigocolorexterno}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!v.end != null}">
+                        <div style="padding: 20px 5px; font-size: 15px;">
+                            No se han encontrado registros.
+                        </div>
+                    </aura:if>
+                </aura:set>
+            </aura:if>
+        </div>
+        <div>
+            <aura:if isTrue="{!v.OriginalinventoryList.length != 0}">
+                <table width="100%">
+                    <tr>
+                        <td width="60%" style="padding-top: 25px">
+                            <lightning:button label="Anterior" disabled="{!v.end le v.pageSize}"
+                                onclick="{!c.previous}" />
+                            <lightning:button label="Siguiente" disabled="{!v.end == v.totalSize}"
+                                onclick="{!c.next}" />
+                        </td>
+                        <td width="40%" style="padding-top: 25px">
+                            <div><strong>Total de Registros: {!v.end} de {!v.totalSize}</strong></div>
+                        </td>
+                    </tr>
+                </table>
+            </aura:if>
+        </div>
+
+        <aura:if isTrue="{!v.loaded}">
+            <lightning:spinner alternativeText="Cargando..." variant="brand" size="medium" />
+        </aura:if>
+    </article>
+
+    <aura:if isTrue="{!v.OpenEstado}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"><strong>Consulta de
+                            Reservación</strong></h2>
+                </header>
+                <div class="slds-form-element">
+
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <table>
+                            <tr>
+                                <td style="width:200px"><strong>Número Orden:</strong></td>
+                                <td>{!v.Estado_NOrden}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Chasis:</strong></td>
+                                <td>{!v.Estado_Chasis}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cliente:</strong></td>
+                                <td>{!v.Estado_Cliente}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vendedor:</strong></td>
+                                <td>{!v.Estado_Vendedor}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nota de reservación:</strong></td>
+                                <td>{!v.Estado_Nota}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" label="Cerrar" title="Cerrar" onclick="{!c.closeEstado}" />
+                    </footer>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+</aura:component>

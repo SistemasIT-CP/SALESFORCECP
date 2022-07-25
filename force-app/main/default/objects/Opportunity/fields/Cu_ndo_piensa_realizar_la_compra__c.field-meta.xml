@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cu_ndo_piensa_realizar_la_compra__c</fullName>
+    <externalId>false</externalId>
+    <label>Cuándo piensa realizar la compra?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>En los próximos 30 días</fullName>
+                <default>false</default>
+                <label>En los próximos 30 días</label>
+            </value>
+            <value>
+                <fullName>Entre 1-3 meses</fullName>
+                <default>false</default>
+                <label>Entre 1-3 meses</label>
+            </value>
+            <value>
+                <fullName>3 meses a más</fullName>
+                <default>false</default>
+                <label>3 meses a más</label>
+            </value>
+            <value>
+                <fullName>No estoy listo para comprar</fullName>
+                <default>false</default>
+                <label>No estoy listo para comprar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

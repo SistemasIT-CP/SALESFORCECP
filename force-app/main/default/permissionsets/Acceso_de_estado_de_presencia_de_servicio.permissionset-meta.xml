@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permiso para habilitar estados de permisos de omnicanal en Services. Por Ejmeplo: Los estados disponibles en el onmical: Disponible</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Acceso de estado de presencia de servicio</label>
+</PermissionSet>

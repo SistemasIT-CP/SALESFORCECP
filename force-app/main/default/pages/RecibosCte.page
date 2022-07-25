@@ -1,0 +1,124 @@
+<apex:page controller="Ctrl_Recibos">
+    <apex:slds />
+    <script type="text/javascript">
+        function selectAllCheckboxes(obj, receivedInputID) {
+            var inputCheckBox = document.getElementsByTagName("input");
+            for (var i = 0; i < inputCheckBox.length; i++) {
+                if (inputCheckBox[i].id.indexOf(receivedInputID) != -1) {
+                    inputCheckBox[i].checked = obj.checked;
+                }
+            }
+        }
+    </script>
+
+    <apex:outputPanel id="contenedor">
+        <apex:outputPanel id="Busqueda">
+            <apex:form >
+                <apex:pageMessages id="showmsg"> </apex:pageMessages>
+                <br/>
+                <center>
+                    <b>
+                        <p style="font-size: 18pt; color:#0000ff">
+                            <apex:image id="theImageNote" value="{!$Resource.noteIcon}" width="45" height="45" /> LISTADO DE RECIBOS</p>
+                    </b>
+                    <br/>
+                    <p style="font-size: 12pt; color: #666666">En esta pantalla podrás seleccionar los recibos que desees aplicar al informe de la negociación</p>
+                    <br/> Podrás buscar por nombre de cliente, codigo de cliente o número de recibo.
+                    <br/>
+                    <br/>
+                    <b>Tipo de busqueda</b>
+                    <br/>
+                    <br/>
+                    <apex:selectList value="{!tipoDeBusqueda}" size="1" styleClass="slds-select" style="width: 220px;">
+                        <apex:selectoption itemLabel="Código de cliente" itemValue="código del cliente"></apex:selectoption>
+                        <font></font>
+                        <apex:selectoption itemLabel="Nombre de cliente" itemValue="nombre del cliente"></apex:selectoption>
+                        <font></font>
+                        <apex:selectoption itemLabel="Número de recibo" itemValue="número del recibo"></apex:selectoption>
+                        <font></font>
+                        <!--<apex:selectoption itemLabel="Esquela" itemValue="esquela"></apex:selectoption>
+                        <font></font>-->
+                        <apex:selectoption itemLabel="AU" itemValue="au"></apex:selectoption>
+                        <font></font>
+                        <apex:actionSupport event="onchange" rerender="Busqueda, InfoRecibos" status="spinnerStatus" action="{!limpiaBusqueda}" />
+                    </apex:selectList>
+                    <br/>
+                    <br/>
+                    <b>Introduzca el {!tipoDeBusqueda}</b>
+                    <br/>
+                    <br/>
+                    <apex:inputText styleClass="slds-form-element__control slds-box_x-small" value="{!paramBusqueda}" id="theTextInput">
+                        <apex:actionSupport event="onchange" action="{!setParamBusqueda}" />
+                    </apex:inputText>
+                    <apex:commandlink action="{!consultaRecibos}" status="spinnerStatus">
+                        <apex:image id="theImage" value="{!$Resource.SerchIcon_Clients}" width="33" height="30" />
+                    </apex:commandlink>
+                    <br/>
+                    <br/>
+                    <p style="font-size: 12pt; color: #0000ff">{!msjBusqueda}</p>
+                    <br/>
+                </center>
+            </apex:form>
+        </apex:outputPanel>
+
+        <apex:outputPanel id="InfoRecibos">
+            <apex:form >
+                <apex:pageBlock title="Seleccionar recibos" tabStyle="Account">
+
+                    <apex:pageBlockSection >
+                        <apex:commandButton action="{!refrescarRecibos}" value="Refrescar recibos" id="recharge" />
+                    </apex:pageBlockSection>
+                    <!--<apex:pageBlockSection rendered="{!tipoDeBusqueda == 'esquela'}">
+                        <apex:commandButton action="{!refrescarRecibosEsquela}" value="Refrescar recibos para la esquela ingresada" id="rechargeEsquela"
+                        />
+                    </apex:pageBlockSection>-->
+                    <br/>
+                    <br/>
+                    <apex:pageBlockTable value="{!ListWrap}" width="90%" var="r" style="background: white; ">
+                        <apex:column style="padding-left:5px;padding-top:10px;padding-bottom:10px; vertical-align: middle;">
+                            <apex:inputCheckbox value="{!r.checkbox}" id="inputId" disabled="{!r.noVisible}"></apex:inputCheckbox>
+                        </apex:column>
+                        <apex:column style="padding-left:10px;" value="{!r.au}" headerValue="Au" />
+                        <apex:column style="padding-left:10px;" value="{!r.numRecibo}" headerValue="No Recibo" />
+                        <apex:column style="padding-left:10px;" value="{!r.codCliente}" headerValue="Código de Cliente" />
+                        <apex:column style="padding-left:10px;" value="{!r.cliente}" headerValue="Cliente" />
+                        <apex:column style="padding-left:10px;" value="{!r.fecha}" headerValue="Fecha" />
+                        <apex:column style="padding-left:10px;" value="{!r.concepto}" headerValue="Concepto" />
+                        <apex:column style="padding-left:10px;" value="{!r.saldoAplicado}" headerValue="Saldo Aplicado" />
+                        <apex:column style="padding-left:10px;" value="{!r.saldoDisponible}" headerValue="Saldo Disponible" />
+                    </apex:pageBlockTable>
+
+                </apex:pageBlock>
+                <center>
+                    <br/>
+                    <br/>
+                    <apex:commandlink action="{!validaSeleccionados}" status="spinnerStatus">
+                        <apex:image id="theImageSave" value="{!$Resource.SaveIcon}" width="35" height="35" />
+                    </apex:commandlink>
+                    <apex:commandlink action="{!validaSeleccionados}" status="spinnerStatus">
+                        <br/>
+                        <b>Guardar y volver a la negociación</b>
+                    </apex:commandlink>
+
+                </center>
+            </apex:form>
+        </apex:outputPanel>
+
+
+        <!-- SPINNER -->
+        <apex:actionStatus id="spinnerStatus">
+            <apex:facet name="start">
+                <div class="slds-spinner_container" style="position: fixed;">
+                    <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </apex:facet>
+        </apex:actionStatus>
+        <!-- / SPINNER -->
+
+
+    </apex:outputPanel>
+
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notificación interna cuando se distribuye un caso.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>ASISTENCIA: Notificación de distribución de casos (MUESTRA)</name>
+    <style>none</style>
+    <subject>Caso número {!Case.Number}: {!Case.Subject} ha sido distribuido.</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

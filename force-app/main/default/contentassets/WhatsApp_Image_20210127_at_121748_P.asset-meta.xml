@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>es</language>
+    <masterLabel>WhatsApp_Image_20210127_at_121748_P</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>WhatsApp Image 2021-01-27 at 12.17.48 PM.jpeg</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

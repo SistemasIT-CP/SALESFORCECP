@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cambiar_tipo_de_registro_para_TIPIFICAR</fullName>
+    <active>true</active>
+    <description>regla que no permite el cierre de un caso  &quot;a tipificar&quot; si no se le cambia el tipo de registro.</description>
+    <errorConditionFormula>AND(
+				RecordType.DeveloperName = &quot;Casos_a_tipificar&quot;,
+				ISPICKVAL(Status, &quot;Cerrado&quot;) 				 				
+				)</errorConditionFormula>
+    <errorMessage>Se debe cambiar el tipo de registro antes de cerrar un caso &quot;a tipificar&quot;.</errorMessage>
+</ValidationRule>

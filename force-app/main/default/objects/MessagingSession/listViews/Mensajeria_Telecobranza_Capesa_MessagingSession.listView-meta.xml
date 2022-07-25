@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mensajeria_Telecobranza_Capesa_MessagingSession</fullName>
+    <columns>Name</columns>
+    <columns>MessagingChannel</columns>
+    <columns>MessagingEndUser</columns>
+    <columns>Owner</columns>
+    <columns>Status</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Case</columns>
+    <columns>EndUserContact</columns>
+    <columns>EndUserAccount</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MessagingChannel</field>
+        <operation>equals</operation>
+        <value>whatsapp:+50584090222</value>
+    </filters>
+    <label>Mensajeria Telecobranza Capesa</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

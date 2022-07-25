@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Usuarios que pueden visualizar y editar los campos NIT y NRC en Cuentas</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.NIT__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.NRC__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Modificacion campo NIT y NRC</label>
+</PermissionSet>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Cliente__c</field>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Contraoferta_del_cliente__c</field>
+        <field>Precio_de_compra_aprobado_S_Autolote__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>avega@casapellas.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>crojas@casapellas.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Contraoferta cliente</label>
+        <name>Contraoferta_cliente</name>
+    </approvalStep>
+    <description>para cuando el cliente tenga una contraoferta de precio</description>
+    <emailTemplate>Plantillas_Email/Contraoferta_cliente</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>NOT(ISBLANK(Contraoferta_del_cliente__c))</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Cambia_el_precio_aprobado_negociado</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Nulear_contraoferta</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Contraoferta cliente</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

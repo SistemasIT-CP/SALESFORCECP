@@ -1,0 +1,3 @@
+[{"numerocorto":304633,"chasis":"304633","codigomotor":"304633","descripcion":"Automovil Yaris B3","codigocolorexterno":"1D4"},{"numerocorto":299916,"chasis":"299916","codigomotor":"299916","descripcion":"Camioneta Hilux Pick-Up","codigocolorexterno":"040"},{"numerocorto":778987,"chasis":"726733","codigomotor":"897656","descripcion":"Camioneta LC","codigocolorexterno":"991"}]
+
+    

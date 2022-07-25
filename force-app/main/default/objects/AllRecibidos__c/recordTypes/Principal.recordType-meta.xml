@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Principal</fullName>
+    <active>true</active>
+    <description>Recibo que viene de caja/Acreditar al código</description>
+    <label>Principal</label>
+</RecordType>

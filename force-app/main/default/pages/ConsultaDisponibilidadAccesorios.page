@@ -1,0 +1,2 @@
+<apex:page controller="CtrlConsultaDisponibilidadAccesorios" action="{!validaDisponibilidad}">
+</apex:page>

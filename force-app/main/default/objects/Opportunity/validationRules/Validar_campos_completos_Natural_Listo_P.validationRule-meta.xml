@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validar_campos_completos_Natural_Listo_P</fullName>
+    <active>true</active>
+    <description>valida que los campos de una persona natural estén completos para pasar de etapa</description>
+    <errorConditionFormula>AND(
+				OR(
+							RecordType.DeveloperName=&quot;Principal_Motos&quot;,
+							RecordType.DeveloperName=&quot;Principal_Autos&quot;,
+RecordType.DeveloperName=&quot;Principal_Autolote&quot;
+								),
+ISCHANGED(StageName),
+Account.RecordType.DeveloperName = &apos;PersonAccount&apos;,
+ISPICKVAL (StageName, &quot;Formalizacion&quot;),
+OR(
+ISBLANK( Account.Cedula__c ),
+ISBLANK( Account.Phone ),
+ISBLANK( Account.Direccion__c ),
+ISBLANK( Account.Departamento__c ),
+ISBLANK( Account.Municipio__c ),
+ISBLANK( Account.Actividad_economica_UDC__c ),
+ISBLANK( Account.Nacionalidad_UDC__c ),
+ISBLANK( TEXT( Account.Tipo_de_Indentificaci_n__c ) ),
+ISBLANK( Account.Profesion_UDC__c ),
+ISBLANK( Account.Ocupacion_UDC__c )
+)
+)</errorConditionFormula>
+    <errorMessage>Hay campos faltantes para generar el Perfil del Cliente</errorMessage>
+</ValidationRule>

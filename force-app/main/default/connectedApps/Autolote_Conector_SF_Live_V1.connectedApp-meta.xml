@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>rbustamante@casapellas.com</contactEmail>
+    <iconUrl>https://login.salesforce.com/logos/Standard/skill_entity/icon.png</iconUrl>
+    <label>Autolote Conector SF Live V1</label>
+    <logoUrl>https://login.salesforce.com/logos/Standard/skill_entity/logo.svg</logoUrl>
+    <oauthConfig>
+        <callbackUrl>https://autolote.com.ni/wp-admin/options-general.php?page=object-sync-salesforce-admin&amp;tab=authorize</callbackUrl>
+        <consumerKey>3MVG9_XwsqeYoueLg4Pn7kNz6S2SpJbRmsNVMuBzi8bBUjbCgyl_t.BXYB1o1QT.rVDDYj.9p_B5xX3DrqKGE</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

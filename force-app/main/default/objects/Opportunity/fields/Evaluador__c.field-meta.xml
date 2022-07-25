@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Evaluador__c</fullName>
+    <externalId>false</externalId>
+    <label>Evaluador</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alejandro Rugama</fullName>
+                <default>false</default>
+                <label>Alejandro Rugama</label>
+            </value>
+            <value>
+                <fullName>Allan Lopez</fullName>
+                <default>false</default>
+                <label>Allan Lopez</label>
+            </value>
+            <value>
+                <fullName>Ernesto Arguello</fullName>
+                <default>false</default>
+                <label>Ernesto Arguello</label>
+            </value>
+            <value>
+                <fullName>Ernesto Gutierrez</fullName>
+                <default>false</default>
+                <label>Ernesto Gutierrez</label>
+            </value>
+            <value>
+                <fullName>Maryoli Membreno</fullName>
+                <default>false</default>
+                <label>Maryoli Membreno</label>
+            </value>
+            <value>
+                <fullName>Ismael Barahona</fullName>
+                <default>false</default>
+                <label>Ismael Barahona</label>
+            </value>
+            <value>
+                <fullName>Pastor Blandon</fullName>
+                <default>false</default>
+                <label>Pastor Blandon</label>
+            </value>
+            <value>
+                <fullName>Sergio Gutierrez M</fullName>
+                <default>false</default>
+                <label>Sergio Gutierrez M</label>
+            </value>
+            <value>
+                <fullName>Jose Acevedo</fullName>
+                <default>false</default>
+                <label>Jose Acevedo</label>
+            </value>
+            <value>
+                <fullName>Irvin Guerrero</fullName>
+                <default>false</default>
+                <label>Irvin Guerrero</label>
+            </value>
+            <value>
+                <fullName>Jose Noel Rivera</fullName>
+                <default>false</default>
+                <label>Jose Noel Rivera</label>
+            </value>
+            <value>
+                <fullName>Guillermo Ramirez</fullName>
+                <default>false</default>
+                <label>Guillermo Ramirez</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

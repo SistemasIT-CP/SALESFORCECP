@@ -1,0 +1,534 @@
+<apex:page standardController="Informe_de_Negociaci_n__c" extensions="CtrlInformeDeNegociacion" renderAs="PDf" showHeader="false"
+  standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false">
+  <html style="overflow-y: hidden;">
+
+  <head>
+    <style>
+      @page {
+        @bottom-right {
+          content: element(footer);
+        }
+
+        margin: 1cm;
+      }
+
+      div.footer {
+        display: block;
+        text-align: right;
+        position: running(footer);
+      }
+
+      td {
+        max-width: 200px;
+      }
+    </style>
+  </head>
+  <apex:form >
+    <apex:pageBlock mode="edit" id="block">
+      <body style="height: auto; min-height: auto;margin:5px;">
+
+
+        <table style="border:none; border-collapse:collapse; width:100%; font-family: Arial, Helvetica, sans-serif !important;">
+          <tbody>
+            <tr>
+              <td colspan="5" rowspan="2" style="color:windowtext; font-size:11px; font-weight:400; font-style:normal; text-decoration:none; font-family: Salesforce Sans, sans-serif; text-align:center; 
+                vertical-align:middle; border:none; border-top:1pt solid #757171; border-right:none; border-bottom:.5pt solid #757171; border-left:none; height:40pt; width:60%;">
+                <div>
+                  <apex:outputPanel id="logoCasaPellas" rendered="{!logo == 'Casa Pellas'}">
+                    <apex:image url="{!$Resource.Logo_CasaPellas}" width="250" height="40" />
+                  </apex:outputPanel>
+                  <apex:outputPanel id="logoKipesa" rendered="{!logo == 'Kipesa'}">
+                    <apex:image url="{!$Resource.KipesaLogo}" width="200" height="40" />
+                  </apex:outputPanel>
+                  <apex:outputPanel id="logoVelosa" rendered="{!logo == 'Velosa'}">
+                    <apex:image url="{!$Resource.VelosaLogo}" width="250" height="40" />
+                  </apex:outputPanel>
+                  <apex:outputPanel id="logoAutolote" rendered="{!logo == 'Autolote'}">
+                    <apex:image url="{!$Resource.Cotizacion_autolote}" width="250" />
+                  </apex:outputPanel>
+                </div>
+              </td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:1.0pt solid #757171;border-right:none;border-bottom:none;border-left:none;background:#D9D9D9;padding:5px;">
+                Sucursal</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:1.0pt solid #757171;border-right:none;border-bottom:none;border-left:none; padding:5px;">
+                {!informeR.Sucursal__c }</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:1.0pt solid #757171;border-right:none;border-bottom:none;border-left:none;background:#D9D9D9;padding:5px;">
+                Informe Neg</td>
+              <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:1.0pt solid #757171;border-right:none;border-bottom:none;border-left:none;padding:5px;">
+                {!informeR.Consecutivo_del_Informe__c}</td>
+            </tr>
+            <tr>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;height:19.5pt;padding:5px;">
+                Fecha</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                <apex:outputText value="{0, date, d/MM/yyyy}">
+                  <apex:param value="{!NOW()}" />
+                </apex:outputText>
+              </td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;padding:5px;">
+                Fecha entrega</td>
+              <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                <apex:outputText value="{0, date, d/MM/yyyy}">
+                  <apex:param value="{!informeR.Oportunidad__r.Fecha_de_entrega__c}" />
+                </apex:outputText>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="12" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;height:7.0pt;padding:5px;">
+                &nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <table style="border:none; border-collapse:collapse; width:100%; font-family: Arial, Helvetica, sans-serif !important;">
+          <tbody>
+            <tr>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;height:15.0pt;padding:5px;">
+                Cód. Cliente</td>
+              <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                {!informeR.C_digo_de_Cliente__c}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;height:15.0pt;padding:5px;">
+                Marca</td>
+              <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                {!informeR.Marca_Oportunidad__c}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;padding:5px;">
+                Chasis</td>
+              <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                {!informeR.Chasis__c}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;padding:5px;">
+                Año</td>
+              <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none;padding:5px;">
+                {!informeR.A_o__c }</td>
+            </tr>
+            <tr>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;height:15.0pt;padding:5px;width:105px;">
+                Teléfono</td>
+              <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;padding:5px;border-bottom:.5pt solid #757171;width:90px;">
+                {!informeR.No_Tel_fono__c}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;padding:5px;width:90px;">
+                Modelo</td>
+              <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;width:90px;">
+                {!informeR.C_Modelo__c}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;padding:5px;width:104px;">
+                Motor</td>
+              <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;width:90px;">
+                {!informeR.Motor__c}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:none;border-left:none;background:#D9D9D9;padding:5px;width:90px;">
+                Color</td>
+              <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none;padding:5px;width:90px;">
+                {!informeR.Color_Externo__c}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table style="border:none; border-collapse:collapse; width:100%; font-family: Arial, Helvetica, sans-serif !important;">
+          <tbody>
+            <tr>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;padding:5px;height:15.0pt;">
+                Ident.</td>
+              <td colspan="5" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                {!informeR.Oportunidad__r.Account.Cedula__c}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;background:#D9D9D9;padding:5px;">
+                Email</td>
+              <td colspan="5" style="color:#0563C1;font-size:11px;font-weight:400;font-style:normal;text-decoration:underline;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;padding:5px;border-top:.5pt solid #757171">
+                {!informeR.Oportunidad__r.Account.Email__c}</td>
+            </tr>
+            <tr>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;height:15.0pt;padding:5px;">
+                Ocupación</td>
+              <td colspan="5" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                {!IF(informeR.Oportunidad__r.Account.Ocupacion_UDC__c != null, informeR.Oportunidad__r.Account.Ocupacion_UDC__r.Name, "--
+                --")}
+              </td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none;background:#D9D9D9;padding:5px;">
+                {!IF(CONTAINS(informeR.Oportunidad__r.RecordType.DeveloperName, 'Autolote'), 'Circulacion', 'Cod. DA')}</td>
+              <td colspan="5" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                {!IF(CONTAINS(informeR.Oportunidad__r.RecordType.DeveloperName, 'Autolote'), informeR.Vehiculo__r.Circulacion__c, IF(distribuidor
+                != null, distribuidor.CodigoCliente__c, "-- --"))}</td>
+            </tr>
+            <tr>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;background:#D9D9D9;height:15.0pt;padding:5px;">
+                Facturar a</td>
+              <td colspan="5" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                {!informeR.Facturar_a_nombre_de__r.name }</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none;background:#D9D9D9;padding:5px;">
+                {!IF(CONTAINS(informeR.Oportunidad__r.RecordType.DeveloperName, 'Autolote'), 'Placa', 'Distribuidor')}</td>
+              <td colspan="5" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                {!IF(CONTAINS(informeR.Oportunidad__r.RecordType.DeveloperName, 'Autolote'), informeR.Vehiculo__r.Placa__c, IF(distribuidor
+                != null, distribuidor.Name, "-- --"))}</td>
+            </tr>
+            <tr>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;height:15.0pt;padding:5px;">
+                Dirección</td>
+              <td colspan="5" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;padding:5px;">
+                {!informeR.Oportunidad__r.Account.Direccion__c}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;padding:5px;">
+                Cod. Vend</td>
+              <td colspan="5" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;padding:5px;">
+                {!codVendedor}</td>
+            </tr>
+            <tr>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;height:15.0pt;padding:5px;">
+                Comprador</td>
+              <td colspan="5" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                {!compradorName}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;padding:5px;">
+                Vendedor</td>
+              <td colspan="5" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;padding:5px;">
+                {!vendedor}</td>
+            </tr>
+            <tr>
+              <td colspan="12" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;height:6.0pt;">
+                &nbsp;</td>
+            </tr>
+            <tr>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:none;border-left:none;background:#D9D9D9;height:15.0pt; padding:5px;">
+                Forma de pago</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none; padding:5px;">
+                {!informeR.Forma_de_Pago_Informe__c}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:none;border-left:none;background:#D9D9D9; padding:5px;">
+                T/C</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:none;border-left:none; padding:5px;">
+                {!informeR.Tasa_Cambio__c}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:none;border-left:none;background:#D9D9D9; padding:5px;">
+                Banco</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none; padding:5px;">
+                {!IF(banco != null, banco, "-- --")}</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:none;border-left:none;background:#D9D9D9; padding:5px;">
+                Prima(US$)</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:none;border-left:none; padding:5px;">
+                {!IF(informeR.Prima_USD__c != null, "USD" & TEXT(informeR.Prima_USD__c), "-- --")}</td>
+            </tr>
+            <tr>
+              <td colspan="12" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none;height:11.0pt;">
+                &nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <apex:outputPanel rendered="{!informeR.Oportunidad__r.Desea_realizar_intercambio__c == 'SI'}">
+          <table style="border:none; border-collapse:collapse; width:100%; font-family: Arial, Helvetica, sans-serif !important; margin-bottom: 15px;">
+            <tbody>
+              <tr>
+                <td colspan="12" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:1.0pt solid #757171;border-left:none;background:#D9D9D9;height:15.0pt;">
+                  DESCRIPCION DE AUTO USADO</td>
+              </tr>
+              <tr>
+                <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:20%;">
+                  Marca</td>
+                <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                  Modelo</td>
+                <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                  Kilometraje</td>
+                <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                  Precio</td>
+                <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                  Año</td>
+              </tr>
+              <apex:repeat value="{!usadosW}" var="usado">
+                <tr>
+                  <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:20%;;border-top:none;">
+                    {!usado.marca}</td>
+                  <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                    {!usado.modelo}</td>
+                  <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                    {!usado.kilometraje} km</td>
+                  <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                    USD {!usado.precio}</td>
+                  <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-top:none;border-left:none;height:20%;">
+                    {!usado.anio}</td>
+                </tr>
+              </apex:repeat>
+            </tbody>
+          </table>
+        </apex:outputPanel>
+        <table style="border:none; border-collapse:collapse; width:100%; font-family: Arial, Helvetica, sans-serif !important;">
+          <tbody>
+            <tr>
+              <td colspan="12" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:none;border-right:none;border-bottom:1.0pt solid #757171;border-left:none;background:#D9D9D9;height:15.0pt;">
+                ACCESORIOS Y SERVICIOS</td>
+            </tr>
+            <tr>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:20%;">
+                Código</td>
+              <td colspan="4" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                Descripción del accesorio o servicio</td>
+              <td colspan="1" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                Cantidad</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                Precio Unitario</td>
+              <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                Total</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                Estado</td>
+            </tr>
+            <apex:repeat value="{!accesoriosW}" var="acc">
+              <tr>
+                <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:20%;;border-top:none;">
+                  {!acc.codigoParte}</td>
+                <td colspan="4" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                  {!acc.descripcion}</td>
+                <td colspan="1" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                  {!acc.cantidad}</td>
+                <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                  USD {!acc.precio}</td>
+                <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;height:20%;">
+                  USD {!acc.total}</td>
+                <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-top:none;border-left:none;height:20%;">
+                  {!acc.estado}</td>
+              </tr>
+            </apex:repeat>
+          </tbody>
+        </table>
+
+        <table style="border:none; border-collapse:collapse; width:100%; font-family: Arial, Helvetica, sans-serif !important;">
+          <tbody>
+            <tr>
+              <td colspan="6" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:.5pt solid #757171;background:#D9D9D9;height:15.0pt;">
+                TOTAL</td>
+              <td colspan="1" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;">
+                {!q}</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;">
+                &nbsp;</td>
+              <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;">
+                <apex:outputText value="USD {0, number, ###,###,###,##0.00}">
+                  <apex:param value="{!total}" />
+                </apex:outputText>
+              </td>
+              <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:none;border-right:.5pt solid #757171;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;">
+                &nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="12" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;height:15.0pt;">
+                &nbsp;</td>
+            </tr>
+            <tr style="vertical-align:top;">
+              <td colspan="6">
+                <table style="width:100%; border-collapse:collapse;">
+                  <tbody>
+                    <tr>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;background:#D9D9D9;height:15.0pt;">
+                        Concepto</td>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;background:#D9D9D9;border-left:none;">
+                        Dólares</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:15.0pt;">
+                        Precio de lista sin Impuestos</td>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;">
+                        <apex:outputText value="USD {0, number, ###,###,###,##0.00}">
+                          <apex:param value="{!informeR.Precio_de_Lista_sin_IMP__c}" />
+                        </apex:outputText>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:15.0pt;">
+                        Accesorios</td>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;">
+                        <apex:outputText value="USD {0, number, ###,###,###,##0.00}">
+                          <apex:param value="{!total}" />
+                        </apex:outputText>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:15.0pt;">
+                        SubTotal-2</td>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;">
+                        <apex:outputText value="USD {0, number, ###,###,###,##0.00}">
+                          <apex:param value="{!subtotal_usd}" />
+                        </apex:outputText>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:15.0pt;">
+                        Rebaja especial</td>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;">
+                        <apex:outputText value="USD {0, number, ###,###,###,##0.00}">
+                          <apex:param value="{!rebjesp_usd}" />
+                        </apex:outputText>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:15.0pt;">
+                        SubTotal-3</td>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;">
+                        <apex:outputText value="USD {0, number, ###,###,###,##0.00}">
+                          <apex:param value="{!preesp_usd}" />
+                        </apex:outputText>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:15.0pt;">
+                        Impuesto de Aduanas</td>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;">
+                        <apex:outputText value="USD {0, number, ###,###,###,##0.00}">
+                          <apex:param value="{!exenadua}" />
+                        </apex:outputText>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:15.0pt;">
+                        SubTotal-4</td>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;">
+                        <apex:outputText value="USD {0, number, ###,###,###,##0.00}">
+                          <apex:param value="{!subtotal4_usd}" />
+                        </apex:outputText>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:15.0pt;">
+                        15% I.V.A</td>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;">
+                        <apex:outputText value="USD {0, number, ###,###,###,##0.00}">
+                          <apex:param value="{!iva15}" />
+                        </apex:outputText>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;background:#D9D9D9;height:15.0pt;">
+                        Total negociado</td>
+                      <td colspan="3" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;background:#D9D9D9;border-left:none;">
+                        <apex:outputText value="USD {0, number, ###,###,###,##0.00}">
+                          <apex:param value="{!totalnego_usd}" />
+                        </apex:outputText>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td colspan="6">
+                <table style="width:100%; border-collapse:collapse;">
+                  <tbody>
+                    <tr>
+                      <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;background:#D9D9D9;">
+                        Número recibo</td>
+                      <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;background:#D9D9D9;border-left:none;">
+                        Dólares</td>
+                      <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;background:#D9D9D9;border-left:none;">
+                        Tipo de transacción</td>
+                    </tr>
+                    <apex:repeat value="{!recibos}" var="rec">
+                      <tr>
+                        <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;height:20%;">
+                          {!rec.Recibos__r.NumeroRecibido__c}</td>
+                        <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;">
+                          USD {!rec.Monto_aplicado_a_la_negociaci_n__c}</td>
+                        <td colspan="2" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;border-left:none;">
+                          {!rec.Recibos__r.Instrumento_de_pago__c}</td>
+                      </tr>
+                    </apex:repeat>
+                    <tr>
+                      <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;background:#D9D9D9;">
+                        Total</td>
+                      <td colspan="4" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;text-align:center;background:#D9D9D9;border-left:none;">
+                        USD {!usd}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:.5pt solid #757171;background:#D9D9D9;">
+                        Pendiente</td>
+                      <td colspan="4" style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:.5pt solid #757171;text-align:center;background:#D9D9D9;border-left:none;">
+                        USD {!pednpago_usd}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="12" style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;height:11.0pt;">
+                &nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="page-break-inside:avoid;width:100%;">
+          <table style="border:none; border-collapse:collapse; width:100%; font-family: Arial, Helvetica, sans-serif !important;">
+            <tbody>
+              <tr>
+                <td style="color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none;background:#D9D9D9;height:15.0pt; padding:5px;">
+                  Observaciones</td>
+                <td style="color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:.5pt solid #757171;border-left:none; padding:5px;width:80%">
+                  {!informeR.Observaciones__c}</td>
+              </tr>
+              <br/>
+            </tbody>
+          </table>
+          <table style="border:none; border-collapse:collapse; width:100%; font-family: Arial, Helvetica, sans-serif !important;">
+            <tbody>
+              <tr>
+                <td style="width:25%;color:windowtext;font-size:13px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none;height:15.0pt;">
+                  VENDEDOR</td>
+                <td style="width:25%;color:windowtext;font-size:13px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none;">
+                  {!IF(CONTAINS(informeR.Oportunidad__r.RecordType.DeveloperName, 'Autolote'), 'SUPERVISOR DE VENTA', 'ALISTAR')}</td>
+                <td style="width:25%;color:windowtext;font-size:13px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none;">
+                  GERENTE DE VENTAS</td>
+                <td style="width:25%;color:windowtext;font-size:13px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-top:.5pt solid #757171;border-right:none;border-bottom:none;border-left:none;">
+                  CLIENTE</td>
+              </tr>
+              <tr>
+                <td style="width:25%;color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-bottom:.5pt solid #757171;height:80px;">
+                  {!codVendedor} - {!vendedor}</td>
+                <td style="width:25%;color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-bottom:.5pt solid #757171;height:80px;">
+                  {!IF(CONTAINS(informeR.Oportunidad__r.RecordType.DeveloperName, 'Autolote'), 'RONNY RIVERA PASTORA', '')}</td>
+                <td style="width:25%;color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-bottom:.5pt solid #757171;height:80px;">
+                  &nbsp;</td>
+                <td style="width:25%;color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;vertical-align:middle;border:none;border-bottom:.5pt solid #757171;height:80px;">
+                  {!informeR.Oportunidad__r.Account.Name}</td>
+              </tr>
+              <apex:outputPanel id="informeMotos" rendered="{!AND(NOT(CONTAINS(informeR.Oportunidad__r.RecordType.DeveloperName, 'Autolote')), informeR.Aprobador_del_precio_minimo__c != null)}">
+                <tr>
+                  <td style="width:16%;color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;border:none;border-right:none;border-bottom:none;border-left:none;padding-top:2px;">
+                    Precio minimo aprobado por:</td>
+                  <td style="width:16%;color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-right:none;border-bottom:none;border-left:none;padding-top:2px;">
+                    {!informeR.Aprobador_del_precio_minimo__c}</td>
+                  <td style="width:16%;color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;border:none;border-right:none;border-bottom:none;border-left:none;padding-top:2px;">
+                    Aprobado electrónicamente por:</td>
+                  <td style="width:16%;color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-right:none;border-bottom:none;border-left:none;padding-top:2px;">
+                    {!informeR.Aprobado_por__c}</td>
+                  <td style="width:16%;color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:center;border:none;border-right:none;border-bottom:none;border-left:none;padding-top:2px;">
+                    Fecha de aprobación:</td>
+                  <td style="width:16%;color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-right:none;border-bottom:none;border-left:none;padding-top:2px;">
+                    {!fechaDeAprobacion}</td>
+                </tr>
+              </apex:outputPanel>
+              <apex:outputPanel id="informeAutos" rendered="{!AND(NOT(CONTAINS(informeR.Oportunidad__r.RecordType.DeveloperName, 'Autolote')), informeR.Aprobador_del_precio_minimo__c == null)}">
+                <tr>
+                  <td style="width:25%;color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:right;vertical-align:middle;border:none;border-right:none;border-bottom:none;border-left:none;padding-top:2px;">
+                    Aprobado electrónicamente por:</td>
+                  <td style="width:25%;color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-right:none;border-bottom:none;border-left:none;padding-top:2px;">
+                    {!informeR.Aprobado_por__c}</td>
+                  <td style="width:25%;color:windowtext;font-size:11px;font-weight:700;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:right;vertical-align:middle;border:none;border-right:none;border-bottom:none;border-left:none;padding-top:2px;">
+                    Fecha de aprobación:</td>
+                  <td style="width:25%;color:windowtext;font-size:11px;font-weight:400;font-style:normal;text-decoration:none;font-family:Salesforce Sans, sans-serif;text-align:left;vertical-align:middle;border:none;border-right:none;border-bottom:none;border-left:none;padding-top:2px;">
+                    {!fechaDeAprobacion}</td>
+                </tr>
+              </apex:outputPanel>
+            </tbody>
+          </table>
+          <apex:outputPanel id="informeAutolote" rendered="{!CONTAINS(informeR.Oportunidad__r.RecordType.DeveloperName, 'Autolote')}">
+            <p style="color:windowtext;font-size:11px;font-family:Salesforce Sans, sans-serif;">
+              <span style="font-weight:700;">Nota: </span>Nuestra obligación es la de suplir solamente los accesorios arriba detallados.
+            </p>
+          </apex:outputPanel>
+        </div>
+        <div class="footer">
+          <apex:outputPanel rendered="{!AND(informeR.Oportunidad__r.StageName != 'Negociacion', informeR.Oportunidad__r.StageName != 'Listo Para Facturar',
+        informeR.Oportunidad__r.StageName != 'Formalizacion', informeR.Oportunidad__r.StageName != 'Seleccionando Modelo', informeR.Oportunidad__r.StageName != 'Contacto Exitoso')}">
+            <div style="font-size:12px;color:red; font-family: Arial, Helvetica, sans-serif;">
+              Facturado
+            </div>
+          </apex:outputPanel>
+          <apex:outputPanel rendered="{!informeR.Oportunidad__r.StageName == 'Listo Para Facturar'}">
+            <div style="font-size:12px;color:red; font-family: Arial, Helvetica, sans-serif;">
+              Listo para facturar
+            </div>
+          </apex:outputPanel>
+          <apex:outputPanel rendered="{!OR(informeR.Oportunidad__r.StageName == 'Negociacion', 
+        informeR.Oportunidad__r.StageName == 'Formalizacion', informeR.Oportunidad__r.StageName == 'Seleccionando Modelo', informeR.Oportunidad__r.StageName == 'Contacto Exitoso')}">
+            <div style="font-size:12px;color:red; font-family: Arial, Helvetica, sans-serif;">
+              No está listo para facturar
+            </div>
+          </apex:outputPanel>
+          Informe de negociación: {!informeR.Consecutivo_del_Informe__c}
+        </div>
+      </body>
+    </apex:pageBlock>
+  </apex:form>
+  </html>
+</apex:page>

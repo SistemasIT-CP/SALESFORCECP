@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forma_de_pago__c</fullName>
+    <externalId>false</externalId>
+    <label>Forma de pago</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Débito automático activo</fullName>
+                <default>false</default>
+                <label>Débito automático activo</label>
+            </value>
+            <value>
+                <fullName>Nuevo débito automátivo</fullName>
+                <default>false</default>
+                <label>Nuevo débito automátivo</label>
+            </value>
+            <value>
+                <fullName>Nuevo Scrow</fullName>
+                <default>false</default>
+                <label>Nuevo Scrow</label>
+            </value>
+            <value>
+                <fullName>Pago directo</fullName>
+                <default>false</default>
+                <label>Pago directo</label>
+            </value>
+            <value>
+                <fullName>Scrow activo</fullName>
+                <default>false</default>
+                <label>Scrow activo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

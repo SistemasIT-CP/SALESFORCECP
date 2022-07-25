@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Envio_correcto_a_WS__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo para verificar que el contacto exista en el JD E1</description>
+    <externalId>false</externalId>
+    <label>Envío correcto a WS (Account)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

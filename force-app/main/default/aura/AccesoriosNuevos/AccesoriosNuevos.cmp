@@ -1,0 +1,394 @@
+<aura:component controller="AccesoriosNuevosController"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" >
+  
+  <aura:attribute name="cantidadAccesorios" type="String" default="0"/>
+  <aura:attribute name="recordId" type="Id"/> 
+  <aura:attribute name="accesorioSeleccionado" type="Object" />
+                
+  <aura:attribute name="listaAccesorios" type="List" default="[]"/>
+  <aura:attribute name="mapaAuxiliar" type="Map" default="{}"/>
+  <aura:attribute name="listaCombos" type="List"  default="[]"/>
+  <aura:attribute name="listaCombosVista" type="List"  default="[]"/>
+  <aura:attribute name="listaCombosTotales" type="List"  default="[]"/>
+  <aura:attribute name="listaCombosOriginal" type="List"  default="[]"/>
+  <aura:attribute name="listaAccesoriosOriginal" type="List"  default="[]"/>
+  <aura:attribute name="listaAccesoriosTotales" type="List"  default="[]"/>
+  <aura:attribute name="listaAccesoriosVista" type="List" default="[]" />
+  <aura:attribute name="listaAccesoriosSeleccionados" type="List"  default="[]"/>
+  <aura:attribute name="mapaCombos" type="Map" default="{}"/>
+  <aura:attribute name="detalleCombo" type="List"  default="[]"/>
+  <aura:attribute name="final" type="Integer" default="10" />
+  <aura:attribute name="finalCombos" type="Integer" default="10" />
+  <aura:attribute name="atrasDisable" type="Boolean" default="true" /> 
+  <aura:attribute name="adelanteDisable" type="Boolean" default="false" />
+
+  <aura:attribute name="columnas" type="List" />  
+  <aura:attribute name="columnasTotales" type="List" />  
+  <aura:attribute name="columnasCombos" type="List" />  
+  <aura:attribute name="columnasDeCantidades" type="List" />  
+
+  <aura:attribute name="eliminarAccesorios" type="Boolean" default="false"/>  
+  <aura:attribute name="editarAccesorios" type="Boolean" default="false"/>  
+  <aura:attribute name="agregarAccesorios" type="Boolean" default="false"/>  
+  <aura:attribute name="agregarCombos" type="Boolean" default="false"/>  
+  <aura:attribute name="asignarCantidades" type="Boolean" default="false"/>  
+  <aura:attribute name="mostrarError" type="Boolean" default="false"/>  
+  <aura:attribute name="cargaCompleta" type="Boolean" default="false"/>  
+
+  <aura:attribute name="reId" type="Id" />
+  <aura:attribute name="togglehover" type="boolean" default="false"/>
+  <aura:attribute name="hoverRow" type="Integer" default="-1" />
+  <aura:attribute name="issearching" type="Boolean" default="false" />
+
+  <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+  <aura:handler name="change" action="{!c.buscarCombos}" value="{!v.agregarCombos}" />
+  <aura:handler name="change" action="{!c.buscarAccesorios}" value="{!v.agregarAccesorios}" />
+
+  <article class="slds-card" style="border:1px solid #dddbda !important">
+    <div class="slds-page-header slds-page-header_record-home">
+        <div class="slds-page-header__row">
+          <div class="slds-page-header__col-title">
+            <div class="slds-media">
+              <div class="slds-media__body" style="padding-top: 3px !important">
+                <div class="slds-page-header__name">
+                  <div class="slds-page-header__name-title" >
+                      <h4 style="font-size: 14px; font-weight: bold;">
+                        <lightning:icon iconName="custom:custom67" alternativeText="Accesorios" title="Accesorios" size="small"/>  
+                        <span style="padding: 15px 0px 0px 12px;">Accesorios ({!v.cantidadAccesorios})</span>
+                      </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slds-page-header__col-actions">
+            <div class="slds-page-header__controls">
+              <div class="slds-page-header__control">
+                <ul class="slds-button-group-list">
+                  <li>
+                    <button class="slds-button slds-button_neutral" 
+                            onclick="{!c.abrirAgregarAccesorios}">
+                        Añadir accesorio
+                    </button>
+                  </li>
+                  <li>
+                    <button class="slds-button slds-button_neutral" 
+                            onclick="{!c.abrirAgregarCombos}">
+                        Añadir combo
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aura:if isTrue="{!v.cantidadAccesorios != 0}">
+      <div style = "width:100%; padding-bottom: 25px;">
+        <lightning:datatable
+            keyField="Id"
+            data="{!v.listaAccesorios}"
+            columns="{!v.columnas}"
+            hideCheckboxColumn="true"
+            onrowaction="{!c.handleRowAction}"/>
+      </div>
+    </aura:if>
+
+<!-- MODAL DE BUSQUEDA DE ACCESORIOS -->
+    
+      <aura:if isTrue="{!v.agregarAccesorios}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+          <div class="slds-modal__container">
+            <aura:if isTrue="{!v.asignarCantidades == false}">
+                <header class="slds-modal__header">
+                  <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Cerrar esta ventana" onclick="{!c.cerrarAgregarAccesorios}">
+                      <lightning:icon iconName="utility:close" size="small" class="colorBlanco"/>  
+                      <span class="slds-assistive-text">Cerrar esta ventana</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Agregar accesorios</h2>
+                  </header>
+                  <div class="slds-box" style="background-color:#F3F2F2 !important" onkeyup="{!c.queryAccesorios}">
+                      <lightning:input
+                        aura:id="buscarAccesorios"
+                        name="buscarAccesorios"
+                        label=""
+                        variant="label-hidden"
+                        isLoading="{!v.issearching}"
+                        type="search"
+                        placeholder="Buscar accesorios..."
+                      />
+                      <div style="padding: 10px 0 0 10px; font-size: 12px;">Inserte al menos 4 letras...</div>
+                  </div>
+                  <aura:if isTrue="{!v.cargaCompleta}">
+                    <aura:if isTrue="{!v.listaAccesoriosVista.length != 0}">
+                      <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+                        <thead>
+                            <tr class="slds-text-heading_label">
+                                <th scope="col"><div class="slds-truncate" title="Check" style="text-align: center"></div></th>
+                                <th scope="col"><div class="slds-truncate" title="Descripcion" style="text-align: center">Descripción</div></th>
+                                <th scope="col"><div class="slds-truncate" title="CodigoParte" style="text-align: center">Código de parte</div></th>
+                                <th scope="col"><div class="slds-truncate" title="PrecioUnitario" style="text-align: center">Precio Unitario</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.listaAccesoriosVista}" var="lista" indexVar="index">
+                                <tr data-selected-Index="{!index}">
+                                    <td><div class="slds-truncate" title="{!lista.CodigoParte__c}" style="text-align: center">
+                                      <lightning:input aura:id="seleccionados" type="checkbox" name="{!lista.CodigoParte__c}" checked="{!lista.Seleccionado}" onchange="{!c.seleccionarAccesorio}"/></div>
+                                    </td>
+                                    <td><div class="slds-truncate" title="{!lista.Descripcion__c}" style="text-align: center">{!lista.Descripcion__c}</div></td>
+                                    <td><div class="slds-truncate" title="{!lista.CodigoParte__c}" style="text-align: center">{!lista.CodigoParte__c}</div></td>
+                                    <td><div class="slds-truncate" title="{!lista.Precio__c}" style="text-align: center">USD {!lista.Precio__c}</div></td>
+                                </tr>
+                            </aura:iteration>
+                        </tbody>
+                      </table>
+                    <div style="background-color: white; padding: 20px;">
+                        <lightning:button variant="brand-outline" label="Atras" title="Atras Accesorio" onclick="{!c.paginar}" disabled="{!v.atrasDisable}"/>
+                        <lightning:button variant="brand-outline" label="Adelante" title="Adelante Accesorio" onclick="{!c.paginar}" disabled="{!v.adelanteDisable}"/>
+                    </div>
+                    <aura:set attribute="else">
+                      <div style="padding: 20px 10px; font-size: 15px; background-color:white;">
+                          No se han encontrado accesorios disponibles.
+                      </div>
+                    </aura:set>
+                    </aura:if>
+                      <aura:set attribute="else"> 
+                        <div style="height: 200px; background-color:white;">
+                            <div role="status" class="slds-spinner slds-spinner_medium">
+                              <span class="slds-assistive-text">Loading</span>
+                              <div class="slds-spinner__dot-a"></div>
+                              <div class="slds-spinner__dot-b"></div>
+                            </div>
+                        </div>
+                      </aura:set>  
+                  </aura:if>
+                  <footer class="slds-modal__footer">
+                    <aura:if isTrue="{!v.mostrarError}"> 
+                      <div style="float: left !important;">
+                        <lightning:icon iconName="action:close" size="xx-small"/>  
+                        <span style="padding-left: 5px; color:tomato;">Debe seleccionar al menos un accesorio para avanzar.</span>
+                      </div>
+                    </aura:if>
+                    <button class="slds-button slds-button_neutral" onclick="{!c.cerrarAgregarAccesorios}">Cancelar</button>
+                    <button class="slds-button slds-button_brand" onclick="{!c.abrirSeleccionarCantidades}">Siguiente</button>
+                  </footer>
+
+<!-- SUBMODAL DE SELECCION DE  CANTIDAD DE ACCESORIOS-->
+
+                <aura:set attribute="else"> 
+                  <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Cerrar esta ventana" onclick="{!c.cerrarAgregarAccesorios}">
+                        <lightning:icon iconName="utility:close" size="small" class="colorBlanco"/>  
+                        <span class="slds-assistive-text">Cerrar esta ventana</span>
+                      </button>
+                      <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Modificar accesorios seleccionados</h2>
+                    </header>
+                    <div style="height: 300px; ">
+                              <lightning:datatable
+                                  keyField="CodigoParte__c"
+                                  aura:id="tablaFinal"
+                                  columns="{!v.columnasDeCantidades}"
+                                  data="{!v.listaAccesoriosSeleccionados}"
+                                  showRowNumberColumn="false"
+                                  hideCheckboxColumn="true"
+                                  suppressBottomBar="true"
+                                  oncellchange = "{!c.edicionCeldas}">
+                              </lightning:datatable>
+                    </div>
+                    <footer class="slds-modal__footer">
+                      <button class="slds-button slds-button_neutral" onclick="{!c.cerrarSeleccionarCantidades}" style="float: left !important;">Atras</button>
+                      <button class="slds-button slds-button_neutral" onclick="{!c.cerrarAgregarAccesorios}">Cerrar</button>
+                      <button class="slds-button slds-button_brand"  onclick="{!c.agregarAccesorios}">Añadir</button>
+                    </footer>
+                </aura:set>
+              </aura:if>
+          </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+      </aura:if>
+
+<!-- MODAL DE BUSQUEDA DE COMBOS -->
+
+      <aura:if isTrue="{!v.agregarCombos}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+          <div class="slds-modal__container">
+            <aura:if isTrue="{!v.asignarCantidades == false}">
+                <header class="slds-modal__header">
+                  <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Cerrar esta ventana" onclick="{!c.cerrarAgregarCombos}">
+                      <lightning:icon iconName="utility:close" size="small" class="colorBlanco"/>  
+                      <span class="slds-assistive-text">Cerrar esta ventana</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Agregar combos</h2>
+                  </header>
+                  <div class="slds-box" style="background-color:#F3F2F2 !important; z-index: -1;" onkeyup="{!c.queryCombos}">
+                      <lightning:input
+                        aura:id="buscarCombos"
+                        name="buscarCombos"
+                        label=""
+                        variant="label-hidden"
+                        isLoading="{!v.issearching}"
+                        type="search"
+                        placeholder="Buscar combos..."
+                      />
+                  </div>
+                  <aura:if isTrue="{!v.cargaCompleta}">
+                    <aura:if isTrue="{!v.listaCombos.length != 0}">
+                  <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+                    <thead>
+                        <tr class="slds-text-heading_label">
+                            <th scope="col"><div class="slds-truncate" title="Nombre" style="text-align: center">Nombre</div></th>
+                            <th scope="col"><div class="slds-truncate" title="CodigoCombo" style="text-align: center">Código de Combo</div></th>
+                            <th scope="col" style="width:130px;"><div class="slds-truncate" title="Check" style="text-align: center"></div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Use the Apex model and controller to fetch server side data -->
+                        <aura:iteration items="{!v.listaCombosVista}" var="combo" indexVar="index">
+                            <tr data-selected-Index="{!index}">
+                                <td><div class="slds-truncate" title="{!combo.Name}" style="text-align: center">
+                                    <a id="{!combo.Id_Externo__c}" onmouseenter="{!c.handleMouseHover}" onmouseout="{!c.handleMouseOut}" data-index="{!index}" tabindex="-1">{!combo.Name}</a></div>
+                                    <aura:if isTrue="{!v.hoverRow == index}">
+                                        <aura:if isTrue="{!v.togglehover == true}">
+                                            <div class="slds-popover slds-nubbin_bottom"
+                                                 role="tooltip" id="help" style="position: absolute; right: -15%; bottom: 145%; width: 40rem; padding: 5px;">
+                                                 <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_col-bordered slds-table_striped">
+                                                  <thead>
+                                                      <tr class="slds-text-title_caps">
+                                                          
+                                                          <th scope="col">
+                                                              <div title="Codigo de parte">Codigo Parte</div>
+                                                          </th>
+                                                          <th scope="col">
+                                                              <div title="Detalle">Detalle</div>
+                                                          </th>
+                                                          <th scope="col">
+                                                              <div title="Cantidad">Cantidad</div>
+                                                          </th>
+                                                          <th scope="col">
+                                                              <div title="Precio">Precio unitario</div>
+                                                          </th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                 <aura:iteration items="{!v.detalleCombo}" var="mp" indexVar="index">
+                                                  <tr data-selected-Index="{!index}">
+                                                    <th scope="col">
+                                                        <div title="{!mp.codigo}">{!mp.codigo}</div>
+                                                    </th>
+                                                    <th scope="col" style="overflow: hidden; max-width:150px;">
+                                                        <div title="{!mp.detalle}">{!mp.detalle}</div>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <div title="{!mp.cantidad}">{!mp.cantidad}</div>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <div title="{!mp.precio}">{!mp.precio}</div>
+                                                    </th>
+                                                  </tr>
+                                                 </aura:iteration>
+                                                 </tbody>
+                                                 </table>
+                                            </div>
+                                        </aura:if>
+                                    </aura:if>
+                                </td>
+                                
+                                <td><div class="slds-truncate" title="{!combo.Id_Externo__c}" style="text-align: center">{!combo.Id_Externo__c}</div></td>
+                                
+								                <td><div class="slds-truncate" title="{!combo.Id_Externo__c}" style="text-align: center">
+                                  <lightning:input aura:id="seleccionados" type="checkbox" name="{!combo.Id_Externo__c}" checked="{!combo.Seleccionado}"/></div>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                  </table>
+                  <div style="background-color: white; padding: 20px;">
+                    <lightning:button variant="brand-outline" label="Atras" title="Atras Combos" onclick="{! c.paginar }" disabled="{!v.atrasDisable}"/>
+                    <lightning:button variant="brand-outline" label="Adelante" title="Adelante Combos" onclick="{! c.paginar }" disabled="{!v.adelanteDisable}"/>
+                </div>
+                    <aura:set attribute="else"> 
+                      <div style="padding: 20px 10px; font-size: 15px; background-color:white;">
+                        No se han encontrado combos disponibles.
+                    </div>
+                    </aura:set>
+                  </aura:if>
+                  <aura:set attribute="else"> 
+                        <div style="height: 200px; background-color:white;">
+                            <div role="status" class="slds-spinner slds-spinner_medium">
+                              <span class="slds-assistive-text">Loading</span>
+                              <div class="slds-spinner__dot-a"></div>
+                              <div class="slds-spinner__dot-b"></div>
+                            </div>
+                        </div>
+                      </aura:set>  
+                      </aura:if>
+                  <footer class="slds-modal__footer">
+
+                    <aura:if isTrue="{!v.mostrarError}"> 
+                      <div style="float: left !important;">
+                        <lightning:icon iconName="action:close" size="xx-small"/>  
+                        <span style="padding-left: 5px; color:tomato;">Debe seleccionar al menos un combo para avanzar.</span>
+                      </div>
+                    </aura:if>
+
+                    <button class="slds-button slds-button_neutral" onclick="{!c.cerrarAgregarCombos}">Cancelar</button>
+                    <button class="slds-button slds-button_brand" onclick="{!c.agregarCombos}">Añadir</button>
+                  </footer>
+                  <aura:set attribute="else"> 
+                    </aura:set>
+                  </aura:if>
+                </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+              </aura:if>
+
+<!-- MODAL DE ELIMINACION -->
+      <aura:if isTrue="{!v.eliminarAccesorios}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+          <div class="slds-modal__container">
+            <header class="slds-modal__header">
+              <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Cerrar esta ventana" onclick="{!c.cerrarEliminarAccesorios}">
+                  <lightning:icon iconName="utility:close" size="small" class="colorBlanco"/>  
+                  <span class="slds-assistive-text">Cerrar esta ventana</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Eliminar Accesorio del Informe</h2>
+              </header>
+              <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <p style="text-align:center;">¿Está seguro de que desea eliminar este accesorio del informe?</p>
+              </div>
+              <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" onclick="{!c.cerrarEliminarAccesorios}">Cancelar</button>
+                <button class="slds-button slds-button_brand" onclick="{!c.eliminarAccesorios}">Eliminar</button>
+              </footer>
+            </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open" ></div>
+      </aura:if>
+
+      <!-- MODAL DE EDICION -->
+      <aura:if isTrue="{!v.editarAccesorios}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+          <div class="slds-modal__container">
+            <header class="slds-modal__header">
+              <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Cerrar esta ventana" onclick="{!c.cerrarEditarAccesorios}">
+                  <lightning:icon iconName="utility:close" size="small" class="colorBlanco"/>  
+                  <span class="slds-assistive-text">Cerrar esta ventana</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Modificar Accesorio del Informe</h2>
+              </header>
+              <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <lightning:input name="codigoParte" readonly="true" value="{!v.accesorioSeleccionado.Codigo_de_parte__c}" label="Codigo de parte:" />
+                <lightning:input name="descripcion" readonly="true" value="{!v.accesorioSeleccionado.Descripci_n_del_accesorio__c}" label="Descripcion:" />
+                <lightning:input name="cantidad" value="{!v.accesorioSeleccionado.Cantidad__c}" label="Cantidad:" />
+              </div>
+              <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" onclick="{!c.cerrarEditarAccesorios}">Cancelar</button>
+                <button class="slds-button slds-button_brand" onclick="{!c.editarAccesorios}">Guardar</button>
+              </footer>
+            </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open" ></div>
+      </aura:if>
+    </article>
+</aura:component>

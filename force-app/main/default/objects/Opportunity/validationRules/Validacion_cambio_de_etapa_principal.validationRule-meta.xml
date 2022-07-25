@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validacion_cambio_de_etapa_principal</fullName>
+    <active>true</active>
+    <description>para pasar de la etapa 1 a la etapa seleccionando modelo, debe estar seleccionado, la marca, modelo, fecha tentativa de compra, forma de pago, intercambio.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Type,&quot;Principal&quot;)&amp;&amp;
+
+CASE(StageName, 
+&quot;Contacto Exitoso&quot;, 1,
+&quot;Listo Para Facturar&quot;, 1,
+&quot;Listo Para Entrega&quot;, 1,
+&quot;Formalización&quot;, 1,
+0) = 1,
+OR(
+ISBLANK( Marca_UDC__c ),    
+ ISBLANK(TEXT( Forma_de_pago__c )),  
+ISBLANK(TEXT(Desea_realizar_intercambio__c)),  
+ISBLANK(CloseDate))
+)</errorConditionFormula>
+    <errorMessage>Complete la marca, modelo, fecha tentativa de compra, forma de pago, intercambio.</errorMessage>
+</ValidationRule>

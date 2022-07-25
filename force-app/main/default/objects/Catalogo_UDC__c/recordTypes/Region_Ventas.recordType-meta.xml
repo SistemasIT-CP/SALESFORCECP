@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region_Ventas</fullName>
+    <active>true</active>
+    <label>Region Ventas</label>
+</RecordType>

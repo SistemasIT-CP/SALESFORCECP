@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cerrar_ganado_avaluo</fullName>
+    <active>true</active>
+    <description>Un avaluo solo puede cerrarse ganado si se ha realizado con anterioridad una consulta de inventario</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;Avaluo&quot;,
+ISPICKVAL(StageName, &quot;Cerrada ganada&quot;),
+NOT(Permite_Ganar_Oportunidad__c)
+)</errorConditionFormula>
+    <errorMessage>Todos los chasis deben estar en el inventario para cerrar ganada la oportunidad</errorMessage>
+</ValidationRule>

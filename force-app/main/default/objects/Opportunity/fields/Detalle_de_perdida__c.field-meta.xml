@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Detalle_de_perdida__c</fullName>
+    <externalId>false</externalId>
+    <label>Detalle de perdida</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Razon_perdida__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Situacion politica/economica</fullName>
+                <default>false</default>
+                <label>Situación política/económica</label>
+            </value>
+            <value>
+                <fullName>Problemas personales</fullName>
+                <default>false</default>
+                <label>Problemas personales</label>
+            </value>
+            <value>
+                <fullName>Compro otra marca (Ext)</fullName>
+                <default>false</default>
+                <label>Compró otra marca (Ext)</label>
+            </value>
+            <value>
+                <fullName>Compro usado</fullName>
+                <default>false</default>
+                <label>Compró usado</label>
+            </value>
+            <value>
+                <fullName>No compro</fullName>
+                <default>false</default>
+                <label>No compró</label>
+            </value>
+            <value>
+                <fullName>Credex</fullName>
+                <default>false</default>
+                <label>Credex</label>
+            </value>
+            <value>
+                <fullName>CrediQ</fullName>
+                <default>false</default>
+                <label>CrediQ</label>
+            </value>
+            <value>
+                <fullName>Leasing AN</fullName>
+                <default>false</default>
+                <label>Leasing AN</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+            <value>
+                <fullName>Compró nuevo</fullName>
+                <default>false</default>
+                <label>Compró nuevo</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Precio/Extras</controllingFieldValue>
+            <controllingFieldValue>Inventario/Tiempo de entrega</controllingFieldValue>
+            <controllingFieldValue>Disenio/Atributos</controllingFieldValue>
+            <valueName>Compro otra marca (Ext)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Precio/Extras</controllingFieldValue>
+            <controllingFieldValue>Inventario/Tiempo de entrega</controllingFieldValue>
+            <controllingFieldValue>Disenio/Atributos</controllingFieldValue>
+            <valueName>Compro usado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Precio/Extras</controllingFieldValue>
+            <controllingFieldValue>Inventario/Tiempo de entrega</controllingFieldValue>
+            <controllingFieldValue>Disenio/Atributos</controllingFieldValue>
+            <valueName>No compro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cliente Pospone Compra</controllingFieldValue>
+            <valueName>Situacion politica/economica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cliente Pospone Compra</controllingFieldValue>
+            <valueName>Problemas personales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inventario/Tiempo de entrega</controllingFieldValue>
+            <valueName>Compró nuevo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Facilidad credito competencia</controllingFieldValue>
+            <valueName>Credex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Facilidad credito competencia</controllingFieldValue>
+            <valueName>CrediQ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Facilidad credito competencia</controllingFieldValue>
+            <valueName>Leasing AN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Facilidad credito competencia</controllingFieldValue>
+            <valueName>Otros</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

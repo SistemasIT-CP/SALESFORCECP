@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Informe_de_Negociaci_n__c</fullName>
+    <externalId>false</externalId>
+    <label>Informe de Negociación</label>
+    <referenceTo>Informe_de_Negociaci_n__c</referenceTo>
+    <relationshipName>Informes_Combos</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

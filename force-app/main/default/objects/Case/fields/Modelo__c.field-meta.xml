@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modelo__c</fullName>
+    <externalId>false</externalId>
+    <label>Modelo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Marca_Dollar__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AGYA MT</fullName>
+                <default>false</default>
+                <label>AGYA MT</label>
+            </value>
+            <value>
+                <fullName>AGYA AT</fullName>
+                <default>false</default>
+                <label>AGYA AT</label>
+            </value>
+            <value>
+                <fullName>ALTO</fullName>
+                <default>false</default>
+                <label>ALTO</label>
+            </value>
+            <value>
+                <fullName>SPRESSO</fullName>
+                <default>false</default>
+                <label>SPRESSO</label>
+            </value>
+            <value>
+                <fullName>PICANTO AT</fullName>
+                <default>false</default>
+                <label>PICANTO AT</label>
+            </value>
+            <value>
+                <fullName>YARIS MT</fullName>
+                <default>false</default>
+                <label>YARIS MT</label>
+            </value>
+            <value>
+                <fullName>YARIS AT</fullName>
+                <default>false</default>
+                <label>YARIS AT</label>
+            </value>
+            <value>
+                <fullName>RIO MT</fullName>
+                <default>false</default>
+                <label>RIO MT</label>
+            </value>
+            <value>
+                <fullName>RIO AT</fullName>
+                <default>false</default>
+                <label>RIO AT</label>
+            </value>
+            <value>
+                <fullName>DZIRE AT</fullName>
+                <default>false</default>
+                <label>DZIRE AT</label>
+            </value>
+            <value>
+                <fullName>SOLUTO AT</fullName>
+                <default>false</default>
+                <label>SOLUTO AT</label>
+            </value>
+            <value>
+                <fullName>RAV4 MT</fullName>
+                <default>false</default>
+                <label>RAV4 MT</label>
+            </value>
+            <value>
+                <fullName>RAV4 AT</fullName>
+                <default>false</default>
+                <label>RAV4 AT</label>
+            </value>
+            <value>
+                <fullName>SPORTAGE MT</fullName>
+                <default>false</default>
+                <label>SPORTAGE MT</label>
+            </value>
+            <value>
+                <fullName>SPORTAGE AT</fullName>
+                <default>false</default>
+                <label>SPORTAGE AT</label>
+            </value>
+            <value>
+                <fullName>GRAND VITARA AT</fullName>
+                <default>false</default>
+                <label>GRAND VITARA AT</label>
+            </value>
+            <value>
+                <fullName>SORENTO AT</fullName>
+                <default>false</default>
+                <label>SORENTO AT</label>
+            </value>
+            <value>
+                <fullName>CARNIVAL</fullName>
+                <default>false</default>
+                <label>CARNIVAL</label>
+            </value>
+            <value>
+                <fullName>XTZ 125</fullName>
+                <default>false</default>
+                <label>XTZ 125</label>
+            </value>
+            <value>
+                <fullName>XTZ 150</fullName>
+                <default>false</default>
+                <label>XTZ 150</label>
+            </value>
+            <value>
+                <fullName>AG200</fullName>
+                <default>false</default>
+                <label>AG200</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>AGYA MT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>AGYA AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>YARIS MT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>YARIS AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>RAV4 MT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>RAV4 AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>ALTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>SPRESSO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>DZIRE AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>GRAND VITARA AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>RIO MT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>RIO AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SOLUTO AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SPORTAGE MT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SPORTAGE AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SORENTO AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>CARNIVAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>YAMAHA</controllingFieldValue>
+            <valueName>XTZ 125</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>YAMAHA</controllingFieldValue>
+            <valueName>XTZ 150</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>YAMAHA</controllingFieldValue>
+            <valueName>AG200</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

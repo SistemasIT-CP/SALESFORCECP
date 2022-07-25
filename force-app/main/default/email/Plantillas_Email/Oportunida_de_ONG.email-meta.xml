@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Para proceso de aprobación oportunidad ONG</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Oportunida de ONG</name>
+    <style>none</style>
+    <subject>Oportunidad OSFL en proceso de venta</subject>
+    <textOnly>Solicitud de cambio en cuenta
+
+El usuario {!Account.Requiere_aprobacion_Name__c}, está solicitando cambios para la siguiente cuenta:
+
+Cliente: {!Account.Name}
+
+Código: {!Account.CodigoCliente__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

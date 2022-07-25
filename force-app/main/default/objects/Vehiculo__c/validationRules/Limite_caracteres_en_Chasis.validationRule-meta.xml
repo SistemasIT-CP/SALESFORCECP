@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limite_caracteres_en_Chasis</fullName>
+    <active>false</active>
+    <description>El Chasis debe tener exactamente 17 caracteres</description>
+    <errorConditionFormula>AND(
+ NOT(ISBLANK(Chasis__c)),
+ LEN(Chasis__c) &lt;&gt; 17
+)</errorConditionFormula>
+    <errorDisplayField>Chasis__c</errorDisplayField>
+    <errorMessage>El Chasis debe tener exactamente 17 caracteres</errorMessage>
+</ValidationRule>

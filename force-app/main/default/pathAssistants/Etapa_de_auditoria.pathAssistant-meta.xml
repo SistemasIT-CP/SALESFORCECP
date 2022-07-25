@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Auditoria__c</entityName>
+    <fieldName>Etapa__c</fieldName>
+    <masterLabel>Etapa de auditoria</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Razon_de_perdida__c</fieldNames>
+        <picklistValueName>Cerrada perdida</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

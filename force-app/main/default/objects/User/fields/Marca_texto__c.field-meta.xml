@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca_texto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( INCLUDES ( Marca__c , &quot;KIA&quot; ), &quot;KIA; &quot;, null) &amp;
+IF ( INCLUDES ( Marca__c  , &quot;TOYOTA&quot; ), &quot;TOYOTA; &quot;, null) &amp;
+IF ( INCLUDES ( Marca__c  , &quot;HINO&quot; ), &quot;HINO; &quot;, null) &amp;
+IF ( INCLUDES ( Marca__c  , &quot;SUZUKI&quot; ), &quot;SUZUKI; &quot;, null) &amp;
+IF ( INCLUDES ( Marca__c  , &quot;JMC&quot; ), &quot;JMC; &quot;, null) &amp;
+IF ( INCLUDES ( Marca__c  , &quot;HERO&quot; ), &quot;HERO; &quot;, null) &amp;
+IF ( INCLUDES ( Marca__c  , &quot;YAMAHA&quot; ), &quot;YAMAHA; &quot;, null) &amp;
+IF ( INCLUDES ( Marca__c  , &quot;HAOJUE&quot; ), &quot;HAOJUE; &quot;, null) &amp;
+IF ( INCLUDES ( Marca__c  , &quot;GENESIS&quot; ), &quot;GENESIS; &quot;, null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Marca texto</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

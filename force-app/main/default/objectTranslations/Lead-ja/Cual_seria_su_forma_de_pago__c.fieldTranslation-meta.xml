@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Cual_seria_su_forma_de_pago__c</name>
+    <picklistValues>
+        <masterLabel>Aún no estoy seguro de comprar/vender</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>De contado</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financiamiento</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intercambio de vehiculo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

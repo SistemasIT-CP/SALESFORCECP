@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ajuste_Bancario</fullName>
+    <active>true</active>
+    <description>Para crear un recibo de Tipo Bancario</description>
+    <label>Ajuste Bancario</label>
+</RecordType>

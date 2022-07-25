@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_hora_contacto_exitoso__c</fullName>
+    <description>Este campo indica la fecha y la hora cuando un lead cambia a estado &quot;Contacto exitoso&quot; mediante una automatizacion</description>
+    <externalId>false</externalId>
+    <label>Fecha/hora contacto exitoso</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,98 @@
+<aura:component controller ="Perfil_del_Cliente_Oportunidad_Principal"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global">
+    
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="cuentaId" type="String"/>
+    <aura:attribute name="comentarioPIC" type="String"/>
+    <aura:attribute name="nombre_cuenta" type="String"/>
+    <aura:attribute name="tipo_cuenta" type="String"/>
+    <aura:attribute name="boton" type="String" default="true"/>
+    <aura:attribute name="modoLectura" type="Boolean" default="true"/>
+    <aura:attribute name ="caseSimpleRecord" type="Object" />
+    <aura:attribute name ="recordLoadError" type="String" />
+
+    <aura:handler name="init" action="{!c.ObtenerDatos}" value="{!this}"/>
+    
+    <aura:handler name="change" action="{!c.ChangeStage}" value="{!v.caseSimpleRecord}"/>
+
+    <force:recordData 
+        aura:id="recordLoader"
+        recordId="{!v.recordId}"
+        fields="StageName" 
+        targetFields="{!v.caseSimpleRecord}"
+        targetError="{!v.recordLoadError}"
+        recordUpdated="{!c.ChangeStage}"
+    />
+    
+    <div class="slds-box slds-box_xx-small slds-theme_default"> 
+        <div>
+            <table>
+                <tr> 
+                    <lightning:layout class="slds-page-header slds-page-header--object-home">
+                        <table>
+                            <tr>
+                                <td style="width:5%; text-align:center; padding:5px;">
+                                    <lightning:layoutItem> 
+                                        <lightning:icon iconName="standard:report" 
+                                                        alternativeText="Report" 
+                                                        size="large"
+                                        /> 
+                                    </lightning:layoutItem> 
+                                </td>
+                                <td style="width:25%">
+                                    <div class="page-section page-header">
+                                        <h1 class="slds-text-heading--label">
+                                            Perfil del Cliente
+                                        </h1>
+                                        <h2 class="slds-text-heading--medium" 
+                                            style = "font-size :14px">
+                                                <a href="" 
+                                                onclick="{!c.Cliente}">
+                                                        {!v.nombre_cuenta}
+                                                </a>
+                                        </h2>
+                                        <h2 class="slds-text-heading--label">
+                                            Tipo de cuenta: {!v.tipo_cuenta}
+                                        </h2> 
+                                    </div>
+                                </td>
+                                <td style="width:70%">
+                                    <div align="center">
+                                        <lightning:button class = "slds-button__icon_right" 
+                                                        disabled="{!v.boton}" 
+                                                        variant="destructive" 
+                                                        label="Visualizar" 
+                                                        title="Visualizar" 
+                                                        onclick="{!c.PerfilCliente}" 
+                                        />
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </lightning:layout>
+                </tr>
+                <tr>
+                    <div style="padding:10px;">
+                        <table>
+                            <tr>
+                                <td style="width:60%;">
+                                    <lightning:input readonly="{!v.modoLectura}" name="comentario" label="Comentario del PIC" value="{!v.comentarioPIC}"/>
+                                </td>
+                                <td style="width:40%; padding:15px;">
+                                    <aura:if isTrue="{!v.modoLectura}">
+                                            <lightning:button label="Editar" iconName="utility:edit" iconPosition="left" onclick="{!c.ActivarModoEscritura}"/>
+                                        <aura:set attribute="else">
+                                            <lightning:button label="Guardar" iconName="utility:download" iconPosition="left" variant="brand" onclick="{!c.GuardarComentarioNuevo}"/>
+                                            <lightning:button label="Cerrar" iconName="utility:close" iconPosition="left" variant="destructive" onclick="{!c.CerrarModoEscritura}"/>
+                                        </aura:set>
+                                    </aura:if>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </tr>
+            </table>    
+        </div>
+    </div>
+</aura:component>

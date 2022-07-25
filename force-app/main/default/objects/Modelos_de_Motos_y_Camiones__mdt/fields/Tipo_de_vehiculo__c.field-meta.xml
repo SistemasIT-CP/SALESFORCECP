@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_vehiculo__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Tipo de vehiculo</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Moto</fullName>
+                <default>true</default>
+                <label>Moto</label>
+            </value>
+            <value>
+                <fullName>Camion</fullName>
+                <default>false</default>
+                <label>Camion</label>
+            </value>
+            <value>
+                <fullName>SEDAN</fullName>
+                <default>false</default>
+                <label>SEDAN</label>
+            </value>
+            <value>
+                <fullName>JEEP</fullName>
+                <default>false</default>
+                <label>JEEP</label>
+            </value>
+            <value>
+                <fullName>SUV</fullName>
+                <default>false</default>
+                <label>SUV</label>
+            </value>
+            <value>
+                <fullName>MICRO SUV</fullName>
+                <default>false</default>
+                <label>MICRO SUV</label>
+            </value>
+            <value>
+                <fullName>CAMIONETA</fullName>
+                <default>false</default>
+                <label>CAMIONETA</label>
+            </value>
+            <value>
+                <fullName>HATCHBACK</fullName>
+                <default>false</default>
+                <label>HATCHBACK</label>
+            </value>
+            <value>
+                <fullName>STATION WAGON</fullName>
+                <default>false</default>
+                <label>STATION WAGON</label>
+            </value>
+            <value>
+                <fullName>FURGONETA</fullName>
+                <default>false</default>
+                <label>FURGONETA</label>
+            </value>
+            <value>
+                <fullName>CAMION PEQUEÑO</fullName>
+                <default>false</default>
+                <label>CAMION PEQUEÑO</label>
+            </value>
+            <value>
+                <fullName>SUV COMPACTO</fullName>
+                <default>false</default>
+                <label>SUV COMPACTO</label>
+            </value>
+            <value>
+                <fullName>MINI VAN</fullName>
+                <default>false</default>
+                <label>MINI VAN</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

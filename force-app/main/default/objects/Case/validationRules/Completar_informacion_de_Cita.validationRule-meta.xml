@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completar_informacion_de_Cita</fullName>
+    <active>true</active>
+    <description>Regla de validacion para completar informacion de cita si se cerro el caso porque se concerto cita</description>
+    <errorConditionFormula>AND( ISPICKVAL( Motivo_de_cierre__c , &quot;Se concertó cita&quot;),OR( ISBLANK( Numero_de_cita__c ),ISBLANK(Fecha_y_hora_de_la_cita__c  )))</errorConditionFormula>
+    <errorMessage>Si se concerto cita, debe completar los datos de la misma en la seccion  de Informacion de cita</errorMessage>
+</ValidationRule>

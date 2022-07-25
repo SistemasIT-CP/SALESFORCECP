@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribuidor_requerido</fullName>
+    <active>true</active>
+    <description>El distribuidor es requerido si el canal de venta tiene seleccionada la opcion &quot;Distribuidor&quot;</description>
+    <errorConditionFormula>AND(
+  RecordType.DeveloperName = &quot;Principal_Motos&quot;,
+  ISPICKVAL(Canal_Contrata__c, &quot;Distribuidor Autorizado&quot;),
+  ISBLANK(Distribuidor__c)
+)</errorConditionFormula>
+    <errorMessage>El distribuidor es un campo requerido.</errorMessage>
+</ValidationRule>

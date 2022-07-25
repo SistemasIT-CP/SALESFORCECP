@@ -1,0 +1,35 @@
+<aura:component controller="CrearInformeDeNeg" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <!-- attributes -->
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="data" type="List"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name ="caseSimpleRecord" type="Object" />
+    <aura:attribute name ="recordLoadError" type="String" />
+
+    <force:recordData 
+        aura:id="recordLoader"
+        recordId="{! v.recordId }"
+        fields="Cantidad_de_Veh_culos__c" 
+        targetFields="{! v.caseSimpleRecord }"
+        targetError="{! v.recordLoadError }"
+        recordUpdated="{! c.actualizar }"
+    />
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+	<lightning:card iconName="action:add_relationship">
+        <aura:set attribute="title">
+            Crear informe de negociación
+        </aura:set> 
+    
+   <div style="height: 200px">
+        <lightning:datatable
+            columns="{! v.columns }"
+            data="{! v.data }"
+            keyField="id"
+            onrowaction="{! c.handleRowAction }"
+            hideCheckboxColumn="true"/>
+    </div>
+    </lightning:card>
+
+</aura:component>

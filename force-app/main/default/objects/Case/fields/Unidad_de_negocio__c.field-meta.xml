@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unidad_de_negocio__c</fullName>
+    <externalId>false</externalId>
+    <label>Unidad de negocio</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accesorios</fullName>
+                <default>false</default>
+                <label>Accesorios</label>
+            </value>
+            <value>
+                <fullName>Alpesa</fullName>
+                <default>false</default>
+                <label>Alpesa</label>
+            </value>
+            <value>
+                <fullName>Autos suzuki</fullName>
+                <default>false</default>
+                <label>Autos suzuki</label>
+            </value>
+            <value>
+                <fullName>Autos toyota</fullName>
+                <default>false</default>
+                <label>Autos toyota</label>
+            </value>
+            <value>
+                <fullName>Autos usados</fullName>
+                <default>false</default>
+                <label>Autos usados</label>
+            </value>
+            <value>
+                <fullName>Camiones hino</fullName>
+                <default>false</default>
+                <label>Camiones hino</label>
+            </value>
+            <value>
+                <fullName>Camiones jmc</fullName>
+                <default>false</default>
+                <label>Camiones jmc</label>
+            </value>
+            <value>
+                <fullName>Contact Center</fullName>
+                <default>false</default>
+                <label>Contact Center</label>
+            </value>
+            <value>
+                <fullName>Correduria de seguros</fullName>
+                <default>false</default>
+                <label>Correduria de seguros</label>
+            </value>
+            <value>
+                <fullName>Credicap</fullName>
+                <default>false</default>
+                <label>Credicap</label>
+            </value>
+            <value>
+                <fullName>Distribuidores autorizados</fullName>
+                <default>false</default>
+                <label>Distribuidores autorizados</label>
+            </value>
+            <value>
+                <fullName>Division de mercadeo y resp social</fullName>
+                <default>false</default>
+                <label>Division de mercadeo y resp social</label>
+            </value>
+            <value>
+                <fullName>Escuela de manejo</fullName>
+                <default>false</default>
+                <label>Escuela de manejo</label>
+            </value>
+            <value>
+                <fullName>Informatica</fullName>
+                <default>false</default>
+                <label>Informatica</label>
+            </value>
+            <value>
+                <fullName>Kipesa Autos</fullName>
+                <default>false</default>
+                <label>Kipesa Autos</label>
+            </value>
+            <value>
+                <fullName>Kipesa Motos</fullName>
+                <default>false</default>
+                <label>Kipesa Motos</label>
+            </value>
+            <value>
+                <fullName>Mantenimiento</fullName>
+                <default>false</default>
+                <label>Mantenimiento</label>
+            </value>
+            <value>
+                <fullName>Maquinaria y equipos</fullName>
+                <default>false</default>
+                <label>Maquinaria y equipos</label>
+            </value>
+            <value>
+                <fullName>Mercadeo y Atención al Cliente</fullName>
+                <default>false</default>
+                <label>Mercadeo y Atención al Cliente</label>
+            </value>
+            <value>
+                <fullName>Motolote</fullName>
+                <default>false</default>
+                <label>Motolote</label>
+            </value>
+            <value>
+                <fullName>Motos Velosa</fullName>
+                <default>false</default>
+                <label>Motos Velosa</label>
+            </value>
+            <value>
+                <fullName>Motos Yamaha</fullName>
+                <default>false</default>
+                <label>Motos Yamaha</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Proveedores</fullName>
+                <default>false</default>
+                <label>Proveedores</label>
+            </value>
+            <value>
+                <fullName>Recursos humanos</fullName>
+                <default>false</default>
+                <label>Recursos humanos</label>
+            </value>
+            <value>
+                <fullName>Rent a car</fullName>
+                <default>false</default>
+                <label>Rent a car</label>
+            </value>
+            <value>
+                <fullName>Repuestos e industrial</fullName>
+                <default>false</default>
+                <label>Repuestos e industrial</label>
+            </value>
+            <value>
+                <fullName>Responsabilidad Social</fullName>
+                <default>false</default>
+                <label>Responsabilidad Social</label>
+            </value>
+            <value>
+                <fullName>Sucursal Yamaha 3S</fullName>
+                <default>false</default>
+                <label>Sucursal Yamaha 3S</label>
+            </value>
+            <value>
+                <fullName>Taller camiones</fullName>
+                <default>false</default>
+                <label>Taller camiones</label>
+            </value>
+            <value>
+                <fullName>Taller chinandega</fullName>
+                <default>false</default>
+                <label>Taller chinandega</label>
+            </value>
+            <value>
+                <fullName>Taller cummins</fullName>
+                <default>false</default>
+                <label>Taller cummins</label>
+            </value>
+            <value>
+                <fullName>Taller de enderezado y pintura</fullName>
+                <default>false</default>
+                <label>Taller de enderezado y pintura</label>
+            </value>
+            <value>
+                <fullName>Taller de maquinaria y montacargas</fullName>
+                <default>false</default>
+                <label>Taller de maquinaria y montacargas</label>
+            </value>
+            <value>
+                <fullName>Taller de motos Kipesa</fullName>
+                <default>false</default>
+                <label>Taller de motos Kipesa</label>
+            </value>
+            <value>
+                <fullName>Taller de motos velosa</fullName>
+                <default>false</default>
+                <label>Taller de motos velosa</label>
+            </value>
+            <value>
+                <fullName>Taller esteli</fullName>
+                <default>false</default>
+                <label>Taller esteli</label>
+            </value>
+            <value>
+                <fullName>Talleres yamaha</fullName>
+                <default>false</default>
+                <label>Talleres yamaha</label>
+            </value>
+            <value>
+                <fullName>Taller express santo domingo</fullName>
+                <default>false</default>
+                <label>Taller express santo domingo</label>
+            </value>
+            <value>
+                <fullName>Taller express serrania</fullName>
+                <default>false</default>
+                <label>Taller express serrania</label>
+            </value>
+            <value>
+                <fullName>Taller matagalpa</fullName>
+                <default>false</default>
+                <label>Taller matagalpa</label>
+            </value>
+            <value>
+                <fullName>Taller mecanica autos</fullName>
+                <default>false</default>
+                <label>Taller mecanica autos</label>
+            </value>
+            <value>
+                <fullName>Taller Motoplaza Velosa</fullName>
+                <default>false</default>
+                <label>Taller Motoplaza Velosa</label>
+            </value>
+            <value>
+                <fullName>Taller motores marinos</fullName>
+                <default>false</default>
+                <label>Taller motores marinos</label>
+            </value>
+            <value>
+                <fullName>Taller Multicentro Las Americas</fullName>
+                <default>false</default>
+                <label>Taller Multicentro Las Américas</label>
+            </value>
+            <value>
+                <fullName>Telepagos</fullName>
+                <default>false</default>
+                <label>Telepagos</label>
+            </value>
+            <value>
+                <fullName>Valores agregados</fullName>
+                <default>false</default>
+                <label>Valores agregados</label>
+            </value>
+            <value>
+                <fullName>Taller express Genova</fullName>
+                <default>false</default>
+                <label>Taller express Genova</label>
+            </value>
+            <value>
+                <fullName>Kipesa</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Kipesa</label>
+            </value>
+            <value>
+                <fullName>Mercadeo  y Atención al Cliente</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mercadeo  y Atención al Cliente</label>
+            </value>
+            <value>
+                <fullName>Velosa</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Velosa</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

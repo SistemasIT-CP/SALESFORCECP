@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Informe_de_Negociaci_n</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Informe de Negociación</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/Infome_de_Negociacion?&amp;id={!Informe_de_Negociaci_n__c.InformeId__c}</url>
+</WebLink>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Cuando una opp caiga en Aprobación Autolote</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Avaluo pendiente de aporbacion</name>
+    <style>none</style>
+    <subject>Oportunidad en espera de aprobación</subject>
+    <textOnly>Notificación de informe de negociación
+
+Tu informe ha sido aprobado
+
+Hola {!User.FirstName} {!User.LastName},
+
+Te informamos que el informe de negociación {!Informe_de_Negociaci_n__c.Consecutivo_del_Informe__c} presente en la oportunidad {!Informe_de_Negociaci_n__c.Nombre_de_la_oportunidad__c}, fue aprobado.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

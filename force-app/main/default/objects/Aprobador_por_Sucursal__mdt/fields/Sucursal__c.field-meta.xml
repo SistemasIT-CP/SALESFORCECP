@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sucursal__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Sucursal</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Altamira</fullName>
+                <default>true</default>
+                <label>Altamira</label>
+            </value>
+            <value>
+                <fullName>Chinandega</fullName>
+                <default>false</default>
+                <label>Chinandega</label>
+            </value>
+            <value>
+                <fullName>Estelí</fullName>
+                <default>false</default>
+                <label>Estelí</label>
+            </value>
+            <value>
+                <fullName>Granada</fullName>
+                <default>false</default>
+                <label>Granada</label>
+            </value>
+            <value>
+                <fullName>Juigalpa</fullName>
+                <default>false</default>
+                <label>Juigalpa</label>
+            </value>
+            <value>
+                <fullName>Kia El Retiro</fullName>
+                <default>false</default>
+                <label>Kia El Retiro</label>
+            </value>
+            <value>
+                <fullName>León</fullName>
+                <default>false</default>
+                <label>León</label>
+            </value>
+            <value>
+                <fullName>Matagalpa</fullName>
+                <default>false</default>
+                <label>Matagalpa</label>
+            </value>
+            <value>
+                <fullName>Plaza España</fullName>
+                <default>false</default>
+                <label>Plaza España</label>
+            </value>
+            <value>
+                <fullName>Puerto Cabezas</fullName>
+                <default>false</default>
+                <label>Puerto Cabezas</label>
+            </value>
+            <value>
+                <fullName>Rivas</fullName>
+                <default>false</default>
+                <label>Rivas</label>
+            </value>
+            <value>
+                <fullName>Acahualinca</fullName>
+                <default>false</default>
+                <label>Acahualinca</label>
+            </value>
+            <value>
+                <fullName>Motoplaza GENESIS</fullName>
+                <default>false</default>
+                <label>Motoplaza GENESIS</label>
+            </value>
+            <value>
+                <fullName>Motoplaza Masaya</fullName>
+                <default>false</default>
+                <label>Motoplaza Masaya</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compacto_Informe_de_Negicaci_n</fullName>
+    <fields>Consecutivo_del_Informe__c</fields>
+    <fields>Oportunidad__c</fields>
+    <fields>Cuenta__c</fields>
+    <fields>Chasis__c</fields>
+    <label>Compacto Informe de Negicación</label>
+</CompactLayout>

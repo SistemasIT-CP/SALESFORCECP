@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accesorio_solo_para_camiones</fullName>
+    <active>true</active>
+    <description>No debe poder elegirse accesorio si el vehiculo no es un camion</description>
+    <errorConditionFormula>AND(
+ NOT(ISBLANK(TEXT( Accesorio_Adicional__c ))),
+ NOT(ISPICKVAL(Producto_Referencia__r.Marca_P__c, &quot;JMC&quot;)),
+ NOT(ISPICKVAL(Producto_Referencia__r.Marca_P__c, &quot;Hino&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Accesorio_Adicional__c</errorDisplayField>
+    <errorMessage>No puede seleccionar accesorio en una cotización que no sea de un camión</errorMessage>
+</ValidationRule>

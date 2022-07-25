@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primer_nombre</fullName>
+    <active>true</active>
+    <description>El primer nombre debe ser obligatorio</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName = &apos;PersonAccount&apos;,
+ISBLANK( FirstName )
+)</errorConditionFormula>
+    <errorDisplayField>FirstName</errorDisplayField>
+    <errorMessage>El primer nombre es obligatorio</errorMessage>
+</ValidationRule>

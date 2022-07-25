@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Oportunidad duplicada aprobada</name>
+    <style>none</style>
+    <subject>Oportunidad aprobada</subject>
+    <textOnly>Notificación oportunidad duplicada
+
+Hola {!User.FirstName} {!User.LastName},
+
+Te informamos que la oportunidad {!Opportunity.Name} ha sido finalmente aprobada. Por lo tanto ya es posible continuar con el proceso normalmente.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

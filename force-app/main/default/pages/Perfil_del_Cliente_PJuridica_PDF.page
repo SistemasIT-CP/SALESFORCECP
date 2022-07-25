@@ -1,0 +1,414 @@
+<apex:page standardController="Account" extensions="PC_PJuridica_PDF_Controller" showHeader="false" renderAs="PDF" standardStylesheets="false">
+    <apex:stylesheet value="{!URLFOR($Resource.pdfStyles, 'pagStyle.css')}" />
+    <apex:form >
+
+        <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta name="author" content="" />
+            <meta name="description" content="Perfil del Cliente" />
+            <title>Perfil del Cliente Persona Natural</title>
+        </head>
+        <body>
+            <div>
+                <div align="center" style="font-family: Arial, Helvetica, sans-serif; font-size:16px; color: black; font-weight:bold; 
+                            background-color:white; padding-top: 2px; width: 100%; height:15px">
+                    PERFIL DEL CLIENTE
+                </div>
+                <div align="center" style="font-family: Arial, Helvetica, sans-serif; font-size:14px; color: black; font-weight:bold; 
+                            background-color:white; padding-top: 2px; width: 100%; height:15px">
+                    PERSONA JURÍDICA
+                </div>
+
+            </div>
+            <br/>
+            <div>
+                <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; 
+                                border-width:0px; border-color:gray; border-style: solid">
+                    <tr style="background-color:#e2f2fd; color:Black; font-weight:bold; font-size: 12px ">
+                        <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:1px; border-color:gray; 
+                                    border-style:solid; height:20px">
+                            A. DATOS GENERALES
+                        </td>
+                    </tr>
+                    <tr style="background-color:white; color:Black; font-weight:bold; font-size: 12px ">
+                        <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; 
+                                    border-style:solid; height:20px">
+                        </td>
+                    </tr>
+                    <tr style="background-color:white; color:Black; font-weight:bold; font-size: 12px ;width:100%; border-width:1px; 
+                                border-color:black; border-style: solid">
+                        <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; 
+                                    border-style:solid; height:20px">
+                            Nombre de la empresa o ente juridico:
+                        </td>
+                    </tr>
+                    <tr style="background-color:#FFFFCC; color:Black; font-weight:bold; font-size: 12px ;width:100%; border-width:1px; 
+                            border-color:black; border-style: solid">
+                        <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; 
+                                    border-style:solid; height:20px">
+                            {!cuentaPJ.Name}
+                        </td>
+                    </tr>
+                    <tr style="background-color:white; color:Black; font-weight:bold; font-size: 12px ">
+                        <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; 
+                                border-style:solid; height:20px">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; 
+                                border-color:gray; border-style: solid">
+                    <tr style="background-color:white; color:black; font-weight:bold; font-size: 12px ">
+                        <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                    height:20px;width:25%">
+                            No. RUC
+                        </td>
+                        <td style="padding-left:5px;text-align:left;background-color:#FFFFCC; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                    border-color:gray; border-style:solid; height:20px;width:50%">{!cuentaPJ.Cedula__c}
+                        </td>
+                        <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-left-width:0px; border-color:gray;
+                                    border-style:solid; height:20px;width:25%"></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; 
+                                border-color:gray; border-style: solid">
+                    <tr style="background-color:white; color:Black; font-size: 12px ">
+                        <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                    height:20px; width:25%;font-weight:bold">
+                            Correo Electrónico
+                        </td>
+                        <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                    border-color:gray; border-style:solid; height:20px; width:25%">
+                            {!cuentaPJ.Email__c}
+                        </td>
+                        <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; border-color:gray; 
+                                    border-style:solid; height:20px;font-weight:bold; width:25%">
+                            Número de teléfono
+                        </td>
+                        <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                    border-color:gray; border-style:solid; height:20px; width:25%">
+                            {!cuentaPJ.Phone}
+                        </td>
+                    </tr>
+                </table>
+
+                <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; 
+                                border-color:black; border-style: solid">
+                    <tr style="background-color:white; color:Black;font-size: 12px;">
+                        <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                    height:20px;font-weight:bold;width:25%">
+                            Dirección
+                        </td>
+                        <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                    border-color:gray; border-style:solid; height:20px;width:75%">
+                            {!cuentaPJ.Direccion__c}
+                        </td>
+                    </tr>
+                </table>
+
+                <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:black; 
+                                    border-style: solid">
+                    <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:gray; 
+                                        border-style: solid">
+                        <tr style="background-color:white; color:Black; font-size: 12px ">
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:20px;
+                                        font-weight:bold; width:25%">
+                                Departamento
+                            </td>
+                            <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                        border-color:gray; border-style:solid; height:20px; width:25%">
+                                {!cuentaPJ.Departamento__r.Name}
+                            </td>
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; border-color:gray; 
+                                        border-style:solid; height:20px;font-weight:bold; width:25%">
+                                Municipio
+                            </td>
+                            <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                        border-color:gray; border-style:solid; height:20px; width:25%">
+                                {!cuentaPJ.Municipio__r.Name}
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:gray; 
+                                        border-style: solid">
+                        <tr style="background-color:white; color:Black; font-size: 12px ">
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:20px; 
+                                            font-weight:bold;width:25%">
+                                Actividad económica
+                            </td>
+                            <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                            border-color:gray; border-style:solid; height:20px; width:75%">
+                                {!IF(cuentaPJ.Actividad_economica_UDC__C != null, cuentaPJ.Actividad_economica_UDC__r.Name, "-- --")}
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:gray; 
+                                        border-style: solid">
+                        <tr style="background-color:white; color:Black; font-weight:bold; font-size: 12px ">
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:20px">
+                            </td>
+                        </tr>
+                        <tr style="background-color:white; color:Black; font-weight:bold; font-size: 12px ">
+                            <td style="padding-left:5px;background-color:#e2f2fd; text-align:left; border-width:1px;border-top-width:0px; border-color:gray; 
+                                            border-style:solid; height:20px">
+                                B. Datos del representante legal
+                            </td>
+                        </tr>
+                        <tr style="background-color:white; color:Black; font-weight:bold; font-size: 12px ">
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:20px">
+                            </td>
+                        </tr>
+                    </table>
+                    <apex:outputPanel id="representanteLegal" rendered="{!cuentaPJ.Representante_Legal__c != null}">
+                        <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:black; 
+                                            border-style: solid">
+                            <tr style="background-color:white; color:Black;font-size: 12px;">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:20px;
+                                                font-weight:bold;width:25%">
+                                    Nombre completo:
+                                </td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px;width:75%">
+                                    {!cuentaPJ.Representante_Legal__r.Name}
+                                </td>
+                            </tr>
+                            <tr style="background-color:white; color:Black;font-size: 12px;">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                                height:20px;font-weight:bold;width:25%">
+                                    Identificación:
+                                </td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px;width:75%">
+                                    {!cuentaPJ.Representante_Legal__r.Numero_de_documento__c}
+                                </td>
+                            </tr>
+                            <tr style="background-color:white; color:Black;font-size: 12px;">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                                height:20px;font-weight:bold;width:25%">
+                                    Número de teléfono:
+                                </td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px;width:75%">
+                                    {!cuentaPJ.Representante_Legal__r.Phone}
+                                </td>
+                            </tr>
+                        </table>
+                        <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:black; 
+                                            border-style: solid">
+                            <tr style="background-color:white; color:Black; font-size: 12px ">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                                height:20px;font-weight:bold; width:25%">¿Es un cliente PEP?</td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px; width:25%">{! IF(representanteLegal.PEP__c, "Sí" , "No") }</td>
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; border-color:gray; 
+                                                border-style:solid; height:20px;font-weight:bold; width:25%">Cargo PEP:</td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px; width:25%">{! IF(representanteLegal.Cargo_PEP__c != null, representanteLegal.Cargo_PEP__c , "-- --")
+                                    }</td>
+                            </tr>
+                            <tr style="background-color:white; color:Black; font-size: 12px ">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                                height:20px;font-weight:bold; width:25%">¿Algún familiar es PEP?</td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px; width:25%">{! IF(representanteLegal.Algun_familiar_es_PEP__c, "Sí" , "No") }</td>
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; border-color:gray; 
+                                                border-style:solid; height:20px;font-weight:bold; width:25%">Cargo PEP del familiar:</td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px; width:25%">{! IF(representanteLegal.Cargo_PEP_del_familiar__c != null, representanteLegal.Cargo_PEP_del_familiar__c
+                                    , "-- --") }</td>
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                    <apex:outputPanel id="noRepresentanteLegal" rendered="{!cuentaPJ.Representante_Legal__c == null}">
+                        <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:black; 
+                                            border-style: solid">
+                            <tr style="background-color:white; color:Black;font-size: 12px;">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:20px;
+                                                font-weight:bold;width:25%">
+                                    Nombre completo:
+                                </td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px;width:75%">
+                                    -- --
+                                </td>
+                            </tr>
+                            <tr style="background-color:white; color:Black;font-size: 12px;">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                                height:20px;font-weight:bold;width:25%">
+                                    Identificación:
+                                </td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px;width:75%">
+                                    -- --
+                                </td>
+                            </tr>
+                            <tr style="background-color:white; color:Black;font-size: 12px;">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                                height:20px;font-weight:bold;width:25%">
+                                    Número de teléfono:
+                                </td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px;width:75%">
+                                    -- --
+                                </td>
+                            </tr>
+                        </table>
+                        <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:black; 
+                                        border-style: solid">
+                            <tr style="background-color:white; color:Black; font-size: 12px ">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                                height:20px;font-weight:bold; width:25%">¿Es un cliente PEP?</td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px; width:25%">-- --</td>
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; border-color:gray; 
+                                                border-style:solid; height:20px;font-weight:bold; width:25%">Cargo PEP:</td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px; width:25%">-- --</td>
+                            </tr>
+                            <tr style="background-color:white; color:Black; font-size: 12px ">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                                height:20px;font-weight:bold; width:25%">¿Algún familiar es PEP?</td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px; width:25%">-- --</td>
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; border-color:gray; 
+                                                border-style:solid; height:20px;font-weight:bold; width:25%">Cargo PEP del familiar:</td>
+                                <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                                border-color:gray; border-style:solid; height:20px; width:25%">-- --</td>
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                    <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:gray; 
+                                        border-style: solid">
+                        <tr style="background-color:white; color:Black; font-weight:bold; font-size: 12px ">
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:20px">
+                            </td>
+                        </tr>
+                        <tr style="background-color:white; color:Black; font-weight:bold; font-size: 12px ">
+                            <td style="padding-left:5px;background-color:#e2f2fd; text-align:left; border-width:1px;border-top-width:0px; border-color:gray; 
+                                            border-style:solid; height:20px">
+                                C. Datos del comprador
+                            </td>
+                        </tr>
+                        <tr style="background-color:white; color:Black; font-weight:bold; font-size: 12px ">
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:20px">
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:black; 
+                                    border-style: solid">
+                        <tr style="background-color:white; color:Black;font-size: 12px;">
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:20px;
+                                            font-weight:bold;width:25%">
+                                Nombre completo:
+                            </td>
+                            <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                            border-color:gray; border-style:solid; height:20px;width:75%">
+                                {!IF(opp.Comprador__c != null, opp.Comprador__r.Name, "-- --")}
+                            </td>
+                        </tr>
+                        <tr style="background-color:white; color:Black;font-size: 12px;">
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                            height:20px;font-weight:bold;width:25%">
+                                Identificación:
+                            </td>
+                            <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                            border-color:gray; border-style:solid; height:20px;width:75%">
+                                {!IF(opp.Comprador__c != null, opp.Comprador__r.Numero_de_documento__c, "-- --")}
+                            </td>
+                        </tr>
+                        <tr style="background-color:white; color:Black;font-size: 12px;">
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                            height:20px;font-weight:bold;width:25%">
+                                Origen de los fondos:
+                            </td>
+                            <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                 			border-color:gray; border-style:solid; height:20px;width:75%">
+                                {!IF(opp.Origen_de_los_fondos__c != null, opp.Origen_de_los_fondos__c, "-- --")}
+                            </td>
+                        </tr>
+                        <tr style="background-color:white; color:Black;font-size: 12px;">
+                            <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; 
+                                            height:20px;font-weight:bold;width:25%">
+                                Procedencia de los fondos:
+                            </td>
+                            <td style="padding-left:5px;background-color:#FFFFCC;text-align:left; border-width:1px;border-top-width:0px;border-left-width:0px; 
+                                 			border-color:gray; border-style:solid; height:20px;width:75%">
+                                {!IF(opp.Procedencia_de_los_fondos__c != null, opp.Procedencia_de_los_fondos__c, "-- --")}
+
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; 
+                                            border-color:gray; border-style: solid">
+                            <tr style="background-color:white; color:Black; font-weight:bold; font-size: 12px ">
+                                <td style="padding-left:5px;text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:40px">
+                                    <b>Nota:</b> {!IF(opp != null, opp.Comentario_del_PIC__c, "-- --")}
+                                </td>
+                            </tr>
+                            <tr style="background-color:white;color:Black; font-weight:bold; font-size: 12px ">
+                                <td style="text-align:left; border-width:1px;border-top-width:0px; border-color:gray; border-style:solid; height:40px;padding-left:5px">
+                                    <p>En cumplimiento con la Normativa UAF-N-020-2019, Artículo 18.</p>
+                                    <p>Declaro que la información que he proporcionado a: {!IF(opp != null, opp.Compa_a__r.Name,
+                                        "-- --")}, la he hecho de manera voluntaria y la misma es correcta y verdadera.
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </table>
+                </table>
+            </div>
+            <br/>
+            <div style="width:100%;margin-top:60px; margin-botton:80px;background-color: white;">
+                <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:gray; 
+                            border-style: solid">
+                    <tr style="background-color:white; color:Black; font-size: 12px ">
+                        <td style="text-align:center; border-width:0px;border-top-width:0px; border-color:gray; border-style:solid; height:20px;font-weight:bold; 
+                                        width:33.3%">
+                            _________________________
+                        </td>
+                        <td style="text-align:center; border-width:0px;border-top-width:0px;border-left-width:0px; border-color:gray; border-style:solid; height:20px; 
+                                        width:33.3%">
+                            _________________________
+                        </td>
+                        <td style="text-align:center; border-width:0px;border-top-width:0px;border-left-width:0px; border-color:gray; border-style:solid; height:20px;
+                                        font-weight:bold;width:33.3%">
+                            _________________________
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="width:100%;margin-top:0px;background-color: white;">
+                <table style="border-spacing:0px; font-family: Arial, Helvetica, sans-serif; font-size:11px; width:100%; border-width:0px; border-color:gray; border-style: solid">
+                    <tr style="background-color:white; color:Black; font-size: 12px ">
+                        <td style="text-align:center; border-width:0px;border-top-width:0px; border-color:gray; border-style:solid; height:20px;font-weight:bold; 
+                                        width:33.3%">
+                            Firma Cliente
+                        </td>
+                        <td style="text-align:center; border-width:0px;border-top-width:0px;border-left-width:0px; border-color:gray; border-style:solid;font-weight:bold; 
+                                        height:20px; width:33.3%">
+                            Vendedor
+                        </td>
+                        <td style="text-align:center; border-width:0px;border-top-width:0px;border-left-width:0px; border-color:gray; border-style:solid; height:20px;
+                                        font-weight:bold;width:33.3%">
+                            Gerente de Ventas
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </body>
+        <footer>
+            <p align="right">
+                <br/>
+                <a href="">Fecha: {!DAY(TODAY())}/{!MONTH(TODAY())}/{!YEAR(TODAY())} {!strFechaHoraMex} </a>
+            </p>
+        </footer>
+
+        </html>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proceso de leads para Anfitrión</fullName>
+    <description>Proceso para conversión de Leads de anfitrión</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Contacto exitoso</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Contacto intentado</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Convertido</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Esperando contacto</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Lead perdido</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

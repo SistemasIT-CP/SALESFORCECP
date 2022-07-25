@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precio_sin_accesorio</fullName>
+    <active>true</active>
+    <description>El precio de accesorio no puede ser distinto de null si no se selecciono un accesorio</description>
+    <errorConditionFormula>AND(
+ NOT(ISBLANK(Precio_del_accesorio_adicional__c )),
+ ISBLANK(TEXT( Accesorio_Adicional__c ))
+)</errorConditionFormula>
+    <errorDisplayField>Precio_del_accesorio_adicional__c</errorDisplayField>
+    <errorMessage>No puede setear un precio si no elige un accesorio adicional</errorMessage>
+</ValidationRule>

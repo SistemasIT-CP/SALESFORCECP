@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Digitos_del_telefono8</fullName>
+    <active>true</active>
+    <description>8 Dígitos del teléfono</description>
+    <errorConditionFormula>AND (
+NOT(ISBLANK(Phone)),
+LEN(Phone) &lt; 8
+)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>El número de teléfono debe te tener al menos 8 números</errorMessage>
+</ValidationRule>

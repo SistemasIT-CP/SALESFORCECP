@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Notifica qie se encontró un cliente potencial en la lista</description>
+        <name>Cliente_en_lista_cumplimineto_identificado</name>
+        <label>Cliente en lista cumplimineto identificado</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>Notificacionlista</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>mmcastillo@casapellas.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>notificaciones@casapellas.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Cliente en lista cumplimiento identificado</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <description>Ver si coincide esa cédula con algo de la lista</description>
+        <name>Coindice</name>
+        <label>Coindice</label>
+        <locationX>182</locationX>
+        <locationY>455</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Coincide_con_la_lista</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_ID_de_la_lista.Identificacion__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account.Cedula__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Cedula__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Cliente_en_lista_cumplimineto_identificado</targetReference>
+            </connector>
+            <label>Coincide con la lista</label>
+        </rules>
+    </decisions>
+    <description>Flow que se ejecuta para revisar si una oportunidad tiene un cliente que está en las listas de cumplimiento</description>
+    <interviewLabel>MAtch en la lista {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>MAtch en la lista</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_ID_de_la_lista</name>
+        <label>Get ID de la lista</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Coindice</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Identificacion__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account.Cedula__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Listas_para_cumplimiento__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_ID_de_la_lista</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>Notificacionlista</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Hola Melba&lt;/p&gt;&lt;p&gt;Se a creado una oportunidad al cliente &lt;b style=&quot;color: rgb(224, 4, 4);&quot;&gt;{!Get_ID_de_la_lista.Nombre_del_cliente__c}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Oportunidad:&lt;/span&gt;&lt;b style=&quot;color: rgb(224, 4, 4);&quot;&gt; {!$Record.Name}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Vendedor:&lt;/span&gt;&lt;b style=&quot;color: rgb(224, 4, 4);&quot;&gt; {!$Record.Owner.FirstName} &lt;/b&gt;&lt;b style=&quot;color: rgb(224, 4, 4); background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.Owner.LastName}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Este cliente está integrado en la lista {!Get_ID_de_la_lista.Tipo_de_lista__c}&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

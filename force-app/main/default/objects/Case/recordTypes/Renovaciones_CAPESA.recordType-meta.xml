@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renovaciones_CAPESA</fullName>
+    <active>true</active>
+    <businessProcess>Renovaciones</businessProcess>
+    <compactLayoutAssignment>Servicio</compactLayoutAssignment>
+    <description>Contiene el embudo de las renovaciones de seguros de capesa</description>
+    <label>Renovaciones CAPESA</label>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook Messenger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presencial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefono</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whatsapp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Alta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baja</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Cotizacion Compra de autos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cotizacion Compra motos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cotizacion compra de camiones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cotizacion compra de repuestos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cotización%2FCompra maquinaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicio de Alpesa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicio de Renta</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Pregunta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problema</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitud de función</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

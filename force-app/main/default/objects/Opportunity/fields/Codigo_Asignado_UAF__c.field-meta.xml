@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Codigo_Asignado_UAF__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Compa_a__r.Name =&apos;CASA PELLAS, S.A&apos;, &apos;UAF-ROS-C-XIII-161-2016&apos;,  IF(Compa_a__r.Name =&apos;KIPESA&apos;, &apos;UAF-ROS-C-XIII-259-2017&apos;,  IF(Compa_a__r.Name =&apos;V E L O S A&apos;, &apos;UAF-ROS-C-XIII-162-2016&apos;, &apos;&apos;) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Código Asignado UAF</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

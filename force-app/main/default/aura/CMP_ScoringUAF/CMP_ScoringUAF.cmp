@@ -1,0 +1,170 @@
+<aura:component controller="CMP_ControllerScoringUAF" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="calificacionesList" type="Object[]" description=""/>
+    <aura:attribute name="Total" type="decimal" description=""/>
+    <aura:attribute name="Poderacion" type="string" description=""/>
+    <aura:attribute name="calificacionesOPList" type="Object[]" description=""/>
+    <aura:attribute name="TotalOP" type="decimal" description=""/>
+    <aura:attribute name="PoderacionOP" type="string" description=""/>
+    <aura:attribute name="Nombrecliente" type="string" description=""/>
+    <aura:attribute name="Tipocliente" type="string" description=""/>
+    
+    
+ <article class="slds-card">
+ 
+  <div class="slds-card__header slds-grid">
+       
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+     
+     
+      <div class="slds-media__body">
+        <h2 class="slds-card__header-title">
+            <span><strong style="font-size:14px;">Calificación del Cliente</strong></span>
+        </h2>
+           <div class="slds-grid slds-gutters_direct slds-text-color_inverse slds-theme_default" style="padding:0.5rem;background:#234590">
+          <lightning:icon iconName="standard:opportunity_contact_role"/><div class="slds-col">
+            <span style="font-size:12px;"><strong>Cliente:</strong></span>
+          </div>
+          <div class="slds-col">
+              <span style="font-size:12px;"><strong>{!v.Nombrecliente}</strong></span>
+          </div>
+          <div class="slds-col">
+              <span style="font-size:12px;"><strong>Tipo Cliente:</strong></span>
+            </div>        
+          <div class="slds-col">
+        <span style="font-size:12px;"><strong>{!v.Tipocliente}</strong></span></div>
+       
+      </div>
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body">
+    <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout" role="grid">
+      <thead>
+        <tr class="slds-line-height_reset">
+           <th class="" scope="col">
+            <div></div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="TipoCliente">Criterio</div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Criterio">Descripción</div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Calificacion">Calificación</div>
+          </th>
+        
+        </tr>
+      </thead>
+      <tbody>
+       <aura:iteration items="{!v.calificacionesList}" var="calificacion">
+        <tr class="slds-hint-parent">
+          <td role="gridcell">
+              <span class="slds-row-number slds-text-body_small slds-text-color_weak">
+          </span>
+         </td>
+          <td role="gridcell">
+            <div class="slds-truncate" title="Tipocliente"><strong>{!calificacion.Criterio__c}</strong></div>
+          </td>
+          <td role="gridcell">
+            <div class="slds-truncate" title="Descripcion">{!calificacion.Descripci_n__c}</div>
+          </td>
+           <td role="gridcell">
+            <div class="slds-truncate" title="Calificacion">{!calificacion.Calificaci_n__c}</div>
+          </td>
+        </tr>
+       </aura:iteration>
+      </tbody>
+    </table>
+  </div>
+  <footer class="slds-card__footer">
+      <div class="slds-grid slds-gutters_direct slds-text-color_inverse slds-theme_default" style="padding:0.5rem;background:#234590">
+  <div class="slds-col">
+    <span style="font-size:12px;"><strong></strong></span>
+  </div>
+  <div class="slds-col">
+      <span></span>
+  </div>
+  <div class="slds-col">
+      <span style="font-size:12px;"><strong>Total</strong></span>
+    </div>        
+  <div class="slds-col">
+    <span style="font-size:13px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!v.Total}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!v.Poderacion}</strong></span>
+  </div>
+</div>
+
+  </footer>
+     <br/>
+   <span><strong style="font-size:14px;">Calificación de Oportunidad</strong></span>    
+  <!--Tabla de calificacion de oportunidades -->
+   <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+      <div class="slds-grid slds-gutters_direct slds-text-color_inverse slds-theme_default" style="padding:0.5rem;background:#234590">
+        <lightning:icon iconName="custom:custom11"/><h2 class="slds-card__header-title">
+         
+        </h2>
+      </div>
+   </div>
+    </header>
+  </div>
+  <div class="slds-card__body">
+    <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout" role="grid">
+      <thead>
+        <tr class="slds-line-height_reset">
+           <th class="" scope="col">
+            <div></div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="TipoCliente">Criterio</div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Criterio">Descripción</div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Calificacion">Calificación</div>
+          </th>
+        
+        </tr>
+      </thead>
+      <tbody>
+       <aura:iteration items="{!v.calificacionesOPList}" var="calificacionOP">
+        <tr class="slds-hint-parent">
+          <td role="gridcell">
+              <span class="slds-row-number slds-text-body_small slds-text-color_weak">
+          </span>
+         </td>
+          <td role="gridcell">
+            <div class="slds-truncate" title="Tipocliente"><strong>{!calificacionOP.Criterio__c}</strong></div>
+          </td>
+          <td role="gridcell">
+            <div class="slds-truncate" title="Descripcion">{!calificacionOP.Descripci_n__c}</div>
+          </td>
+           <td role="gridcell">
+            <div class="slds-truncate" title="Calificacion">{!calificacionOP.Calificaci_n__c}</div>
+          </td>
+        </tr>
+       </aura:iteration>
+      </tbody>
+    </table>
+  </div>
+  <footer class="slds-card__footer">
+      <div class="slds-grid slds-gutters_direct slds-text-color_inverse slds-theme_default" style="padding:0.5rem;background:#234590">
+  <div class="slds-col">
+    <span style="font-size:12px;"><strong></strong></span>
+  </div>
+  <div class="slds-col">
+      <span></span>
+  </div>
+  <div class="slds-col">
+      <span style="font-size:12px;"><strong>Total</strong></span>
+    </div>        
+  <div class="slds-col">
+    <span style="font-size:13px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!v.TotalOP}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!v.PoderacionOP}</strong></span>
+  </div>
+</div>
+
+  </footer>
+</article>
+</aura:component>

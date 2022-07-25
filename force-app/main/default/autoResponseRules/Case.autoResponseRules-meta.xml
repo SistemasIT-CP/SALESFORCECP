@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>NPS Cuando cierra</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Cerrado</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Atencion al cliente</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>eljarquin@casapellas.com</replyToEmail>
+            <senderEmail>notificaciones@casapellas.com</senderEmail>
+            <senderName>NPS Casa Pellas</senderName>
+            <template>unfiled$public/Encuesta_NPS</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

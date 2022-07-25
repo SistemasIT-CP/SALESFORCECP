@@ -1,0 +1,1 @@
+Estimado/a {!Case.SuppliedName}, muchas gracias por enviarnos su consulta online. Caso número {!Case.Number}: se ha creado "{!Case.Subject}". Un representante de atención al cliente de {!Organization.Name} le responderá a la mayor brevedad posible.     Gracias, el Equipo de atención al cliente de {!Organization.Name}

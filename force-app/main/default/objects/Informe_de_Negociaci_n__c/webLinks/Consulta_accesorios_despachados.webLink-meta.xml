@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consulta_accesorios_despachados</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Consultar estado de accesorios</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/ConsultaAccesoriosDespachados?id={!Informe_de_Negociaci_n__c.InformeId__c}</url>
+</WebLink>

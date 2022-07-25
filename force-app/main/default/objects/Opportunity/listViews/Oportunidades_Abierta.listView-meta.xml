@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oportunidades_Abierta</fullName>
+    <columns>Inactivo__c</columns>
+    <columns>SDR_Signal__c</columns>
+    <columns>Tiene_chasis_reservado__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>C_digo_de_Oportunidad_Numerico__c</columns>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Contacto Exitoso,Seleccionando Modelo,Negociacion,Formalizacion,Listo Para Facturar</value>
+    </filters>
+    <label>Oportunidades Abiertas</label>
+</ListView>

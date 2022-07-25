@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_de_ingreso__c</fullName>
+    <description>En este campo se ingresa el motivo por lo cuál el cliente esta ingresado a la Lista Negra.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Cuál es el motivo de ingreso a la Lista Negra?</inlineHelpText>
+    <label>Motivo de ingreso</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

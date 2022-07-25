@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cambio_de_Tipo_de_Direccion</fullName>
+    <active>true</active>
+    <description>Si se cambia el tipo de direccion el JD detecta una creacion y no modificacion</description>
+    <errorConditionFormula>ISCHANGED( Tipo_de_direcci_n__c )</errorConditionFormula>
+    <errorDisplayField>Tipo_de_direcci_n__c</errorDisplayField>
+    <errorMessage>No puede cambiarse el tipo de dirección</errorMessage>
+</ValidationRule>

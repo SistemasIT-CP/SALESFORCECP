@@ -1,0 +1,1 @@
+Estimado/a {!Contact.FirstName}, fue un placer platicar con usted hoy.  Creo que {!Organization.Name} tiene mucho para ofrecerle a {!Account.Name}. Espero que podamos vernos en nuestra próxima reunión.    Atentamente, {!User.FirstName}

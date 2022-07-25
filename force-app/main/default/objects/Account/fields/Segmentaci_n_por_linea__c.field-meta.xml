@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segmentaci_n_por_linea__c</fullName>
+    <description>Almacenara el campo padre para que se deriven los cmapos de segmentacion según tableau</description>
+    <externalId>false</externalId>
+    <label>Segmentación</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agroforestal</fullName>
+                <default>false</default>
+                <label>Agroforestal</label>
+            </value>
+            <value>
+                <fullName>Aseguradora</fullName>
+                <default>false</default>
+                <label>Aseguradora</label>
+            </value>
+            <value>
+                <fullName>Autolote</fullName>
+                <default>false</default>
+                <label>Autolote</label>
+            </value>
+            <value>
+                <fullName>Automotriz</fullName>
+                <default>false</default>
+                <label>Automotriz</label>
+            </value>
+            <value>
+                <fullName>Avicola</fullName>
+                <default>false</default>
+                <label>Avicola</label>
+            </value>
+            <value>
+                <fullName>Banco</fullName>
+                <default>false</default>
+                <label>Banco</label>
+            </value>
+            <value>
+                <fullName>Bebidas y Licores</fullName>
+                <default>false</default>
+                <label>Bebidas y Licores</label>
+            </value>
+            <value>
+                <fullName>Café</fullName>
+                <default>false</default>
+                <label>Café</label>
+            </value>
+            <value>
+                <fullName>Camaronera</fullName>
+                <default>false</default>
+                <label>Camaronera</label>
+            </value>
+            <value>
+                <fullName>Construcción</fullName>
+                <default>false</default>
+                <label>Construcción</label>
+            </value>
+            <value>
+                <fullName>Corredor de Seguros</fullName>
+                <default>false</default>
+                <label>Corredor de Seguros</label>
+            </value>
+            <value>
+                <fullName>DA</fullName>
+                <default>false</default>
+                <label>DA</label>
+            </value>
+            <value>
+                <fullName>Distribución de Consumo masivo</fullName>
+                <default>false</default>
+                <label>Distribución de Consumo masivo</label>
+            </value>
+            <value>
+                <fullName>Embutidos y carnes frias</fullName>
+                <default>false</default>
+                <label>Embutidos y carnes frias</label>
+            </value>
+            <value>
+                <fullName>Energía</fullName>
+                <default>false</default>
+                <label>Energía</label>
+            </value>
+            <value>
+                <fullName>Equipos electricos</fullName>
+                <default>false</default>
+                <label>Equipos electricos</label>
+            </value>
+            <value>
+                <fullName>Exploración Petrolera</fullName>
+                <default>false</default>
+                <label>Exploración Petrolera</label>
+            </value>
+            <value>
+                <fullName>Financiera</fullName>
+                <default>false</default>
+                <label>Financiera</label>
+            </value>
+            <value>
+                <fullName>Funeraria</fullName>
+                <default>false</default>
+                <label>Funeraria</label>
+            </value>
+            <value>
+                <fullName>Ganaderia</fullName>
+                <default>false</default>
+                <label>Ganaderia</label>
+            </value>
+            <value>
+                <fullName>Gobierno</fullName>
+                <default>false</default>
+                <label>Gobierno</label>
+            </value>
+            <value>
+                <fullName>Hidrocarburos y derivados</fullName>
+                <default>false</default>
+                <label>Hidrocarburos y derivados</label>
+            </value>
+            <value>
+                <fullName>Ingenios</fullName>
+                <default>false</default>
+                <label>Ingenios</label>
+            </value>
+            <value>
+                <fullName>Lacteos</fullName>
+                <default>false</default>
+                <label>Lacteos</label>
+            </value>
+            <value>
+                <fullName>LOGISTICA</fullName>
+                <default>false</default>
+                <label>LOGISTICA</label>
+            </value>
+            <value>
+                <fullName>Maquinaria industrial</fullName>
+                <default>false</default>
+                <label>Maquinaria industrial</label>
+            </value>
+            <value>
+                <fullName>Matadero</fullName>
+                <default>false</default>
+                <label>Matadero</label>
+            </value>
+            <value>
+                <fullName>Metalurgia</fullName>
+                <default>false</default>
+                <label>Metalurgia</label>
+            </value>
+            <value>
+                <fullName>Mineria</fullName>
+                <default>false</default>
+                <label>Mineria</label>
+            </value>
+            <value>
+                <fullName>Muebles y electrodomesticos</fullName>
+                <default>false</default>
+                <label>Muebles y electrodomesticos</label>
+            </value>
+            <value>
+                <fullName>Ocio y Entretenimiento</fullName>
+                <default>false</default>
+                <label>Ocio y Entretenimiento</label>
+            </value>
+            <value>
+                <fullName>ONG</fullName>
+                <default>false</default>
+                <label>ONG</label>
+            </value>
+            <value>
+                <fullName>Panadería</fullName>
+                <default>false</default>
+                <label>Panadería</label>
+            </value>
+            <value>
+                <fullName>Pesca</fullName>
+                <default>false</default>
+                <label>Pesca</label>
+            </value>
+            <value>
+                <fullName>Portuaria</fullName>
+                <default>false</default>
+                <label>Portuaria</label>
+            </value>
+            <value>
+                <fullName>Producción de Frutas Cítricas</fullName>
+                <default>false</default>
+                <label>Producción de Frutas Cítricas</label>
+            </value>
+            <value>
+                <fullName>Producción de Maní y derivados</fullName>
+                <default>false</default>
+                <label>Producción de Maní y derivados</label>
+            </value>
+            <value>
+                <fullName>Producción de Papa y derivados</fullName>
+                <default>false</default>
+                <label>Producción de Papa y derivados</label>
+            </value>
+            <value>
+                <fullName>Producción y derivados de Palma</fullName>
+                <default>false</default>
+                <label>Producción y derivados de Palma</label>
+            </value>
+            <value>
+                <fullName>Producción y Derivados de Trigo</fullName>
+                <default>false</default>
+                <label>Producción y Derivados de Trigo</label>
+            </value>
+            <value>
+                <fullName>Productos quimicos</fullName>
+                <default>false</default>
+                <label>Productos quimicos</label>
+            </value>
+            <value>
+                <fullName>Rent a Car</fullName>
+                <default>false</default>
+                <label>Rent a Car</label>
+            </value>
+            <value>
+                <fullName>Salud</fullName>
+                <default>false</default>
+                <label>Salud</label>
+            </value>
+            <value>
+                <fullName>Seguridad</fullName>
+                <default>false</default>
+                <label>Seguridad</label>
+            </value>
+            <value>
+                <fullName>SERVICIOS PROFESIONALES</fullName>
+                <default>false</default>
+                <label>SERVICIOS PROFESIONALES</label>
+            </value>
+            <value>
+                <fullName>Supermercados</fullName>
+                <default>false</default>
+                <label>Supermercados</label>
+            </value>
+            <value>
+                <fullName>Tabacalera</fullName>
+                <default>false</default>
+                <label>Tabacalera</label>
+            </value>
+            <value>
+                <fullName>Telecomunicaciones</fullName>
+                <default>false</default>
+                <label>Telecomunicaciones</label>
+            </value>
+            <value>
+                <fullName>Transporte</fullName>
+                <default>false</default>
+                <label>Transporte</label>
+            </value>
+            <value>
+                <fullName>Turismo y Hotelería</fullName>
+                <default>false</default>
+                <label>Turismo y Hotelería</label>
+            </value>
+            <value>
+                <fullName>Zona Franca</fullName>
+                <default>false</default>
+                <label>Zona Franca</label>
+            </value>
+            <value>
+                <fullName>Autolote2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Autolote2</label>
+            </value>
+            <value>
+                <fullName>Distribución de productos de consumo masivo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Distribución de Consumo masivo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

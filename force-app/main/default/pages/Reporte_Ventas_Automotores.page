@@ -1,0 +1,2240 @@
+<apex:page docType="html-5.0" controller="Ctrl_Reporte_Ventas_Automotores" renderAs="PDF" standardStylesheets="false">
+    <apex:stylesheet value="{!URLFOR($Resource.pdfStyles, 'pagStyle.css')}" />
+
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="" />
+        <meta name="description" content="Perfil del Cliente" />
+        <title>Reporte de Ventas Automotores</title>
+    </head>
+    <apex:form >
+
+        <body>
+            <apex:repeat value="{!reportesList}" var="v">
+                <br />
+
+                <table style="
+              border-spacing: 0px;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 11px;
+              width: 100%;
+              border-width: 0px;
+              border-color: gray;
+              border-style: solid;
+            ">
+                    <tr style="
+                background-color: #e2f2fd;
+                color: Black;
+                font-weight: bold;
+                font-size: 14px;
+              ">
+                        <td style="
+                  padding-left: 5px;
+                  text-align: center;
+                  border-width: 1px;
+                  border-top-width: 1px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                ">
+                            REPORTE DE VENTAS DE AUTOMOTORES NUEVOS Y USADOS
+                        </td>
+                    </tr>
+                    <tr style="
+                background-color: #e2f2fd;
+                color: Black;
+                font-weight: bold;
+                font-size: 14px;
+              ">
+                        <td style="
+                  padding-left: 5px;
+                  text-align: center;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                ">
+                            PARTE A: INFORMACIÓN DE REGISTRO DEL REPORTANTE
+                        </td>
+                    </tr>
+                </table>
+
+                <table style="
+              border-spacing: 0px;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 11px;
+              width: 100%;
+              border-width: 0px;
+              border-color: gray;
+              border-style: solid;
+            ">
+                    <tr style="background-color: white; color: Black; font-size: 10px">
+                        <td style="
+                  padding-left: 5px;
+                  text-align: left;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 34%;
+                  font-weight: bold;
+                ">
+                            1. Mes de Reporte:
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  background-color: #ffffcc;
+                  text-align: left;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 22%;
+                ">
+                            <apex:outputText value="{!CASE(MONTH(v.fechaContra),
+                      1, 'Enero',
+                      2, 'Febrero',
+                      3, 'Marzo', 
+                      4, 'Abril', 
+                      5, 'Mayo', 
+                      6, 'Junio',
+                      7, 'Julio',
+                      8, 'Agosto',
+                      9, 'Septiembre',
+                      10, 'Octubre',
+                      11, 'Noviembre',
+                      12, 'Diciembre',
+                      '-')}" />
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  text-align: left;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  font-weight: bold;
+                  width: 22%;
+                ">
+                            2.Código asignado en la UAF:
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  background-color: #ffffcc;
+                  text-align: left;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 22%;
+                ">
+                            {!v.codigoUAF}
+                        </td>
+                    </tr>
+                    <tr style="background-color: white; color: Black; font-size: 10px">
+                        <td style="
+                  padding-left: 5px;
+                  text-align: left;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 34%;
+                  font-weight: bold;
+                ">
+                            3. Nombre del Reportante (Persona Jurídica):
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  background-color: #ffffcc;
+                  text-align: left;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-right-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 22%;
+                ">
+                            {!v.nombreCompania}
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  text-align: left;
+                  background-color: #ffffcc;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-right-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  font-weight: bold;
+                  width: 22%;
+                ">
+                            &nbsp;
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  background-color: #ffffcc;
+                  text-align: left;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 22%;
+                ">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr style="background-color: white; color: Black; font-size: 10px">
+                        <td style="
+                  padding-left: 5px;
+                  text-align: left;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 34%;
+                  font-weight: bold;
+                ">
+                            4. Fecha del Reporte:
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  text-align: center;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  font-weight: bold;
+                  width: 22%;
+                ">
+                            Día (dd)
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  text-align: center;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  font-weight: bold;
+                  width: 22%;
+                ">
+                            Mes (mm)
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  text-align: center;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  font-weight: bold;
+                  width: 22%;
+                ">
+                            Año (aaaa)
+                        </td>
+                    </tr>
+                    <tr style="background-color: white; color: Black; font-size: 10px">
+                        <td style="
+                  padding-left: 5px;
+                  text-align: left;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 34%;
+                  font-weight: bold;
+                ">
+                            &nbsp;
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  background-color: #ffffcc;
+                  text-align: center;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 22%;
+                ">
+                            <apex:outputText value="{0,  date,   dd  }">
+                                <apex:param value="{!TODAY()}" />
+                            </apex:outputText>
+                        </td>
+
+                        <td style="
+                  padding-left: 5px;
+                  background-color: #ffffcc;
+                  text-align: center;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 22%;
+                ">
+                            <apex:outputText value="{0,  date,   MM  }">
+                                <apex:param value="{!TODAY()}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="
+                  padding-left: 5px;
+                  background-color: #ffffcc;
+                  text-align: center;
+                  border-width: 1px;
+                  border-top-width: 0px;
+                  border-left-width: 0px;
+                  border-color: gray;
+                  border-style: solid;
+                  height: 20px;
+                  width: 22%;
+                ">
+                            <apex:outputText value="{0,  date,   yyyy  }">
+                                <apex:param value="{!TODAY()}" />
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="Parte B">
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="
+                  background-color: #e2f2fd;
+                  color: Black;
+                  font-weight: bold;
+                  font-size: 14px;
+                ">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                  ">
+                                Parte B: DATOS DE IDENTIFICACIÓN DE PERSONA NATURAL COMPRADOR
+                                DE AUTOMOTOR
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                1.1 Primer Nombre
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                1.2 Segundo Nombre
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                1.3 Primer Apellido
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                1.4 Segundo Apellido
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: #ffffcc; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                  ">
+                                {!v.informeP.Cuenta__r.FirstName}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                  {!IF(v.informeP.Cuenta__r.MiddleName != null, v.informeP.Cuenta__r.MiddleName, "-- --")}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.primerApellido}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.segundoApellido}
+                            </td>
+                        </tr>
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                    font-weight: bold;
+                  ">
+                                2. Sexo:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.genero}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    background-color: #ffffcc;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                    font-weight: bold;
+                  ">
+                                3. Nacionalidad:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.informeP.Cuenta__r.Nacionalidad_UDC__r.Name}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    background-color: #ffffcc;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                    font-weight: bold;
+                  ">
+                                4. Tipo de Identificación:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                  ">
+                                {! IF(v.informeP.Cuenta__r.Tipo_de_Indentificaci_n__c ==
+                                'Cedula de Identidad', 'Cedula de Identidad X', 'Cedula de
+                                Identidad') }
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {! IF(v.informeP.Cuenta__r.Tipo_de_Indentificaci_n__c == 'Cedula de Residente', 'Cedula de Residente X', 'Cedula de Residente')
+                                }
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {! IF(v.informeP.Cuenta__r.Tipo_de_Indentificaci_n__c=='DUI',
+                                'Carné de Extranjería X', 'Carné de Extranjería') }
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!
+                                IF(v.informeP.Cuenta__r.Tipo_de_Indentificaci_n__c=='Pasaporte',
+                                'Pasaporte X', 'Pasaporte') }
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                  ">
+                                {!
+                                IF(v.informeP.Cuenta__r.Tipo_de_Indentificaci_n__c=='Otros',
+                                'Otros (especifique) X', 'Otros (especifique)') }
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                    font-weight: bold;
+                  ">
+                                5. No. de Documento de Identificación:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.informeP.Cuenta__r.Cedula__c}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                6. Profesión
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.informeP.Cuenta__r.Profesion_UDC__r.Name}
+                            </td>
+                        </tr>
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                    font-weight: bold;
+                  ">
+                                7. Ocupación:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.informeP.Cuenta__r.Ocupacion_UDC__r.Name}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    background-color: #ffffcc;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                8. Dirección Domiciliar:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 44%;
+                  ">
+                                <strong>Departamento:</strong>
+                                {!v.informeP.Cuenta__r.Departamento__r.Name}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                <strong>Municipio:</strong>
+                                {!v.informeP.Cuenta__r.Municipio__r.Name}
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                8.1. Descripción de la dirección:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">
+                                {!v.informeP.Cuenta__r.Direccion__c}
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                9. Actividad económica o Comercial que realiza:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">
+                                {!v.informeP.Cuenta__r.Actividad_economica_UDC__r.Name}
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                10. Número de Teléfono:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">
+                                {!v.informeP.Cuenta__r.Phone}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="parte C">
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="
+                  background-color: #e2f2fd;
+                  color: Black;
+                  font-weight: bold;
+                  font-size: 12px;
+                ">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                  ">
+                                Parte C: DATOS DE IDENTIFICACIÓN DE PERSONA JURÍDICA COMPRADOR
+                                AUTOMOVIL
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                1. Nombre de la Razón Social:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">
+                                {!v.informeJ.Nombre_del_cliente__c}
+                            </td>
+                        </tr>
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                2. Número de RUC:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">
+                                {!v.informeJ.Cuenta__r.Cedula__c}
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                3. Dirección Domiciliar:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 44%;
+                  ">
+                                <strong>Departamento:</strong>
+                                {!v.informeJ.Cuenta__r.Departamento__r.Name}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                <strong>Municipio:</strong>
+                                {!v.informeJ.Cuenta__r.Municipio__r.Name}
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                3.1. Descripción de la dirección:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">
+                                {!v.informeJ.Cuenta__r.Direccion__c}
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                4. Actividad económica o comercial que realiza:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">
+                                {!v.informeJ.Cuenta__r.Actividad_economica_UDC__r.Name}
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                5. Nombres y apellidos del comprador en nombre de la persona
+                                jurídica:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">
+                                {!v.comprador.Name}
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                6. Tipo de identificación:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {! IF(v.comprador.Tipo_de_Indentificaci_n__c == 'Cedula de
+                                Identidad', 'Cedula de Identidad X', 'Cedula de Identidad') }
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {! IF(v.comprador.Tipo_de_Indentificaci_n__c =='Cedula de
+                                Residente', 'Cedula de Residente X', 'Cedula de Residente')}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {! IF(v.comprador.Tipo_de_Indentificaci_n__c =='DUI', 'Carné de
+                                Extranjería X', 'Carné de Extranjería') }
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                  ">
+                                {! IF(v.comprador.Tipo_de_Indentificaci_n__c =='Pasaporte',
+                                'Pasaporte X', 'Pasaporte') }
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {! IF(v.comprador.Tipo_de_Indentificaci_n__c =='Otros', 'Otros
+                                (especifique) X', 'Otros (especifique)') }
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                    font-weight: bold;
+                  ">
+                                No. de Documento de Identificación:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.comprador.Cedula__c}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                7. Profesión
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.comprador.Profesion_UDC__r.Name}
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                8. Ocupación:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">
+                                {!v.comprador.Ocupacion_UDC__r.Name}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- Parte C -->
+
+                <div style="page-break-after: always" />
+
+                <div id="parte C">
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="
+                  background-color: #e2f2fd;
+                  color: Black;
+                  font-weight: bold;
+                  font-size: 14px;
+                ">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                  ">
+                                Parte D: INFORMACIÓN DE LA ACTIVIDAD DE VENTA EN EFECTIVO DE
+                                AUOMOTOR, CUYO MONTO DE VENTA ES UN DÍA O ACUMULADO EN UN MES,
+                                ES IGUAL O MAYOR A USD$5,000.00 O SU EQUIVALENTE EN MONEDA
+                                NACIONAL U OTRA MONEDA EXTRANJERA
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                1. Fecha de venta:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                Día (dd)
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                Mes (mm)
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                Año (aaaa)
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 34%;
+                  ">
+                                &nbsp;
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                <apex:outputText value="{0,  date,   dd  }">
+                                    <apex:param value="{!v.fechaContra}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                <apex:outputText value="{0,  date,   MM  }">
+                                    <apex:param value="{!v.fechaContra}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                <apex:outputText value="{0,  date,   yyyy  }">
+                                    <apex:param value="{!v.fechaContra }" />
+                                </apex:outputText>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                2. Lugar dónde se dió la transacción
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 44%;
+                  ">
+                                <strong>Departamento:</strong>
+                                {!v.deptoSucursal}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                <strong>Municipio:</strong>
+                                {!v.muniSucursal}
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                3. Tipo de automotor vendido:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">{!v.tipoVehiculo}</td>
+                        </tr>
+                    </table>
+
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                4. Número de factura emitida (automotor nuevo):
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 18%;
+                  ">
+                                {!v.factura}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 30%;
+                  ">
+                                5. Número de placa automotor usado:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 18%;
+                  ">
+                                -- --
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                6. Número de tarjeta de circulación:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 18%;
+                  ">
+                                -- --
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 30%;
+                  ">
+                                7. Número de la declaración de importación y año (si aplica):
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 18%;
+                  ">
+                                -- --
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                8. Nombres y apellidos o razón social del propietario en
+                                tarjeta de Circulación o Declaración de importación (si el
+                                vendedor es otra persona distinta del propietario persona
+                                natural o en nombre de la persona jurídica):
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 66%;
+                  ">
+                                -- --
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                9. Número de VIN:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 18%;
+                  ">
+                                {!v.chasis}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 30%;
+                  ">
+                                10. Número de Chasis (Si es dintitnto del VIN):
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 18%;
+                  ">
+                                {!v.chasis}
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 20%;
+                  ">
+                                11. Número de Motor:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 20%;
+                  ">
+                                {!v.motor}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 15%;
+                  ">
+                                12. Año del motor:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 10%;
+                  ">
+                                {!v.anio}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 20%;
+                  ">
+                                13. Marca del Motor:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 15%;
+                  ">
+                                {!v.marca}
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="
+                border-spacing: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                width: 100%;
+                border-width: 0px;
+                border-color: gray;
+                border-style: solid;
+              ">
+                        <tr style="background-color: white; color: Black; font-size: 10px">
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 34%;
+                  ">
+                                14. Monto de la venta:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.totalNegociado}
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    text-align: left;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 1px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    font-weight: bold;
+                    width: 22%;
+                  ">
+                                15. Tipo de moneda:
+                            </td>
+                            <td style="
+                    padding-left: 5px;
+                    background-color: #ffffcc;
+                    text-align: center;
+                    border-width: 1px;
+                    border-top-width: 0px;
+                    border-left-width: 0px;
+                    border-color: gray;
+                    border-style: solid;
+                    height: 20px;
+                    width: 22%;
+                  ">
+                                {!v.moneda}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <apex:outputPanel rendered="{! If(v.isBreak==true ,true,false) }">
+                    <div style="page-break-after: always" />
+                </apex:outputPanel>
+            </apex:repeat>
+        </body>
+    </apex:form>
+
+    </html>
+</apex:page>

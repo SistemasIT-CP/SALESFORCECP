@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Altamira</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Altamira</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Altamira</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Altamira</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Analista_de_Cr_dito</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Analista de Crédito</label>
+        <sharedTo>
+            <roleAndSubordinates>Jefe_de_Cr_dito</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Financiamiento Interno</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Auditor_a</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Auditoría</label>
+        <sharedTo>
+            <role>Auditor_a</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AutoLote_vea_oportunidades_autos_nuevos</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Para que el supervisor de compra pueda ver las oportunidades de autos nuevos</description>
+        <label>AutoLote vea oportunidades autos nuevos</label>
+        <sharedTo>
+            <group>Gerencia_compra_usado</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>StageName</field>
+            <operation>notEqual</operation>
+            <value>Listo Para Entrega,Facturado,Cerrada perdida</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Chinandega</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Chinandega</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Chinandega</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Chinandega</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Estel</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Estelí</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Estel</role>
+        </sharedTo>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Matagalpa,Chinandega,Estelí,Juigalpa,León,Puerto Cabezas</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gerente_KIA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Gerente KIA</label>
+        <sharedTo>
+            <role>Gerente_Kia</role>
+        </sharedTo>
+        <booleanFilter>(4 AND 1) OR (4 AND 2 ) OR (4 AND 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Valores Agregados</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Financiamiento Interno</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Financiamiento Bancario</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>KIA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gerente_KIA2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Le brinda lectura y escritura al gerente de marca KIA a los registros que contienen la palabra KIA en Name</description>
+        <label>Gerente KIA</label>
+        <sharedTo>
+            <role>Gerente_Kia</role>
+        </sharedTo>
+        <booleanFilter>(1 AND 2) OR (1 AND 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>KIA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>TOYOTA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gerente_Suzuki</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Gerente Suzuki</label>
+        <sharedTo>
+            <role>Gerente_Suzuki</role>
+        </sharedTo>
+        <booleanFilter>(4 AND 1) OR (4 AND 2) OR (4 AND 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Valores Agregados</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Financiamiento Bancario</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Financiamiento Interno</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>SUZUKI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gerente_TOYOTA2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Gerente TOYOTA</label>
+        <sharedTo>
+            <role>Gerente_Toyota</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>TOYOTA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gerente_Toyota</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Gerente Toyota</label>
+        <sharedTo>
+            <role>Gerente_Toyota</role>
+        </sharedTo>
+        <booleanFilter>(4 AND 1) OR (4 AND 2 ) OR (3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Financiamiento Interno</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Valores Agregados</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Financiamiento Bancario</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>TOYOTA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Granada</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Granada</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Granada</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Granada</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Jefe_de_ventas_Motores_Marinos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Jefe de motores marino pueda ver sus opps</description>
+        <label>Jefe de ventas Motores Marinos</label>
+        <sharedTo>
+            <role>Jefe_de_ventas_Motores_Marinos_Yamaha</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal Motos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>YAMAHA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>L_nea_de_negocio_texto__c</field>
+            <operation>equals</operation>
+            <value>Motores Marinos</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Juigalpa</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Juigalpa</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Juigalpa</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Juigalpa</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Kia_El_Retiro</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Kia El Retiro</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Kia_El_Retiro</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Kia El Retiro</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Matagalpa</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Matagalpa</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Matagalpa</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Matagalpa</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_AutoLote</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>ver las opps de autolote</description>
+        <label>Oportunidades AutoLote</label>
+        <sharedTo>
+            <role>Gerente_Autolote</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal Autolote</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Avalúo</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_Avaluo</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para que Supervsor compra y gerente vean los avaluos</description>
+        <label>Oportunidades Avaluo</label>
+        <sharedTo>
+            <group>Gerencia_Avaluo</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Avalúo</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_Genesis</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para que gerente Genesis pueda ver las opps de su equipo</description>
+        <label>Oportunidades Genesis</label>
+        <sharedTo>
+            <role>Gerente_Genesis</role>
+        </sharedTo>
+        <booleanFilter>(1 AND 2) OR (1 AND 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal Motos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>GENESIS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>HAOJUE</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_Genesis1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>PARA que jefe de marca pueda ver oportunidades GENESIS</description>
+        <label>Oportunidades Genesis1</label>
+        <sharedTo>
+            <role>Jefe_de_Ventas_Genesis</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal Motos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>GENESIS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_Gerente_KIA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Oportunidades Gerente KIA</label>
+        <sharedTo>
+            <role>Gerente_Kia</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>KIA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_Gerente_Suzuki</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Oportunidades Gerente Suzuki</label>
+        <sharedTo>
+            <role>Gerente_Suzuki</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>SUZUKI</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_Gerentes_Toyota</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Oportunidades Gerentes Toyota</label>
+        <sharedTo>
+            <role>Gerente_Toyota</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>TOYOTA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>L_nea_de_negocio_texto__c</field>
+            <operation>equals</operation>
+            <value>Autos Toyota</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_HERO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para que el jefe de ventas pueda ver las oportunidades de HERO</description>
+        <label>Oportunidades HERO</label>
+        <sharedTo>
+            <role>Jefe_de_Ventas_HERO</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal Motos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>HERO</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_Leon</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Oportunidades Leon</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Le_n</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>León</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_Yamaha</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>para que el jefe de ventas Yamaha vea las opps de su equipo</description>
+        <label>Oportunidades Yamaha</label>
+        <sharedTo>
+            <role>Jefe_de_Ventas_Yamaha</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal Motos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>YAMAHA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>L_nea_de_negocio_texto__c</field>
+            <operation>equals</operation>
+            <value>Yamaha</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_Yamaha1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Gerente Yamaha pueda ver las opps de su equipo</description>
+        <label>Oportunidades Yamaha1</label>
+        <sharedTo>
+            <role>Gerente_Yamaha</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal Motos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>YAMAHA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_de_Camiones</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Oportunidades de Camiones</label>
+        <sharedTo>
+            <role>Jefe_Camiones</role>
+        </sharedTo>
+        <booleanFilter>(1 AND 3) OR ( 2 AND 3 )</booleanFilter>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>HINO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>JMC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_de_Camiones_gerente</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Para que el gerente de camiones vea las opp de camiones</description>
+        <label>Oportunidades de Camiones  Gerente</label>
+        <sharedTo>
+            <role>Gerente_Camiones</role>
+        </sharedTo>
+        <booleanFilter>(1 AND 3) OR (2  AND 3)</booleanFilter>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>HINO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>JMC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_de_KIA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Visualizar oportunidades de KIA para el corrdinador de marca</description>
+        <label>Oportunidades de KIA</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Kia_El_Retiro</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>KIA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Oportunidades_de_TOYOTA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para que jefe de marca pueda ver las opps de toyota</description>
+        <label>Oportunidades de TOYOTA</label>
+        <sharedTo>
+            <role>Jefe_de_Venta_Toyota</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>TOYOTA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Plaza_Espa_a</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Plaza España</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Plaza_Espa_a</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Plaza España</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Puerto_Cabezas</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Puerto Cabezas</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Puerto_Cabezas</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Puerto Cabezas</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Rivas</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Rivas</label>
+        <sharedTo>
+            <role>Jefe_de_Sucursal_Rivas</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Rivas</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sucursal_Masaya</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para que ej jefe de Motoplaza pueda ver las opps de masaya</description>
+        <label>Sucursal Masaya</label>
+        <sharedTo>
+            <role>Jefe_de_sucursal_Motoplaza_Masaya</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Principal Motos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sucursal__c</field>
+            <operation>equals</operation>
+            <value>Motoplaza Masaya</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

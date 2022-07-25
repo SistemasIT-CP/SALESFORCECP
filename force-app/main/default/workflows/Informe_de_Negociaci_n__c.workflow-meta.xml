@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Informe_aprobado</fullName>
+        <description>Informe aprobado</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>notificaciones@casapellas.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Plantillas_Email/Informe_aprobado</template>
+    </alerts>
+    <alerts>
+        <fullName>Informe_aprobado_a_liberar</fullName>
+        <description>Informe aprobado a liberar</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Plantillas_Email/Informe_Aprobado_para_liberar</template>
+    </alerts>
+    <alerts>
+        <fullName>Informe_aprobado_a_liberar_Suzuki</fullName>
+        <description>Informe aprobado a liberar Suzuki</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Plantillas_Email/Informe_Aprobado_para_liberar</template>
+    </alerts>
+    <alerts>
+        <fullName>Informe_rechazado</fullName>
+        <description>Informe rechazado</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>notificaciones@casapellas.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Plantillas_Email/Informe_rechazado</template>
+    </alerts>
+    <alerts>
+        <fullName>Liberar_informe_Camiones</fullName>
+        <description>Liberar informe Camiones</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Plantillas_Email/Informe_Aprobado_para_liberar</template>
+    </alerts>
+    <alerts>
+        <fullName>Liberar_informe_KIA</fullName>
+        <description>Liberar informe KIA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Plantillas_Email/Informe_Aprobado_para_liberar</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Actualizar_bandera_a_aprobado</fullName>
+        <field>Texto_Bandera__c</field>
+        <formula>&quot;Precio Aprobacion&quot;</formula>
+        <name>Actualizar bandera a aprobado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_bandera_a_informe_aprobado</fullName>
+        <field>Texto_Bandera__c</field>
+        <formula>&quot;Informe aprobado&quot;</formula>
+        <name>Actualizar bandera a informe aprobado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_bandera_a_informe_rechazado</fullName>
+        <field>Texto_Bandera__c</field>
+        <formula>&quot;Informe rechazado&quot;</formula>
+        <name>Actualizar bandera a informe rechazado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_bandera_a_rechazado</fullName>
+        <field>Texto_Bandera__c</field>
+        <formula>&quot;Precio rechazado&quot;</formula>
+        <name>Actualizar bandera a rechazado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Aprobacion_rechazada</fullName>
+        <field>Estado_de_aprobaci_n__c</field>
+        <name>Aprobacion rechazada</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Aprobado</fullName>
+        <field>Aprobado__c</field>
+        <literalValue>1</literalValue>
+        <name>Aprobado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Estado_Aprobacion</fullName>
+        <description>Para que pase a aprobado y ative el process que va a a cambiar a solicitado el proceso</description>
+        <field>Estado_de_aprobaci_n__c</field>
+        <literalValue>Aprobado</literalValue>
+        <name>Estado Aprobación</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Estado_a_Aprobado</fullName>
+        <field>Estado__c</field>
+        <literalValue>Aprobado</literalValue>
+        <name>Estado a Aprobado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Estado_a_Rechazado</fullName>
+        <field>Estado__c</field>
+        <literalValue>Rechazado</literalValue>
+        <name>Estado a Rechazado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fecha_de_aprobaci_n</fullName>
+        <field>Fecha_de_aprobaci_n__c</field>
+        <formula>TODAY()</formula>
+        <name>Fecha de aprobación</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Horario_de_aprobacion</fullName>
+        <field>Horario_de_aprobacion__c</field>
+        <formula>NOW()</formula>
+        <name>Horario de aprobacion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Solicitar_accesorior</fullName>
+        <description>Solicitar accesoios pase a false</description>
+        <field>Solicitar_accesorios__c</field>
+        <literalValue>0</literalValue>
+        <name>Solicitar accesorior</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Solicitar_accesorios</fullName>
+        <field>Solicitar_accesorios__c</field>
+        <literalValue>1</literalValue>
+        <name>Solicitar accesorios</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

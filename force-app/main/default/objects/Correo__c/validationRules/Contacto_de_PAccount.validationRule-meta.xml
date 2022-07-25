@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contacto_de_PAccount</fullName>
+    <active>true</active>
+    <description>Si el cliente es personal el contacto debe seleccionarse.</description>
+    <errorConditionFormula>AND( Cliente__r.RecordType.DeveloperName = &apos;PersonAccount&apos;,
+ISBLANK(Contacto__c )
+)</errorConditionFormula>
+    <errorDisplayField>Contacto__c</errorDisplayField>
+    <errorMessage>Como la cuenta es personal debe seleccionar un contacto.</errorMessage>
+</ValidationRule>

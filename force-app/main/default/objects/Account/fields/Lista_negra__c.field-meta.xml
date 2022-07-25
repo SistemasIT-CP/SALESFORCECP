@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lista_negra__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Si el campo esta en true, luego la cuenta coincide con un valor de la lista negra.</description>
+    <externalId>false</externalId>
+    <label>Lista negra</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

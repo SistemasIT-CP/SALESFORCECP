@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campana_taller__c</fullName>
+    <description>Lista que almacena los tipos de campaña para recordatorio de mantenimiento del taller</description>
+    <externalId>false</externalId>
+    <label>Campaña</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1CK Y 2CK AUTOS</fullName>
+                <default>false</default>
+                <label>1CK Y 2CK AUTOS</label>
+            </value>
+            <value>
+                <fullName>1CK Y 2CK CAMIONES</fullName>
+                <default>false</default>
+                <label>1CK Y 2CK CAMIONES</label>
+            </value>
+            <value>
+                <fullName>SRM A/B</fullName>
+                <default>false</default>
+                <label>SRM A/B</label>
+            </value>
+            <value>
+                <fullName>SRM C</fullName>
+                <default>false</default>
+                <label>SRM C</label>
+            </value>
+            <value>
+                <fullName>SRM CAMIONES</fullName>
+                <default>false</default>
+                <label>SRM CAMIONES</label>
+            </value>
+            <value>
+                <fullName>SRM CORPORATIVO</fullName>
+                <default>false</default>
+                <label>SRM CORPORATIVO</label>
+            </value>
+            <value>
+                <fullName>VEH. SIN USO</fullName>
+                <default>false</default>
+                <label>VEH. SIN USO</label>
+            </value>
+            <value>
+                <fullName>Express Génova</fullName>
+                <default>false</default>
+                <label>Express Génova</label>
+            </value>
+            <value>
+                <fullName>Recuperación 2018</fullName>
+                <default>false</default>
+                <label>Recuperación 2018</label>
+            </value>
+            <value>
+                <fullName>Express Juigalpa</fullName>
+                <default>false</default>
+                <label>Express Juigalpa</label>
+            </value>
+            <value>
+                <fullName>Garantía HINO 300</fullName>
+                <default>false</default>
+                <label>Garantía HINO 300</label>
+            </value>
+            <value>
+                <fullName>Actualización de datos</fullName>
+                <default>false</default>
+                <label>Actualización de datos</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

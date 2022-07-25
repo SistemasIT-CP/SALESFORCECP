@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completar_numero_de_referencia</fullName>
+    <active>true</active>
+    <description>al cerrar el caso de ventas se debe completar el numero de referencia</description>
+    <errorConditionFormula>AND(
+				OR(
+								ISPICKVAL(Reason, &quot;Cotizacion Compra de autos&quot;),
+								ISPICKVAL(Reason, &quot;Cotizacion compra de repuestos&quot;),
+								ISPICKVAL(Reason, &quot;Servicio de Alpesa&quot;),
+								ISPICKVAL(Reason, &quot;Servicio de Renta&quot;),
+								ISPICKVAL(Reason, &quot;Cotizacion Compra motos&quot;)
+				),
+				ISPICKVAL(Motivo_de_cierre__c,&quot;Cliente compró&quot;),
+				ISBLANK(Numero_de_referencia__c)         
+)</errorConditionFormula>
+    <errorMessage>Debe completar el numero de referencia antes de cerrar un caso donde el cliente compro</errorMessage>
+</ValidationRule>

@@ -1,0 +1,1611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modelo__c</fullName>
+    <externalId>false</externalId>
+    <label>Modelo habilitado</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Marca_habilitada__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>21AC-A5</fullName>
+                <default>false</default>
+                <label>21AC-A5</label>
+            </value>
+            <value>
+                <fullName>22BKT-BL</fullName>
+                <default>false</default>
+                <label>22BKT-BL</label>
+            </value>
+            <value>
+                <fullName>4RUNNER4x4-LTD</fullName>
+                <default>false</default>
+                <label>4RUNNER4x4-LTD</label>
+            </value>
+            <value>
+                <fullName>4RUNNER4x4-SR5</fullName>
+                <default>false</default>
+                <label>4RUNNER4x4-SR5</label>
+            </value>
+            <value>
+                <fullName>AG200F</fullName>
+                <default>false</default>
+                <label>AG200F</label>
+            </value>
+            <value>
+                <fullName>AGYA A4</fullName>
+                <default>false</default>
+                <label>AGYA A4</label>
+            </value>
+            <value>
+                <fullName>AGYA AUT</fullName>
+                <default>false</default>
+                <label>AGYA AUT</label>
+            </value>
+            <value>
+                <fullName>AGYA C5</fullName>
+                <default>false</default>
+                <label>AGYA C5</label>
+            </value>
+            <value>
+                <fullName>AGYA MEC</fullName>
+                <default>false</default>
+                <label>AGYA MEC</label>
+            </value>
+            <value>
+                <fullName>ALTO DLX 800</fullName>
+                <default>false</default>
+                <label>ALTO DLX 800</label>
+            </value>
+            <value>
+                <fullName>APV BUS GL</fullName>
+                <default>false</default>
+                <label>APV BUS GL</label>
+            </value>
+            <value>
+                <fullName>BALENO GL</fullName>
+                <default>false</default>
+                <label>BALENO GL</label>
+            </value>
+            <value>
+                <fullName>BALENO GL AUT</fullName>
+                <default>false</default>
+                <label>BALENO GL AUT</label>
+            </value>
+            <value>
+                <fullName>BASE-CVT</fullName>
+                <default>false</default>
+                <label>BASE-CVT</label>
+            </value>
+            <value>
+                <fullName>BASE-MT</fullName>
+                <default>false</default>
+                <label>BASE-MT</label>
+            </value>
+            <value>
+                <fullName>BU150-DECK</fullName>
+                <default>false</default>
+                <label>BU150-DECK</label>
+            </value>
+            <value>
+                <fullName>CAMRY-25AUT</fullName>
+                <default>false</default>
+                <label>CAMRY-25AUT</label>
+            </value>
+            <value>
+                <fullName>CAMRY-35AUT</fullName>
+                <default>false</default>
+                <label>CAMRY-35AUT</label>
+            </value>
+            <value>
+                <fullName>CARNIVAL EX</fullName>
+                <default>false</default>
+                <label>CARNIVAL EX</label>
+            </value>
+            <value>
+                <fullName>CELERIO</fullName>
+                <default>false</default>
+                <label>CELERIO</label>
+            </value>
+            <value>
+                <fullName>CELERIO-DLX-AUT</fullName>
+                <default>false</default>
+                <label>CELERIO-DLX-AUT</label>
+            </value>
+            <value>
+                <fullName>COASTER</fullName>
+                <default>false</default>
+                <label>COASTER</label>
+            </value>
+            <value>
+                <fullName>COROLLA AUT</fullName>
+                <default>false</default>
+                <label>COROLLA AUT</label>
+            </value>
+            <value>
+                <fullName>COROLLA CROSS AD</fullName>
+                <default>false</default>
+                <label>COROLLA CROSS AD</label>
+            </value>
+            <value>
+                <fullName>COROLLA CROSS AE</fullName>
+                <default>false</default>
+                <label>COROLLA CROSS AE</label>
+            </value>
+            <value>
+                <fullName>COROLLA CROSS AUT BAS</fullName>
+                <default>false</default>
+                <label>COROLLA CROSS AUT BAS</label>
+            </value>
+            <value>
+                <fullName>COROLLA CROSS AUT FULL</fullName>
+                <default>false</default>
+                <label>COROLLA CROSS AUT FULL</label>
+            </value>
+            <value>
+                <fullName>COROLLA CROSS AUT INT</fullName>
+                <default>false</default>
+                <label>COROLLA CROSS AUT INT</label>
+            </value>
+            <value>
+                <fullName>COROLLA CROSS CA</fullName>
+                <default>false</default>
+                <label>COROLLA CROSS CA</label>
+            </value>
+            <value>
+                <fullName>DASH125</fullName>
+                <default>false</default>
+                <label>DASH125</label>
+            </value>
+            <value>
+                <fullName>DX-22ASE-D3</fullName>
+                <default>false</default>
+                <label>DX-22ASE-D3</label>
+            </value>
+            <value>
+                <fullName>DX-22ASE-KK</fullName>
+                <default>false</default>
+                <label>DX-22ASE-KK</label>
+            </value>
+            <value>
+                <fullName>DX-41MED-AM</fullName>
+                <default>false</default>
+                <label>DX-41MED-AM</label>
+            </value>
+            <value>
+                <fullName>DX-42AST-AY</fullName>
+                <default>false</default>
+                <label>DX-42AST-AY</label>
+            </value>
+            <value>
+                <fullName>DX-42AST-BB</fullName>
+                <default>false</default>
+                <label>DX-42AST-BB</label>
+            </value>
+            <value>
+                <fullName>DX-42AST-BM</fullName>
+                <default>false</default>
+                <label>DX-42AST-BM</label>
+            </value>
+            <value>
+                <fullName>DYNA</fullName>
+                <default>false</default>
+                <label>DYNA</label>
+            </value>
+            <value>
+                <fullName>DZIRE-DLX</fullName>
+                <default>false</default>
+                <label>DZIRE-DLX</label>
+            </value>
+            <value>
+                <fullName>DZIRE-DLXAT</fullName>
+                <default>false</default>
+                <label>DZIRE-DLXAT</label>
+            </value>
+            <value>
+                <fullName>ECO 150</fullName>
+                <default>false</default>
+                <label>ECO 150</label>
+            </value>
+            <value>
+                <fullName>ECO 150TR</fullName>
+                <default>false</default>
+                <label>ECO 150TR</label>
+            </value>
+            <value>
+                <fullName>FJA 300</fullName>
+                <default>false</default>
+                <label>FJA 300</label>
+            </value>
+            <value>
+                <fullName>FJ-CRUISER-MEC</fullName>
+                <default>false</default>
+                <label>FJ-CRUISER-MEC</label>
+            </value>
+            <value>
+                <fullName>FM8JR7A-SG2</fullName>
+                <default>false</default>
+                <label>FM8JR7A-SG2</label>
+            </value>
+            <value>
+                <fullName>FORT-EW</fullName>
+                <default>false</default>
+                <label>FORT-EW</label>
+            </value>
+            <value>
+                <fullName>FORT-K3</fullName>
+                <default>false</default>
+                <label>FORT-K3</label>
+            </value>
+            <value>
+                <fullName>FORT-K3-E5</fullName>
+                <default>false</default>
+                <label>FORT-K3-E5</label>
+            </value>
+            <value>
+                <fullName>FORT-KS</fullName>
+                <default>false</default>
+                <label>FORT-KS</label>
+            </value>
+            <value>
+                <fullName>FORT-KY</fullName>
+                <default>false</default>
+                <label>FORT-KY</label>
+            </value>
+            <value>
+                <fullName>FORT-KY-FH</fullName>
+                <default>false</default>
+                <label>FORT-KY-FH</label>
+            </value>
+            <value>
+                <fullName>FORTUNER AUT FULL</fullName>
+                <default>false</default>
+                <label>FORTUNER AUT FULL</label>
+            </value>
+            <value>
+                <fullName>FORTUNER AUTOMATICO FULL</fullName>
+                <default>false</default>
+                <label>FORTUNER AUTOMATICO FULL</label>
+            </value>
+            <value>
+                <fullName>FORTUNER AUTOMATICO INTERMEDIO</fullName>
+                <default>false</default>
+                <label>FORTUNER AUTOMATICO INTERMEDIO</label>
+            </value>
+            <value>
+                <fullName>FORTUNER MEC INT</fullName>
+                <default>false</default>
+                <label>FORTUNER MEC INT</label>
+            </value>
+            <value>
+                <fullName>FZN250</fullName>
+                <default>false</default>
+                <label>FZN250</label>
+            </value>
+            <value>
+                <fullName>GD150-SP1/AUT TXL</fullName>
+                <default>false</default>
+                <label>GD150-SP1/AUT TXL</label>
+            </value>
+            <value>
+                <fullName>GD150-SP1/AUT TXL LTD</fullName>
+                <default>false</default>
+                <label>GD150-SP1/AUT TXL LTD</label>
+            </value>
+            <value>
+                <fullName>GD150-SP1/AUT-VXL</fullName>
+                <default>false</default>
+                <label>GD150-SP1/AUT-VXL</label>
+            </value>
+            <value>
+                <fullName>GD150-SP1 AUT-VX</fullName>
+                <default>false</default>
+                <label>GD150-SP1 AUT-VX</label>
+            </value>
+            <value>
+                <fullName>GD150-SP1-TXL</fullName>
+                <default>false</default>
+                <label>GD150-SP1-TXL</label>
+            </value>
+            <value>
+                <fullName>GDH322-MED/AB</fullName>
+                <default>false</default>
+                <label>GDH322-MED/AB</label>
+            </value>
+            <value>
+                <fullName>HB70-2+2TA-CP</fullName>
+                <default>false</default>
+                <label>HB70-2+2TA-CP</label>
+            </value>
+            <value>
+                <fullName>HIACE MICROBUS</fullName>
+                <default>false</default>
+                <label>HIACE MICROBUS</label>
+            </value>
+            <value>
+                <fullName>HIACE PANEL</fullName>
+                <default>false</default>
+                <label>HIACE PANEL</label>
+            </value>
+            <value>
+                <fullName>HIACE PANEL A/C</fullName>
+                <default>false</default>
+                <label>HIACE PANEL A/C</label>
+            </value>
+            <value>
+                <fullName>HILUX 2.4 MEC CS BAS 4X2 BAJ</fullName>
+                <default>false</default>
+                <label>HILUX 2.4 MEC CS BAS 4X2 BAJ</label>
+            </value>
+            <value>
+                <fullName>HILUX 2.4 MEC CS BAS 4X4</fullName>
+                <default>false</default>
+                <label>HILUX 2.4 MEC CS BAS 4X4</label>
+            </value>
+            <value>
+                <fullName>HILUX 2.4 MEC DC BAS 4X2 BAJ</fullName>
+                <default>false</default>
+                <label>HILUX 2.4 MEC DC BAS 4X2 BAJ</label>
+            </value>
+            <value>
+                <fullName>HILUX 2.4 MEC DC BAS 4X4</fullName>
+                <default>false</default>
+                <label>HILUX 2.4 MEC DC BAS 4X4</label>
+            </value>
+            <value>
+                <fullName>HILUX 2.4 MEC EC INT 4X4</fullName>
+                <default>false</default>
+                <label>HILUX 2.4 MEC EC INT 4X4</label>
+            </value>
+            <value>
+                <fullName>HILUX 2.8 AUT DC FULL 4x4 CUE</fullName>
+                <default>false</default>
+                <label>HILUX 2.8 AUT DC FULL 4x4 CUE</label>
+            </value>
+            <value>
+                <fullName>HILUX 2.8 MEC DC FULL 4X4 CUE</fullName>
+                <default>false</default>
+                <label>HILUX 2.8 MEC DC FULL 4X4 CUE</label>
+            </value>
+            <value>
+                <fullName>HILUX 2.8 MEC DC FULL 4X4 TEL</fullName>
+                <default>false</default>
+                <label>HILUX 2.8 MEC DC FULL 4X4 TEL</label>
+            </value>
+            <value>
+                <fullName>HINO 12</fullName>
+                <default>false</default>
+                <label>HINO 12</label>
+            </value>
+            <value>
+                <fullName>HINO 12 TXL</fullName>
+                <default>false</default>
+                <label>HINO 12 TXL</label>
+            </value>
+            <value>
+                <fullName>HINO 3.5</fullName>
+                <default>false</default>
+                <label>HINO 3.5</label>
+            </value>
+            <value>
+                <fullName>HINO 4.5</fullName>
+                <default>false</default>
+                <label>HINO 4.5</label>
+            </value>
+            <value>
+                <fullName>HINO 5.5</fullName>
+                <default>false</default>
+                <label>HINO 5.5</label>
+            </value>
+            <value>
+                <fullName>HINO 7T</fullName>
+                <default>false</default>
+                <label>HINO 7T</label>
+            </value>
+            <value>
+                <fullName>HINO 8TR</fullName>
+                <default>false</default>
+                <label>HINO 8TR</label>
+            </value>
+            <value>
+                <fullName>HINO 9.5</fullName>
+                <default>false</default>
+                <label>HINO 9.5</label>
+            </value>
+            <value>
+                <fullName>HIXCAB-CQ</fullName>
+                <default>false</default>
+                <label>HIXCAB-CQ</label>
+            </value>
+            <value>
+                <fullName>HJ110-2</fullName>
+                <default>false</default>
+                <label>HJ110-2</label>
+            </value>
+            <value>
+                <fullName>HUNK 150</fullName>
+                <default>false</default>
+                <label>HUNK 150</label>
+            </value>
+            <value>
+                <fullName>HUNK 160R</fullName>
+                <default>false</default>
+                <label>HUNK 160R</label>
+            </value>
+            <value>
+                <fullName>HUNK 190R</fullName>
+                <default>false</default>
+                <label>HUNK 190R</label>
+            </value>
+            <value>
+                <fullName>HZ79-DLX</fullName>
+                <default>false</default>
+                <label>HZ79-DLX</label>
+            </value>
+            <value>
+                <fullName>HZ79-DLX AA</fullName>
+                <default>false</default>
+                <label>HZ79-DLX AA</label>
+            </value>
+            <value>
+                <fullName>HZJ79-DLX D/CAB.</fullName>
+                <default>false</default>
+                <label>HZJ79-DLX D/CAB.</label>
+            </value>
+            <value>
+                <fullName>IGNITOR 125</fullName>
+                <default>false</default>
+                <label>IGNITOR 125</label>
+            </value>
+            <value>
+                <fullName>JIMNY GL</fullName>
+                <default>false</default>
+                <label>JIMNY GL</label>
+            </value>
+            <value>
+                <fullName>JIMNY GL AT</fullName>
+                <default>false</default>
+                <label>JIMNY GL AT</label>
+            </value>
+            <value>
+                <fullName>JX1043DSL2 DOBLE CABINA</fullName>
+                <default>false</default>
+                <label>JX1043DSL2 DOBLE CABINA</label>
+            </value>
+            <value>
+                <fullName>JX1064TG2</fullName>
+                <default>false</default>
+                <label>JX1064TG2</label>
+            </value>
+            <value>
+                <fullName>K2700 C/S 4X2</fullName>
+                <default>false</default>
+                <label>K2700 C/S 4X2</label>
+            </value>
+            <value>
+                <fullName>K2700 C/S 4X2 AC</fullName>
+                <default>false</default>
+                <label>K2700 C/S 4X2 AC</label>
+            </value>
+            <value>
+                <fullName>K2700 C/S 4X4</fullName>
+                <default>false</default>
+                <label>K2700 C/S 4X4</label>
+            </value>
+            <value>
+                <fullName>K2700 C/S 4X4 AC</fullName>
+                <default>false</default>
+                <label>K2700 C/S 4X4 AC</label>
+            </value>
+            <value>
+                <fullName>K2700 D/C 4X2</fullName>
+                <default>false</default>
+                <label>K2700 D/C 4X2</label>
+            </value>
+            <value>
+                <fullName>K2700 D/C 4X4</fullName>
+                <default>false</default>
+                <label>K2700 D/C 4X4</label>
+            </value>
+            <value>
+                <fullName>K3000 C/S 4X2</fullName>
+                <default>false</default>
+                <label>K3000 C/S 4X2</label>
+            </value>
+            <value>
+                <fullName>K3000 E/C 4X2 AC</fullName>
+                <default>false</default>
+                <label>K3000 E/C 4X2 AC</label>
+            </value>
+            <value>
+                <fullName>LAND CRUISER LC300 DIE</fullName>
+                <default>false</default>
+                <label>LAND CRUISER LC300 DIE</label>
+            </value>
+            <value>
+                <fullName>LAND CRUISER LC300 GAS</fullName>
+                <default>false</default>
+                <label>LAND CRUISER LC300 GAS</label>
+            </value>
+            <value>
+                <fullName>LC LMED</fullName>
+                <default>false</default>
+                <label>LC LMED</label>
+            </value>
+            <value>
+                <fullName>LC PICKUP CS BAS</fullName>
+                <default>false</default>
+                <label>LC PICKUP CS BAS</label>
+            </value>
+            <value>
+                <fullName>LC PICKUP CS INT</fullName>
+                <default>false</default>
+                <label>LC PICKUP CS INT</label>
+            </value>
+            <value>
+                <fullName>LC PICKUP DC</fullName>
+                <default>false</default>
+                <label>LC PICKUP DC</label>
+            </value>
+            <value>
+                <fullName>LEXUS 570</fullName>
+                <default>false</default>
+                <label>LEXUS 570</label>
+            </value>
+            <value>
+                <fullName>LEXUS-RX350</fullName>
+                <default>false</default>
+                <label>LEXUS-RX350</label>
+            </value>
+            <value>
+                <fullName>LGOMED</fullName>
+                <default>false</default>
+                <label>LGOMED</label>
+            </value>
+            <value>
+                <fullName>LH200-AC</fullName>
+                <default>false</default>
+                <label>LH200-AC</label>
+            </value>
+            <value>
+                <fullName>LH200-PAN</fullName>
+                <default>false</default>
+                <label>LH200-PAN</label>
+            </value>
+            <value>
+                <fullName>LJ150-TX-CP</fullName>
+                <default>false</default>
+                <label>LJ150-TX-CP</label>
+            </value>
+            <value>
+                <fullName>PANEL C/A</fullName>
+                <default>false</default>
+                <label>PANEL C/A</label>
+            </value>
+            <value>
+                <fullName>PICANTO AUTOMATICO</fullName>
+                <default>false</default>
+                <label>PICANTO AUTOMATICO</label>
+            </value>
+            <value>
+                <fullName>PICANTO FULL MECANICO</fullName>
+                <default>false</default>
+                <label>PICANTO FULL MECANICO</label>
+            </value>
+            <value>
+                <fullName>PICANTO SENCILLO MECANICO</fullName>
+                <default>false</default>
+                <label>PICANTO SENCILLO MECANICO</label>
+            </value>
+            <value>
+                <fullName>PRADO 5L MEC</fullName>
+                <default>false</default>
+                <label>PRADO 5L MEC</label>
+            </value>
+            <value>
+                <fullName>PRADO BLACK EDITION</fullName>
+                <default>false</default>
+                <label>PRADO BLACK EDITION</label>
+            </value>
+            <value>
+                <fullName>PRADO TXL LTD</fullName>
+                <default>false</default>
+                <label>PRADO TXL LTD</label>
+            </value>
+            <value>
+                <fullName>PRADO TXL MEC</fullName>
+                <default>false</default>
+                <label>PRADO TXL MEC</label>
+            </value>
+            <value>
+                <fullName>PRADO VXL</fullName>
+                <default>false</default>
+                <label>PRADO VXL</label>
+            </value>
+            <value>
+                <fullName>RAIZE AUT FULL</fullName>
+                <default>false</default>
+                <label>RAIZE AUT FULL</label>
+            </value>
+            <value>
+                <fullName>RAIZE-LC</fullName>
+                <default>false</default>
+                <label>RAIZE-LC</label>
+            </value>
+            <value>
+                <fullName>RAIZE-LL</fullName>
+                <default>false</default>
+                <label>RAIZE-LL</label>
+            </value>
+            <value>
+                <fullName>RAIZE MEC FULL</fullName>
+                <default>false</default>
+                <label>RAIZE MEC FULL</label>
+            </value>
+            <value>
+                <fullName>RAIZE MEC INT</fullName>
+                <default>false</default>
+                <label>RAIZE MEC INT</label>
+            </value>
+            <value>
+                <fullName>RAIZE-MM</fullName>
+                <default>false</default>
+                <label>RAIZE-MM</label>
+            </value>
+            <value>
+                <fullName>RAV4</fullName>
+                <default>false</default>
+                <label>RAV4</label>
+            </value>
+            <value>
+                <fullName>RAV4AUT LE-4x2</fullName>
+                <default>false</default>
+                <label>RAV4AUT LE-4x2</label>
+            </value>
+            <value>
+                <fullName>RAV4 MT LE-4x2</fullName>
+                <default>false</default>
+                <label>RAV4 MT LE-4x2</label>
+            </value>
+            <value>
+                <fullName>RIO SEDAN AUTOMATICO</fullName>
+                <default>false</default>
+                <label>RIO SEDAN AUTOMATICO</label>
+            </value>
+            <value>
+                <fullName>RIO SEDAN FULL MECANICO</fullName>
+                <default>false</default>
+                <label>RIO SEDAN FULL MECANICO</label>
+            </value>
+            <value>
+                <fullName>RUSH AUT FULL</fullName>
+                <default>false</default>
+                <label>RUSH AUT FULL</label>
+            </value>
+            <value>
+                <fullName>RUSH AUT INT</fullName>
+                <default>false</default>
+                <label>RUSH AUT INT</label>
+            </value>
+            <value>
+                <fullName>RUSH HZ</fullName>
+                <default>false</default>
+                <label>RUSH HZ</label>
+            </value>
+            <value>
+                <fullName>RUSH JT</fullName>
+                <default>false</default>
+                <label>RUSH JT</label>
+            </value>
+            <value>
+                <fullName>RUSH KR</fullName>
+                <default>false</default>
+                <label>RUSH KR</label>
+            </value>
+            <value>
+                <fullName>RUSH MEC INT</fullName>
+                <default>false</default>
+                <label>RUSH MEC INT</label>
+            </value>
+            <value>
+                <fullName>SELTOS AUTOMATICO</fullName>
+                <default>false</default>
+                <label>SELTOS AUTOMATICO</label>
+            </value>
+            <value>
+                <fullName>SELTOS MECANICO</fullName>
+                <default>false</default>
+                <label>SELTOS MECANICO</label>
+            </value>
+            <value>
+                <fullName>SOLUTO AUTOMATICO</fullName>
+                <default>false</default>
+                <label>SOLUTO AUTOMATICO</label>
+            </value>
+            <value>
+                <fullName>SOLUTO MECANICO</fullName>
+                <default>false</default>
+                <label>SOLUTO MECANICO</label>
+            </value>
+            <value>
+                <fullName>SONET AUTOMATICO</fullName>
+                <default>false</default>
+                <label>SONET AUTOMATICO</label>
+            </value>
+            <value>
+                <fullName>SONET MECANICO</fullName>
+                <default>false</default>
+                <label>SONET MECANICO</label>
+            </value>
+            <value>
+                <fullName>SORENTO FULL AUT 4X4</fullName>
+                <default>false</default>
+                <label>SORENTO FULL AUT 4X4</label>
+            </value>
+            <value>
+                <fullName>SPLENDOR ISMART 110</fullName>
+                <default>false</default>
+                <label>SPLENDOR ISMART 110</label>
+            </value>
+            <value>
+                <fullName>SPORTAGE AUTOMATICO PE</fullName>
+                <default>false</default>
+                <label>SPORTAGE AUTOMATICO PE</label>
+            </value>
+            <value>
+                <fullName>SPORTAGE MECANICO PE</fullName>
+                <default>false</default>
+                <label>SPORTAGE MECANICO PE</label>
+            </value>
+            <value>
+                <fullName>SPRESSO MT GL</fullName>
+                <default>false</default>
+                <label>SPRESSO MT GL</label>
+            </value>
+            <value>
+                <fullName>SRV-42AUT-J5 CS</fullName>
+                <default>false</default>
+                <label>SRV-42AUT-J5 CS</label>
+            </value>
+            <value>
+                <fullName>SRV-42MEC-BW</fullName>
+                <default>false</default>
+                <label>SRV-42MEC-BW</label>
+            </value>
+            <value>
+                <fullName>SRV-42MEC-BX</fullName>
+                <default>false</default>
+                <label>SRV-42MEC-BX</label>
+            </value>
+            <value>
+                <fullName>TA-SPR-AUT</fullName>
+                <default>false</default>
+                <label>TA-SPR-AUT</label>
+            </value>
+            <value>
+                <fullName>TRUCK 2 TON CT</fullName>
+                <default>false</default>
+                <label>TRUCK 2 TON CT</label>
+            </value>
+            <value>
+                <fullName>TUN4x4-LTD</fullName>
+                <default>false</default>
+                <label>TUN4x4-LTD</label>
+            </value>
+            <value>
+                <fullName>URBAN CRUISER</fullName>
+                <default>false</default>
+                <label>URBAN CRUISER</label>
+            </value>
+            <value>
+                <fullName>VITARA-AT 4X2 GLX</fullName>
+                <default>false</default>
+                <label>VITARA-AT 4X2 GLX</label>
+            </value>
+            <value>
+                <fullName>VITARA M/T 4X2</fullName>
+                <default>false</default>
+                <label>VITARA M/T 4X2</label>
+            </value>
+            <value>
+                <fullName>WR450F</fullName>
+                <default>false</default>
+                <label>WR450F</label>
+            </value>
+            <value>
+                <fullName>XL7 GL AT</fullName>
+                <default>false</default>
+                <label>XL7 GL AT</label>
+            </value>
+            <value>
+                <fullName>XL7 GL MT</fullName>
+                <default>false</default>
+                <label>XL7 GL MT</label>
+            </value>
+            <value>
+                <fullName>XPULSE 200</fullName>
+                <default>false</default>
+                <label>XPULSE 200</label>
+            </value>
+            <value>
+                <fullName>XTZ150</fullName>
+                <default>false</default>
+                <label>XTZ150</label>
+            </value>
+            <value>
+                <fullName>YARIS AUT</fullName>
+                <default>false</default>
+                <label>YARIS AUT</label>
+            </value>
+            <value>
+                <fullName>YARIS LN</fullName>
+                <default>false</default>
+                <label>YARIS LN</label>
+            </value>
+            <value>
+                <fullName>YARIS MEC</fullName>
+                <default>false</default>
+                <label>YARIS MEC</label>
+            </value>
+            <value>
+                <fullName>YARIS MH</fullName>
+                <default>false</default>
+                <label>YARIS MH</label>
+            </value>
+            <value>
+                <fullName>YBR125ED</fullName>
+                <default>false</default>
+                <label>YBR125ED</label>
+            </value>
+            <value>
+                <fullName>YBR125G</fullName>
+                <default>false</default>
+                <label>YBR125G</label>
+            </value>
+            <value>
+                <fullName>YZ250F</fullName>
+                <default>false</default>
+                <label>YZ250F</label>
+            </value>
+            <value>
+                <fullName>FORTUNER AUT INT</fullName>
+                <default>false</default>
+                <label>FORTUNER AUT INT</label>
+            </value>
+            <value>
+                <fullName>HILUX 2.4 MEC DC INT 4X4</fullName>
+                <default>false</default>
+                <label>HILUX 2.4 MEC DC INT 4X4</label>
+            </value>
+            <value>
+                <fullName>HILUX 2.4 AUT DC INT 4X4</fullName>
+                <default>false</default>
+                <label>HILUX 2.4 AUT DC INT 4X4</label>
+            </value>
+            <value>
+                <fullName>ALTO 800 DLX S/A</fullName>
+                <default>false</default>
+                <label>ALTO 800 DLX S/A</label>
+            </value>
+            <value>
+                <fullName>CELERIO AMT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CELERIO AMT</label>
+            </value>
+            <value>
+                <fullName>GD150-SP1/AUT-TXL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>GD150-SP1/AUT-TXL</label>
+            </value>
+            <value>
+                <fullName>HZJ79-DLX D/CAB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>HZJ79-DLX D/CAB</label>
+            </value>
+            <value>
+                <fullName>LC PICKUP CS BAS AA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>LC PICKUP CS BAS AA</label>
+            </value>
+            <value>
+                <fullName>SRV-42MEC-JT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SRV-42MEC-JT</label>
+            </value>
+            <value>
+                <fullName>SRV-42MED-DY-JU (LIMITED)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SRV-42MED-DY-JU (LIMITED)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>21AC-A5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>22BKT-BL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>4RUNNER4x4-LTD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <valueName>4RUNNER4x4-SR5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>YAMAHA</controllingFieldValue>
+            <valueName>AG200F</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>AGYA A4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>AGYA C5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>ALTO DLX 800</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>APV BUS GL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>BALENO GL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>BALENO GL AUT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>BASE-CVT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>BASE-MT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>BU150-DECK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>CAMRY-25AUT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>CAMRY-35AUT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>CARNIVAL EX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>CELERIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>CELERIO-DLX-AUT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>COROLLA CROSS AD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>COROLLA CROSS AE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>COROLLA CROSS CA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>DX-22ASE-D3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>DX-22ASE-KK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>DX-41MED-AM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>DX-42AST-AY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>DX-42AST-BB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>DX-42AST-BM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>DZIRE-DLX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>DZIRE-DLXAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>FJA 300</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>FJ-CRUISER-MEC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>FORT-EW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>FORT-K3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>FORT-K3-E5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>FORT-KS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>FORT-KY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>FORT-KY-FH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>FORTUNER AUTOMATICO FULL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>FORTUNER AUTOMATICO INTERMEDIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>YAMAHA</controllingFieldValue>
+            <valueName>FZN250</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>GD150-SP1/AUT TXL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>GD150-SP1/AUT TXL LTD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>GD150-SP1/AUT-VXL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>GD150-SP1 AUT-VX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>GD150-SP1-TXL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>GDH322-MED/AB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HB70-2+2TA-CP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HILUX 2.4 MEC CS BAS 4X2 BAJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <valueName>HILUX 2.4 MEC DC BAS 4X4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HILUX 2.4 MEC EC INT 4X4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HILUX 2.8 AUT DC FULL 4x4 CUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HILUX 2.8 MEC DC FULL 4X4 CUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HILUX 2.8 MEC DC FULL 4X4 TEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>HINO</controllingFieldValue>
+            <valueName>HINO 12</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>HINO</controllingFieldValue>
+            <valueName>HINO 12 TXL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>HINO</controllingFieldValue>
+            <valueName>HINO 3.5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>HINO</controllingFieldValue>
+            <valueName>HINO 4.5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>HINO</controllingFieldValue>
+            <valueName>HINO 5.5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>HINO</controllingFieldValue>
+            <valueName>HINO 7T</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>HINO</controllingFieldValue>
+            <valueName>HINO 8TR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>HINO</controllingFieldValue>
+            <valueName>HINO 9.5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HIXCAB-CQ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>GENESIS</controllingFieldValue>
+            <valueName>HJ110-2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HZ79-DLX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HZ79-DLX AA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HZJ79-DLX D/CAB.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>JIMNY GL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>JIMNY GL AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>K2700 C/S 4X2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>K2700 C/S 4X2 AC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>K2700 C/S 4X4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>K2700 C/S 4X4 AC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>K2700 D/C 4X2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>K2700 D/C 4X4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>K3000 C/S 4X2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>K3000 E/C 4X2 AC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <valueName>LEXUS 570</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <valueName>LEXUS-RX350</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>LGOMED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>LH200-AC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>LH200-PAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>LJ150-TX-CP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>PANEL C/A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>PICANTO AUTOMATICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>PICANTO FULL MECANICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>PICANTO SENCILLO MECANICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>PRADO BLACK EDITION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>RAIZE-MM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>RAV4AUT LE-4x2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>RAV4 MT LE-4x2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>RIO SEDAN AUTOMATICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>RIO SEDAN FULL MECANICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>RUSH HZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>RUSH JT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>RUSH KR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SELTOS AUTOMATICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SELTOS MECANICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SOLUTO AUTOMATICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SOLUTO MECANICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SONET AUTOMATICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SONET MECANICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SORENTO FULL AUT 4X4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SPORTAGE AUTOMATICO PE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>KIA</controllingFieldValue>
+            <valueName>SPORTAGE MECANICO PE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>SPRESSO MT GL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>SRV-42AUT-J5 CS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>SRV-42MEC-BW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>SRV-42MEC-BX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <valueName>TA-SPR-AUT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>TUN4x4-LTD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <valueName>URBAN CRUISER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>VITARA-AT 4X2 GLX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>VITARA M/T 4X2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <valueName>WR450F</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>XL7 GL AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>XL7 GL MT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>YAMAHA</controllingFieldValue>
+            <valueName>XTZ150</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>YARIS LN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>YARIS MH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIMARCA</controllingFieldValue>
+            <valueName>YZ250F</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HERO</controllingFieldValue>
+            <valueName>DASH125</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HERO</controllingFieldValue>
+            <valueName>ECO 150</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HERO</controllingFieldValue>
+            <valueName>ECO 150TR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HERO</controllingFieldValue>
+            <valueName>HUNK 150</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HERO</controllingFieldValue>
+            <valueName>HUNK 160R</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HERO</controllingFieldValue>
+            <valueName>HUNK 190R</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HERO</controllingFieldValue>
+            <valueName>IGNITOR 125</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HERO</controllingFieldValue>
+            <valueName>SPLENDOR ISMART 110</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HERO</controllingFieldValue>
+            <valueName>XPULSE 200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HINO</controllingFieldValue>
+            <valueName>FM8JR7A-SG2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JMC</controllingFieldValue>
+            <valueName>JX1043DSL2 DOBLE CABINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JMC</controllingFieldValue>
+            <valueName>JX1064TG2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JMC</controllingFieldValue>
+            <valueName>TRUCK 2 TON CT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUZUKI</controllingFieldValue>
+            <valueName>ALTO 800 DLX S/A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>HILUX 2.4 MEC DC BAS 4X2 BAJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>RAIZE-LC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>RAIZE-LL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOYOTA</controllingFieldValue>
+            <valueName>YARIS MEC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>YAMAHA</controllingFieldValue>
+            <valueName>YBR125ED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>YAMAHA</controllingFieldValue>
+            <valueName>YBR125G</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

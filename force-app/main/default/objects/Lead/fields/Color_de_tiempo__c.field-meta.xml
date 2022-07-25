@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Color_de_tiempo__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+Indicador_de_tiempo__c,
+&quot;Verde&quot;,IMAGE(&quot;https://gcpcrm--c.documentforce.com/servlet/servlet.FileDownload?file=0153k00000Avdar&quot;,&quot;Verde&quot;,25,25),
+&quot;Naranja&quot;,IMAGE(&quot;https://gcpcrm--c.documentforce.com/servlet/servlet.FileDownload?file=0153k00000Avdac&quot;,&quot;Naranja&quot;,25,25),
+&quot;Rojo&quot;,IMAGE(&quot;https://gcpcrm--c.documentforce.com/servlet/servlet.FileDownload?file=0153k00000Avdah&quot;,&quot;Rojo&quot;,25,25),&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Color de tiempo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

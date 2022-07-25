@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_del_no_fisico__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo del no físico</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Hay_fisico__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alta siniestralidad</fullName>
+                <default>false</default>
+                <label>Alta siniestralidad</label>
+            </value>
+            <value>
+                <fullName>Cancelada</fullName>
+                <default>false</default>
+                <label>Cancelada</label>
+            </value>
+            <value>
+                <fullName>Canceló préstamo</fullName>
+                <default>false</default>
+                <label>Canceló préstamo</label>
+            </value>
+            <value>
+                <fullName>Carta de pre-renovación</fullName>
+                <default>false</default>
+                <label>Carta de pre-renovación</label>
+            </value>
+            <value>
+                <fullName>Mora</fullName>
+                <default>false</default>
+                <label>Mora</label>
+            </value>
+            <value>
+                <fullName>Pérdida total</fullName>
+                <default>false</default>
+                <label>Pérdida total</label>
+            </value>
+            <value>
+                <fullName>Pérdida valores agregados</fullName>
+                <default>false</default>
+                <label>Pérdida valores agregados</label>
+            </value>
+            <value>
+                <fullName>Plan mi carro</fullName>
+                <default>false</default>
+                <label>Plan mi carro</label>
+            </value>
+            <value>
+                <fullName>PLD</fullName>
+                <default>false</default>
+                <label>PLD</label>
+            </value>
+            <value>
+                <fullName>Póliza de sucursal</fullName>
+                <default>false</default>
+                <label>Póliza de sucursal</label>
+            </value>
+            <value>
+                <fullName>Seguro obligatorio</fullName>
+                <default>false</default>
+                <label>Seguro obligatorio</label>
+            </value>
+            <value>
+                <fullName>Sin confirmar</fullName>
+                <default>false</default>
+                <label>Sin confirmar</label>
+            </value>
+            <value>
+                <fullName>Solicitar renovación para nueva vigencia</fullName>
+                <default>false</default>
+                <label>Solicitar renovación para nueva vigencia</label>
+            </value>
+            <value>
+                <fullName>Solo tiene coberturas RCO</fullName>
+                <default>false</default>
+                <label>Solo tiene coberturas RCO</label>
+            </value>
+            <value>
+                <fullName>Venta de vehículo</fullName>
+                <default>false</default>
+                <label>Venta de vehículo</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Alta siniestralidad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Cancelada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Canceló préstamo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Carta de pre-renovación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Mora</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Pérdida total</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Pérdida valores agregados</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Plan mi carro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>PLD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Póliza de sucursal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Seguro obligatorio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Sin confirmar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Solicitar renovación para nueva vigencia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Solo tiene coberturas RCO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Venta de vehículo</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

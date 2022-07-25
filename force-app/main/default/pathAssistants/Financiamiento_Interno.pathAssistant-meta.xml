@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Financiamiento Interno</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Marca_UDC__c</fieldNames>
+        <fieldNames>ModeloVehiculo__c</fieldNames>
+        <fieldNames>Producto_Financiamiento__c</fieldNames>
+        <fieldNames>Cuota_Total__c</fieldNames>
+        <fieldNames>Vendedor__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14.6667px;&quot;&gt; -Llamar al cliente en cuanto sea aprobado el caso para que llegue a firmar&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14.6667px;&quot;&gt; -Asegurarse que pague el anticipo + primera cuota&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14.6667px;&quot;&gt; -Dar seguimiento para que el cliente llegue y no se enfríe el caso&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Firma de Contrato</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Marca_UDC__c</fieldNames>
+        <fieldNames>ModeloVehiculo__c</fieldNames>
+        <fieldNames>Producto_Financiamiento__c</fieldNames>
+        <fieldNames>N_mero_de_tel_fono__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14.6667px;&quot;&gt; -Asegurarse que el cliente llene todos los campos requeridos de solicitud&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14.6667px;&quot;&gt; -Buscar opciones en caso que el cliente no haya aplicado en prefiltro (mayor prima, menor plazo, etc)&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Oportunidad Identificada</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Marca_UDC__c</fieldNames>
+        <fieldNames>ModeloVehiculo__c</fieldNames>
+        <fieldNames>N_mero_de_tel_fono__c</fieldNames>
+        <fieldNames>Producto_Financiamiento__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14.6667px;&quot;&gt; -Asegurarse que la información esté completa &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14.6667px;&quot;&gt; -En caso que no aplique, dar opciones para que aplique.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Pre - Filtro</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Financiamiento_Interno</recordTypeName>
+</PathAssistant>

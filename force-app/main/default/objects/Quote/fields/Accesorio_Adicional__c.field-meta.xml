@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accesorio_Adicional__c</fullName>
+    <externalId>false</externalId>
+    <label>Accesorio Adicional</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tina</fullName>
+                <default>false</default>
+                <label>Tina</label>
+            </value>
+            <value>
+                <fullName>Camastro</fullName>
+                <default>false</default>
+                <label>Camastro</label>
+            </value>
+            <value>
+                <fullName>Cajon</fullName>
+                <default>false</default>
+                <label>Cajón</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

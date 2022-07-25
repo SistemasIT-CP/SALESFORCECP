@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_se_pueden_saltar_etapas_autos</fullName>
+    <active>true</active>
+    <description>Se imposibilita la posibilidad de saltar mas de una etapa a la vez</description>
+    <errorConditionFormula>AND(
+ OR(
+   RecordType.DeveloperName = &quot;Principal_Autos&quot;,
+   RecordType.DeveloperName=&quot;Principal_Autolote&quot;
+ ),
+ ISCHANGED(StageName),
+ NOT(CONTAINS(TEXT(PRIORVALUE(StageName)), &quot;Cerrada&quot;)),
+ NOT(CONTAINS(TEXT(StageName), &quot;Cerrada&quot;)),
+ (ABS(
+   CASE(StageName ,
+        &quot;Contacto Exitoso&quot;,1,
+        &quot;Seleccionando Modelo&quot;,2,
+        &quot;Negociacion&quot;,3,
+        &quot;Formalizacion&quot;,4,
+        &quot;Listo Para Facturar&quot;,5,
+        &quot;Facturado&quot;,6,
+        &quot;Listo Para Entrega&quot;,7,1)
+   -
+   CASE(PRIORVALUE(StageName) ,
+        &quot;Contacto Exitoso&quot;,1,
+        &quot;Seleccionando Modelo&quot;,2,
+        &quot;Negociacion&quot;,3,
+        &quot;Formalizacion&quot;,4,
+        &quot;Listo Para Facturar&quot;,5,
+        &quot;Facturado&quot;,6,
+        &quot;Listo Para Entrega&quot;,7,0))
+
+        &lt;&gt; 1
+    )
+)</errorConditionFormula>
+    <errorMessage>Las etapas deben avanzarse de una en una.</errorMessage>
+</ValidationRule>

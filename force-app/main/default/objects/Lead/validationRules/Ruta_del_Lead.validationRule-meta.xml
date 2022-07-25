@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruta_del_Lead</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+				AND(
+				     ISCHANGED(Status),
+								  $Profile.Name  &lt;&gt; &quot;Administrador del sistema&quot;,
+			    	NOT(  
+		    	    	OR( 
+								       AND(
+																			ISPICKVAL(PRIORVALUE(Status), &quot;Esperando contacto&quot;),
+							            ISPICKVAL(Status, &quot;Contacto intentado&quot;)
+											       	) 
+																)
+												),
+								NOT(
+												OR(
+								       AND(
+														    	ISPICKVAL(PRIORVALUE(Status), &quot;Contacto intentado&quot;),
+																	 	OR(
+												          ISPICKVAL(Status,&quot;Contacto exitoso&quot;),
+																				 	ISPICKVAL(Status,&quot;Lead a futuro&quot;),
+																				 	ISPICKVAL(Status,&quot;Lead perdido&quot;)
+																						)
+																		)
+																) 
+												),
+								NOT(
+												OR(
+																AND(
+																				ISPICKVAL(PRIORVALUE(Status),&quot;Contacto exitoso&quot;),
+																				OR(
+																								ISPICKVAL(Status,&quot;Lead a futuro&quot;),
+																								ISPICKVAL(Status,&quot;Lead perdido&quot;),
+																								ISPICKVAL(Status,&quot;Convertido&quot;)
+																								)
+																				)
+																)
+												),
+								NOT(
+												OR(
+																AND(
+																		  ISPICKVAL(PRIORVALUE(Status),&quot;Lead a futuro&quot;),
+																				OR(
+																								ISPICKVAL(Status,&quot;Lead perdido&quot;),
+																								ISPICKVAL(Status,&quot;Convertido&quot;)
+																								)
+																				)
+																)
+												),
+								NOT(
+												OR(
+																AND(
+																				ISPICKVAL(PRIORVALUE(Status),&quot;Lead perdido&quot;),
+																				ISPICKVAL(Status,&quot;Contacto exitoso&quot;)
+																				)
+																)
+												)														
+								)
+				)</errorConditionFormula>
+    <errorMessage>No puede cambiar el &quot;Estado del Candidato&quot; a un valor no permitido del proceso.</errorMessage>
+</ValidationRule>

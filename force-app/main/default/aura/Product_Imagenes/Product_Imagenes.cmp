@@ -1,0 +1,13 @@
+<aura:component controller="Product_Imagenes_Controller" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    
+    
+    <aura:attribute name = "listImagenes" type = "List"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    
+    <aura:iteration items="{!v.listImagenes}" var="list">
+        <img src="{!list.urlimagen__c}"/>
+    </aura:iteration>
+    
+</aura:component>
